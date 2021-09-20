@@ -69,7 +69,7 @@
 
 NHSX Analytics Unit - Data Engineering Team. Tableau analytics repository. Contains Tableau workbooks for NHSX analytics projects.
 
-_**Note:** No data, public or private are shared in this repository._
+_**Note:** No private data are shared in this repository._ _All tableau workbooks require NHSEI Tableau credentials to access._
 
 ### Folder Stucture
 
