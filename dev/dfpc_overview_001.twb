@@ -1900,7 +1900,7 @@
           <groupfilter function='level-members' level='[Calculation_2627498566490599424]' />
         </groupfilter>
       </group>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.89604' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.10396' show-structure='true' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.9' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.1' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
@@ -3105,6 +3105,67 @@
       <map key='[st_area(shape)]' value='[sqlproxy].[st_area(shape)]' />
       <map key='[st_length(shape)]' value='[sqlproxy].[st_length(shape)]' />
     </cols>
+    <relation type='collection'>
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    </relation>
+    <cols>
+      <map key='[Age_band]' value='[sqlproxy].[Age_band]' />
+      <map key='[CCG Geography]' value='[sqlproxy].[CCG Geography]' />
+      <map key='[CCG code]' value='[sqlproxy].[CCG code]' />
+      <map key='[CCG name (shapefile_ccg_boundaries_snapshot)]' value='[sqlproxy].[CCG name (shapefile_ccg_boundaries_snapshot)]' />
+      <map key='[CCG name]' value='[sqlproxy].[CCG name]' />
+      <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[sqlproxy].[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' />
+      <map key='[DataSourceFileForThisSnapshot_Version]' value='[sqlproxy].[DataSourceFileForThisSnapshot_Version]' />
+      <map key='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' value='[sqlproxy].[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' />
+      <map key='[Effective_Snapshot_Date]' value='[sqlproxy].[Effective_Snapshot_Date]' />
+      <map key='[GP_CCG_Code]' value='[sqlproxy].[GP_CCG_Code]' />
+      <map key='[GP_CCG_Name]' value='[sqlproxy].[GP_CCG_Name]' />
+      <map key='[GP_Code]' value='[sqlproxy].[GP_Code]' />
+      <map key='[GP_LAT]' value='[sqlproxy].[GP_LAT]' />
+      <map key='[GP_Long]' value='[sqlproxy].[GP_Long]' />
+      <map key='[GP_Name]' value='[sqlproxy].[GP_Name]' />
+      <map key='[GP_PCN_Code]' value='[sqlproxy].[GP_PCN_Code]' />
+      <map key='[GP_PCN_Name]' value='[sqlproxy].[GP_PCN_Name]' />
+      <map key='[GP_Postcode]' value='[sqlproxy].[GP_Postcode]' />
+      <map key='[GP_Practice_Code (patients_age_band_demography_snapshot)]' value='[sqlproxy].[GP_Practice_Code (patients_age_band_demography_snapshot)]' />
+      <map key='[GP_Practice_Code]' value='[sqlproxy].[GP_Practice_Code]' />
+      <map key='[GP_Region_Code]' value='[sqlproxy].[GP_Region_Code]' />
+      <map key='[GP_Region_Name]' value='[sqlproxy].[GP_Region_Name]' />
+      <map key='[GP_Register_Date]' value='[sqlproxy].[GP_Register_Date]' />
+      <map key='[GP_STP_Code]' value='[sqlproxy].[GP_STP_Code]' />
+      <map key='[GP_STP_Name]' value='[sqlproxy].[GP_STP_Name]' />
+      <map key='[Last_Refreshed]' value='[sqlproxy].[Last_Refreshed]' />
+      <map key='[M0140_Number of patients registered for appointment functionality]' value='[sqlproxy].[M0140_Number of patients registered for appointment functionality]' />
+      <map key='[M0141_Number of patients registered for repeat prescription functionality]' value='[sqlproxy].[M0141_Number of patients registered for repeat prescription functionality]' />
+      <map key='[M0142_Number of patients registered for detailed coded record functionality]' value='[sqlproxy].[M0142_Number of patients registered for detailed coded record functionality]' />
+      <map key='[M050_GP practice appointment functionality enabled]' value='[sqlproxy].[M050_GP practice appointment functionality enabled]' />
+      <map key='[M051_GP practice repeat prescription functionality enabled]' value='[sqlproxy].[M051_GP practice repeat prescription functionality enabled]' />
+      <map key='[M052_GP practice detailed coded record functionality enabled]' value='[sqlproxy].[M052_GP practice detailed coded record functionality enabled]' />
+      <map key='[M053_Number of GP appointments managed online]' value='[sqlproxy].[M053_Number of GP appointments managed online]' />
+      <map key='[M054_Number of repeat prescription transactions]' value='[sqlproxy].[M054_Number of repeat prescription transactions]' />
+      <map key='[M055_Number of detailed coded record views]' value='[sqlproxy].[M055_Number of detailed coded record views]' />
+      <map key='[ODS CCG code]' value='[sqlproxy].[ODS CCG code]' />
+      <map key='[ONS CCG code]' value='[sqlproxy].[ONS CCG code]' />
+      <map key='[REF_Number of GP practice registered patients]' value='[sqlproxy].[REF_Number of GP practice registered patients]' />
+      <map key='[Sex]' value='[sqlproxy].[Sex]' />
+      <map key='[Size (patients_age_band_demography_snapshot)]' value='[sqlproxy].[Size (patients_age_band_demography_snapshot)]' />
+      <map key='[Size]' value='[sqlproxy].[Size]' />
+      <map key='[Unique ID (shapefile_ccg_boundaries_snapshot)]' value='[sqlproxy].[Unique ID (shapefile_ccg_boundaries_snapshot)]' />
+      <map key='[bng_e]' value='[sqlproxy].[bng_e]' />
+      <map key='[bng_n]' value='[sqlproxy].[bng_n]' />
+      <map key='[dfpc_POMI_Date]' value='[sqlproxy].[dfpc_POMI_Date]' />
+      <map key='[dfpc_POMI_Practice code]' value='[sqlproxy].[dfpc_POMI_Practice code]' />
+      <map key='[geometry]' value='[sqlproxy].[geometry]' />
+      <map key='[lat]' value='[sqlproxy].[lat]' />
+      <map key='[long]' value='[sqlproxy].[long]' />
+      <map key='[st_area(shape)]' value='[sqlproxy].[st_area(shape)]' />
+      <map key='[st_length(shape)]' value='[sqlproxy].[st_length(shape)]' />
+    </cols>
   </connection>
   <aliases enabled='yes' />
   <column aggregation='Count' caption='Age band' datatype='string' default-type='nominal' name='[Age_band]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -3185,8 +3246,14 @@
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='dfpc_pomi_view' id='dfpc_pomi_view_A16EFD3A7AB24C8192C0C2B41D013288'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -3195,8 +3262,14 @@
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='patients_age_band_demography_snapshot' id='patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -3205,8 +3278,14 @@
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='shapefile_ccg_boundaries_snapshot' id='shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -4901,6 +4980,76 @@
       <map key='[st_area(shape)]' value='[sqlproxy].[st_area(shape)]' />
       <map key='[st_length(shape)]' value='[sqlproxy].[st_length(shape)]' />
     </cols>
+    <relation type='collection'>
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+      <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    </relation>
+    <cols>
+      <map key='[Age_band]' value='[sqlproxy].[Age_band]' />
+      <map key='[CCG Geography]' value='[sqlproxy].[CCG Geography]' />
+      <map key='[CCG code]' value='[sqlproxy].[CCG code]' />
+      <map key='[CCG name (shapefile_ccg_boundaries_snapshot)]' value='[sqlproxy].[CCG name (shapefile_ccg_boundaries_snapshot)]' />
+      <map key='[CCG name]' value='[sqlproxy].[CCG name]' />
+      <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[sqlproxy].[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' />
+      <map key='[DataSourceFileForThisSnapshot_Version]' value='[sqlproxy].[DataSourceFileForThisSnapshot_Version]' />
+      <map key='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' value='[sqlproxy].[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' />
+      <map key='[Effective_Snapshot_Date]' value='[sqlproxy].[Effective_Snapshot_Date]' />
+      <map key='[GP_CCG_Code]' value='[sqlproxy].[GP_CCG_Code]' />
+      <map key='[GP_CCG_Name]' value='[sqlproxy].[GP_CCG_Name]' />
+      <map key='[GP_Code]' value='[sqlproxy].[GP_Code]' />
+      <map key='[GP_LAT]' value='[sqlproxy].[GP_LAT]' />
+      <map key='[GP_Long]' value='[sqlproxy].[GP_Long]' />
+      <map key='[GP_Name]' value='[sqlproxy].[GP_Name]' />
+      <map key='[GP_PCN_Code]' value='[sqlproxy].[GP_PCN_Code]' />
+      <map key='[GP_PCN_Name]' value='[sqlproxy].[GP_PCN_Name]' />
+      <map key='[GP_Postcode]' value='[sqlproxy].[GP_Postcode]' />
+      <map key='[GP_Practice_Code (patients_age_band_demography_snapshot)]' value='[sqlproxy].[GP_Practice_Code (patients_age_band_demography_snapshot)]' />
+      <map key='[GP_Practice_Code]' value='[sqlproxy].[GP_Practice_Code]' />
+      <map key='[GP_Region_Code]' value='[sqlproxy].[GP_Region_Code]' />
+      <map key='[GP_Region_Name]' value='[sqlproxy].[GP_Region_Name]' />
+      <map key='[GP_Register_Date]' value='[sqlproxy].[GP_Register_Date]' />
+      <map key='[GP_STP_Code]' value='[sqlproxy].[GP_STP_Code]' />
+      <map key='[GP_STP_Name]' value='[sqlproxy].[GP_STP_Name]' />
+      <map key='[Last_Refreshed]' value='[sqlproxy].[Last_Refreshed]' />
+      <map key='[M0140_Number of patients registered for appointment functionality]' value='[sqlproxy].[M0140_Number of patients registered for appointment functionality]' />
+      <map key='[M0141_Number of patients registered for repeat prescription functionality]' value='[sqlproxy].[M0141_Number of patients registered for repeat prescription functionality]' />
+      <map key='[M0142_Number of patients registered for detailed coded record functionality]' value='[sqlproxy].[M0142_Number of patients registered for detailed coded record functionality]' />
+      <map key='[M050_GP practice appointment functionality enabled]' value='[sqlproxy].[M050_GP practice appointment functionality enabled]' />
+      <map key='[M051_GP practice repeat prescription functionality enabled]' value='[sqlproxy].[M051_GP practice repeat prescription functionality enabled]' />
+      <map key='[M052_GP practice detailed coded record functionality enabled]' value='[sqlproxy].[M052_GP practice detailed coded record functionality enabled]' />
+      <map key='[M053_Number of GP appointments managed online]' value='[sqlproxy].[M053_Number of GP appointments managed online]' />
+      <map key='[M054_Number of repeat prescription transactions]' value='[sqlproxy].[M054_Number of repeat prescription transactions]' />
+      <map key='[M055_Number of detailed coded record views]' value='[sqlproxy].[M055_Number of detailed coded record views]' />
+      <map key='[M083_Number of registered patients with a nominated pharmacy]' value='[sqlproxy].[M083_Number of registered patients with a nominated pharmacy]' />
+      <map key='[M084_Number of items prescribed and dispensed via EPS during the reporting period]' value='[sqlproxy].[M084_Number of items prescribed and dispensed via EPS during the reporting period]' />
+      <map key='[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' value='[sqlproxy].[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' />
+      <map key='[ODS CCG code]' value='[sqlproxy].[ODS CCG code]' />
+      <map key='[ONS CCG code]' value='[sqlproxy].[ONS CCG code]' />
+      <map key='[REF_All dispensing items prescribed and dispensed during the reporting period]' value='[sqlproxy].[REF_All dispensing items prescribed and dispensed during the reporting period]' />
+      <map key='[REF_Number of GP practice registered patients]' value='[sqlproxy].[REF_Number of GP practice registered patients]' />
+      <map key='[REF_Number of GP registered patients]' value='[sqlproxy].[REF_Number of GP registered patients]' />
+      <map key='[Sex]' value='[sqlproxy].[Sex]' />
+      <map key='[Size (patients_age_band_demography_snapshot)]' value='[sqlproxy].[Size (patients_age_band_demography_snapshot)]' />
+      <map key='[Size]' value='[sqlproxy].[Size]' />
+      <map key='[Unique ID (shapefile_ccg_boundaries_snapshot)]' value='[sqlproxy].[Unique ID (shapefile_ccg_boundaries_snapshot)]' />
+      <map key='[bng_e]' value='[sqlproxy].[bng_e]' />
+      <map key='[bng_n]' value='[sqlproxy].[bng_n]' />
+      <map key='[dfpc_POMI_Date]' value='[sqlproxy].[dfpc_POMI_Date]' />
+      <map key='[dfpc_POMI_Practice code]' value='[sqlproxy].[dfpc_POMI_Practice code]' />
+      <map key='[dfpc_gp_eps_Date]' value='[sqlproxy].[dfpc_gp_eps_Date]' />
+      <map key='[dfpc_gp_eps_Practice code]' value='[sqlproxy].[dfpc_gp_eps_Practice code]' />
+      <map key='[dfpc_gp_eps_Unique ID]' value='[sqlproxy].[dfpc_gp_eps_Unique ID]' />
+      <map key='[geometry]' value='[sqlproxy].[geometry]' />
+      <map key='[lat]' value='[sqlproxy].[lat]' />
+      <map key='[long]' value='[sqlproxy].[long]' />
+      <map key='[st_area(shape)]' value='[sqlproxy].[st_area(shape)]' />
+      <map key='[st_length(shape)]' value='[sqlproxy].[st_length(shape)]' />
+    </cols>
   </connection>
   <aliases enabled='yes' />
   <column aggregation='Count' caption='Age band' datatype='string' default-type='nominal' name='[Age_band]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
@@ -4986,8 +5135,14 @@
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='dfpc_gp_eps_view' id='dfpc_gp_eps_view_9AD4DA033F2E47A1A17E9E1274B05E13'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -4996,8 +5151,14 @@
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='odscodes_gp_mapping' id='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -5006,13 +5167,22 @@
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='patients_sex_demography_snapshot' id='patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94'>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
       </object>
       <object caption='shapefile_ccg_boundaries_snapshot' id='shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -11183,8 +11353,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3000' minheight='3000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='787' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='786' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='789' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='788' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone forceUpdate='true' h='6120' id='485' type-v2='text' w='69765' x='29649' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='18'>Connecting to patients</run>
@@ -12009,8 +12179,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='753' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='752' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='755' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='754' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone forceUpdate='true' h='6120' id='485' type-v2='text' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='18'>Data</run>
@@ -12767,8 +12937,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2200' minheight='2200' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='765' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='764' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='767' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='766' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone forceUpdate='true' h='6120' id='485' type-v2='text' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='18'>Demographics</run>
@@ -13416,9 +13586,9 @@
           </zone>
           <zone h='4167' id='737' param='vert' type-v2='layout-flow' w='78331' x='21083' y='8073' />
           <zone h='41276' id='738' param='vert' type-v2='layout-flow' w='39970' x='59444' y='12240'>
-            <zone forceUpdate='true' h='20052' id='739' type-v2='text' w='39970' x='59444' y='12240'>
+            <zone forceUpdate='true' h='19922' id='739' type-v2='text' w='39970' x='59444' y='12240'>
               <formatted-text>
-                <run fontsize='14'>About</run>
+                <run bold='true' fontsize='14'>About</run>
                 <run>&#10;&#10;- </run>
                 <run fontcolor='#333333'>Patient Online is an NHS England programme designed to support GP Practices to offer and promote online services to patients, including booking and cancelling appointments, ordering of repeat prescriptions and access to coded information in records.Patient Online is an NHS England programme designed to support GP Practices to offer and promote online services to patients, including booking and cancelling appointments, ordering of repeat prescriptions and access to coded information in records.</run>
               </formatted-text>
@@ -13442,8 +13612,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='765' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='764' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='767' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='766' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone forceUpdate='true' h='6120' id='485' type-v2='text' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='18'>Further information</run>
@@ -13518,9 +13688,9 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='20052' id='739' type-v2='text' w='39970' x='59444' y='12240'>
+                <zone forceUpdate='true' h='19922' id='739' type-v2='text' w='39970' x='59444' y='12240'>
                   <formatted-text>
-                    <run fontsize='14'>About</run>
+                    <run bold='true' fontsize='14'>About</run>
                     <run>&#10;&#10;- </run>
                     <run fontcolor='#333333'>Patient Online is an NHS England programme designed to support GP Practices to offer and promote online services to patients, including booking and cancelling appointments, ordering of repeat prescriptions and access to coded information in records.Patient Online is an NHS England programme designed to support GP Practices to offer and promote online services to patients, including booking and cancelling appointments, ordering of repeat prescriptions and access to coded information in records.</run>
                   </formatted-text>
@@ -14114,8 +14284,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2700' minheight='2700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='734' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='733' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='736' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='735' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone forceUpdate='true' h='4167' id='485' type-v2='text' w='78332' x='21082' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='10'>GP Patient Survey  /  Geography</run>
@@ -14914,8 +15084,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2400' minheight='2400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='744' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='743' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='746' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='745' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone forceUpdate='true' h='6120' id='485' type-v2='text' w='69765' x='29649' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='18'>Improving our organisations </run>
@@ -16327,7 +16497,7 @@
         </viewpoint>
         <viewpoint name='[M083] KPI' />
       </viewpoints>
-      <active id='628' />
+      <active id='-1' />
       <simple-id uuid='{12B798F9-300D-4005-9C6E-77A42E7640C7}' />
     </window>
     <window class='dashboard' name='Improving our organisations'>
@@ -16393,7 +16563,7 @@
         </viewpoint>
         <viewpoint name='Sex' />
       </viewpoints>
-      <active id='460' />
+      <active id='-1' />
       <simple-id uuid='{D1397974-F16E-42B4-9791-1C5081165910}' />
     </window>
     <window class='dashboard' name='Data'>
@@ -16402,7 +16572,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='460' />
+      <active id='-1' />
       <simple-id uuid='{3C1C0540-7D59-4912-A507-B1B01B1582C5}' />
     </window>
     <window class='dashboard' maximized='true' name='Further information'>
@@ -16411,7 +16581,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='732' />
+      <active id='733' />
       <simple-id uuid='{43EFE925-D96A-470F-8C98-AEFAFD749859}' />
     </window>
     <window class='worksheet' name='NHSX Website (2)'>
