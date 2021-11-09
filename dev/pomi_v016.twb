@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='PatientOnline' path='/t/NHSX_DEV/workbooks' revision='5.8' site='NHSX_DEV' />
+  <repository-location id='PatientOnline' path='/t/NHSX_DEV/workbooks' revision='5.9' site='NHSX_DEV' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -5718,8 +5718,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2700' minheight='2700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='584' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='583' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='592' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='591' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone forceUpdate='true' h='4167' id='485' type-v2='text' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='10'>Patient Online  /  Geography</run>
@@ -6460,8 +6460,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3250' minheight='3250' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='571' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='570' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='579' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='578' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone forceUpdate='true' h='4167' id='485' type-v2='text' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='10'>Patient Online  /  Uptake</run>
@@ -7259,8 +7259,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3250' minheight='3250' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='566' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='565' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='574' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='573' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone forceUpdate='true' h='4167' id='485' type-v2='text' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='10'>Patient Online  /  Usage</run>
@@ -8287,7 +8287,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='523' />
+      <active id='-1' />
       <simple-id uuid='{6B4676A7-C466-4B37-8FB4-5201CF23142D}' />
     </window>
     <window class='dashboard' name='Uptake'>
@@ -8361,14 +8361,17 @@
           <zoom type='entire-view' />
           <map-scale-visibility value='0' />
           <default-map-tool-selection tool='1' />
+          <default-map-unit-selection mapunit='1' />
         </viewpoint>
         <viewpoint name='[M054] Map'>
           <zoom type='entire-view' />
           <map-scale-visibility value='0' />
+          <default-map-unit-selection mapunit='1' />
         </viewpoint>
         <viewpoint name='[M055] Map'>
           <zoom type='entire-view' />
           <map-scale-visibility value='0' />
+          <default-map-unit-selection mapunit='1' />
         </viewpoint>
       </viewpoints>
       <active id='-1' />
