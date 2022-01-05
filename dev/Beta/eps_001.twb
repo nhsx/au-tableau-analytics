@@ -2036,7 +2036,7 @@
     <action caption='Reset Filter (Usage)' name='[Action3]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='Utilisation' type='sheet' worksheet='Reset Filters' />
-      <link caption='Reset Filter (Usage)' delimiter=',' escape='\' expression='tsl:Utilisation?%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_CCG_Name%5D~s0=&lt;[GP_CCG_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_Name%5D~s0=&lt;[GP_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_PCN_Name%5D~s0=&lt;[GP_PCN_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_Region_Name%5D~s0=&lt;[GP_Region_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_STP_Name%5D~s0=&lt;[GP_STP_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5Bdfpc_gp_eps_Date%5D~s0=&lt;[dfpc_gp_eps_Date]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <link caption='Reset Filter (Usage)' delimiter=',' escape='\' expression='tsl:Utilisation?%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_CCG_Name%5D~s0=&lt;[GP_CCG_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_Name%5D~s0=&lt;[GP_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_PCN_Name%5D~s0=&lt;[GP_PCN_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_Region_Name%5D~s0=&lt;[GP_Region_Name]~na&gt;&amp;%5Bsqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8%5D.%5BGP_STP_Name%5D~s0=&lt;[GP_STP_Name]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
       <command command='tsc:tsl-filter'>
         <param name='exclude' value='Reset Filters' />
         <param name='target' value='Utilisation' />
@@ -2061,7 +2061,6 @@
       <column aggregation='Count' caption='GP PCN Name' datatype='string' default-type='nominal' layered='true' name='[GP_PCN_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' caption='GP Region Name' datatype='string' default-type='nominal' layered='true' name='[GP_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
       <column aggregation='Count' caption='GP STP Name' datatype='string' default-type='nominal' layered='true' name='[GP_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-      <column aggregation='Year' caption='dfpc gp eps Date' datatype='date' default-type='ordinal' layered='true' name='[dfpc_gp_eps_Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
     </datasource-dependencies>
   </actions>
   <worksheets>
@@ -2882,7 +2881,7 @@
             <format attr='stroke-size' value='0' />
             <format attr='line-visibility' value='off' />
             <format attr='title' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M050_GP practice appointment functionality enabled (%) (copy)_130463678569205766:qk]' scope='rows' value='' />
-            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M050_GP practice appointment functionality enabled (%) (copy)_130463678569205766:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.2' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M050_GP practice appointment functionality enabled (%) (copy)_130463678569205766:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.20000000000000001' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='width' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[tmn:dfpc_gp_eps_Date:ok]' value='85' />
@@ -3535,7 +3534,7 @@
             <format attr='stroke-size' value='0' />
             <format attr='line-visibility' value='off' />
             <format attr='title' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M0140a_Proportion of patients registered for appointment functionality (%) (copy)_130463678570115079:qk]' scope='rows' value='' />
-            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M0140a_Proportion of patients registered for appointment functionality (%) (copy)_130463678570115079:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.2' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M0140a_Proportion of patients registered for appointment functionality (%) (copy)_130463678570115079:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.20000000000000001' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='width' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[tmn:dfpc_gp_eps_Date:ok]' value='68' />
@@ -4163,7 +4162,7 @@
             <format attr='stroke-size' value='0' />
             <format attr='line-visibility' value='off' />
             <format attr='title' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M084 (%) (copy)_556827909523808256:qk]' scope='rows' value='' />
-            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M084 (%) (copy)_556827909523808256:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.2' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M084 (%) (copy)_556827909523808256:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.20000000000000001' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='header'>
             <format attr='border-width' data-class='total' value='0' />
@@ -5238,8 +5237,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2700' minheight='2700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='724' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97916' id='723' param='vert' w='98828' x='586' y='1042'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='726' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='725' param='vert' w='84000' x='8000' y='8000'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='4167' id='485' w='78333' x='21081' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='10'>Electronic Prescription Service  /  Geography</run>
@@ -5937,8 +5936,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3200' minheight='3200' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='710' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97916' id='709' param='vert' w='98828' x='586' y='1042'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='712' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97916' id='711' param='vert' w='98828' x='586' y='1042'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='4167' id='485' w='78331' x='21083' y='1042'>
                   <formatted-text>
                     <run bold='true' fontsize='10'>Electronic Prescription Service  /  Utilisation</run>
