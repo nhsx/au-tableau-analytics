@@ -20,6 +20,7 @@
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='ccg_code_mapping_snapshot' table='[dbo].[ccg_code_mapping_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='shapefile_ccg_boundaries_snapshot' table='[dbo].[shapefile_ccg_boundaries_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='dfpc_gp_survey_view' table='[dbo].[dfpc_gp_survey_view]' type='table' />
+      <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='patients_age_band_demography_snapshot' table='[dbo].[patients_age_band_demography_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='patients_sex_demography_snapshot' table='[dbo].[patients_sex_demography_snapshot]' type='table' />
     </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
@@ -31,6 +32,7 @@
       <map key='[CCG name]' value='[ccg_code_mapping_snapshot].[CCG name]' />
       <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[DataSourceFileForThisSnapshot_Version]' />
       <map key='[DataSourceFileForThisSnapshot_Version]' value='[patients_sex_demography_snapshot].[DataSourceFileForThisSnapshot_Version]' />
+      <map key='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot].[Effective_Snapshot_Date]' />
       <map key='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[Effective_Snapshot_Date]' />
       <map key='[Effective_Snapshot_Date]' value='[patients_sex_demography_snapshot].[Effective_Snapshot_Date]' />
       <map key='[GP_Address1]' value='[odscodes_gp_mapping].[GP_Address1]' />
@@ -45,6 +47,7 @@
       <map key='[GP_PCN_Code]' value='[odscodes_gp_mapping].[GP_PCN_Code]' />
       <map key='[GP_PCN_Name]' value='[odscodes_gp_mapping].[GP_PCN_Name]' />
       <map key='[GP_Postcode]' value='[odscodes_gp_mapping].[GP_Postcode]' />
+      <map key='[GP_Practice_Code (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot].[GP_Practice_Code]' />
       <map key='[GP_Practice_Code (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[GP_Practice_Code]' />
       <map key='[GP_Practice_Code]' value='[patients_sex_demography_snapshot].[GP_Practice_Code]' />
       <map key='[GP_Region_Code]' value='[odscodes_gp_mapping].[GP_Region_Code]' />
@@ -71,6 +74,7 @@
       <map key='[PCN_STP_Name]' value='[odscodes_gp_mapping].[PCN_STP_Name]' />
       <map key='[Region_Code_Name]' value='[odscodes_gp_mapping].[Region_Code_Name]' />
       <map key='[Region_Name]' value='[odscodes_gp_mapping].[Region_Name]' />
+      <map key='[Registered_patient]' value='[gp_practice_population_snapshot].[Registered_patient]' />
       <map key='[Sex]' value='[patients_sex_demography_snapshot].[Sex]' />
       <map key='[Size (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[Size]' />
       <map key='[Size]' value='[patients_sex_demography_snapshot].[Size]' />
@@ -1094,10 +1098,64 @@
       <metadata-record class='column'>
         <remote-name>GP_Practice_Code</remote-name>
         <remote-type>129</remote-type>
+        <local-name>[GP_Practice_Code (gp_practice_population_snapshot)]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>GP_Practice_Code</remote-alias>
+        <ordinal>59</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Registered_patient</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Registered_patient]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>Registered_patient</remote-alias>
+        <ordinal>60</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Effective_Snapshot_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Effective_Snapshot_Date (gp_practice_population_snapshot)]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>Effective_Snapshot_Date</remote-alias>
+        <ordinal>61</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Practice_Code</remote-name>
+        <remote-type>129</remote-type>
         <local-name>[GP_Practice_Code (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>59</ordinal>
+        <ordinal>63</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1117,7 +1175,7 @@
         <local-name>[Age_band]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Age_band</remote-alias>
-        <ordinal>60</ordinal>
+        <ordinal>64</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1137,7 +1195,7 @@
         <local-name>[Size (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Size</remote-alias>
-        <ordinal>61</ordinal>
+        <ordinal>65</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1154,7 +1212,7 @@
         <local-name>[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>62</ordinal>
+        <ordinal>66</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1171,7 +1229,7 @@
         <local-name>[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-        <ordinal>63</ordinal>
+        <ordinal>67</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1188,7 +1246,7 @@
         <local-name>[GP_Practice_Code]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>65</ordinal>
+        <ordinal>69</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1208,7 +1266,7 @@
         <local-name>[Sex]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Sex</remote-alias>
-        <ordinal>66</ordinal>
+        <ordinal>70</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1228,7 +1286,7 @@
         <local-name>[Size]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Size</remote-alias>
-        <ordinal>67</ordinal>
+        <ordinal>71</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1245,7 +1303,7 @@
         <local-name>[Effective_Snapshot_Date]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>68</ordinal>
+        <ordinal>72</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1262,7 +1320,7 @@
         <local-name>[DataSourceFileForThisSnapshot_Version]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-        <ordinal>69</ordinal>
+        <ordinal>73</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1280,6 +1338,7 @@
   <column caption='CCG name (shapefile ccg boundaries snapshot)' datatype='string' name='[CCG name (shapefile_ccg_boundaries_snapshot)]' role='dimension' type='nominal' />
   <column caption='DataSourceFileForThisSnapshot Version (patients age band demography snapshot)' datatype='integer' name='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' role='measure' type='quantitative' />
   <column caption='DataSourceFileForThisSnapshot Version' datatype='integer' name='[DataSourceFileForThisSnapshot_Version]' role='measure' type='quantitative' />
+  <column caption='Effective Snapshot Date (gp practice population snapshot)' datatype='date' name='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Effective Snapshot Date (patients age band demography snapshot)' datatype='date' name='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Effective Snapshot Date' datatype='date' name='[Effective_Snapshot_Date]' role='dimension' type='ordinal' />
   <column caption='GP Address1' datatype='string' hidden='true' name='[GP_Address1]' role='dimension' type='nominal' />
@@ -1294,6 +1353,7 @@
   <column caption='GP PCN Code' datatype='string' name='[GP_PCN_Code]' role='dimension' type='nominal' />
   <column caption='GP PCN Name' datatype='string' name='[GP_PCN_Name]' role='dimension' type='nominal' />
   <column caption='GP Postcode' datatype='string' name='[GP_Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+  <column caption='GP Practice Code (gp practice population snapshot)' datatype='string' name='[GP_Practice_Code (gp_practice_population_snapshot)]' role='dimension' type='nominal' />
   <column caption='GP Practice Code (patients age band demography snapshot)' datatype='string' name='[GP_Practice_Code (patients_age_band_demography_snapshot)]' role='dimension' type='nominal' />
   <column caption='GP Practice Code' datatype='string' name='[GP_Practice_Code]' role='dimension' type='nominal' />
   <column caption='GP Region Code' datatype='string' name='[GP_Region_Code]' role='dimension' type='nominal' />
@@ -1310,6 +1370,7 @@
   <column caption='PCN STP Name' datatype='string' hidden='true' name='[PCN_STP_Name]' role='dimension' type='nominal' />
   <column caption='Region Code Name' datatype='string' hidden='true' name='[Region_Code_Name]' role='dimension' type='nominal' />
   <column caption='Region Name' datatype='string' hidden='true' name='[Region_Name]' role='dimension' type='nominal' />
+  <column caption='Registered patient' datatype='integer' name='[Registered_patient]' role='measure' type='quantitative' />
   <column caption='Size (patients age band demography snapshot)' datatype='integer' name='[Size (patients_age_band_demography_snapshot)]' role='measure' type='quantitative' />
   <column caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Unique ID (shapefile ccg boundaries snapshot)' datatype='integer' name='[Unique ID (shapefile_ccg_boundaries_snapshot)]' role='dimension' type='ordinal' />
@@ -1317,6 +1378,7 @@
   <column datatype='integer' hidden='true' name='[Unique ID]' role='dimension' type='ordinal' />
   <_.fcp.ObjectModelTableType.true...column caption='ccg_code_mapping_snapshot' datatype='table' name='[__tableau_internal_object_id__].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='dfpc_gp_survey_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='gp_practice_population_snapshot' datatype='table' name='[__tableau_internal_object_id__].[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='odscodes_gp_mapping' datatype='table' name='[__tableau_internal_object_id__].[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='patients_age_band_demography_snapshot' datatype='table' name='[__tableau_internal_object_id__].[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='patients_sex_demography_snapshot' datatype='table' name='[__tableau_internal_object_id__].[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]' role='measure' type='quantitative' />
@@ -1333,13 +1395,14 @@
   <column caption='St Area(Shape)' datatype='real' name='[st_area(shape)]' role='measure' type='quantitative' />
   <column caption='St Length(Shape)' datatype='real' name='[st_length(shape)]' role='measure' type='quantitative' />
   <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/14/2022 11:11:19 AM' username='tableau_internal_user'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/14/2022 03:37:29 PM' username='tableau_internal_user'>
       <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' table='[Extract].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
         <relation name='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3' table='[Extract].[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]' type='table' />
         <relation name='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' table='[Extract].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' type='table' />
         <relation name='shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9' table='[Extract].[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]' type='table' />
         <relation name='dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6' table='[Extract].[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]' type='table' />
+        <relation name='gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E' table='[Extract].[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]' type='table' />
         <relation name='patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F' table='[Extract].[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]' type='table' />
         <relation name='patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94' table='[Extract].[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]' type='table' />
       </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
@@ -1351,6 +1414,7 @@
         <map key='[CCG name]' value='[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98].[CCG name]' />
         <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F].[DataSourceFileForThisSnapshot_Version]' />
         <map key='[DataSourceFileForThisSnapshot_Version]' value='[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94].[DataSourceFileForThisSnapshot_Version]' />
+        <map key='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E].[Effective_Snapshot_Date]' />
         <map key='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F].[Effective_Snapshot_Date]' />
         <map key='[Effective_Snapshot_Date]' value='[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94].[Effective_Snapshot_Date]' />
         <map key='[GP_CCG_Code]' value='[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3].[GP_CCG_Code]' />
@@ -1362,6 +1426,7 @@
         <map key='[GP_PCN_Code]' value='[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3].[GP_PCN_Code]' />
         <map key='[GP_PCN_Name]' value='[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3].[GP_PCN_Name]' />
         <map key='[GP_Postcode]' value='[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3].[GP_Postcode]' />
+        <map key='[GP_Practice_Code (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E].[GP_Practice_Code]' />
         <map key='[GP_Practice_Code (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F].[GP_Practice_Code]' />
         <map key='[GP_Practice_Code]' value='[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94].[GP_Practice_Code]' />
         <map key='[GP_Region_Code]' value='[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3].[GP_Region_Code]' />
@@ -1380,6 +1445,7 @@
         <map key='[M90_Total number of responses]' value='[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6].[M90_Total number of responses]' />
         <map key='[ODS CCG code]' value='[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98].[ODS CCG code]' />
         <map key='[ONS CCG code]' value='[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98].[ONS CCG code]' />
+        <map key='[Registered_patient]' value='[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E].[Registered_patient]' />
         <map key='[Sex]' value='[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94].[Sex]' />
         <map key='[Size (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F].[Size]' />
         <map key='[Size]' value='[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94].[Size]' />
@@ -1396,7 +1462,7 @@
         <map key='[st_length(shape)]' value='[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9].[st_length(shape)]' />
       </cols>
       <refresh>
-        <refresh-event add-from-file-path='gpsurvey_v001' increment-value='%null%' refresh-type='create' rows-inserted='75093' timestamp-start='2022-01-14 11:11:19.792' />
+        <refresh-event add-from-file-path='gpsurvey_v001' increment-value='%null%' refresh-type='create' rows-inserted='94674' timestamp-start='2022-01-14 15:37:29.608' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
@@ -1412,6 +1478,7 @@
           <approx-count>6952</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Name</remote-name>
@@ -1426,6 +1493,7 @@
           <approx-count>5149</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Register_Date</remote-name>
@@ -1439,6 +1507,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_LAT</remote-name>
@@ -1452,6 +1521,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>4373</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Long</remote-name>
@@ -1465,6 +1535,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>4373</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Postcode</remote-name>
@@ -1479,6 +1550,7 @@
           <approx-count>4239</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_CCG_Code</remote-name>
@@ -1493,6 +1565,7 @@
           <approx-count>119</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_CCG_Name</remote-name>
@@ -1507,6 +1580,7 @@
           <approx-count>119</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_STP_Code</remote-name>
@@ -1521,6 +1595,7 @@
           <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_STP_Name</remote-name>
@@ -1535,6 +1610,7 @@
           <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Region_Code</remote-name>
@@ -1549,6 +1625,7 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Region_Name</remote-name>
@@ -1563,6 +1640,7 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_PCN_Code</remote-name>
@@ -1577,6 +1655,7 @@
           <approx-count>1398</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_PCN_Name</remote-name>
@@ -1591,6 +1670,7 @@
           <approx-count>1398</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Last_Refreshed</remote-name>
@@ -1604,6 +1684,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>ONS CCG code</remote-name>
@@ -1618,6 +1699,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG name</remote-name>
@@ -1632,6 +1714,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>ODS CCG code</remote-name>
@@ -1646,6 +1729,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Unique ID</remote-name>
@@ -1659,6 +1743,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG code</remote-name>
@@ -1673,6 +1758,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG name</remote-name>
@@ -1687,6 +1773,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>bng_e</remote-name>
@@ -1700,6 +1787,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>bng_n</remote-name>
@@ -1713,6 +1801,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>long</remote-name>
@@ -1726,6 +1815,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>lat</remote-name>
@@ -1739,6 +1829,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>st_area(shape)</remote-name>
@@ -1752,6 +1843,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>st_length(shape)</remote-name>
@@ -1765,6 +1857,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>geometry</remote-name>
@@ -1779,6 +1872,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG Geography</remote-name>
@@ -1792,6 +1886,7 @@
           <aggregation>Collect</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_survey_Unique ID</remote-name>
@@ -1805,6 +1900,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>35254</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_survey_Date</remote-name>
@@ -1818,6 +1914,7 @@
           <aggregation>Year</aggregation>
           <approx-count>5</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_survey_Practice code</remote-name>
@@ -1832,6 +1929,7 @@
           <approx-count>9344</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M90_Total number of responses</remote-name>
@@ -1845,6 +1943,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>35254</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M90_Number of patients reporting using GP practice online services</remote-name>
@@ -1858,6 +1957,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>33383</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M091_Total number of responses</remote-name>
@@ -1871,6 +1971,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>35254</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M091_Number of patients reporting having booked an appointment online</remote-name>
@@ -1884,6 +1985,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>30849</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M092_Total number of responses</remote-name>
@@ -1897,6 +1999,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>29440</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M092_Number of patients reporting having tried to use their GP practices website</remote-name>
@@ -1910,6 +2013,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>29269</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M093_Number of patients reporting that their GP practice website was easy to use</remote-name>
@@ -1923,6 +2027,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>29269</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M093_Total number of responses</remote-name>
@@ -1936,6 +2041,50 @@
           <aggregation>Sum</aggregation>
           <approx-count>29269</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Practice_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Practice_Code (gp_practice_population_snapshot)]</local-name>
+          <parent-name>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</parent-name>
+          <remote-alias>GP_Practice_Code</remote-alias>
+          <ordinal>40</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6527</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Registered_patient</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Registered_patient]</local-name>
+          <parent-name>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</parent-name>
+          <remote-alias>Registered_patient</remote-alias>
+          <ordinal>41</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3284</approx-count>
+          <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Effective_Snapshot_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[Effective_Snapshot_Date (gp_practice_population_snapshot)]</local-name>
+          <parent-name>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</parent-name>
+          <remote-alias>Effective_Snapshot_Date</remote-alias>
+          <ordinal>42</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -1943,13 +2092,14 @@
           <local-name>[GP_Practice_Code (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</parent-name>
           <remote-alias>GP_Practice_Code</remote-alias>
-          <ordinal>40</ordinal>
+          <ordinal>43</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>8532</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Age_band</remote-name>
@@ -1957,13 +2107,14 @@
           <local-name>[Age_band]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</parent-name>
           <remote-alias>Age_band</remote-alias>
-          <ordinal>41</ordinal>
+          <ordinal>44</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>5</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Size</remote-name>
@@ -1971,12 +2122,13 @@
           <local-name>[Size (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</parent-name>
           <remote-alias>Size</remote-alias>
-          <ordinal>42</ordinal>
+          <ordinal>45</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>6152</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -1984,12 +2136,13 @@
           <local-name>[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</parent-name>
           <remote-alias>Effective_Snapshot_Date</remote-alias>
-          <ordinal>43</ordinal>
+          <ordinal>46</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>DataSourceFileForThisSnapshot_Version</remote-name>
@@ -1997,12 +2150,13 @@
           <local-name>[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</parent-name>
           <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-          <ordinal>44</ordinal>
+          <ordinal>47</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -2010,13 +2164,14 @@
           <local-name>[GP_Practice_Code]</local-name>
           <parent-name>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</parent-name>
           <remote-alias>GP_Practice_Code</remote-alias>
-          <ordinal>45</ordinal>
+          <ordinal>48</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>0</approx-count>
+          <approx-count>4852</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Sex</remote-name>
@@ -2024,13 +2179,14 @@
           <local-name>[Sex]</local-name>
           <parent-name>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</parent-name>
           <remote-alias>Sex</remote-alias>
-          <ordinal>46</ordinal>
+          <ordinal>49</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>0</approx-count>
+          <approx-count>2</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Size</remote-name>
@@ -2038,12 +2194,13 @@
           <local-name>[Size]</local-name>
           <parent-name>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</parent-name>
           <remote-alias>Size</remote-alias>
-          <ordinal>47</ordinal>
+          <ordinal>50</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>0</approx-count>
+          <approx-count>4440</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -2051,12 +2208,13 @@
           <local-name>[Effective_Snapshot_Date]</local-name>
           <parent-name>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</parent-name>
           <remote-alias>Effective_Snapshot_Date</remote-alias>
-          <ordinal>48</ordinal>
+          <ordinal>51</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>0</approx-count>
+          <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>DataSourceFileForThisSnapshot_Version</remote-name>
@@ -2064,12 +2222,13 @@
           <local-name>[DataSourceFileForThisSnapshot_Version]</local-name>
           <parent-name>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</parent-name>
           <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-          <ordinal>49</ordinal>
+          <ordinal>52</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>0</approx-count>
+          <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
       </metadata-records>
     </connection>
@@ -2095,6 +2254,14 @@
         </properties>
         <properties context='extract'>
           <relation name='dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6' table='[Extract].[dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6]' type='table' />
+        </properties>
+      </object>
+      <object caption='gp_practice_population_snapshot' id='gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E'>
+        <properties context=''>
+          <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E' table='[Extract].[gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E]' type='table' />
         </properties>
       </object>
       <object caption='odscodes_gp_mapping' id='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3'>
@@ -2146,6 +2313,14 @@
         </expression>
         <first-end-point object-id='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3' />
         <second-end-point object-id='dfpc_gp_survey_view_BEF8123F9575400995C429148744F5F6' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
+          <expression op='[GP_Practice_Code (gp_practice_population_snapshot)]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3' />
+        <second-end-point object-id='gp_practice_population_snapshot_9E5D21F87D7948F085CAE77D0560B33E' />
       </relationship>
       <relationship>
         <expression op='='>
