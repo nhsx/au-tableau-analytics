@@ -1272,7 +1272,7 @@
   <column caption='St Area(Shape)' datatype='real' name='[st_area(shape)]' role='measure' type='quantitative' />
   <column caption='St Length(Shape)' datatype='real' name='[st_length(shape)]' role='measure' type='quantitative' />
   <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/18/2022 06:04:45 PM' username='tableau_internal_user'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/18/2022 08:03:04 PM' username='tableau_internal_user'>
       <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' table='[Extract].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
         <relation name='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3' table='[Extract].[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]' type='table' />
@@ -1332,7 +1332,7 @@
         <map key='[st_length(shape)]' value='[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9].[st_length(shape)]' />
       </cols>
       <refresh>
-        <refresh-event add-from-file-path='gpit_v001' increment-value='%null%' refresh-type='create' rows-inserted='66250' timestamp-start='2022-01-18 18:04:45.979' />
+        <refresh-event add-from-file-path='gpit_v001' increment-value='%null%' refresh-type='create' rows-inserted='66250' timestamp-start='2022-01-18 20:03:04.547' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
