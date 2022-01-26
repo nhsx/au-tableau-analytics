@@ -3926,8 +3926,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[Longitude (generated)]' field-type='quantitative' max='296554.8023861777' min='-1310520.9028390818' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[Latitude (generated)]' field-type='quantitative' max='8015182.2030623769' min='5840088.3672515815' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[Longitude (generated)]' field-type='quantitative' max='1254070.9529668493' min='-1871217.8536603269' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[Latitude (generated)]' field-type='quantitative' max='9236615.6021923162' min='5006698.8681387585' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='mark'>
             <encoding attr='color' field='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:{KPI} M0140 - Current Month (int) (copy)_3892447112551292959:qk]' num-steps='5' type='custom-interpolated'>
@@ -5199,7 +5199,7 @@
                   </zone>
                   <zone h='97916' id='484' param='vert' type-v2='layout-flow' w='78333' x='21081' y='1042'>
                     <zone h='4558' id='756' name='Electronic Prescription Service  /  Caveats' show-title='false' w='78333' x='21081' y='1042'>
-                      <layout-cache fixed-size-h='27' type-h='fixed' type-w='fixed' />
+                      <layout-cache type-h='fixed' type-w='fixed' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
                         <format attr='border-style' value='none' />
@@ -5236,7 +5236,7 @@
                     </zone>
                     <zone h='41144' id='759' param='horz' type-v2='layout-flow' w='78333' x='21081' y='10679'>
                       <zone h='41144' id='760' name='[M083] Caveats' w='39166' x='21081' y='10679'>
-                        <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                        <layout-cache cell-count-w='1' fixed-size-h='171' type-h='fixed' type-w='cell' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -5245,7 +5245,7 @@
                         </zone-style>
                       </zone>
                       <zone h='41144' id='764' name='[M084] Caveats' w='39166' x='60247' y='10679'>
-                        <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                        <layout-cache cell-count-h='1' cell-count-w='1' non-cell-size-h='33' type-h='cell' type-w='cell' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
                           <format attr='border-style' value='none' />
@@ -6298,7 +6298,7 @@
             <zone h='21484' id='477' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='78331' x='21083' y='77474'>
               <zone h='21484' id='741' param='horz' type-v2='layout-flow' w='78331' x='21083' y='77474'>
                 <zone h='21484' id='745' name='Pop' show-title='false' w='17643' x='21083' y='77474'>
-                  <layout-cache fixed-size-h='88' fixed-size-w='233' type-h='fixed' type-w='fixed' />
+                  <layout-cache fixed-size-h='88' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -6941,7 +6941,7 @@
       </cards>
       <simple-id uuid='{E5823A1B-D49C-4572-992D-21224F2A0F57}' />
     </window>
-    <window class='worksheet' name='Age'>
+    <window class='worksheet' maximized='true' name='Age'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -7493,7 +7493,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='746' />
       <simple-id uuid='{6B4676A7-C466-4B37-8FB4-5201CF23142D}' />
     </window>
     <window class='dashboard' name='Geography'>
@@ -7532,10 +7532,10 @@
           <default-map-unit-selection mapunit='1' />
         </viewpoint>
       </viewpoints>
-      <active id='648' />
+      <active id='752' />
       <simple-id uuid='{F6D7C13F-562A-4E91-AD5D-D6961100165C}' />
     </window>
-    <window class='dashboard' maximized='true' name='Caveats'>
+    <window class='dashboard' name='Caveats'>
       <viewpoints>
         <viewpoint name='Connecting to patients'>
           <zoom type='entire-view' />
@@ -7551,7 +7551,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='762' />
+      <active id='764' />
       <simple-id uuid='{8D1A99B9-E2CD-413F-A52E-6741EC610C6E}' />
     </window>
     <window class='worksheet' name='Electronic Prescription Service  /  Geography'>
