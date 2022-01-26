@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20213.21.1018.0949                               -->
-<workbook source-build='2021.3.3 (20213.21.1018.0949)' source-platform='mac' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20213.21.1217.2247                               -->
+<workbook source-build='2021.3.6 (20213.21.1217.2247)' source-platform='mac' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
     <AutoCreateAndUpdateDSDPhoneLayouts />
@@ -18,7 +18,6 @@
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
-    <_.fcp.SingleValuePerNestSorting.true...SingleValuePerNestSorting />
     <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
@@ -1881,9 +1880,6 @@
           <filter class='categorical' column='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:GP_STP_Name:nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:GP_STP_Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
-          <_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
-            <single-value-per-nest-shelf-sort dimension-to-sort='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:Age_band:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:Age_band:nk]' shelf='rows' />
-          </_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
           <slices>
             <column>[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:GP_PCN_Name:nk]</column>
             <column>[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:GP_STP_Name:nk]</column>
@@ -2294,7 +2290,6 @@
             <format attr='width' value='233' />
             <format attr='height' value='88' />
             <format attr='color' value='#000000' />
-            <format attr='font-size' data-class='subtotal' value='15' />
           </style-rule>
         </style>
         <panes>
@@ -2855,9 +2850,6 @@
             <groupfilter function='level-members' level='[none:GP_STP_Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='relative-date' column='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:dfpc_gp_eps_Date:qk]' filter-group='5' first-period='-2' include-future='true' include-null='false' last-period='0' period-type-v2='year' />
-          <filter class='categorical' column='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[tmn:dfpc_gp_eps_Date:ok]'>
-            <groupfilter function='member' level='[tmn:dfpc_gp_eps_Date:ok]' member='#2021-07-01 00:00:00#' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
-          </filter>
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[tmn:dfpc_gp_eps_Date:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[usr:M050_GP practice appointment functionality enabled (%) (copy)_130463678569205766:qk]' shelf='columns' />
           </shelf-sorts>
@@ -2868,7 +2860,6 @@
             <column>[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:GP_Name:nk]</column>
             <column>[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:GP_CCG_Name:nk]</column>
             <column>[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[none:dfpc_gp_eps_Date:qk]</column>
-            <column>[sqlproxy.1b92hc11lrrsmf1euhqkd0z1nzz8].[tmn:dfpc_gp_eps_Date:ok]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -7471,7 +7462,7 @@
       </cards>
       <simple-id uuid='{02D78E49-B0B4-408A-B6DC-F1A92DEFC223}' />
     </window>
-    <window class='dashboard' maximized='true' name='Utilisation'>
+    <window class='dashboard' name='Utilisation'>
       <viewpoints>
         <viewpoint name='Age' />
         <viewpoint name='Connecting to patients'>
@@ -7502,10 +7493,10 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='745' />
+      <active id='746' />
       <simple-id uuid='{6B4676A7-C466-4B37-8FB4-5201CF23142D}' />
     </window>
-    <window class='dashboard' name='Geography'>
+    <window class='dashboard' maximized='true' name='Geography'>
       <viewpoints>
         <viewpoint name='Connecting to patients'>
           <zoom type='entire-view' />
