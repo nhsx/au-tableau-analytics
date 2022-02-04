@@ -17,7 +17,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='DigitseConnectTransfomDCT' path='/t/NHSX_DEV/workbooks' revision='2.3' site='NHSX_DEV' />
+  <repository-location id='DigitseConnectTransfomDCT' path='/t/NHSX_DEV/workbooks' revision='2.7' site='NHSX_DEV' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -117,6 +117,256 @@
           <member value='&quot;WEST YORKSHIRE AND HARROGATE HEALTH &amp; CARE PARTNERSHIP (STP)&quot;' />
         </members>
       </column>
+    </datasource>
+    <datasource caption='DCT_dspt_care_standards_year_count_prop_v001' inline='true' name='sqlproxy.068ap840ps0yec19bhr840f0blar' version='18.1'>
+      <repository-location id='DCT_dspt_care_standards_year_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+      <connection channel='https' class='sqlproxy' dbname='DCT_dspt_care_standards_year_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>dspt_care_standards_year_count_prop</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Number of social care organizations with a standards met or exceeded DSPT status</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of social care organizations with a standards met or exceeded DSPT status]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Number of social care organizations with a standards met or exceeded DSPT status</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>dspt_care_standards_year_count_prop</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Percent of social care organizations with a standards met or exceeded DSPT status</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent of social care organizations with a standards met or exceeded DSPT status]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Percent of social care organizations with a standards met or exceeded DSPT status</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>dspt_care_standards_year_count_prop</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Total number of social care organizations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total number of social care organizations]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Total number of social care organizations</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>dspt_care_standards_year_count_prop</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='datamodel_v001' inline='true' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location id='DCT_dspt_care_standards_year_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+  <connection channel='https' class='sqlproxy' dbname='DCT_dspt_care_standards_year_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[Date]' value='[sqlproxy].[Date]' />
+      <map key='[Number of social care organizations with a standards met or exceeded DSPT status]' value='[sqlproxy].[Number of social care organizations with a standards met or exceeded DSPT status]' />
+      <map key='[Percent of social care organizations with a standards met or exceeded DSPT status]' value='[sqlproxy].[Percent of social care organizations with a standards met or exceeded DSPT status]' />
+      <map key='[Total number of social care organizations]' value='[sqlproxy].[Total number of social care organizations]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='dspt_care_standards_year_count_prop' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='dspt_care_standards_year_count_prop' id='dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='hyper' version='0.0.0'>
+  </primary-dialect>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>true</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='update-time'>&quot;2/3/2022 4:28:36 PM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='monday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
+      </column>
+      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='{KPI} M011(int) - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
+      </column>
+      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of social care organizations with a standards met or exceeded DSPT status]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Percent of social care organizations with a standards met or exceeded DSPT status]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Total number of social care organizations]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='dspt_care_standards_year_count_prop' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column caption='{KPI} M011(int) - Previous Month (int)' datatype='integer' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M011(int) - Previous Year (int)' datatype='integer' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M011(int) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])/([{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
+      </column>
+      <column caption='{KPI} M011(int) - Previous Month (int) (copy)' datatype='integer' hidden='true' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290893830]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M011(int) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])/([{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
+      </column>
+      <column caption='{KPI} M012(%) -  △Year (%)' datatype='real' name='[{KPI} M012(%) -  △Month (%) (copy)_1590615160288608259]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' />
+      </column>
+      <column caption='{KPI} M012(%) - Previous Month (%)' datatype='real' name='[{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905] &#13;&#10;        AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Percent of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M012(%) -  △Month (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160286584833]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' />
+      </column>
+      <column caption='{KPI} M012(%) - Previous Year (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M012(%) - Current Month (%)' datatype='real' name='[{KPI} M015b - Current Year (int) (copy)_908038341715767296]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074] &#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.888298' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.111702' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='dspt_care_standards_year_count_prop' id='dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
     <datasource caption='DCT_gp_it_standards_year_prop_v001' inline='true' name='sqlproxy.1c0gc2s1c87rke1giwz971vyjy47' version='18.1'>
       <repository-location id='DCT_gp_it_standards_year_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
@@ -2890,256 +3140,6 @@
         </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='DCT_dspt_care_standards_year_count_prop_v001' inline='true' name='sqlproxy.068ap840ps0yec19bhr840f0blar' version='18.1'>
-      <repository-location id='DCT_dspt_care_standards_year_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-      <connection channel='https' class='sqlproxy' dbname='DCT_dspt_care_standards_year_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>Date</remote-name>
-            <remote-type>133</remote-type>
-            <local-name>[Date]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Date</remote-alias>
-            <ordinal>0</ordinal>
-            <layered>true</layered>
-            <family>dspt_care_standards_year_count_prop</family>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>1</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Number of social care organizations with a standards met or exceeded DSPT status</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Number of social care organizations with a standards met or exceeded DSPT status]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Number of social care organizations with a standards met or exceeded DSPT status</remote-alias>
-            <ordinal>1</ordinal>
-            <layered>true</layered>
-            <family>dspt_care_standards_year_count_prop</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Percent of social care organizations with a standards met or exceeded DSPT status</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Percent of social care organizations with a standards met or exceeded DSPT status]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Percent of social care organizations with a standards met or exceeded DSPT status</remote-alias>
-            <ordinal>3</ordinal>
-            <layered>true</layered>
-            <family>dspt_care_standards_year_count_prop</family>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Total number of social care organizations</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Total number of social care organizations]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Total number of social care organizations</remote-alias>
-            <ordinal>2</ordinal>
-            <layered>true</layered>
-            <family>dspt_care_standards_year_count_prop</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
-              <attribute datatype='integer' name='charset'>0</attribute>
-              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
-              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
-
-<datasource :source-version='18.1' formatted-name='datamodel_v001' inline='true' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
-  <document-format-change-manifest>
-    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
-    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
-    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
-    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
-  </document-format-change-manifest>
-  <repository-location id='DCT_dspt_care_standards_year_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-  <connection channel='https' class='sqlproxy' dbname='DCT_dspt_care_standards_year_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
-    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <cols>
-      <map key='[Date]' value='[sqlproxy].[Date]' />
-      <map key='[Number of social care organizations with a standards met or exceeded DSPT status]' value='[sqlproxy].[Number of social care organizations with a standards met or exceeded DSPT status]' />
-      <map key='[Percent of social care organizations with a standards met or exceeded DSPT status]' value='[sqlproxy].[Percent of social care organizations with a standards met or exceeded DSPT status]' />
-      <map key='[Total number of social care organizations]' value='[sqlproxy].[Total number of social care organizations]' />
-    </cols>
-  </connection>
-  <aliases enabled='yes' />
-  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='dspt_care_standards_year_count_prop' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-  <semantic-values>
-    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-  </semantic-values>
-  <date-options start-of-week='monday' />
-  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    <objects>
-      <object caption='dspt_care_standards_year_count_prop' id='dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95'>
-        <properties context=''>
-          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        </properties>
-      </object>
-    </objects>
-  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-</datasource>
-]]>&quot;</attribute>
-              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
-  <primary-dialect class='hyper' version='0.0.0'>
-  </primary-dialect>
-</dialect-definition>
-]]>&quot;</attribute>
-              <attribute datatype='boolean' name='extract-active'>true</attribute>
-              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;2/3/2022 4:28:36 PM&quot;</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <overridable-settings>
-        <date-options fiscal-year-start='january' start-of-week='monday' />
-        <default-date-format />
-        <default-calendar-type>Gregorian</default-calendar-type>
-      </overridable-settings>
-      <aliases enabled='yes' />
-      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
-        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
-      </column>
-      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='{KPI} M011(int) - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
-      </column>
-      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of social care organizations with a standards met or exceeded DSPT status]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Percent of social care organizations with a standards met or exceeded DSPT status]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
-      </column>
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Total number of social care organizations]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='dspt_care_standards_year_count_prop' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-      <column caption='{KPI} M011(int) - Previous Month (int)' datatype='integer' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M011(int) - Previous Year (int)' datatype='integer' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M011(int) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])/([{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
-      </column>
-      <column caption='{KPI} M011(int) - Previous Month (int) (copy)' datatype='integer' hidden='true' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290893830]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Number of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M011(int) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])/([{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
-      </column>
-      <column caption='{KPI} M012(%) -  △Year (%)' datatype='real' name='[{KPI} M012(%) -  △Month (%) (copy)_1590615160288608259]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' />
-      </column>
-      <column caption='{KPI} M012(%) - Previous Month (%)' datatype='real' name='[{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905] &#13;&#10;        AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Percent of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M012(%) -  △Month (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160286584833]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' />
-      </column>
-      <column caption='{KPI} M012(%) - Previous Year (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M012(%) - Current Month (%)' datatype='real' name='[{KPI} M015b - Current Year (int) (copy)_908038341715767296]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074] &#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of social care organizations with a standards met or exceeded DSPT status]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.888298' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.111702' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='dspt_care_standards_year_count_prop' id='dspt_care_standards_year_count_prop_8EF03DA254D741228D87C6896529BE95'>
-            <properties context=''>
-              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
   </datasources>
   <mapsources>
     <mapsource name='Tableau' />
@@ -3550,7 +3550,7 @@
             </encodings>
             <customized-tooltip>
               <formatted-text>
-                <run bold='true' fontcolor='#000000' fontname='Arial' fontsize='11'>Adult Social Organisations Data Security Standards </run>
+                <run bold='true' fontcolor='#000000' fontname='Arial' fontsize='11'>Adult Social Care Organisations Data Security Standards </run>
                 <run fontcolor='#000000' fontname='Arial' fontsize='11'><![CDATA[(<[sqlproxy.068ap840ps0yec19bhr840f0blar].[tmn:Date:qk]>)]]></run>
                 <run>Æ&#10;</run>
                 <run bold='true' fontcolor='#000000' fontname='Arial' fontsize='11'><![CDATA[∙ <[sqlproxy.068ap840ps0yec19bhr840f0blar].[sum:Percent of social care organizations with a standards met or exceeded DSPT status:qk]> ]]></run>
@@ -3593,7 +3593,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run fontcolor='#000000' fontname='Arial' fontsize='12'>Adult Social Organisations Data Security Standards</run>
+            <run fontcolor='#000000' fontname='Arial' fontsize='12'>Adult Social Care Organisations Data Security Standards</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -12921,7 +12921,7 @@
               </zone>
               <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='44660' id='1008' param='vert' w='27599' x='44436' y='9897'>
                 <zone h='14063' id='1010' name='[M020A] KPI' w='27014' x='44582' y='10157'>
-                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <layout-cache fixed-size-h='100' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -12985,12 +12985,13 @@
                     </zone-style>
                   </zone>
                   <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='44401' id='1013' param='vert' w='27598' x='44437' y='54557'>
-                    <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' fixed-size='299' forceUpdate='true' h='39974' id='1017' is-fixed='true' w='27013' x='44583' y='54817'>
+                    <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' fixed-size='271' forceUpdate='true' h='36328' id='1017' is-fixed='true' w='27013' x='44583' y='54817'>
                       <formatted-text>
                         <run fontalignment='1'>Æ&#10;</run>
-                        <run bold='true' fontalignment='1' fontcolor='#ff0000' fontname='Arial' fontsize='11'>PLACEHOLDER:</run>
-                        <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial' fontsize='11'> Further Multi-setting/ICS metrics are in development</run>
-                        <run>Æ&#10;</run>
+                        <run bold='true' fontalignment='1' fontcolor='#003087' fontname='Arial' fontsize='11'>PLACEHOLDER: </run>
+                        <run fontalignment='1'>Æ&#10;</run>
+                        <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial' fontsize='11'>Further Multi-setting/ICB metrics are in development</run>
+                        <run fontalignment='1'>Æ&#10;</run>
                       </formatted-text>
                       <zone-style>
                         <format attr='border-color' value='#000000' />
@@ -13012,10 +13013,11 @@
             </zone>
           </zone>
           <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='44401' id='1018' param='vert' w='27379' x='72035' y='54557'>
-            <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' fixed-size='299' h='39974' id='1019' is-fixed='true' w='26794' x='72181' y='54817'>
+            <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' fixed-size='299' forceUpdate='true' h='39974' id='1019' is-fixed='true' w='26794' x='72181' y='54817'>
               <formatted-text>
-                <run bold='true' fontalignment='1' fontcolor='#ff0000' fontname='Arial' fontsize='11'>PLACEHOLDER:</run>
-                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial' fontsize='11'> Adoption of digital social care records by CQC registered social care providers are in development</run>
+                <run bold='true' fontalignment='1' fontcolor='#003087' fontname='Arial' fontsize='11'>PLACEHOLDER: </run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial' fontsize='11'>Adoption of digital social care records by CQC registered social care providers are in development</run>
               </formatted-text>
               <zone-style>
                 <format attr='border-color' value='#000000' />
@@ -17953,346 +17955,349 @@
       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
-      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
+      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
+      SUVORK5CYII=
     </thumbnail>
     <thumbnail height='72' name='POMI/USAGE' width='576'>
       iVBORw0KGgoAAAANSUhEUgAAAkAAAABICAYAAAAeVkpyAAAACXBIWXMAAA7DAAAOwwHHb6hk
