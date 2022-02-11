@@ -16,7 +16,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='DigitseConnectTransfomDCT' path='/t/NHSX_DEV/workbooks' revision='5.8' site='NHSX_DEV' />
+  <repository-location id='DigitseConnectTransfomDCT' path='/t/NHSX_DEV/workbooks' revision='6.2' site='NHSX_DEV' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -1126,485 +1126,6 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='DCT_trusts_ailab_solutions_month_count_prop_v001' inline='true' name='sqlproxy.0d6i17s0phaogj159ktrk0l14erw' version='18.1'>
-      <repository-location id='DCT_trusts_ailab_solutions_month_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-      <connection channel='https' class='sqlproxy' dbname='DCT_trusts_ailab_solutions_month_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>Date</remote-name>
-            <remote-type>133</remote-type>
-            <local-name>[Date]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Date</remote-alias>
-            <ordinal>0</ordinal>
-            <layered>true</layered>
-            <family>trusts_ailab_solutions_month_count_prop</family>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>1</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Number of Trusts with at least one NHS AI Lab solution trialled</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Number of Trusts with at least one NHS AI Lab solution trialled]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Number of Trusts with at least one NHS AI Lab solution trialled</remote-alias>
-            <ordinal>1</ordinal>
-            <layered>true</layered>
-            <family>trusts_ailab_solutions_month_count_prop</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Percent of Trusts with at least one NHS AI Lab solution trialled</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Percent of Trusts with at least one NHS AI Lab solution trialled]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Percent of Trusts with at least one NHS AI Lab solution trialled</remote-alias>
-            <ordinal>3</ordinal>
-            <layered>true</layered>
-            <family>trusts_ailab_solutions_month_count_prop</family>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Total number of Trusts</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Total number of Trusts]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Total number of Trusts</remote-alias>
-            <ordinal>2</ordinal>
-            <layered>true</layered>
-            <family>trusts_ailab_solutions_month_count_prop</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
-              <attribute datatype='integer' name='charset'>0</attribute>
-              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
-              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
-
-<datasource :source-version='18.1' formatted-name='DCT_dspt_care_standards_year_count_prop_v001' inline='true' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
-  <document-format-change-manifest>
-    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
-    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
-    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
-    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
-  </document-format-change-manifest>
-  <repository-location id='DCT_trusts_ailab_solutions_month_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-  <connection channel='https' class='sqlproxy' dbname='DCT_trusts_ailab_solutions_month_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
-    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <cols>
-      <map key='[Date]' value='[sqlproxy].[Date]' />
-      <map key='[Number of Trusts with at least one NHS AI Lab solution trialled]' value='[sqlproxy].[Number of Trusts with at least one NHS AI Lab solution trialled]' />
-      <map key='[Percent of Trusts with at least one NHS AI Lab solution trialled]' value='[sqlproxy].[Percent of Trusts with at least one NHS AI Lab solution trialled]' />
-      <map key='[Total number of Trusts]' value='[sqlproxy].[Total number of Trusts]' />
-    </cols>
-  </connection>
-  <aliases enabled='yes' />
-  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='trusts_ailab_solutions_month_count_prop' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-  <semantic-values>
-    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-  </semantic-values>
-  <date-options start-of-week='monday' />
-  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    <objects>
-      <object caption='trusts_ailab_solutions_month_count_prop' id='trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D'>
-        <properties context=''>
-          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        </properties>
-      </object>
-    </objects>
-  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-</datasource>
-]]>&quot;</attribute>
-              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
-  <primary-dialect class='hyper' version='0.0.0'>
-  </primary-dialect>
-</dialect-definition>
-]]>&quot;</attribute>
-              <attribute datatype='boolean' name='extract-active'>true</attribute>
-              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;2/8/2022 11:13:27 AM&quot;</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <overridable-settings>
-        <date-options fiscal-year-start='january' start-of-week='monday' />
-        <default-date-format />
-        <default-calendar-type>Gregorian</default-calendar-type>
-      </overridable-settings>
-      <aliases enabled='yes' />
-      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
-        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
-      </column>
-      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='{KPI} M022(int) - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
-      </column>
-      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of Trusts with at least one NHS AI Lab solution trialled]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Percent of Trusts with at least one NHS AI Lab solution trialled]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
-      </column>
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Total number of Trusts]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='trusts_ailab_solutions_month_count_prop' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-      <column caption='{KPI} M022(int) - Previous Month (int)' datatype='integer' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Number of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M022(int) - Previous Year (int)' datatype='integer' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M022(int) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])/([{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
-      </column>
-      <column caption='{KPI} M022(int) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])/([{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
-      </column>
-      <column caption='{KPI} M023(%) -  △Year (%)' datatype='real' name='[{KPI} M012(%) -  △Month (%) (copy)_1590615160288608259]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' />
-      </column>
-      <column caption='{KPI} M023(%) - Previous Month (%)' datatype='real' name='[{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905] &#13;&#10;        AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Percent of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M023(%) -  △Month (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160286584833]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' />
-      </column>
-      <column caption='{KPI} M023(%) - Previous Year (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M023(%) - Current Month (%)' datatype='real' name='[{KPI} M015b - Current Year (int) (copy)_908038341715767296]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074] &#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='trusts_ailab_solutions_month_count_prop' id='trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D'>
-            <properties context=''>
-              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
-    <datasource caption='DCT_pomi_patient_enabled_month_prop_v001' inline='true' name='sqlproxy.07st5vc1wfpptr1ejr4xw1yl331s' version='18.1'>
-      <repository-location id='DCT_pomi_patient_enabled_month_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-      <connection channel='https' class='sqlproxy' dbname='DCT_pomi_patient_enabled_month_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>Date</remote-name>
-            <remote-type>133</remote-type>
-            <local-name>[Date]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Date</remote-alias>
-            <ordinal>0</ordinal>
-            <layered>true</layered>
-            <family>pomi_patient_enabled_month_prop</family>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>1</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Number of patients enabled to manage appointments online</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Number of patients enabled to manage appointments online]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Number of patients enabled to manage appointments online</remote-alias>
-            <ordinal>1</ordinal>
-            <layered>true</layered>
-            <family>pomi_patient_enabled_month_prop</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Percent of patients enabled to manage appointments online</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Percent of patients enabled to manage appointments online]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Percent of patients enabled to manage appointments online</remote-alias>
-            <ordinal>3</ordinal>
-            <layered>true</layered>
-            <family>pomi_patient_enabled_month_prop</family>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Total number of patients</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Total number of patients]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Total number of patients</remote-alias>
-            <ordinal>2</ordinal>
-            <layered>true</layered>
-            <family>pomi_patient_enabled_month_prop</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
-              <attribute datatype='integer' name='charset'>0</attribute>
-              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
-              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
-
-<datasource :source-version='18.1' formatted-name='DCT_dspt_care_standards_year_count_prop_v001' inline='true' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
-  <document-format-change-manifest>
-    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
-    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
-    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
-    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
-  </document-format-change-manifest>
-  <repository-location id='DCT_pomi_patient_enabled_month_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-  <connection channel='https' class='sqlproxy' dbname='DCT_pomi_patient_enabled_month_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
-    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <cols>
-      <map key='[Date]' value='[sqlproxy].[Date]' />
-      <map key='[Number of patients enabled to manage appointments online]' value='[sqlproxy].[Number of patients enabled to manage appointments online]' />
-      <map key='[Percent of patients enabled to manage appointments online]' value='[sqlproxy].[Percent of patients enabled to manage appointments online]' />
-      <map key='[Total number of patients]' value='[sqlproxy].[Total number of patients]' />
-    </cols>
-  </connection>
-  <aliases enabled='yes' />
-  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='pomi_patient_enabled_month_prop' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-  <semantic-values>
-    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-  </semantic-values>
-  <date-options start-of-week='monday' />
-  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    <objects>
-      <object caption='pomi_patient_enabled_month_prop' id='pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0'>
-        <properties context=''>
-          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        </properties>
-      </object>
-    </objects>
-  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-</datasource>
-]]>&quot;</attribute>
-              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
-  <primary-dialect class='hyper' version='0.0.0'>
-  </primary-dialect>
-</dialect-definition>
-]]>&quot;</attribute>
-              <attribute datatype='boolean' name='extract-active'>true</attribute>
-              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;2/8/2022 11:20:38 AM&quot;</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <overridable-settings>
-        <date-options fiscal-year-start='january' start-of-week='monday' />
-        <default-date-format />
-        <default-calendar-type>Gregorian</default-calendar-type>
-      </overridable-settings>
-      <aliases enabled='yes' />
-      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
-        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
-      </column>
-      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='{KPI} M043(%) - Current Month (%)' datatype='real' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of patients enabled to manage appointments online]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
-      </column>
-      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of patients enabled to manage appointments online]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Percent of patients enabled to manage appointments online]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
-      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
-      </column>
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Total number of patients]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='pomi_patient_enabled_month_prop' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-      <column caption='{KPI} M043(%) - Previous Month (%)' datatype='real' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Percent of patients enabled to manage appointments online]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M043(%) - Previous Year (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of patients enabled to manage appointments online]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M043(%) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
-      </column>
-      <column caption='{KPI} M043(%) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
-      </column>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='pomi_patient_enabled_month_prop' id='pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0'>
-            <properties context=''>
-              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
     <datasource caption='DCT_toc_messages_sent_week_count_v001' inline='true' name='sqlproxy.0is697g0nuvv0t1bsobxb1r28hph' version='18.1'>
       <repository-location derived-from='/datasources/DCT_toc_messages_sent_week_count_v001?rev=1.0' id='DCT_toc_messages_sent_week_count_v001' path='/t/NHSX_DEV/datasources' revision='1.1' site='NHSX_DEV' />
       <connection channel='https' class='sqlproxy' dbname='DCT_toc_messages_sent_week_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
@@ -1871,9 +1392,9 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='DCT_gp_records_api_month_count_v001' inline='true' name='sqlproxy.0pi98e40glruii11hck8502qe7au' version='18.1'>
-      <repository-location id='DCT_gp_records_api_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-      <connection channel='https' class='sqlproxy' dbname='DCT_gp_records_api_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
+    <datasource caption='DCT_pomi_patient_enabled_month_prop_v001' inline='true' name='sqlproxy.07st5vc1wfpptr1ejr4xw1yl331s' version='18.1'>
+      <repository-location id='DCT_pomi_patient_enabled_month_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+      <connection channel='https' class='sqlproxy' dbname='DCT_pomi_patient_enabled_month_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
         <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
         <metadata-records>
@@ -1885,7 +1406,7 @@
             <remote-alias>Date</remote-alias>
             <ordinal>0</ordinal>
             <layered>true</layered>
-            <family>gp_records_api_month_count</family>
+            <family>pomi_patient_enabled_month_prop</family>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
@@ -1893,24 +1414,58 @@
               <attribute datatype='integer' name='field-type'>1</attribute>
               <attribute datatype='integer' name='role'>0</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='measure'>
-            <remote-name>Number of GP records accessed using the digital API</remote-name>
+            <remote-name>Number of patients enabled to manage appointments online</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[Number of GP records accessed using the digital API]</local-name>
+            <local-name>[Number of patients enabled to manage appointments online]</local-name>
             <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Number of GP records accessed using the digital API</remote-alias>
+            <remote-alias>Number of patients enabled to manage appointments online</remote-alias>
             <ordinal>1</ordinal>
             <layered>true</layered>
-            <family>gp_records_api_month_count</family>
+            <family>pomi_patient_enabled_month_prop</family>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
             <attributes>
               <attribute datatype='integer' name='field-type'>0</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Percent of patients enabled to manage appointments online</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent of patients enabled to manage appointments online]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Percent of patients enabled to manage appointments online</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>pomi_patient_enabled_month_prop</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Total number of patients</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total number of patients]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Total number of patients</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>pomi_patient_enabled_month_prop</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='capability'>
             <remote-name />
@@ -1946,13 +1501,15 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
   </document-format-change-manifest>
-  <repository-location id='DCT_gp_records_api_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
-  <connection channel='https' class='sqlproxy' dbname='DCT_gp_records_api_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
+  <repository-location id='DCT_pomi_patient_enabled_month_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+  <connection channel='https' class='sqlproxy' dbname='DCT_pomi_patient_enabled_month_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
     <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
     <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
     <cols>
       <map key='[Date]' value='[sqlproxy].[Date]' />
-      <map key='[Number of GP records accessed using the digital API]' value='[sqlproxy].[Number of GP records accessed using the digital API]' />
+      <map key='[Number of patients enabled to manage appointments online]' value='[sqlproxy].[Number of patients enabled to manage appointments online]' />
+      <map key='[Percent of patients enabled to manage appointments online]' value='[sqlproxy].[Percent of patients enabled to manage appointments online]' />
+      <map key='[Total number of patients]' value='[sqlproxy].[Total number of patients]' />
     </cols>
   </connection>
   <aliases enabled='yes' />
@@ -1970,7 +1527,7 @@
   <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
   <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
   <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='gp_records_api_month_count' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='pomi_patient_enabled_month_prop' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
   <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
   <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
   <semantic-values>
@@ -1979,7 +1536,7 @@
   <date-options start-of-week='monday' />
   <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     <objects>
-      <object caption='gp_records_api_month_count' id='gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D'>
+      <object caption='pomi_patient_enabled_month_prop' id='pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0'>
         <properties context=''>
           <relation name='sqlproxy' table='[sqlproxy]' type='table' />
         </properties>
@@ -1995,7 +1552,7 @@
 ]]>&quot;</attribute>
               <attribute datatype='boolean' name='extract-active'>true</attribute>
               <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;2/4/2022 11:09:54 AM&quot;</attribute>
+              <attribute datatype='string' name='update-time'>&quot;2/8/2022 11:20:38 AM&quot;</attribute>
             </attributes>
           </metadata-record>
         </metadata-records>
@@ -2018,14 +1575,11 @@
       <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
       </column>
-      <column caption='{KPI} M016 - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of GP records accessed using the digital API]&#10;    ELSE NULL&#10;    END)' />
+      <column caption='{KPI} M043(%) - Current Month (%)' datatype='real' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of patients enabled to manage appointments online]&#10;    ELSE NULL&#10;    END)' />
       </column>
-      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840 1]' role='dimension' type='nominal'>
+      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
         <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
-      </column>
-      <column caption='Current Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
       </column>
       <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
@@ -2033,35 +1587,28 @@
       <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
       </column>
-      <column caption='Previous Year (string) ' datatype='string' name='[Current Year (string) (copy)_923800940567330817]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='RIGHT(DATENAME(&quot;year&quot;,[Prev Month (date) (copy)_1170935962615070727]),4)' />
-      </column>
       <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of GP records accessed using the digital API]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of patients enabled to manage appointments online]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Percent of patients enabled to manage appointments online]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
       <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
       </column>
       <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
       </column>
-      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='gp_records_api_month_count' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-      <column caption='{KPI} M016 - Year △ (%)' datatype='real' default-format='*+#.#%;-#.#%;=' name='[{KPI} M016 - Month △ (%) (copy)_287667426499497986]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF [{KPI} M016- Month △ (int) (copy)_287667426498621441] = 0 THEN 0&#10;ELSE [{KPI} M016- Month △ (int) (copy)_287667426498621441]/[{KPI} M016 - Prev Month (int) (copy)_287667426497974272]&#10;END' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Total number of patients]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='pomi_patient_enabled_month_prop' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column caption='{KPI} M043(%) - Previous Month (%)' datatype='real' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Percent of patients enabled to manage appointments online]&#10;    ELSE NULL&#10;    END)' />
       </column>
-      <column caption='{KPI} M016 - Prev Year (int)' datatype='integer' name='[{KPI} M016 - Prev Month (int) (copy)_287667426497974272]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#13;&#10;    THEN [Number of GP records accessed using the digital API]&#13;&#10;    ELSE NULL&#13;&#10;    END)' />
+      <column caption='{KPI} M043(%) - Previous Year (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of patients enabled to manage appointments online]&#10;    ELSE NULL&#10;    END)' />
       </column>
-      <column caption='{KPI} M016- Year △ (int) ' datatype='integer' default-format='*+#,#;-#,#;=' name='[{KPI} M016- Month △ (int) (copy)_287667426498621441]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[Calculation_3060758924673638404]-[{KPI} M016 - Prev Month (int) (copy)_287667426497974272]' />
+      <column caption='{KPI} M043(%) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
       </column>
-      <column caption='{KPI} M016 - Month △ (%)' datatype='real' default-format='*+#.#%;-#.#%;=' name='[{KPI} M053 - Month △ (%) (copy)_1170935962624991242]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF [{KPI} M053 - Month △ (int) (copy)_1170935962625097739] = 0 THEN 0&#10;ELSE [{KPI} M053 - Month △ (int) (copy)_1170935962625097739]/[{KPI} M053 - Prev Month (int) (copy)_1170935962624712713]&#10;END' />
-      </column>
-      <column caption='{KPI} M016- Month △ (int)' datatype='integer' default-format='*+#,#;-#,#;=' name='[{KPI} M053 - Month △ (int) (copy)_1170935962625097739]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[Calculation_3060758924673638404]-[{KPI} M053 - Prev Month (int) (copy)_1170935962624712713]' />
-      </column>
-      <column caption='{KPI} M016 - Prev Month (int)' datatype='integer' name='[{KPI} M053 - Prev Month (int) (copy)_1170935962624712713]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#13;&#10;    THEN [Number of GP records accessed using the digital API]&#13;&#10;    ELSE NULL&#13;&#10;    END)' />
+      <column caption='{KPI} M043(%) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
       </column>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
@@ -2069,7 +1616,7 @@
       </semantic-values>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='gp_records_api_month_count' id='gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D'>
+          <object caption='pomi_patient_enabled_month_prop' id='pomi_patient_enabled_month_prop_4BDB9936DAED4C7A9E39D0189E2FD9C0'>
             <properties context=''>
               <relation name='sqlproxy' table='[sqlproxy]' type='table' />
             </properties>
@@ -2451,6 +1998,212 @@
         </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
+    <datasource caption='DCT_gp_records_api_month_count_v001' inline='true' name='sqlproxy.0pi98e40glruii11hck8502qe7au' version='18.1'>
+      <repository-location id='DCT_gp_records_api_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+      <connection channel='https' class='sqlproxy' dbname='DCT_gp_records_api_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>gp_records_api_month_count</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Number of GP records accessed using the digital API</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of GP records accessed using the digital API]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Number of GP records accessed using the digital API</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>gp_records_api_month_count</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='DCT_dspt_care_standards_year_count_prop_v001' inline='true' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location id='DCT_gp_records_api_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+  <connection channel='https' class='sqlproxy' dbname='DCT_gp_records_api_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[Date]' value='[sqlproxy].[Date]' />
+      <map key='[Number of GP records accessed using the digital API]' value='[sqlproxy].[Number of GP records accessed using the digital API]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='gp_records_api_month_count' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='gp_records_api_month_count' id='gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='hyper' version='0.0.0'>
+  </primary-dialect>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>true</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='update-time'>&quot;2/4/2022 11:09:54 AM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='monday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
+      </column>
+      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='{KPI} M016 - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of GP records accessed using the digital API]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840 1]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
+      </column>
+      <column caption='Current Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
+      </column>
+      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column caption='Previous Year (string) ' datatype='string' name='[Current Year (string) (copy)_923800940567330817]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='RIGHT(DATENAME(&quot;year&quot;,[Prev Month (date) (copy)_1170935962615070727]),4)' />
+      </column>
+      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of GP records accessed using the digital API]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='gp_records_api_month_count' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column caption='{KPI} M016 - Year △ (%)' datatype='real' default-format='*+#.#%;-#.#%;=' name='[{KPI} M016 - Month △ (%) (copy)_287667426499497986]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [{KPI} M016- Month △ (int) (copy)_287667426498621441] = 0 THEN 0&#10;ELSE [{KPI} M016- Month △ (int) (copy)_287667426498621441]/[{KPI} M016 - Prev Month (int) (copy)_287667426497974272]&#10;END' />
+      </column>
+      <column caption='{KPI} M016 - Prev Year (int)' datatype='integer' name='[{KPI} M016 - Prev Month (int) (copy)_287667426497974272]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#13;&#10;    THEN [Number of GP records accessed using the digital API]&#13;&#10;    ELSE NULL&#13;&#10;    END)' />
+      </column>
+      <column caption='{KPI} M016- Year △ (int) ' datatype='integer' default-format='*+#,#;-#,#;=' name='[{KPI} M016- Month △ (int) (copy)_287667426498621441]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_3060758924673638404]-[{KPI} M016 - Prev Month (int) (copy)_287667426497974272]' />
+      </column>
+      <column caption='{KPI} M016 - Month △ (%)' datatype='real' default-format='*+#.#%;-#.#%;=' name='[{KPI} M053 - Month △ (%) (copy)_1170935962624991242]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [{KPI} M053 - Month △ (int) (copy)_1170935962625097739] = 0 THEN 0&#10;ELSE [{KPI} M053 - Month △ (int) (copy)_1170935962625097739]/[{KPI} M053 - Prev Month (int) (copy)_1170935962624712713]&#10;END' />
+      </column>
+      <column caption='{KPI} M016- Month △ (int)' datatype='integer' default-format='*+#,#;-#,#;=' name='[{KPI} M053 - Month △ (int) (copy)_1170935962625097739]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_3060758924673638404]-[{KPI} M053 - Prev Month (int) (copy)_1170935962624712713]' />
+      </column>
+      <column caption='{KPI} M016 - Prev Month (int)' datatype='integer' name='[{KPI} M053 - Prev Month (int) (copy)_1170935962624712713]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#13;&#10;    THEN [Number of GP records accessed using the digital API]&#13;&#10;    ELSE NULL&#13;&#10;    END)' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='gp_records_api_month_count' id='gp_records_api_month_count_6205E915AB0945F18ACD323A139A7C7D'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
     <datasource caption='DCT_toc_messages_sent_admitted_patient_month_prop_v001' inline='true' name='sqlproxy.0nuq5g91lnboc41eybmmm1cke09g' version='18.1'>
       <repository-location id='DCT_toc_messages_sent_admitted_patient_month_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
       <connection channel='https' class='sqlproxy' dbname='DCT_toc_messages_sent_admitted_patient_month_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
@@ -2695,6 +2448,466 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
+    <datasource caption='DCT_github_gitlab_openrepos_month_count_v001' inline='true' name='sqlproxy.1sgdj0s1vp52m319md2it1tbmsyx' version='18.1'>
+      <repository-location derived-from='/datasources/DCT_github_gitlab_openrepos_month_count_v001?rev=1.0' id='DCT_github_gitlab_openrepos_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.1' site='NHSX_DEV' />
+      <connection channel='https' class='sqlproxy' dbname='DCT_github_gitlab_openrepos_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <metadata-records>
+          <metadata-record class='measure'>
+            <remote-name>Cumulative number of open repositories</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cumulative number of open repositories]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Cumulative number of open repositories</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>github_gitlab_openrepos_month_count</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>github_gitlab_openrepos_month_count</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Number of new open repositories</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of new open repositories]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Number of new open repositories</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>github_gitlab_openrepos_month_count</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='DCT_dspt_care_standards_year_count_prop_v001' inline='true' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location derived-from='/datasources/DCT_github_gitlab_openrepos_month_count_v001?rev=1.0' id='DCT_github_gitlab_openrepos_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.1' site='NHSX_DEV' />
+  <connection channel='https' class='sqlproxy' dbname='DCT_github_gitlab_openrepos_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[Cumulative number of open repositories]' value='[sqlproxy].[Cumulative number of open repositories]' />
+      <map key='[Date]' value='[sqlproxy].[Date]' />
+      <map key='[Number of new open repositories]' value='[sqlproxy].[Number of new open repositories]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='github_gitlab_openrepos_month_count' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='github_gitlab_openrepos_month_count' id='github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='hyper' version='0.0.0'>
+  </primary-dialect>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>true</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='update-time'>&quot;2/8/2022 11:32:07 AM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='monday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
+      </column>
+      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='{KPI} M027(int) - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Cumulative number of open repositories]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
+      </column>
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Cumulative number of open repositories]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of new open repositories]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='github_gitlab_openrepos_month_count' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column caption='{KPI} M027(int) - Previous Month (int)' datatype='integer' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Cumulative number of open repositories]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M027(int) - Previous Year (int)' datatype='integer' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Cumulative number of open repositories]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M027(int) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])/([{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
+      </column>
+      <column caption='{KPI} M027(int) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])/([{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='github_gitlab_openrepos_month_count' id='github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='DCT_trusts_ailab_solutions_month_count_prop_v001' inline='true' name='sqlproxy.0d6i17s0phaogj159ktrk0l14erw' version='18.1'>
+      <repository-location id='DCT_trusts_ailab_solutions_month_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+      <connection channel='https' class='sqlproxy' dbname='DCT_trusts_ailab_solutions_month_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>trusts_ailab_solutions_month_count_prop</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Number of Trusts with at least one NHS AI Lab solution trialled</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Trusts with at least one NHS AI Lab solution trialled]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Number of Trusts with at least one NHS AI Lab solution trialled</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>trusts_ailab_solutions_month_count_prop</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Percent of Trusts with at least one NHS AI Lab solution trialled</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent of Trusts with at least one NHS AI Lab solution trialled]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Percent of Trusts with at least one NHS AI Lab solution trialled</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>trusts_ailab_solutions_month_count_prop</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Total number of Trusts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total number of Trusts]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Total number of Trusts</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>trusts_ailab_solutions_month_count_prop</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='DCT_dspt_care_standards_year_count_prop_v001' inline='true' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location id='DCT_trusts_ailab_solutions_month_count_prop_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
+  <connection channel='https' class='sqlproxy' dbname='DCT_trusts_ailab_solutions_month_count_prop_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[Date]' value='[sqlproxy].[Date]' />
+      <map key='[Number of Trusts with at least one NHS AI Lab solution trialled]' value='[sqlproxy].[Number of Trusts with at least one NHS AI Lab solution trialled]' />
+      <map key='[Percent of Trusts with at least one NHS AI Lab solution trialled]' value='[sqlproxy].[Percent of Trusts with at least one NHS AI Lab solution trialled]' />
+      <map key='[Total number of Trusts]' value='[sqlproxy].[Total number of Trusts]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='trusts_ailab_solutions_month_count_prop' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='trusts_ailab_solutions_month_count_prop' id='trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='hyper' version='0.0.0'>
+  </primary-dialect>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>true</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='update-time'>&quot;2/8/2022 11:13:27 AM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='monday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
+      </column>
+      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
+      </column>
+      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='{KPI} M022(int) - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
+      </column>
+      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
+      </column>
+      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of Trusts with at least one NHS AI Lab solution trialled]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Percent of Trusts with at least one NHS AI Lab solution trialled]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
+      </column>
+      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Total number of Trusts]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
+      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='trusts_ailab_solutions_month_count_prop' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column caption='{KPI} M022(int) - Previous Month (int)' datatype='integer' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Number of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M022(int) - Previous Year (int)' datatype='integer' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Number of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M022(int) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])/([{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
+      </column>
+      <column caption='{KPI} M022(int) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])/([{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
+      </column>
+      <column caption='{KPI} M023(%) -  △Year (%)' datatype='real' name='[{KPI} M012(%) -  △Month (%) (copy)_1590615160288608259]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' />
+      </column>
+      <column caption='{KPI} M023(%) - Previous Month (%)' datatype='real' name='[{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905] &#13;&#10;        AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Percent of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M023(%) -  △Month (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160286584833]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[{KPI} M015b - Current Year (int) (copy)_908038341715767296] - [{KPI} M012(%) - Current Month (%) (copy)_1590615160286408704]' />
+      </column>
+      <column caption='{KPI} M023(%) - Previous Year (%)' datatype='real' name='[{KPI} M012(%) - Previous Month (%) (copy)_1590615160288423938]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <column caption='{KPI} M023(%) - Current Month (%)' datatype='real' name='[{KPI} M015b - Current Year (int) (copy)_908038341715767296]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074] &#13;&#10;        AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Percent of Trusts with at least one NHS AI Lab solution trialled]&#10;    ELSE NULL&#10;    END)' />
+      </column>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='trusts_ailab_solutions_month_count_prop' id='trusts_ailab_solutions_month_count_prop_6E17F33E3E5A4CE4A1DE30B5114FCA7D'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
     <datasource caption='DCT_pomi_appointments_month_count_v001' inline='true' name='sqlproxy.08pxdhi1kmluwb1h9hz5e04oqet9' version='18.1'>
       <repository-location id='DCT_pomi_appointments_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.0' site='NHSX_DEV' />
       <connection channel='https' class='sqlproxy' dbname='DCT_pomi_appointments_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
@@ -2903,219 +3116,6 @@
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
           <object caption='pomi_appointments_month_count' id='pomi_appointments_month_count_DB340C4B09434B96A92A492D3838D324'>
-            <properties context=''>
-              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
-    <datasource caption='DCT_github_gitlab_openrepos_month_count_v001' inline='true' name='sqlproxy.1sgdj0s1vp52m319md2it1tbmsyx' version='18.1'>
-      <repository-location derived-from='/datasources/DCT_github_gitlab_openrepos_month_count_v001?rev=1.0' id='DCT_github_gitlab_openrepos_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.1' site='NHSX_DEV' />
-      <connection channel='https' class='sqlproxy' dbname='DCT_github_gitlab_openrepos_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk' server-oauth='' username='' workgroup-auth-mode='prompt'>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        <metadata-records>
-          <metadata-record class='measure'>
-            <remote-name>Cumulative number of open repositories</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Cumulative number of open repositories]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Cumulative number of open repositories</remote-alias>
-            <ordinal>2</ordinal>
-            <layered>true</layered>
-            <family>github_gitlab_openrepos_month_count</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Date</remote-name>
-            <remote-type>133</remote-type>
-            <local-name>[Date]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Date</remote-alias>
-            <ordinal>0</ordinal>
-            <layered>true</layered>
-            <family>github_gitlab_openrepos_month_count</family>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>1</attribute>
-              <attribute datatype='integer' name='role'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='measure'>
-            <remote-name>Number of new open repositories</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Number of new open repositories]</local-name>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias>Number of new open repositories</remote-alias>
-            <ordinal>1</ordinal>
-            <layered>true</layered>
-            <family>github_gitlab_openrepos_month_count</family>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='field-type'>0</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[sqlproxy]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
-              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
-              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
-              <attribute datatype='integer' name='charset'>0</attribute>
-              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
-              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
-
-<datasource :source-version='18.1' formatted-name='DCT_dspt_care_standards_year_count_prop_v001' inline='true' version='18.1' xml:base='https://tabuat.data.england.nhs.uk' xmlns:user='http://www.tableausoftware.com/xml/user'>
-  <document-format-change-manifest>
-    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
-    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
-    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
-    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
-  </document-format-change-manifest>
-  <repository-location derived-from='/datasources/DCT_github_gitlab_openrepos_month_count_v001?rev=1.0' id='DCT_github_gitlab_openrepos_month_count_v001' path='/t/NHSX_DEV/datasources' revision='1.1' site='NHSX_DEV' />
-  <connection channel='https' class='sqlproxy' dbname='DCT_github_gitlab_openrepos_month_count_v001' directory='/dataserver' port='443' server='tabuat.data.england.nhs.uk'>
-    <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='sqlproxy' table='[sqlproxy]' type='table' />
-    <cols>
-      <map key='[Cumulative number of open repositories]' value='[sqlproxy].[Cumulative number of open repositories]' />
-      <map key='[Date]' value='[sqlproxy].[Date]' />
-      <map key='[Number of new open repositories]' value='[sqlproxy].[Number of new open repositories]' />
-    </cols>
-  </connection>
-  <aliases enabled='yes' />
-  <column aggregation='Count' caption='GP Address1' datatype='string' default-type='nominal' hidden='true' name='[GP_Address1]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address2' datatype='string' default-type='nominal' hidden='true' name='[GP_Address2]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='GP Address3' datatype='string' default-type='nominal' hidden='true' name='[GP_Address3]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN CCG Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_CCG_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN Region Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Code' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='PCN STP Name' datatype='string' default-type='nominal' hidden='true' name='[PCN_STP_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Code Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Code_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Region Name' datatype='string' default-type='nominal' hidden='true' name='[Region_Name]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' caption='Unique ID (stp code mapping snapshot)' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <column aggregation='Count' datatype='integer' default-type='ordinal' hidden='true' name='[Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='github_gitlab_openrepos_month_count' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-  <column aggregation='Count' caption='dfpc POMI Unique ID' datatype='integer' default-type='ordinal' hidden='true' name='[dfpc_POMI_Unique ID]' pivot='key' role='dimension' type='ordinal' user-datatype='integer' visual-totals='Default' />
-  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-  <semantic-values>
-    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-  </semantic-values>
-  <date-options start-of-week='monday' />
-  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    <objects>
-      <object caption='github_gitlab_openrepos_month_count' id='github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49'>
-        <properties context=''>
-          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
-        </properties>
-      </object>
-    </objects>
-  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-</datasource>
-]]>&quot;</attribute>
-              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
-  <primary-dialect class='hyper' version='0.0.0'>
-  </primary-dialect>
-</dialect-definition>
-]]>&quot;</attribute>
-              <attribute datatype='boolean' name='extract-active'>true</attribute>
-              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
-              <attribute datatype='string' name='update-time'>&quot;2/8/2022 11:32:07 AM&quot;</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <overridable-settings>
-        <date-options fiscal-year-start='january' start-of-week='monday' />
-        <default-date-format />
-        <default-calendar-type>Gregorian</default-calendar-type>
-      </overridable-settings>
-      <aliases enabled='yes' />
-      <column caption='Current Month (date)' datatype='date' name='[Calculation_2940639475841212416]' role='dimension' type='quantitative'>
-        <calculation class='tableau' formula='MAKEDATE([Calculation_2940639475841667074],[Calculation_2940639475841515521],1)' />
-      </column>
-      <column caption='Current Month (int)' datatype='integer' name='[Calculation_2940639475841515521]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Current Year (int)' datatype='integer' name='[Calculation_2940639475841667074]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, {Fixed: Max([Date])})' />
-      </column>
-      <column caption='Prev Month (date)' datatype='datetime' name='[Calculation_3060758924673359874]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;month&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='{KPI} M027(int) - Current Month (int)' datatype='integer' name='[Calculation_3060758924673638404]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Calculation_2940639475841667074]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Cumulative number of open repositories]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='Current Month Year (string)' datatype='string' name='[Calculation_3918413176566435840]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='LEFT(DATENAME(&quot;month&quot;,[Calculation_2940639475841212416]),10) +&#13;&#10;&quot; &quot;&#13;&#10;+ RIGHT(DATENAME(&quot;year&quot;,[Calculation_2940639475841212416]),4)' />
-      </column>
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Cumulative number of open repositories]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <column caption='Prev Month (int)' datatype='integer' name='[Current Month (int) (copy)_3060758924708438024]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;month&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column caption='Year For previous month (int)' datatype='integer' name='[Current Year (int) (copy)_3060758924708560905]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Calculation_3060758924673359874])' />
-      </column>
-      <column aggregation='Year' datatype='date' default-type='ordinal' layered='true' name='[Date]' pivot='key' role='dimension' type='ordinal' user-datatype='date' visual-totals='Default' />
-      <column aggregation='Sum' datatype='integer' default-type='quantitative' layered='true' name='[Number of new open repositories]' pivot='key' role='measure' type='quantitative' user-datatype='integer' visual-totals='Default' />
-      <column caption='Prev Year (date)' datatype='datetime' name='[Prev Month (date) (copy)_1170935962615070727]' role='dimension' type='ordinal'>
-        <calculation class='tableau' formula='DATEADD(&apos;year&apos;,-1,[Calculation_2940639475841212416])' />
-      </column>
-      <column caption='Previous Year (int)' datatype='integer' name='[Prev Month (int) (copy)_1170935962623803400]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='DATEPART(&quot;year&quot;, [Prev Month (date) (copy)_1170935962615070727])' />
-      </column>
-      <_.fcp.ObjectModelTableType.true...column aggregation='Count' caption='github_gitlab_openrepos_month_count' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
-      <column caption='{KPI} M027(int) - Previous Month (int)' datatype='integer' name='[{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Current Year (int) (copy)_3060758924708560905]&#13;&#10;       AND MONTH([Date]) = [Current Month (int) (copy)_3060758924708438024]&#10;    THEN [Cumulative number of open repositories]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M027(int) - Previous Year (int)' datatype='integer' name='[{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IF YEAR([Date]) = [Prev Month (int) (copy)_1170935962623803400]&#13;&#10;       AND MONTH([Date]) = [Calculation_2940639475841515521]&#10;    THEN [Cumulative number of open repositories]&#10;    ELSE NULL&#10;    END)' />
-      </column>
-      <column caption='{KPI} M027(int) - △Month (%)' datatype='real' name='[{KPI} M011(int) - Previous Month (int) (copy)_1590615160290062341]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='([Calculation_3060758924673638404] - [{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])/([{KPI} M011(int) - Current Month (int) (copy)_1590615160289828868])' />
-      </column>
-      <column caption='{KPI} M027(int) - △Year (%)' datatype='real' name='[{KPI} M011(int) - △Month (%) (copy)_1590615160291139592]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF ([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599]) = 0 THEN 0&#13;&#10;ELSE([Calculation_3060758924673638404] - [{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])/([{KPI} M011(int) - Previous Month (int) (copy 2)_1590615160290926599])&#13;&#10;END' />
-      </column>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='github_gitlab_openrepos_month_count' id='github_gitlab_openrepos_month_count_7C39C56242C94110B00019E558A03C49'>
             <properties context=''>
               <relation name='sqlproxy' table='[sqlproxy]' type='table' />
             </properties>
@@ -7299,7 +7299,7 @@
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='width' value='37' />
+            <format attr='width' value='41' />
             <format attr='height' value='26' />
           </style-rule>
           <style-rule element='header'>
@@ -8179,17 +8179,17 @@
                 </zone>
                 <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='29948' id='1014' param='vert' w='20571' x='78843' y='38411'>
                   <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='28907' id='1075' param='vert' w='19986' x='78989' y='38671'>
-                    <zone h='25391' id='1083' name='[M043] Caveat' show-title='false' w='19986' x='78989' y='38671'>
+                    <zone h='26303' id='1083' name='[M043] Caveat' show-title='false' w='19986' x='78989' y='38671'>
                       <layout-cache cell-count-h='1' type-h='cell' type-w='cell' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
                         <format attr='border-style' value='none' />
                         <format attr='border-width' value='0' />
                         <format attr='margin' value='4' />
-                        <format attr='margin-right' value='6' />
+                        <format attr='margin-right' value='12' />
                       </zone-style>
                     </zone>
-                    <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' fixed-size='27' h='3516' id='1104' is-fixed='true' w='19986' x='78989' y='64062'>
+                    <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' fixed-size='20' h='2604' id='1112' is-fixed='true' w='19986' x='78989' y='64974'>
                       <zone-style>
                         <format attr='border-color' value='#000000' />
                         <format attr='border-style' value='none' />
@@ -8258,6 +8258,7 @@
                   <format attr='border-style' value='none' />
                   <format attr='border-width' value='0' />
                   <format attr='margin' value='4' />
+                  <format attr='margin-right' value='8' />
                 </zone-style>
               </zone>
               <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' fixed-size='81' h='11589' id='1107' is-fixed='true' w='19986' x='58418' y='86588'>
@@ -8286,10 +8287,10 @@
         </zone>
         <zone h='2604' id='1070' name='[M016] action' show-title='false' w='2782' x='34407' y='64453' />
         <zone h='2865' id='1074' name='[M002] action' show-title='false' w='2782' x='17423' y='94922' />
-        <zone h='3385' id='1084' name='[M043 action' show-title='false' w='3367' x='79283' y='62500'>
+        <zone h='3385' id='1084' name='[M043 action' show-title='false' w='3367' x='94290' y='61719'>
           <layout-cache fixed-size-w='38' type-h='fixed' type-w='fixed' />
         </zone>
-        <zone h='3516' id='1089' name='[M022_M023] action' show-title='false' w='3148' x='64568' y='82682'>
+        <zone h='3516' id='1089' name='[M022_M023] action' show-title='false' w='3148' x='68668' y='82682'>
           <layout-cache fixed-size-h='26' type-h='fixed' type-w='fixed' />
         </zone>
         <zone h='3516' id='1093' name='[M020A] Action' show-title='false' w='3587' x='50586' y='31901'>
@@ -15881,7 +15882,7 @@
       nB4Ryq7NZjOFhYWMGDGCRx99lKSkJLGMXC6XEx0dTWlpKaWlpQQFBYkP8dDQUMrKyqiurmbB
       ggXceeed7N69m9raWtxuN5MmTeKVV14hMDCQnTt3iiKEDz/8MNddd51Yxm80Grnmmmu45ppr
       GDp0KFu2bGHkyJG88MILeHl5sXv3bqxWKxKJhEGDBjF9+nSuvfZaBg0axMGDB3nooYfzxuj2
-      AAAfQ0lEQVR45plnOHnyJAUFBdjtdoYOHcpvf/tbBg0a1C+/KiEhgeeff17UIHr22Wex2Wyc
+      AAAfaElEQVR45plnOHnyJAUFBdjtdoYOHcpvf/tbBg0a1C+/KiEhgeeff17UIHr22Wex2Wyc
       Pn2adevWERUVxcKFC4mNjWXnzp2kpKQwcuRIZs2aJdpnPPjgg+h0OoqKijh9+jSHDx/m0Ucf
       5YknnhAjbH5+ftx1113ce++92Gw26uvryczMZMSIEUyePBmj0chtt93G/fffj1wup6ioqN8g
       WqPRMGfOHB566CF0Oh0lJSVYrVY0Gg0PPfQQP//5zzl16hQVFRVs376dtLQ0fv/735Oenu4x
@@ -15953,83 +15954,84 @@
       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
-      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
+      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
+      PzeW+QQFAAAAAElFTkSuQmCC
     </thumbnail>
     <thumbnail height='576' name='Connect' width='576'>
       iVBORw0KGgoAAAANSUhEUgAAAkAAAAJACAYAAABlmtk2AAAACXBIWXMAAA7DAAAOwwHHb6hk
@@ -30494,27 +30496,27 @@
       AADwDg0gAADgHRpAAADAOzSAAACAd2gAAQAA79AAAgAA3qEBBAAAvEMDCAAAeIcGEAAA8A4N
       IAAA4B0aQAAAwDv/DWjylAl0n2MQAAAAAElFTkSuQmCC
     </thumbnail>
-    <thumbnail height='90' name='[M043 action' width='126'>
-      iVBORw0KGgoAAAANSUhEUgAAAH4AAABaCAYAAAB+HuKoAAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAADvElEQVR4nO2dXUyOYRyH/6QPhcU01VZJa+0dhhmlTTI2a2uMzAqrIzMbxThhk8mJzYFq
-      NjrggC1pOGBz4mtrZuSbrIj5yLAyWSY15nH2ux8rlZfpXb/fdXTteZ+e965r9939PG9bozzP
-      80zQMXq4ByCGB4UnReFJUXhSFJ4UhSdF4UlReFIUnhSFJ0XhSVF4UhSeFIUnReFJUXhSFJ4U
-      hSdF4UlReFIUnhSFJ0XhSVF4UhSeFIUnReFJUXhSFJ4UhSdF4UlReFIUnhSFJ0XhSVF4UhSe
-      FIUnReFJUXhSFJ4UhSdF4UkZM9wD6EPHY2jZwdfwhdvyzMxsddx/H9GIRDOeFIUnReFJUXhS
-      FJ4UhSdF4UlReFJC7wHOL7j/k/T+4U0zMytteIFjr36Ew9Mys+F78xPg4/2X+94JPV97DX6i
-      5Qu8NzwGPj83C1662D05Gm9d8NPVF8zMrGnKVBxra3oJ/xRYAK9dmwT/2nIPXlH/HP68xw03
-      JiEFvnn9PHj2xL+fr5rxpCg8KSG+1Lsl9daHGWZmVlWeiWPRb+7CS2uuw2sDBfCNad/gDScv
-      wuu8OfDKinT4lB73+UB11VX4oYkr4Ttn9x3pvbYI+P49a+BpvnMi3j6Clx1vh8/fsBx+INX9
-      +np9+RJ8x1H3tfE7ZsGn9R3KkNCMJ0XhSQnxpT4atiQ72czMYsN8L6e4nXaGPYV3+3bG1tsG
-      bWiOgi/b5Jb3RP9PYVwytCCrCb7lgbtO9+zJfUYaN93twANj+p9PrQ9ewd9lzIAXprpx+b+9
-      1NwAPOvyffi1Nt9Sn2RBoRlPisKTEuJLvdvhRkcNcNpAdH2Fdlg3/NbhOviZoVwn3l2ns5+X
-      Y6LC+zn6Kx+73Pvbk0Zo0a7Gfs7+Pbldg58zGJrxpIT4jP8HTBgLjfNtFuducvfOxX+8QQpu
-      yk2a4N7ffJu7kyXubjza/g+a8aQoPCkjf6mPdOt4TuA2vOZKK3zpOt89vW/rduqIe8R7ISkH
-      fmxFcAty+ix3r59w6Am87kUivCTVPfr9/OgGvKzebS4Lty+B58UGNRTNeFYUnpSRv9T7ngXk
-      FCyGt592y+jW8jvw3jB3fmK6+xhuX348PCzIXb0lzoRWFLnnyvtPnIOv6vkBj4yZBF9WvAie
-      F/sMXpntfk0173Z/uFKTN/BQNONJUXhSRnme5w1+mhhpaMaTovCkhNyufm3F2eEeQshTW77q
-      r6+hGU+KwpOiXT0pmvGkKDwpCk+KwpOi8KQoPCkKT4rCk6LwpCg8KT8BH26tRQrKoScAAAAA
-      SUVORK5CYII=
+    <thumbnail height='90' name='[M043 action' width='138'>
+      iVBORw0KGgoAAAANSUhEUgAAAIoAAABaCAYAAABnuc5LAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAD6UlEQVR4nO3dX2hWdRzH8Z/N6dpSpjTcBsvWGPJQoRHpGrQmBjKQIhfhn9CrCKFckTcF
+      LVo3QhepCLWLukiYS6yLAm/KgiFRWpk5UTMxXVRoZCyaG4Wni+LzPeHmPo6xPdn7dfXh2dlz
+      fozP8/ud8zsbm5FlWZaAcdww3QPAfwNFgYWiwEJRYKEosFAUWCgKLBQFFooCC0WBhaLAQlFg
+      oSiwUBRYKAosFAUWigILRYGFosBCUWChKLBQFFgoCiwUBRaKAgtFgYWiwEJRYKEosFAUWCgK
+      LBQFFooCC0WBhaLAQlFgoSiwUBRYKAosFAUWigILRYGFosAyc7oHcIULxxQ7Xj2nfN8zbcqP
+      VE3piJCYUWCiKLBQFFgoCiwUBRaKAgtFgYWiwFJ8G27/Ev8X86evP1Pe3HcmpZTS2culeq1h
+      WbPyS6tqlOfk3+7Pi4rv9xxQ3nXid+WR0grlpa1Ncc7lscs3Jw0q792xT7l/wa3KA/3fpZRS
+      +rVwr17rWVenfOnEYeWuPaeVTw/HcCtqFio/+dg9ys3zpv7zzYwCC0WBpciXnpjiD/18h/L2
+      zmUppZTKv/9Sr23u/kS5p9Cu/ETDH8p9uz9Q7s3uUt7W1ai8YDieL+3Y/rHyznkPKz+3ZPTR
+      Hh6Ypbz1xUdTSik15L4+64ejyh1vnVde+viDyq/Ux3J6bv+HylveiO+t3rJY+bbRhzLpmFFg
+      oSiwFPnSU660ovkW5cqSf8LCuBNZlL5RHsrdOaSRAcW+42XKKzfFclOb/yncFOdpb+pXfupI
+      vM/QkptHHW3V7XGXUph55Wfw1JGzyj8uiqV0TX2MqyR3fH1rQblp/1fKBwZyS09dmhLMKLBQ
+      FFiKfOmJO4DysqscdjWDlxQvpCHlQ6/1Kr/jvE91vM/FMQ6pKCsd4yt/+2Uwzp9OHlRc+/zB
+      UY4eW+vg+MdMNmYUWIp8RpkEc29UrMpdHN+9KfYuNlzzBeHEPtLz58b5U+5idvfG2A0pT8WJ
+      GQUWigLL9b/0zI51paXwuXL3R6eUH1if21PJXaq+/Xps+e+ra1F+86GJLRCNi2OfpWbnSeXe
+      M7XKG+vjMcBvRz9V7tgTF9Nrnl2h3FY5oaFcM2YUWCgKLNf/0pPbi2lpX658fm9M6093fqE8
+      UhLH1zbGY+KXV1Url0zwrifV3qnYtTaeM2zd9Z7y6uHLyrMr5iuv3HC/clvlt8rbmmPZPP5C
+      /KJXd/xh5aRgRoGFosAyI8uybPzD8H/HjAILRYGl6O561nW9O91DKHo9naun/JzMKLBQFFi4
+      64GFGQUWigILRYGFosBCUWChKLBQFFgoCiwUBRaKAstf/kmtRSYsNAsAAAAASUVORK5CYII=
     </thumbnail>
     <thumbnail height='321' name='[M043] Caveat' width='576'>
       iVBORw0KGgoAAAANSUhEUgAAAkAAAAFBCAYAAACfLhAOAAAACXBIWXMAAA7DAAAOwwHHb6hk
