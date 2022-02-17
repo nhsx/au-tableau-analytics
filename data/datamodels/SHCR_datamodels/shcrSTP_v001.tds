@@ -1,0 +1,1479 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1110.1623                               -->
+<datasource formatted-name='federated.11aj5ut1hg1ssy19qblas1p9n8gd' inline='true' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='nhsx-slt-analytics.database.windows.net' name='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v'>
+        <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' username='nhsei_tableau_read' />
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+      <relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='odscodes_gp_mapping' table='[dbo].[odscodes_gp_mapping]' type='table' />
+      <relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
+      <relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='shcr_partners_stp_data_month_count' table='[dbo].[shcr_partners_stp_data_month_count]' type='table' />
+    </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>GP_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Code</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Name</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Register_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[GP_Register_Date]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Register_Date</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_LAT</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[GP_LAT]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_LAT</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Long</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[GP_Long]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Long</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Address1</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Address1]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Address1</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Address2</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Address2]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Address2</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Address3</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Address3]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Address3</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Postcode</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Postcode]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Postcode</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_CCG_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_CCG_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_CCG_Code</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_CCG_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_CCG_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_CCG_Name</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_STP_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_STP_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_STP_Code</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_STP_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_STP_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_STP_Name</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Region_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Region_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Region_Code</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Region_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Region_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_Region_Name</remote-alias>
+        <ordinal>15</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Region_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>Region_Name</remote-alias>
+        <ordinal>16</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region_Code_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Region_Code_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>Region_Code_Name</remote-alias>
+        <ordinal>17</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_PCN_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_PCN_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_PCN_Code</remote-alias>
+        <ordinal>18</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_PCN_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_PCN_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>GP_PCN_Name</remote-alias>
+        <ordinal>19</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PCN_CCG_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[PCN_CCG_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>PCN_CCG_Code</remote-alias>
+        <ordinal>20</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PCN_CCG_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[PCN_CCG_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>PCN_CCG_Name</remote-alias>
+        <ordinal>21</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PCN_STP_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[PCN_STP_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>PCN_STP_Code</remote-alias>
+        <ordinal>22</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PCN_STP_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[PCN_STP_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>PCN_STP_Name</remote-alias>
+        <ordinal>23</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PCN_Region_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[PCN_Region_Code]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>PCN_Region_Code</remote-alias>
+        <ordinal>24</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PCN_Region_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[PCN_Region_Name]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>PCN_Region_Name</remote-alias>
+        <ordinal>25</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Last_Refreshed</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Last_Refreshed]</local-name>
+        <parent-name>[odscodes_gp_mapping]</parent-name>
+        <remote-alias>Last_Refreshed</remote-alias>
+        <ordinal>26</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Practice_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[GP_Practice_Code]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>GP_Practice_Code</remote-alias>
+        <ordinal>28</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Registered_patient</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Registered_patient]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>Registered_patient</remote-alias>
+        <ordinal>29</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Effective_Snapshot_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Effective_Snapshot_Date]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>Effective_Snapshot_Date</remote-alias>
+        <ordinal>30</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>For Month</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[For Month]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>For Month</remote-alias>
+        <ordinal>32</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ODS STP Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ODS STP Code]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>ODS STP Code</remote-alias>
+        <ordinal>33</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>STP Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[STP Name]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>STP Name</remote-alias>
+        <ordinal>34</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ICS Name (if applicable)</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ICS Name (if applicable)]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>ICS Name (if applicable)</remote-alias>
+        <ordinal>35</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ShCR Programme Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ShCR Programme Name]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>ShCR Programme Name</remote-alias>
+        <ordinal>36</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Name of ShCR System</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Name of ShCR System]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Name of ShCR System</remote-alias>
+        <ordinal>37</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Number of users with access to the ShCR</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Number of users with access to the ShCR]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Number of users with access to the ShCR</remote-alias>
+        <ordinal>38</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Number of citizen records available to users via the ShCR</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Number of citizen records available to users via the ShCR]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Number of citizen records available to users via the ShCR</remote-alias>
+        <ordinal>39</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Number of ShCR views in the past month</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Number of ShCR views in the past month]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Number of ShCR views in the past month</remote-alias>
+        <ordinal>40</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Number of unique user ShCR views in the past month</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Number of unique user ShCR views in the past month]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Number of unique user ShCR views in the past month</remote-alias>
+        <ordinal>41</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Completed by (email)</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Completed by (email)]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Completed by (email)</remote-alias>
+        <ordinal>42</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Date completed</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Date completed]</local-name>
+        <parent-name>[shcr_partners_stp_data_month_count]</parent-name>
+        <remote-alias>Date completed</remote-alias>
+        <ordinal>43</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='Effective Snapshot Date' datatype='date' name='[Effective_Snapshot_Date]' role='dimension' type='ordinal' />
+  <column caption='GP Address1' datatype='string' name='[GP_Address1]' role='dimension' type='nominal' />
+  <column caption='GP Address2' datatype='string' name='[GP_Address2]' role='dimension' type='nominal' />
+  <column caption='GP Address3' datatype='string' name='[GP_Address3]' role='dimension' type='nominal' />
+  <column caption='GP CCG Code' datatype='string' name='[GP_CCG_Code]' role='dimension' type='nominal' />
+  <column caption='GP CCG Name' datatype='string' name='[GP_CCG_Name]' role='dimension' type='nominal' />
+  <column caption='GP Code' datatype='string' name='[GP_Code]' role='dimension' type='nominal' />
+  <column aggregation='Avg' caption='Gp Lat' datatype='real' name='[GP_LAT]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+  <column caption='GP Long' datatype='real' name='[GP_Long]' role='measure' type='quantitative' />
+  <column caption='GP Name' datatype='string' name='[GP_Name]' role='dimension' type='nominal' />
+  <column caption='GP PCN Code' datatype='string' name='[GP_PCN_Code]' role='dimension' type='nominal' />
+  <column caption='GP PCN Name' datatype='string' name='[GP_PCN_Name]' role='dimension' type='nominal' />
+  <column caption='GP Postcode' datatype='string' name='[GP_Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+  <column caption='GP Practice Code' datatype='string' name='[GP_Practice_Code]' role='dimension' type='nominal' />
+  <column caption='GP Region Code' datatype='string' name='[GP_Region_Code]' role='dimension' type='nominal' />
+  <column caption='GP Region Name' datatype='string' name='[GP_Region_Name]' role='dimension' type='nominal' />
+  <column caption='GP Register Date' datatype='date' name='[GP_Register_Date]' role='dimension' type='ordinal' />
+  <column caption='GP STP Code' datatype='string' name='[GP_STP_Code]' role='dimension' type='nominal' />
+  <column caption='GP STP Name' datatype='string' name='[GP_STP_Name]' role='dimension' type='nominal' />
+  <column caption='Last Refreshed' datatype='date' name='[Last_Refreshed]' role='dimension' type='ordinal' />
+  <column caption='PCN CCG Code' datatype='string' name='[PCN_CCG_Code]' role='dimension' type='nominal' />
+  <column caption='PCN CCG Name' datatype='string' name='[PCN_CCG_Name]' role='dimension' type='nominal' />
+  <column caption='PCN Region Code' datatype='string' name='[PCN_Region_Code]' role='dimension' type='nominal' />
+  <column caption='PCN Region Name' datatype='string' name='[PCN_Region_Name]' role='dimension' type='nominal' />
+  <column caption='PCN STP Code' datatype='string' name='[PCN_STP_Code]' role='dimension' type='nominal' />
+  <column caption='PCN STP Name' datatype='string' name='[PCN_STP_Name]' role='dimension' type='nominal' />
+  <column caption='Region Code Name' datatype='string' name='[Region_Code_Name]' role='dimension' type='nominal' />
+  <column caption='Region Name' datatype='string' name='[Region_Name]' role='dimension' type='nominal' />
+  <column caption='Registered patient' datatype='integer' name='[Registered_patient]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='gp_practice_population_snapshot' datatype='table' name='[__tableau_internal_object_id__].[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='odscodes_gp_mapping' datatype='table' name='[__tableau_internal_object_id__].[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='shcr_partners_stp_data_month_count' datatype='table' name='[__tableau_internal_object_id__].[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]' role='measure' type='quantitative' />
+  <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='/Users/craig.shenton/Documents/My Tableau Repository/Datasources/odscodes_gp_mapping+ (tableau-staging).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/18/2022 10:03:48 AM' username='tableau_internal_user'>
+      <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A' table='[Extract].[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]' type='table' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+        <relation name='odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E' table='[Extract].[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]' type='table' />
+        <relation name='gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A' table='[Extract].[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]' type='table' />
+        <relation name='shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082' table='[Extract].[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]' type='table' />
+      </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+      <refresh>
+        <refresh-event add-from-file-path='odscodes_gp_mapping+ (tableau-staging)' increment-value='%null%' refresh-type='create' rows-inserted='13519' timestamp-start='2022-01-18 10:03:48.812' />
+      </refresh>
+      <metadata-records>
+        <metadata-record class='column'>
+          <remote-name>GP_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Code</remote-alias>
+          <ordinal>0</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6952</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Name</remote-alias>
+          <ordinal>1</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4004</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Register_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[GP_Register_Date]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Register_Date</remote-alias>
+          <ordinal>2</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_LAT</remote-name>
+          <remote-type>5</remote-type>
+          <local-name>[GP_LAT]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_LAT</remote-alias>
+          <ordinal>3</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>real</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3835</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Long</remote-name>
+          <remote-type>5</remote-type>
+          <local-name>[GP_Long]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Long</remote-alias>
+          <ordinal>4</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>real</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3835</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Address1</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Address1]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Address1</remote-alias>
+          <ordinal>5</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>3493</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Address2</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Address2]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Address2</remote-alias>
+          <ordinal>6</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>3557</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Address3</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Address3]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Address3</remote-alias>
+          <ordinal>7</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>1469</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Postcode</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Postcode]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Postcode</remote-alias>
+          <ordinal>8</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>3782</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_CCG_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_CCG_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_CCG_Code</remote-alias>
+          <ordinal>9</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>115</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_CCG_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_CCG_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_CCG_Name</remote-alias>
+          <ordinal>10</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>115</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_STP_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_STP_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_STP_Code</remote-alias>
+          <ordinal>11</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>43</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_STP_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_STP_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_STP_Name</remote-alias>
+          <ordinal>12</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>43</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Region_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Region_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Region_Code</remote-alias>
+          <ordinal>13</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Region_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Region_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_Region_Name</remote-alias>
+          <ordinal>14</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Region_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Region_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>Region_Name</remote-alias>
+          <ordinal>15</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Region_Code_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Region_Code_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>Region_Code_Name</remote-alias>
+          <ordinal>16</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_PCN_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_PCN_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_PCN_Code</remote-alias>
+          <ordinal>17</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>1447</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_PCN_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_PCN_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>GP_PCN_Name</remote-alias>
+          <ordinal>18</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>1447</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>PCN_CCG_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[PCN_CCG_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>PCN_CCG_Code</remote-alias>
+          <ordinal>19</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>113</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>PCN_CCG_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[PCN_CCG_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>PCN_CCG_Name</remote-alias>
+          <ordinal>20</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>113</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>PCN_STP_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[PCN_STP_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>PCN_STP_Code</remote-alias>
+          <ordinal>21</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>43</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>PCN_STP_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[PCN_STP_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>PCN_STP_Name</remote-alias>
+          <ordinal>22</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>43</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>PCN_Region_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[PCN_Region_Code]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>PCN_Region_Code</remote-alias>
+          <ordinal>23</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>PCN_Region_Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[PCN_Region_Name]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>PCN_Region_Name</remote-alias>
+          <ordinal>24</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Last_Refreshed</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[Last_Refreshed]</local-name>
+          <parent-name>[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]</parent-name>
+          <remote-alias>Last_Refreshed</remote-alias>
+          <ordinal>25</ordinal>
+          <family>odscodes_gp_mapping</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Practice_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Practice_Code]</local-name>
+          <parent-name>[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]</parent-name>
+          <remote-alias>GP_Practice_Code</remote-alias>
+          <ordinal>26</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6527</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Registered_patient</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Registered_patient]</local-name>
+          <parent-name>[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]</parent-name>
+          <remote-alias>Registered_patient</remote-alias>
+          <ordinal>27</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3284</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Effective_Snapshot_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[Effective_Snapshot_Date]</local-name>
+          <parent-name>[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]</parent-name>
+          <remote-alias>Effective_Snapshot_Date</remote-alias>
+          <ordinal>28</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>For Month</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[For Month]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>For Month</remote-alias>
+          <ordinal>29</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>5</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>ODS STP Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[ODS STP Code]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>ODS STP Code</remote-alias>
+          <ordinal>30</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>37</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>STP Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[STP Name]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>STP Name</remote-alias>
+          <ordinal>31</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>40</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>ICS Name (if applicable)</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[ICS Name (if applicable)]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>ICS Name (if applicable)</remote-alias>
+          <ordinal>32</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>20</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>ShCR Programme Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[ShCR Programme Name]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>ShCR Programme Name</remote-alias>
+          <ordinal>33</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>13</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Name of ShCR System</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Name of ShCR System]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Name of ShCR System</remote-alias>
+          <ordinal>34</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>35</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Number of users with access to the ShCR</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Number of users with access to the ShCR]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Number of users with access to the ShCR</remote-alias>
+          <ordinal>35</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>21</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Number of citizen records available to users via the ShCR</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Number of citizen records available to users via the ShCR]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Number of citizen records available to users via the ShCR</remote-alias>
+          <ordinal>36</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>26</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Number of ShCR views in the past month</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Number of ShCR views in the past month]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Number of ShCR views in the past month</remote-alias>
+          <ordinal>37</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>30</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Number of unique user ShCR views in the past month</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Number of unique user ShCR views in the past month]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Number of unique user ShCR views in the past month</remote-alias>
+          <ordinal>38</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>27</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Completed by (email)</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Completed by (email)]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Completed by (email)</remote-alias>
+          <ordinal>39</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>35</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Date completed</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Date completed]</local-name>
+          <parent-name>[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]</parent-name>
+          <remote-alias>Date completed</remote-alias>
+          <ordinal>40</ordinal>
+          <family>shcr_partners_stp_data_month_count</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>23</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+      </metadata-records>
+    </connection>
+  </extract>
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='gp_practice_population_snapshot' id='gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A'>
+        <properties context=''>
+          <relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A' table='[Extract].[gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A]' type='table' />
+        </properties>
+      </object>
+      <object caption='odscodes_gp_mapping' id='odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E'>
+        <properties context=''>
+          <relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='odscodes_gp_mapping' table='[dbo].[odscodes_gp_mapping]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E' table='[Extract].[odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E]' type='table' />
+        </properties>
+      </object>
+      <object caption='shcr_partners_stp_data_month_count' id='shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082'>
+        <properties context=''>
+          <relation connection='sqlserver.1bbl7vo12t9dsm1dt45iu1xe0t9v' name='shcr_partners_stp_data_month_count' table='[dbo].[shcr_partners_stp_data_month_count]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082' table='[Extract].[shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082]' type='table' />
+        </properties>
+      </object>
+    </objects>
+    <relationships>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
+          <expression op='[GP_Practice_Code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E' />
+        <second-end-point object-id='gp_practice_population_snapshot_B4EA77993CCF4F3990A1604E82C2819A' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_STP_Code]' />
+          <expression op='[ODS STP Code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_B0B5FA2A91E54CD693574A19BF3FE20E' />
+        <second-end-point object-id='shcr_partners_stp_data_month_count_4B439F2CE7C241448D977369CA4E3082' />
+      </relationship>
+    </relationships>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
