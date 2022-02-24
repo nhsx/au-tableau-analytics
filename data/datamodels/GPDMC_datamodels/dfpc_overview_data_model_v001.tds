@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20213.21.0917.1006                               -->
-<datasource formatted-name='federated.0pamcdz1u8z32c19mo2q40yn5uir' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20211.21.0320.1853                               -->
+<datasource formatted-name='dfpc_overview_data_model_v001' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
@@ -19,9 +19,14 @@
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='odscodes_gp_mapping' table='[dbo].[odscodes_gp_mapping]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='ccg_code_mapping_snapshot' table='[dbo].[ccg_code_mapping_snapshot]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='shapefile_ccg_boundaries_snapshot' table='[dbo].[shapefile_ccg_boundaries_snapshot]' type='table' />
+      <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_dspt_gp_practice_historical_view' table='[dbo].[dfpc_dspt_gp_practice_historical_view]' type='table' />
+      <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_dspt_gp_practice_snapshot_view' table='[dbo].[dfpc_dspt_gp_practice_snapshot_view]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_gp_eps_view' table='[dbo].[dfpc_gp_eps_view]' type='table' />
+      <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_gp_it_view' table='[dbo].[dfpc_gp_it_view]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_gp_survey_view' table='[dbo].[dfpc_gp_survey_view]' type='table' />
+      <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_online_consultation_view' table='[dbo].[dfpc_online_consultation_view]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_pomi_view' table='[dbo].[dfpc_pomi_view]' type='table' />
+      <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='patients_age_band_demography_snapshot' table='[dbo].[patients_age_band_demography_snapshot]' type='table' />
       <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='patients_sex_demography_snapshot' table='[dbo].[patients_sex_demography_snapshot]' type='table' />
     </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
@@ -33,6 +38,7 @@
       <map key='[CCG name]' value='[ccg_code_mapping_snapshot].[CCG name]' />
       <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[DataSourceFileForThisSnapshot_Version]' />
       <map key='[DataSourceFileForThisSnapshot_Version]' value='[patients_sex_demography_snapshot].[DataSourceFileForThisSnapshot_Version]' />
+      <map key='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot].[Effective_Snapshot_Date]' />
       <map key='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[Effective_Snapshot_Date]' />
       <map key='[Effective_Snapshot_Date]' value='[patients_sex_demography_snapshot].[Effective_Snapshot_Date]' />
       <map key='[GP_Address1]' value='[odscodes_gp_mapping].[GP_Address1]' />
@@ -47,6 +53,7 @@
       <map key='[GP_PCN_Code]' value='[odscodes_gp_mapping].[GP_PCN_Code]' />
       <map key='[GP_PCN_Name]' value='[odscodes_gp_mapping].[GP_PCN_Name]' />
       <map key='[GP_Postcode]' value='[odscodes_gp_mapping].[GP_Postcode]' />
+      <map key='[GP_Practice_Code (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot].[GP_Practice_Code]' />
       <map key='[GP_Practice_Code (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[GP_Practice_Code]' />
       <map key='[GP_Practice_Code]' value='[patients_sex_demography_snapshot].[GP_Practice_Code]' />
       <map key='[GP_Region_Code]' value='[odscodes_gp_mapping].[GP_Region_Code]' />
@@ -64,6 +71,11 @@
       <map key='[M053_Number of GP appointments managed online]' value='[dfpc_pomi_view].[M053_Number of GP appointments managed online]' />
       <map key='[M054_Number of repeat prescription transactions]' value='[dfpc_pomi_view].[M054_Number of repeat prescription transactions]' />
       <map key='[M055_Number of detailed coded record views]' value='[dfpc_pomi_view].[M055_Number of detailed coded record views]' />
+      <map key='[M056_EMIS GP Practices]' value='[dfpc_pomi_view].[M056_EMIS GP Practices]' />
+      <map key='[M057_TPP GP Practices]' value='[dfpc_pomi_view].[M057_TPP GP Practices]' />
+      <map key='[M058B_MICROTEST GP Practices]' value='[dfpc_pomi_view].[M058B_MICROTEST GP Practices]' />
+      <map key='[M058_VISION GP Practices]' value='[dfpc_pomi_view].[M058_VISION GP Practices]' />
+      <map key='[M074_GP practice compliance with IT standards]' value='[dfpc_gp_it_view].[M074_GP practice compliance with IT standards]' />
       <map key='[M083_Number of registered patients with a nominated pharmacy]' value='[dfpc_gp_eps_view].[M083_Number of registered patients with a nominated pharmacy]' />
       <map key='[M084_Number of items prescribed and dispensed via EPS during the reporting period]' value='[dfpc_gp_eps_view].[M084_Number of items prescribed and dispensed via EPS during the reporting period]' />
       <map key='[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' value='[dfpc_gp_eps_view].[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' />
@@ -73,10 +85,20 @@
       <map key='[M092_Total number of responses]' value='[dfpc_gp_survey_view].[M092_Total number of responses]' />
       <map key='[M093_Number of patients reporting that their GP practice website was easy to use]' value='[dfpc_gp_survey_view].[M093_Number of patients reporting that their GP practice website was easy to use]' />
       <map key='[M093_Total number of responses]' value='[dfpc_gp_survey_view].[M093_Total number of responses]' />
+      <map key='[M60_Number of patient online consultation submissions]' value='[dfpc_online_consultation_view].[M60_Number of patient online consultation submissions]' />
+      <map key='[M61_Number of patient online consultation submissions]' value='[dfpc_online_consultation_view].[M61_Number of patient online consultation submissions]' />
+      <map key='[M62_GP practice OC supplier count]' value='[dfpc_online_consultation_view].[M62_GP practice OC supplier count]' />
+      <map key='[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]' value='[dfpc_dspt_gp_practice_snapshot_view].[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]' />
+      <map key='[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]' value='[dfpc_dspt_gp_practice_historical_view].[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]' />
+      <map key='[M77A_Number of GP practices that exceed the DSPT standard (historical)]' value='[dfpc_dspt_gp_practice_historical_view].[M77A_Number of GP practices that exceed the DSPT standard (historical)]' />
+      <map key='[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]' value='[dfpc_dspt_gp_practice_snapshot_view].[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]' />
+      <map key='[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]' value='[dfpc_dspt_gp_practice_historical_view].[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]' />
+      <map key='[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]' value='[dfpc_dspt_gp_practice_snapshot_view].[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]' />
       <map key='[M90_Number of patients reporting using GP practice online services]' value='[dfpc_gp_survey_view].[M90_Number of patients reporting using GP practice online services]' />
       <map key='[M90_Total number of responses]' value='[dfpc_gp_survey_view].[M90_Total number of responses]' />
       <map key='[ODS CCG code]' value='[ccg_code_mapping_snapshot].[ODS CCG code]' />
       <map key='[ONS CCG code]' value='[ccg_code_mapping_snapshot].[ONS CCG code]' />
+      <map key='[Online consultation system supplier]' value='[dfpc_online_consultation_view].[Online consultation system supplier]' />
       <map key='[PCN_CCG_Code]' value='[odscodes_gp_mapping].[PCN_CCG_Code]' />
       <map key='[PCN_CCG_Name]' value='[odscodes_gp_mapping].[PCN_CCG_Name]' />
       <map key='[PCN_Region_Code]' value='[odscodes_gp_mapping].[PCN_Region_Code]' />
@@ -84,10 +106,12 @@
       <map key='[PCN_STP_Code]' value='[odscodes_gp_mapping].[PCN_STP_Code]' />
       <map key='[PCN_STP_Name]' value='[odscodes_gp_mapping].[PCN_STP_Name]' />
       <map key='[REF_All dispensing items prescribed and dispensed during the reporting period]' value='[dfpc_gp_eps_view].[REF_All dispensing items prescribed and dispensed during the reporting period]' />
+      <map key='[REF_GP practice population]' value='[dfpc_online_consultation_view].[REF_GP practice population]' />
       <map key='[REF_Number of GP practice registered patients]' value='[dfpc_pomi_view].[REF_Number of GP practice registered patients]' />
       <map key='[REF_Number of GP registered patients]' value='[dfpc_gp_eps_view].[REF_Number of GP registered patients]' />
       <map key='[Region_Code_Name]' value='[odscodes_gp_mapping].[Region_Code_Name]' />
       <map key='[Region_Name]' value='[odscodes_gp_mapping].[Region_Name]' />
+      <map key='[Registered_patient]' value='[gp_practice_population_snapshot].[Registered_patient]' />
       <map key='[Sex]' value='[patients_sex_demography_snapshot].[Sex]' />
       <map key='[Size (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[Size]' />
       <map key='[Size]' value='[patients_sex_demography_snapshot].[Size]' />
@@ -95,15 +119,30 @@
       <map key='[Unique ID]' value='[ccg_code_mapping_snapshot].[Unique ID]' />
       <map key='[bng_e]' value='[shapefile_ccg_boundaries_snapshot].[bng_e]' />
       <map key='[bng_n]' value='[shapefile_ccg_boundaries_snapshot].[bng_n]' />
+      <map key='[dfpc_DSPT_historical_Date]' value='[dfpc_dspt_gp_practice_historical_view].[dfpc_DSPT_historical_Date]' />
+      <map key='[dfpc_DSPT_historical_Practice code]' value='[dfpc_dspt_gp_practice_historical_view].[dfpc_DSPT_historical_Practice code]' />
+      <map key='[dfpc_DSPT_historical_Unique ID]' value='[dfpc_dspt_gp_practice_historical_view].[dfpc_DSPT_historical_Unique ID]' />
+      <map key='[dfpc_DSPT_historical_financial_year]' value='[dfpc_dspt_gp_practice_historical_view].[dfpc_DSPT_historical_financial_year]' />
+      <map key='[dfpc_DSPT_snapshot_Date]' value='[dfpc_dspt_gp_practice_snapshot_view].[dfpc_DSPT_snapshot_Date]' />
+      <map key='[dfpc_DSPT_snapshot_Practice code]' value='[dfpc_dspt_gp_practice_snapshot_view].[dfpc_DSPT_snapshot_Practice code]' />
+      <map key='[dfpc_DSPT_snapshot_Unique ID]' value='[dfpc_dspt_gp_practice_snapshot_view].[dfpc_DSPT_snapshot_Unique ID]' />
+      <map key='[dfpc_DSPT_snapshot_financial_year]' value='[dfpc_dspt_gp_practice_snapshot_view].[dfpc_DSPT_snapshot_financial_year]' />
       <map key='[dfpc_POMI_Date]' value='[dfpc_pomi_view].[dfpc_POMI_Date]' />
       <map key='[dfpc_POMI_Practice code]' value='[dfpc_pomi_view].[dfpc_POMI_Practice code]' />
       <map key='[dfpc_POMI_Unique ID]' value='[dfpc_pomi_view].[dfpc_POMI_Unique ID]' />
       <map key='[dfpc_gp_eps_Date]' value='[dfpc_gp_eps_view].[dfpc_gp_eps_Date]' />
       <map key='[dfpc_gp_eps_Practice code]' value='[dfpc_gp_eps_view].[dfpc_gp_eps_Practice code]' />
       <map key='[dfpc_gp_eps_Unique ID]' value='[dfpc_gp_eps_view].[dfpc_gp_eps_Unique ID]' />
+      <map key='[dfpc_gp_it_Date]' value='[dfpc_gp_it_view].[dfpc_gp_it_Date]' />
+      <map key='[dfpc_gp_it_Financial_Year]' value='[dfpc_gp_it_view].[dfpc_gp_it_Financial_Year]' />
+      <map key='[dfpc_gp_it_Practice code]' value='[dfpc_gp_it_view].[dfpc_gp_it_Practice code]' />
+      <map key='[dfpc_gp_it_Unique ID]' value='[dfpc_gp_it_view].[dfpc_gp_it_Unique ID]' />
       <map key='[dfpc_gp_survey_Date]' value='[dfpc_gp_survey_view].[dfpc_gp_survey_Date]' />
       <map key='[dfpc_gp_survey_Practice code]' value='[dfpc_gp_survey_view].[dfpc_gp_survey_Practice code]' />
       <map key='[dfpc_gp_survey_Unique ID]' value='[dfpc_gp_survey_view].[dfpc_gp_survey_Unique ID]' />
+      <map key='[dfpc_online_consultation_Date]' value='[dfpc_online_consultation_view].[dfpc_online_consultation_Date]' />
+      <map key='[dfpc_online_consultation_Practice code]' value='[dfpc_online_consultation_view].[dfpc_online_consultation_Practice code]' />
+      <map key='[dfpc_online_consultation_Unique ID]' value='[dfpc_online_consultation_view].[dfpc_online_consultation_Unique ID]' />
       <map key='[geometry2]' value='[shapefile_ccg_boundaries_snapshot].[geometry2]' />
       <map key='[geometry3]' value='[shapefile_ccg_boundaries_snapshot].[geometry3]' />
       <map key='[geometry]' value='[shapefile_ccg_boundaries_snapshot].[geometry]' />
@@ -925,12 +964,262 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_historical_Unique ID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[dfpc_DSPT_historical_Unique ID]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>dfpc_DSPT_historical_Unique ID</remote-alias>
+        <ordinal>47</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_historical_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[dfpc_DSPT_historical_Date]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>dfpc_DSPT_historical_Date</remote-alias>
+        <ordinal>48</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_historical_Practice code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_DSPT_historical_Practice code]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>dfpc_DSPT_historical_Practice code</remote-alias>
+        <ordinal>49</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_historical_financial_year</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_DSPT_historical_financial_year]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>dfpc_DSPT_historical_financial_year</remote-alias>
+        <ordinal>50</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M76A_Number of GP practices that meet or exceed the DSPT standard (historical)</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>M76A_Number of GP practices that meet or exceed the DSPT standard (historical)</remote-alias>
+        <ordinal>51</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M77A_Number of GP practices that exceed the DSPT standard (historical)</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M77A_Number of GP practices that exceed the DSPT standard (historical)]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>M77A_Number of GP practices that exceed the DSPT standard (historical)</remote-alias>
+        <ordinal>52</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M78A_Number of GP practices that have not submitted a DSPT assessment (historical)</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_historical_view]</parent-name>
+        <remote-alias>M78A_Number of GP practices that have not submitted a DSPT assessment (historical)</remote-alias>
+        <ordinal>53</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_snapshot_Unique ID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[dfpc_DSPT_snapshot_Unique ID]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>dfpc_DSPT_snapshot_Unique ID</remote-alias>
+        <ordinal>55</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_snapshot_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[dfpc_DSPT_snapshot_Date]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>dfpc_DSPT_snapshot_Date</remote-alias>
+        <ordinal>56</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_snapshot_Practice code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_DSPT_snapshot_Practice code]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>dfpc_DSPT_snapshot_Practice code</remote-alias>
+        <ordinal>57</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_DSPT_snapshot_financial_year</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_DSPT_snapshot_financial_year]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>dfpc_DSPT_snapshot_financial_year</remote-alias>
+        <ordinal>58</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)</remote-alias>
+        <ordinal>59</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M77B_Number of GP practices that exceed the DSPT standard (snapshot)</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>M77B_Number of GP practices that exceed the DSPT standard (snapshot)</remote-alias>
+        <ordinal>60</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]</local-name>
+        <parent-name>[dfpc_dspt_gp_practice_snapshot_view]</parent-name>
+        <remote-alias>M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)</remote-alias>
+        <ordinal>61</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>dfpc_gp_eps_Unique ID</remote-name>
         <remote-type>3</remote-type>
         <local-name>[dfpc_gp_eps_Unique ID]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>dfpc_gp_eps_Unique ID</remote-alias>
-        <ordinal>47</ordinal>
+        <ordinal>63</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -947,7 +1236,7 @@
         <local-name>[dfpc_gp_eps_Date]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>dfpc_gp_eps_Date</remote-alias>
-        <ordinal>48</ordinal>
+        <ordinal>64</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>false</contains-null>
@@ -964,7 +1253,7 @@
         <local-name>[dfpc_gp_eps_Practice code]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>dfpc_gp_eps_Practice code</remote-alias>
-        <ordinal>49</ordinal>
+        <ordinal>65</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -984,7 +1273,7 @@
         <local-name>[M083_Number of registered patients with a nominated pharmacy]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>M083_Number of registered patients with a nominated pharmacy</remote-alias>
-        <ordinal>50</ordinal>
+        <ordinal>66</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1001,7 +1290,7 @@
         <local-name>[REF_Number of GP registered patients]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>REF_Number of GP registered patients</remote-alias>
-        <ordinal>51</ordinal>
+        <ordinal>67</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1018,7 +1307,7 @@
         <local-name>[M084_Number of items prescribed and dispensed via EPS during the reporting period]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>M084_Number of items prescribed and dispensed via EPS during the reporting period</remote-alias>
-        <ordinal>52</ordinal>
+        <ordinal>68</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1035,7 +1324,7 @@
         <local-name>[REF_All dispensing items prescribed and dispensed during the reporting period]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>REF_All dispensing items prescribed and dispensed during the reporting period</remote-alias>
-        <ordinal>53</ordinal>
+        <ordinal>69</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1052,7 +1341,7 @@
         <local-name>[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]</local-name>
         <parent-name>[dfpc_gp_eps_view]</parent-name>
         <remote-alias>M085_Number of repeat dispensing items prescribed and dispensed during the reporting period</remote-alias>
-        <ordinal>54</ordinal>
+        <ordinal>70</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1064,12 +1353,103 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>dfpc_gp_it_Unique ID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[dfpc_gp_it_Unique ID]</local-name>
+        <parent-name>[dfpc_gp_it_view]</parent-name>
+        <remote-alias>dfpc_gp_it_Unique ID</remote-alias>
+        <ordinal>72</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_gp_it_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[dfpc_gp_it_Date]</local-name>
+        <parent-name>[dfpc_gp_it_view]</parent-name>
+        <remote-alias>dfpc_gp_it_Date</remote-alias>
+        <ordinal>73</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_gp_it_Financial_Year</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_gp_it_Financial_Year]</local-name>
+        <parent-name>[dfpc_gp_it_view]</parent-name>
+        <remote-alias>dfpc_gp_it_Financial_Year</remote-alias>
+        <ordinal>74</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_gp_it_Practice code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_gp_it_Practice code]</local-name>
+        <parent-name>[dfpc_gp_it_view]</parent-name>
+        <remote-alias>dfpc_gp_it_Practice code</remote-alias>
+        <ordinal>75</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M074_GP practice compliance with IT standards</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M074_GP practice compliance with IT standards]</local-name>
+        <parent-name>[dfpc_gp_it_view]</parent-name>
+        <remote-alias>M074_GP practice compliance with IT standards</remote-alias>
+        <ordinal>76</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>dfpc_gp_survey_Unique ID</remote-name>
         <remote-type>3</remote-type>
         <local-name>[dfpc_gp_survey_Unique ID]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>dfpc_gp_survey_Unique ID</remote-alias>
-        <ordinal>56</ordinal>
+        <ordinal>78</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1086,7 +1466,7 @@
         <local-name>[dfpc_gp_survey_Date]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>dfpc_gp_survey_Date</remote-alias>
-        <ordinal>57</ordinal>
+        <ordinal>79</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>false</contains-null>
@@ -1103,7 +1483,7 @@
         <local-name>[dfpc_gp_survey_Practice code]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>dfpc_gp_survey_Practice code</remote-alias>
-        <ordinal>58</ordinal>
+        <ordinal>80</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1123,7 +1503,7 @@
         <local-name>[M90_Total number of responses]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M90_Total number of responses</remote-alias>
-        <ordinal>59</ordinal>
+        <ordinal>81</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1140,7 +1520,7 @@
         <local-name>[M90_Number of patients reporting using GP practice online services]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M90_Number of patients reporting using GP practice online services</remote-alias>
-        <ordinal>60</ordinal>
+        <ordinal>82</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1157,7 +1537,7 @@
         <local-name>[M091_Total number of responses]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M091_Total number of responses</remote-alias>
-        <ordinal>61</ordinal>
+        <ordinal>83</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1174,7 +1554,7 @@
         <local-name>[M091_Number of patients reporting having booked an appointment online]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M091_Number of patients reporting having booked an appointment online</remote-alias>
-        <ordinal>62</ordinal>
+        <ordinal>84</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1191,7 +1571,7 @@
         <local-name>[M092_Total number of responses]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M092_Total number of responses</remote-alias>
-        <ordinal>63</ordinal>
+        <ordinal>85</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1208,7 +1588,7 @@
         <local-name>[M092_Number of patients reporting having tried to use their GP practices website]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M092_Number of patients reporting having tried to use their GP practices website</remote-alias>
-        <ordinal>64</ordinal>
+        <ordinal>86</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1225,7 +1605,7 @@
         <local-name>[M093_Number of patients reporting that their GP practice website was easy to use]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M093_Number of patients reporting that their GP practice website was easy to use</remote-alias>
-        <ordinal>65</ordinal>
+        <ordinal>87</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1242,7 +1622,7 @@
         <local-name>[M093_Total number of responses]</local-name>
         <parent-name>[dfpc_gp_survey_view]</parent-name>
         <remote-alias>M093_Total number of responses</remote-alias>
-        <ordinal>66</ordinal>
+        <ordinal>88</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1254,12 +1634,154 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>dfpc_online_consultation_Unique ID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[dfpc_online_consultation_Unique ID]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>dfpc_online_consultation_Unique ID</remote-alias>
+        <ordinal>90</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_online_consultation_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[dfpc_online_consultation_Date]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>dfpc_online_consultation_Date</remote-alias>
+        <ordinal>91</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>dfpc_online_consultation_Practice code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[dfpc_online_consultation_Practice code]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>dfpc_online_consultation_Practice code</remote-alias>
+        <ordinal>92</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M60_Number of patient online consultation submissions</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M60_Number of patient online consultation submissions]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>M60_Number of patient online consultation submissions</remote-alias>
+        <ordinal>93</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M61_Number of patient online consultation submissions</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M61_Number of patient online consultation submissions]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>M61_Number of patient online consultation submissions</remote-alias>
+        <ordinal>94</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>REF_GP practice population</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[REF_GP practice population]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>REF_GP practice population</remote-alias>
+        <ordinal>95</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Online consultation system supplier</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Online consultation system supplier]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>Online consultation system supplier</remote-alias>
+        <ordinal>96</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M62_GP practice OC supplier count</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M62_GP practice OC supplier count]</local-name>
+        <parent-name>[dfpc_online_consultation_view]</parent-name>
+        <remote-alias>M62_GP practice OC supplier count</remote-alias>
+        <ordinal>97</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>dfpc_POMI_Unique ID</remote-name>
         <remote-type>3</remote-type>
         <local-name>[dfpc_POMI_Unique ID]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>dfpc_POMI_Unique ID</remote-alias>
-        <ordinal>68</ordinal>
+        <ordinal>99</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1276,7 +1798,7 @@
         <local-name>[dfpc_POMI_Date]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>dfpc_POMI_Date</remote-alias>
-        <ordinal>69</ordinal>
+        <ordinal>100</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>false</contains-null>
@@ -1293,7 +1815,7 @@
         <local-name>[dfpc_POMI_Practice code]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>dfpc_POMI_Practice code</remote-alias>
-        <ordinal>70</ordinal>
+        <ordinal>101</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1313,7 +1835,7 @@
         <local-name>[M050_GP practice appointment functionality enabled]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M050_GP practice appointment functionality enabled</remote-alias>
-        <ordinal>71</ordinal>
+        <ordinal>102</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1330,7 +1852,7 @@
         <local-name>[M051_GP practice repeat prescription functionality enabled]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M051_GP practice repeat prescription functionality enabled</remote-alias>
-        <ordinal>72</ordinal>
+        <ordinal>103</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1347,7 +1869,7 @@
         <local-name>[M052_GP practice detailed coded record functionality enabled]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M052_GP practice detailed coded record functionality enabled</remote-alias>
-        <ordinal>73</ordinal>
+        <ordinal>104</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1364,7 +1886,7 @@
         <local-name>[M053_Number of GP appointments managed online]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M053_Number of GP appointments managed online</remote-alias>
-        <ordinal>74</ordinal>
+        <ordinal>105</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1381,7 +1903,7 @@
         <local-name>[M054_Number of repeat prescription transactions]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M054_Number of repeat prescription transactions</remote-alias>
-        <ordinal>75</ordinal>
+        <ordinal>106</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1398,7 +1920,7 @@
         <local-name>[M055_Number of detailed coded record views]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M055_Number of detailed coded record views</remote-alias>
-        <ordinal>76</ordinal>
+        <ordinal>107</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1415,7 +1937,7 @@
         <local-name>[REF_Number of GP practice registered patients]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>REF_Number of GP practice registered patients</remote-alias>
-        <ordinal>77</ordinal>
+        <ordinal>108</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1427,12 +1949,80 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>M056_EMIS GP Practices</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M056_EMIS GP Practices]</local-name>
+        <parent-name>[dfpc_pomi_view]</parent-name>
+        <remote-alias>M056_EMIS GP Practices</remote-alias>
+        <ordinal>109</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M057_TPP GP Practices</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M057_TPP GP Practices]</local-name>
+        <parent-name>[dfpc_pomi_view]</parent-name>
+        <remote-alias>M057_TPP GP Practices</remote-alias>
+        <ordinal>110</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M058_VISION GP Practices</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M058_VISION GP Practices]</local-name>
+        <parent-name>[dfpc_pomi_view]</parent-name>
+        <remote-alias>M058_VISION GP Practices</remote-alias>
+        <ordinal>111</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M058B_MICROTEST GP Practices</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[M058B_MICROTEST GP Practices]</local-name>
+        <parent-name>[dfpc_pomi_view]</parent-name>
+        <remote-alias>M058B_MICROTEST GP Practices</remote-alias>
+        <ordinal>112</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>M0140_Number of patients registered for appointment functionality</remote-name>
         <remote-type>20</remote-type>
         <local-name>[M0140_Number of patients registered for appointment functionality]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M0140_Number of patients registered for appointment functionality</remote-alias>
-        <ordinal>78</ordinal>
+        <ordinal>113</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1449,7 +2039,7 @@
         <local-name>[M0141_Number of patients registered for repeat prescription functionality]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M0141_Number of patients registered for repeat prescription functionality</remote-alias>
-        <ordinal>79</ordinal>
+        <ordinal>114</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1466,7 +2056,7 @@
         <local-name>[M0142_Number of patients registered for detailed coded record functionality]</local-name>
         <parent-name>[dfpc_pomi_view]</parent-name>
         <remote-alias>M0142_Number of patients registered for detailed coded record functionality</remote-alias>
-        <ordinal>80</ordinal>
+        <ordinal>115</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1480,10 +2070,64 @@
       <metadata-record class='column'>
         <remote-name>GP_Practice_Code</remote-name>
         <remote-type>129</remote-type>
+        <local-name>[GP_Practice_Code (gp_practice_population_snapshot)]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>GP_Practice_Code</remote-alias>
+        <ordinal>117</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Registered_patient</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Registered_patient]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>Registered_patient</remote-alias>
+        <ordinal>118</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Effective_Snapshot_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Effective_Snapshot_Date (gp_practice_population_snapshot)]</local-name>
+        <parent-name>[gp_practice_population_snapshot]</parent-name>
+        <remote-alias>Effective_Snapshot_Date</remote-alias>
+        <ordinal>119</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GP_Practice_Code</remote-name>
+        <remote-type>129</remote-type>
         <local-name>[GP_Practice_Code (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>82</ordinal>
+        <ordinal>121</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1503,7 +2147,7 @@
         <local-name>[Age_band]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Age_band</remote-alias>
-        <ordinal>83</ordinal>
+        <ordinal>122</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1523,7 +2167,7 @@
         <local-name>[Size (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Size</remote-alias>
-        <ordinal>84</ordinal>
+        <ordinal>123</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1540,7 +2184,7 @@
         <local-name>[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>85</ordinal>
+        <ordinal>124</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1557,7 +2201,7 @@
         <local-name>[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-        <ordinal>86</ordinal>
+        <ordinal>125</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1574,7 +2218,7 @@
         <local-name>[GP_Practice_Code]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>88</ordinal>
+        <ordinal>127</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1594,7 +2238,7 @@
         <local-name>[Sex]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Sex</remote-alias>
-        <ordinal>89</ordinal>
+        <ordinal>128</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1614,7 +2258,7 @@
         <local-name>[Size]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Size</remote-alias>
-        <ordinal>90</ordinal>
+        <ordinal>129</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1631,7 +2275,7 @@
         <local-name>[Effective_Snapshot_Date]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>91</ordinal>
+        <ordinal>130</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1648,7 +2292,7 @@
         <local-name>[DataSourceFileForThisSnapshot_Version]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-        <ordinal>92</ordinal>
+        <ordinal>131</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1666,6 +2310,7 @@
   <column caption='CCG name (shapefile ccg boundaries snapshot)' datatype='string' name='[CCG name (shapefile_ccg_boundaries_snapshot)]' role='dimension' type='nominal' />
   <column caption='DataSourceFileForThisSnapshot Version (patients age band demography snapshot)' datatype='integer' name='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' role='measure' type='quantitative' />
   <column caption='DataSourceFileForThisSnapshot Version' datatype='integer' name='[DataSourceFileForThisSnapshot_Version]' role='measure' type='quantitative' />
+  <column caption='Effective Snapshot Date (gp practice population snapshot)' datatype='date' name='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Effective Snapshot Date (patients age band demography snapshot)' datatype='date' name='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Effective Snapshot Date' datatype='date' name='[Effective_Snapshot_Date]' role='dimension' type='ordinal' />
   <column caption='GP Address1' datatype='string' name='[GP_Address1]' role='dimension' type='nominal' />
@@ -1680,6 +2325,7 @@
   <column caption='GP PCN Code' datatype='string' name='[GP_PCN_Code]' role='dimension' type='nominal' />
   <column caption='GP PCN Name' datatype='string' name='[GP_PCN_Name]' role='dimension' type='nominal' />
   <column caption='GP Postcode' datatype='string' name='[GP_Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+  <column caption='GP Practice Code (gp practice population snapshot)' datatype='string' name='[GP_Practice_Code (gp_practice_population_snapshot)]' role='dimension' type='nominal' />
   <column caption='GP Practice Code (patients age band demography snapshot)' datatype='string' name='[GP_Practice_Code (patients_age_band_demography_snapshot)]' role='dimension' type='nominal' />
   <column caption='GP Practice Code' datatype='string' name='[GP_Practice_Code]' role='dimension' type='nominal' />
   <column caption='GP Region Code' datatype='string' name='[GP_Region_Code]' role='dimension' type='nominal' />
@@ -1697,6 +2343,7 @@
   <column caption='M053 Number of GP appointments managed online' datatype='integer' name='[M053_Number of GP appointments managed online]' role='measure' type='quantitative' />
   <column caption='M054 Number of repeat prescription transactions' datatype='integer' name='[M054_Number of repeat prescription transactions]' role='measure' type='quantitative' />
   <column caption='M055 Number of detailed coded record views' datatype='integer' name='[M055_Number of detailed coded record views]' role='measure' type='quantitative' />
+  <column caption='M074 GP practice compliance with IT standards' datatype='integer' name='[M074_GP practice compliance with IT standards]' role='measure' type='quantitative' />
   <column caption='M083 Number of registered patients with a nominated pharmacy' datatype='integer' name='[M083_Number of registered patients with a nominated pharmacy]' role='measure' type='quantitative' />
   <column caption='M084 Number of items prescribed and dispensed via EPS during the reporting period' datatype='integer' name='[M084_Number of items prescribed and dispensed via EPS during the reporting period]' role='measure' type='quantitative' />
   <column caption='M085 Number of repeat dispensing items prescribed and dispensed during the reporting period' datatype='integer' name='[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' role='measure' type='quantitative' />
@@ -1706,6 +2353,15 @@
   <column caption='M092 Total number of responses' datatype='real' name='[M092_Total number of responses]' role='measure' type='quantitative' />
   <column caption='M093 Number of patients reporting that their GP practice website was easy to use' datatype='real' name='[M093_Number of patients reporting that their GP practice website was easy to use]' role='measure' type='quantitative' />
   <column caption='M093 Total number of responses' datatype='real' name='[M093_Total number of responses]' role='measure' type='quantitative' />
+  <column caption='M60 Number of patient online consultation submissions' datatype='integer' name='[M60_Number of patient online consultation submissions]' role='measure' type='quantitative' />
+  <column caption='M61 Number of patient online consultation submissions' datatype='integer' name='[M61_Number of patient online consultation submissions]' role='measure' type='quantitative' />
+  <column caption='M62 GP practice OC supplier count' datatype='integer' name='[M62_GP practice OC supplier count]' role='measure' type='quantitative' />
+  <column caption='M76AB Number of GP practices that meet or exceed the DSPT standard (snapshot)' datatype='integer' name='[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]' role='measure' type='quantitative' />
+  <column caption='M76A Number of GP practices that meet or exceed the DSPT standard (historical)' datatype='integer' name='[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]' role='measure' type='quantitative' />
+  <column caption='M77A Number of GP practices that exceed the DSPT standard (historical)' datatype='integer' name='[M77A_Number of GP practices that exceed the DSPT standard (historical)]' role='measure' type='quantitative' />
+  <column caption='M77B Number of GP practices that exceed the DSPT standard (snapshot)' datatype='integer' name='[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]' role='measure' type='quantitative' />
+  <column caption='M78A Number of GP practices that have not submitted a DSPT assessment (historical)' datatype='integer' name='[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]' role='measure' type='quantitative' />
+  <column caption='M78B Number of GP practices that have not submitted a DSPT assessment (snapshot)' datatype='integer' name='[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]' role='measure' type='quantitative' />
   <column caption='M90 Number of patients reporting using GP practice online services' datatype='real' name='[M90_Number of patients reporting using GP practice online services]' role='measure' type='quantitative' />
   <column caption='M90 Total number of responses' datatype='real' name='[M90_Total number of responses]' role='measure' type='quantitative' />
   <column caption='PCN CCG Code' datatype='string' name='[PCN_CCG_Code]' role='dimension' type='nominal' />
@@ -1715,32 +2371,54 @@
   <column caption='PCN STP Code' datatype='string' name='[PCN_STP_Code]' role='dimension' type='nominal' />
   <column caption='PCN STP Name' datatype='string' name='[PCN_STP_Name]' role='dimension' type='nominal' />
   <column caption='REF All dispensing items prescribed and dispensed during the reporting period' datatype='integer' name='[REF_All dispensing items prescribed and dispensed during the reporting period]' role='measure' type='quantitative' />
+  <column caption='REF GP practice population' datatype='integer' name='[REF_GP practice population]' role='measure' type='quantitative' />
   <column caption='REF Number of GP practice registered patients' datatype='integer' name='[REF_Number of GP practice registered patients]' role='measure' type='quantitative' />
   <column caption='REF Number of GP registered patients' datatype='integer' name='[REF_Number of GP registered patients]' role='measure' type='quantitative' />
   <column caption='Region Code Name' datatype='string' name='[Region_Code_Name]' role='dimension' type='nominal' />
   <column caption='Region Name' datatype='string' name='[Region_Name]' role='dimension' type='nominal' />
+  <column caption='Registered patient' datatype='integer' name='[Registered_patient]' role='measure' type='quantitative' />
   <column caption='Size (patients age band demography snapshot)' datatype='integer' name='[Size (patients_age_band_demography_snapshot)]' role='measure' type='quantitative' />
   <column caption='Unique ID (shapefile ccg boundaries snapshot)' datatype='integer' name='[Unique ID (shapefile_ccg_boundaries_snapshot)]' role='dimension' type='ordinal' />
   <column datatype='integer' name='[Unique ID]' role='dimension' type='ordinal' />
   <_.fcp.ObjectModelTableType.true...column caption='ccg_code_mapping_snapshot' datatype='table' name='[__tableau_internal_object_id__].[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='dfpc_dspt_gp_practice_historical_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='dfpc_dspt_gp_practice_snapshot_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='dfpc_gp_eps_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='dfpc_gp_it_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='dfpc_gp_survey_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='dfpc_online_consultation_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='dfpc_pomi_view' datatype='table' name='[__tableau_internal_object_id__].[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='gp_practice_population_snapshot' datatype='table' name='[__tableau_internal_object_id__].[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='odscodes_gp_mapping' datatype='table' name='[__tableau_internal_object_id__].[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='patients_age_band_demography_snapshot' datatype='table' name='[__tableau_internal_object_id__].[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='patients_sex_demography_snapshot' datatype='table' name='[__tableau_internal_object_id__].[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shapefile_ccg_boundaries_snapshot' datatype='table' name='[__tableau_internal_object_id__].[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]' role='measure' type='quantitative' />
   <column caption='Bng E' datatype='integer' name='[bng_e]' role='measure' type='quantitative' />
   <column caption='Bng N' datatype='integer' name='[bng_n]' role='measure' type='quantitative' />
+  <column caption='dfpc DSPT historical Date' datatype='date' name='[dfpc_DSPT_historical_Date]' role='dimension' type='ordinal' />
+  <column caption='dfpc DSPT historical Practice code' datatype='string' name='[dfpc_DSPT_historical_Practice code]' role='dimension' type='nominal' />
+  <column caption='dfpc DSPT historical Unique ID' datatype='integer' name='[dfpc_DSPT_historical_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='dfpc DSPT historical financial year' datatype='string' name='[dfpc_DSPT_historical_financial_year]' role='dimension' type='nominal' />
+  <column caption='dfpc DSPT snapshot Date' datatype='date' name='[dfpc_DSPT_snapshot_Date]' role='dimension' type='ordinal' />
+  <column caption='dfpc DSPT snapshot Practice code' datatype='string' name='[dfpc_DSPT_snapshot_Practice code]' role='dimension' type='nominal' />
+  <column caption='dfpc DSPT snapshot Unique ID' datatype='integer' name='[dfpc_DSPT_snapshot_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='dfpc DSPT snapshot financial year' datatype='string' name='[dfpc_DSPT_snapshot_financial_year]' role='dimension' type='nominal' />
   <column caption='dfpc POMI Date' datatype='date' name='[dfpc_POMI_Date]' role='dimension' type='ordinal' />
   <column caption='dfpc POMI Practice code' datatype='string' name='[dfpc_POMI_Practice code]' role='dimension' type='nominal' />
   <column caption='dfpc POMI Unique ID' datatype='integer' name='[dfpc_POMI_Unique ID]' role='dimension' type='ordinal' />
   <column caption='dfpc gp eps Date' datatype='date' name='[dfpc_gp_eps_Date]' role='dimension' type='ordinal' />
   <column caption='dfpc gp eps Practice code' datatype='string' name='[dfpc_gp_eps_Practice code]' role='dimension' type='nominal' />
   <column caption='dfpc gp eps Unique ID' datatype='integer' name='[dfpc_gp_eps_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='dfpc gp it Date' datatype='date' name='[dfpc_gp_it_Date]' role='dimension' type='ordinal' />
+  <column caption='dfpc gp it Financial Year' datatype='string' name='[dfpc_gp_it_Financial_Year]' role='dimension' type='nominal' />
+  <column caption='dfpc gp it Practice code' datatype='string' name='[dfpc_gp_it_Practice code]' role='dimension' type='nominal' />
+  <column caption='dfpc gp it Unique ID' datatype='integer' name='[dfpc_gp_it_Unique ID]' role='dimension' type='ordinal' />
   <column caption='dfpc gp survey Date' datatype='date' name='[dfpc_gp_survey_Date]' role='dimension' type='ordinal' />
   <column caption='dfpc gp survey Practice code' datatype='string' name='[dfpc_gp_survey_Practice code]' role='dimension' type='nominal' />
   <column caption='dfpc gp survey Unique ID' datatype='integer' name='[dfpc_gp_survey_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='dfpc online consultation Date' datatype='date' name='[dfpc_online_consultation_Date]' role='dimension' type='ordinal' />
+  <column caption='dfpc online consultation Practice code' datatype='string' name='[dfpc_online_consultation_Practice code]' role='dimension' type='nominal' />
+  <column caption='dfpc online consultation Unique ID' datatype='integer' name='[dfpc_online_consultation_Unique ID]' role='dimension' type='ordinal' />
   <column caption='Geometry2' datatype='spatial' name='[geometry2]' role='measure' type='nominal' />
   <column caption='Geometry3' datatype='spatial' name='[geometry3]' role='measure' type='nominal' />
   <column caption='Geometry' datatype='string' name='[geometry]' role='dimension' type='nominal' />
@@ -1749,15 +2427,20 @@
   <column caption='St Area(Shape)' datatype='real' name='[st_area(shape)]' role='measure' type='quantitative' />
   <column caption='St Length(Shape)' datatype='real' name='[st_length(shape)]' role='measure' type='quantitative' />
   <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Desktop/dfpc_overview_data_model.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/10/2021 01:24:00 PM' username='tableau_internal_user'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Desktop/dfpc_overview_data_model.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/17/2022 02:57:02 PM' username='tableau_internal_user'>
       <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4' table='[Extract].[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
         <relation name='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' table='[Extract].[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]' type='table' />
         <relation name='ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4' table='[Extract].[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]' type='table' />
         <relation name='shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720' table='[Extract].[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]' type='table' />
+        <relation name='dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B' table='[Extract].[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]' type='table' />
+        <relation name='dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB' table='[Extract].[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]' type='table' />
         <relation name='dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734' table='[Extract].[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]' type='table' />
+        <relation name='dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6' table='[Extract].[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]' type='table' />
         <relation name='dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50' table='[Extract].[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]' type='table' />
+        <relation name='dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA' table='[Extract].[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]' type='table' />
         <relation name='dfpc_pomi_view_9788946157154299A0BB79858E1F1B86' table='[Extract].[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]' type='table' />
+        <relation name='gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA' table='[Extract].[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]' type='table' />
         <relation name='patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518' table='[Extract].[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]' type='table' />
         <relation name='patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4' table='[Extract].[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]' type='table' />
       </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
@@ -1769,6 +2452,7 @@
         <map key='[CCG name]' value='[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4].[CCG name]' />
         <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518].[DataSourceFileForThisSnapshot_Version]' />
         <map key='[DataSourceFileForThisSnapshot_Version]' value='[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4].[DataSourceFileForThisSnapshot_Version]' />
+        <map key='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA].[Effective_Snapshot_Date]' />
         <map key='[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518].[Effective_Snapshot_Date]' />
         <map key='[Effective_Snapshot_Date]' value='[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4].[Effective_Snapshot_Date]' />
         <map key='[GP_Address1]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[GP_Address1]' />
@@ -1783,6 +2467,7 @@
         <map key='[GP_PCN_Code]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[GP_PCN_Code]' />
         <map key='[GP_PCN_Name]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[GP_PCN_Name]' />
         <map key='[GP_Postcode]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[GP_Postcode]' />
+        <map key='[GP_Practice_Code (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA].[GP_Practice_Code]' />
         <map key='[GP_Practice_Code (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518].[GP_Practice_Code]' />
         <map key='[GP_Practice_Code]' value='[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4].[GP_Practice_Code]' />
         <map key='[GP_Region_Code]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[GP_Region_Code]' />
@@ -1800,6 +2485,11 @@
         <map key='[M053_Number of GP appointments managed online]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M053_Number of GP appointments managed online]' />
         <map key='[M054_Number of repeat prescription transactions]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M054_Number of repeat prescription transactions]' />
         <map key='[M055_Number of detailed coded record views]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M055_Number of detailed coded record views]' />
+        <map key='[M056_EMIS GP Practices]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M056_EMIS GP Practices]' />
+        <map key='[M057_TPP GP Practices]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M057_TPP GP Practices]' />
+        <map key='[M058B_MICROTEST GP Practices]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M058B_MICROTEST GP Practices]' />
+        <map key='[M058_VISION GP Practices]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[M058_VISION GP Practices]' />
+        <map key='[M074_GP practice compliance with IT standards]' value='[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6].[M074_GP practice compliance with IT standards]' />
         <map key='[M083_Number of registered patients with a nominated pharmacy]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[M083_Number of registered patients with a nominated pharmacy]' />
         <map key='[M084_Number of items prescribed and dispensed via EPS during the reporting period]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[M084_Number of items prescribed and dispensed via EPS during the reporting period]' />
         <map key='[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]' />
@@ -1809,10 +2499,20 @@
         <map key='[M092_Total number of responses]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[M092_Total number of responses]' />
         <map key='[M093_Number of patients reporting that their GP practice website was easy to use]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[M093_Number of patients reporting that their GP practice website was easy to use]' />
         <map key='[M093_Total number of responses]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[M093_Total number of responses]' />
+        <map key='[M60_Number of patient online consultation submissions]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[M60_Number of patient online consultation submissions]' />
+        <map key='[M61_Number of patient online consultation submissions]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[M61_Number of patient online consultation submissions]' />
+        <map key='[M62_GP practice OC supplier count]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[M62_GP practice OC supplier count]' />
+        <map key='[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]' />
+        <map key='[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]' />
+        <map key='[M77A_Number of GP practices that exceed the DSPT standard (historical)]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[M77A_Number of GP practices that exceed the DSPT standard (historical)]' />
+        <map key='[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]' />
+        <map key='[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]' />
+        <map key='[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]' />
         <map key='[M90_Number of patients reporting using GP practice online services]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[M90_Number of patients reporting using GP practice online services]' />
         <map key='[M90_Total number of responses]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[M90_Total number of responses]' />
         <map key='[ODS CCG code]' value='[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4].[ODS CCG code]' />
         <map key='[ONS CCG code]' value='[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4].[ONS CCG code]' />
+        <map key='[Online consultation system supplier]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[Online consultation system supplier]' />
         <map key='[PCN_CCG_Code]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[PCN_CCG_Code]' />
         <map key='[PCN_CCG_Name]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[PCN_CCG_Name]' />
         <map key='[PCN_Region_Code]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[PCN_Region_Code]' />
@@ -1820,10 +2520,12 @@
         <map key='[PCN_STP_Code]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[PCN_STP_Code]' />
         <map key='[PCN_STP_Name]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[PCN_STP_Name]' />
         <map key='[REF_All dispensing items prescribed and dispensed during the reporting period]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[REF_All dispensing items prescribed and dispensed during the reporting period]' />
+        <map key='[REF_GP practice population]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[REF_GP practice population]' />
         <map key='[REF_Number of GP practice registered patients]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[REF_Number of GP practice registered patients]' />
         <map key='[REF_Number of GP registered patients]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[REF_Number of GP registered patients]' />
         <map key='[Region_Code_Name]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[Region_Code_Name]' />
         <map key='[Region_Name]' value='[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15].[Region_Name]' />
+        <map key='[Registered_patient]' value='[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA].[Registered_patient]' />
         <map key='[Sex]' value='[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4].[Sex]' />
         <map key='[Size (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518].[Size]' />
         <map key='[Size]' value='[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4].[Size]' />
@@ -1831,15 +2533,30 @@
         <map key='[Unique ID]' value='[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4].[Unique ID]' />
         <map key='[bng_e]' value='[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720].[bng_e]' />
         <map key='[bng_n]' value='[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720].[bng_n]' />
+        <map key='[dfpc_DSPT_historical_Date]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[dfpc_DSPT_historical_Date]' />
+        <map key='[dfpc_DSPT_historical_Practice code]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[dfpc_DSPT_historical_Practice code]' />
+        <map key='[dfpc_DSPT_historical_Unique ID]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[dfpc_DSPT_historical_Unique ID]' />
+        <map key='[dfpc_DSPT_historical_financial_year]' value='[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B].[dfpc_DSPT_historical_financial_year]' />
+        <map key='[dfpc_DSPT_snapshot_Date]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[dfpc_DSPT_snapshot_Date]' />
+        <map key='[dfpc_DSPT_snapshot_Practice code]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[dfpc_DSPT_snapshot_Practice code]' />
+        <map key='[dfpc_DSPT_snapshot_Unique ID]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[dfpc_DSPT_snapshot_Unique ID]' />
+        <map key='[dfpc_DSPT_snapshot_financial_year]' value='[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB].[dfpc_DSPT_snapshot_financial_year]' />
         <map key='[dfpc_POMI_Date]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[dfpc_POMI_Date]' />
         <map key='[dfpc_POMI_Practice code]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[dfpc_POMI_Practice code]' />
         <map key='[dfpc_POMI_Unique ID]' value='[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86].[dfpc_POMI_Unique ID]' />
         <map key='[dfpc_gp_eps_Date]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[dfpc_gp_eps_Date]' />
         <map key='[dfpc_gp_eps_Practice code]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[dfpc_gp_eps_Practice code]' />
         <map key='[dfpc_gp_eps_Unique ID]' value='[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734].[dfpc_gp_eps_Unique ID]' />
+        <map key='[dfpc_gp_it_Date]' value='[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6].[dfpc_gp_it_Date]' />
+        <map key='[dfpc_gp_it_Financial_Year]' value='[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6].[dfpc_gp_it_Financial_Year]' />
+        <map key='[dfpc_gp_it_Practice code]' value='[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6].[dfpc_gp_it_Practice code]' />
+        <map key='[dfpc_gp_it_Unique ID]' value='[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6].[dfpc_gp_it_Unique ID]' />
         <map key='[dfpc_gp_survey_Date]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[dfpc_gp_survey_Date]' />
         <map key='[dfpc_gp_survey_Practice code]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[dfpc_gp_survey_Practice code]' />
         <map key='[dfpc_gp_survey_Unique ID]' value='[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50].[dfpc_gp_survey_Unique ID]' />
+        <map key='[dfpc_online_consultation_Date]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[dfpc_online_consultation_Date]' />
+        <map key='[dfpc_online_consultation_Practice code]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[dfpc_online_consultation_Practice code]' />
+        <map key='[dfpc_online_consultation_Unique ID]' value='[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA].[dfpc_online_consultation_Unique ID]' />
         <map key='[geometry2]' value='[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720].[geometry2]' />
         <map key='[geometry3]' value='[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720].[geometry3]' />
         <map key='[geometry]' value='[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720].[geometry]' />
@@ -1849,7 +2566,7 @@
         <map key='[st_length(shape)]' value='[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720].[st_length(shape)]' />
       </cols>
       <refresh>
-        <refresh-event add-from-file-path='odscodes_gp_mapping+ (tableau-staging)' increment-value='%null%' refresh-type='create' rows-inserted='434076' timestamp-start='2021-11-10 13:22:19.287' />
+        <refresh-event add-from-file-path='dfpc_overview_data_model_v001' increment-value='%null%' refresh-type='create' rows-inserted='1144548' timestamp-start='2022-02-17 14:57:02.117' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
@@ -1862,10 +2579,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>6576</approx-count>
+          <approx-count>6947</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Name</remote-name>
@@ -1877,10 +2593,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3923</approx-count>
+          <approx-count>3990</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Register_Date</remote-name>
@@ -1894,7 +2609,6 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_LAT</remote-name>
@@ -1906,9 +2620,8 @@
           <family>odscodes_gp_mapping</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>3798</approx-count>
+          <approx-count>4233</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Long</remote-name>
@@ -1920,9 +2633,8 @@
           <family>odscodes_gp_mapping</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>3798</approx-count>
+          <approx-count>4233</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Address1</remote-name>
@@ -1934,10 +2646,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3434</approx-count>
+          <approx-count>3765</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Address2</remote-name>
@@ -1949,10 +2660,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3336</approx-count>
+          <approx-count>3556</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Address3</remote-name>
@@ -1964,10 +2674,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1385</approx-count>
+          <approx-count>1476</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Postcode</remote-name>
@@ -1979,10 +2688,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3861</approx-count>
+          <approx-count>4233</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_CCG_Code</remote-name>
@@ -1994,10 +2702,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>119</approx-count>
+          <approx-count>110</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_CCG_Name</remote-name>
@@ -2009,10 +2716,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>119</approx-count>
+          <approx-count>110</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_STP_Code</remote-name>
@@ -2024,10 +2730,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>42</approx-count>
+          <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_STP_Name</remote-name>
@@ -2039,10 +2744,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>42</approx-count>
+          <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Region_Code</remote-name>
@@ -2054,10 +2758,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>7</approx-count>
+          <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Region_Name</remote-name>
@@ -2069,10 +2772,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>7</approx-count>
+          <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Region_Name</remote-name>
@@ -2087,7 +2789,6 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Region_Code_Name</remote-name>
@@ -2102,7 +2803,6 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_PCN_Code</remote-name>
@@ -2114,10 +2814,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1399</approx-count>
+          <approx-count>1404</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_PCN_Name</remote-name>
@@ -2129,10 +2828,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1399</approx-count>
+          <approx-count>1404</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>PCN_CCG_Code</remote-name>
@@ -2144,10 +2842,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>122</approx-count>
+          <approx-count>114</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>PCN_CCG_Name</remote-name>
@@ -2159,10 +2856,9 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>122</approx-count>
+          <approx-count>114</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>PCN_STP_Code</remote-name>
@@ -2177,7 +2873,6 @@
           <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>PCN_STP_Name</remote-name>
@@ -2192,7 +2887,6 @@
           <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>PCN_Region_Code</remote-name>
@@ -2207,7 +2901,6 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>PCN_Region_Name</remote-name>
@@ -2222,7 +2915,6 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Last_Refreshed</remote-name>
@@ -2236,7 +2928,6 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Unique ID</remote-name>
@@ -2250,7 +2941,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>ONS CCG code</remote-name>
@@ -2265,7 +2955,6 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG name</remote-name>
@@ -2280,7 +2969,6 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>ODS CCG code</remote-name>
@@ -2295,7 +2983,6 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Unique ID</remote-name>
@@ -2309,7 +2996,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG code</remote-name>
@@ -2324,7 +3010,6 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG name</remote-name>
@@ -2339,7 +3024,6 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>bng_e</remote-name>
@@ -2353,7 +3037,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>bng_n</remote-name>
@@ -2367,7 +3050,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>long</remote-name>
@@ -2381,7 +3063,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>lat</remote-name>
@@ -2395,7 +3076,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>st_area(shape)</remote-name>
@@ -2409,7 +3089,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>st_length(shape)</remote-name>
@@ -2423,7 +3102,6 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>geometry</remote-name>
@@ -2438,7 +3116,6 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG Geography</remote-name>
@@ -2452,7 +3129,6 @@
           <aggregation>Collect</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>geometry2</remote-name>
@@ -2466,7 +3142,6 @@
           <aggregation>Collect</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>geometry3</remote-name>
@@ -2480,7 +3155,192 @@
           <aggregation>Collect</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_08757B01930446F085376D1AB3005720]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_historical_Unique ID</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[dfpc_DSPT_historical_Unique ID]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>dfpc_DSPT_historical_Unique ID</remote-alias>
+          <ordinal>43</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>20493</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_historical_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[dfpc_DSPT_historical_Date]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>dfpc_DSPT_historical_Date</remote-alias>
+          <ordinal>44</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>3</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_historical_Practice code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_DSPT_historical_Practice code]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>dfpc_DSPT_historical_Practice code</remote-alias>
+          <ordinal>45</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6708</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_historical_financial_year</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_DSPT_historical_financial_year]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>dfpc_DSPT_historical_financial_year</remote-alias>
+          <ordinal>46</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>3</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M76A_Number of GP practices that meet or exceed the DSPT standard (historical)</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>M76A_Number of GP practices that meet or exceed the DSPT standard (historical)</remote-alias>
+          <ordinal>47</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M77A_Number of GP practices that exceed the DSPT standard (historical)</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M77A_Number of GP practices that exceed the DSPT standard (historical)]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>M77A_Number of GP practices that exceed the DSPT standard (historical)</remote-alias>
+          <ordinal>48</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M78A_Number of GP practices that have not submitted a DSPT assessment (historical)</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M78A_Number of GP practices that have not submitted a DSPT assessment (historical)]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]</parent-name>
+          <remote-alias>M78A_Number of GP practices that have not submitted a DSPT assessment (historical)</remote-alias>
+          <ordinal>49</ordinal>
+          <family>dfpc_dspt_gp_practice_historical_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_snapshot_Unique ID</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[dfpc_DSPT_snapshot_Unique ID]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>dfpc_DSPT_snapshot_Unique ID</remote-alias>
+          <ordinal>50</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>6626</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_snapshot_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[dfpc_DSPT_snapshot_Date]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>dfpc_DSPT_snapshot_Date</remote-alias>
+          <ordinal>51</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_snapshot_Practice code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_DSPT_snapshot_Practice code]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>dfpc_DSPT_snapshot_Practice code</remote-alias>
+          <ordinal>52</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6626</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_DSPT_snapshot_financial_year</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_DSPT_snapshot_financial_year]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>dfpc_DSPT_snapshot_financial_year</remote-alias>
+          <ordinal>53</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)</remote-alias>
+          <ordinal>54</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M77B_Number of GP practices that exceed the DSPT standard (snapshot)</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M77B_Number of GP practices that exceed the DSPT standard (snapshot)]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>M77B_Number of GP practices that exceed the DSPT standard (snapshot)</remote-alias>
+          <ordinal>55</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)]</local-name>
+          <parent-name>[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]</parent-name>
+          <remote-alias>M78B_Number of GP practices that have not submitted a DSPT assessment (snapshot)</remote-alias>
+          <ordinal>56</ordinal>
+          <family>dfpc_dspt_gp_practice_snapshot_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_eps_Unique ID</remote-name>
@@ -2488,13 +3348,12 @@
           <local-name>[dfpc_gp_eps_Unique ID]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>dfpc_gp_eps_Unique ID</remote-alias>
-          <ordinal>43</ordinal>
+          <ordinal>57</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>13256</approx-count>
+          <approx-count>39639</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_eps_Date</remote-name>
@@ -2502,13 +3361,12 @@
           <local-name>[dfpc_gp_eps_Date]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>dfpc_gp_eps_Date</remote-alias>
-          <ordinal>44</ordinal>
+          <ordinal>58</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>2</approx-count>
+          <approx-count>6</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_eps_Practice code</remote-name>
@@ -2516,14 +3374,13 @@
           <local-name>[dfpc_gp_eps_Practice code]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>dfpc_gp_eps_Practice code</remote-alias>
-          <ordinal>45</ordinal>
+          <ordinal>59</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>5186</approx-count>
+          <approx-count>10176</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M083_Number of registered patients with a nominated pharmacy</remote-name>
@@ -2531,13 +3388,12 @@
           <local-name>[M083_Number of registered patients with a nominated pharmacy]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>M083_Number of registered patients with a nominated pharmacy</remote-alias>
-          <ordinal>46</ordinal>
+          <ordinal>60</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>5115</approx-count>
+          <approx-count>9976</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>REF_Number of GP registered patients</remote-name>
@@ -2545,13 +3401,12 @@
           <local-name>[REF_Number of GP registered patients]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>REF_Number of GP registered patients</remote-alias>
-          <ordinal>47</ordinal>
+          <ordinal>61</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>5870</approx-count>
+          <approx-count>13948</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M084_Number of items prescribed and dispensed via EPS during the reporting period</remote-name>
@@ -2559,13 +3414,12 @@
           <local-name>[M084_Number of items prescribed and dispensed via EPS during the reporting period]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>M084_Number of items prescribed and dispensed via EPS during the reporting period</remote-alias>
-          <ordinal>48</ordinal>
+          <ordinal>62</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>6499</approx-count>
+          <approx-count>14858</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>REF_All dispensing items prescribed and dispensed during the reporting period</remote-name>
@@ -2573,13 +3427,12 @@
           <local-name>[REF_All dispensing items prescribed and dispensed during the reporting period]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>REF_All dispensing items prescribed and dispensed during the reporting period</remote-alias>
-          <ordinal>49</ordinal>
+          <ordinal>63</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>6655</approx-count>
+          <approx-count>16868</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M085_Number of repeat dispensing items prescribed and dispensed during the reporting period</remote-name>
@@ -2587,13 +3440,79 @@
           <local-name>[M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]</local-name>
           <parent-name>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</parent-name>
           <remote-alias>M085_Number of repeat dispensing items prescribed and dispensed during the reporting period</remote-alias>
-          <ordinal>50</ordinal>
+          <ordinal>64</ordinal>
           <family>dfpc_gp_eps_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>2949</approx-count>
+          <approx-count>5751</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_gp_it_Unique ID</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[dfpc_gp_it_Unique ID]</local-name>
+          <parent-name>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</parent-name>
+          <remote-alias>dfpc_gp_it_Unique ID</remote-alias>
+          <ordinal>65</ordinal>
+          <family>dfpc_gp_it_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>13501</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_gp_it_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[dfpc_gp_it_Date]</local-name>
+          <parent-name>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</parent-name>
+          <remote-alias>dfpc_gp_it_Date</remote-alias>
+          <ordinal>66</ordinal>
+          <family>dfpc_gp_it_view</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_gp_it_Financial_Year</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_gp_it_Financial_Year]</local-name>
+          <parent-name>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</parent-name>
+          <remote-alias>dfpc_gp_it_Financial_Year</remote-alias>
+          <ordinal>67</ordinal>
+          <family>dfpc_gp_it_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_gp_it_Practice code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_gp_it_Practice code]</local-name>
+          <parent-name>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</parent-name>
+          <remote-alias>dfpc_gp_it_Practice code</remote-alias>
+          <ordinal>68</ordinal>
+          <family>dfpc_gp_it_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4969</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M074_GP practice compliance with IT standards</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M074_GP practice compliance with IT standards]</local-name>
+          <parent-name>[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]</parent-name>
+          <remote-alias>M074_GP practice compliance with IT standards</remote-alias>
+          <ordinal>69</ordinal>
+          <family>dfpc_gp_it_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_survey_Unique ID</remote-name>
@@ -2601,13 +3520,12 @@
           <local-name>[dfpc_gp_survey_Unique ID]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>dfpc_gp_survey_Unique ID</remote-alias>
-          <ordinal>51</ordinal>
+          <ordinal>70</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>35254</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_survey_Date</remote-name>
@@ -2615,13 +3533,12 @@
           <local-name>[dfpc_gp_survey_Date]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>dfpc_gp_survey_Date</remote-alias>
-          <ordinal>52</ordinal>
+          <ordinal>71</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
           <approx-count>5</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_gp_survey_Practice code</remote-name>
@@ -2629,14 +3546,13 @@
           <local-name>[dfpc_gp_survey_Practice code]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>dfpc_gp_survey_Practice code</remote-alias>
-          <ordinal>53</ordinal>
+          <ordinal>72</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>9344</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M90_Total number of responses</remote-name>
@@ -2644,13 +3560,12 @@
           <local-name>[M90_Total number of responses]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M90_Total number of responses</remote-alias>
-          <ordinal>54</ordinal>
+          <ordinal>73</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>35254</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M90_Number of patients reporting using GP practice online services</remote-name>
@@ -2658,13 +3573,12 @@
           <local-name>[M90_Number of patients reporting using GP practice online services]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M90_Number of patients reporting using GP practice online services</remote-alias>
-          <ordinal>55</ordinal>
+          <ordinal>74</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>33383</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M091_Total number of responses</remote-name>
@@ -2672,13 +3586,12 @@
           <local-name>[M091_Total number of responses]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M091_Total number of responses</remote-alias>
-          <ordinal>56</ordinal>
+          <ordinal>75</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>35254</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M091_Number of patients reporting having booked an appointment online</remote-name>
@@ -2686,13 +3599,12 @@
           <local-name>[M091_Number of patients reporting having booked an appointment online]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M091_Number of patients reporting having booked an appointment online</remote-alias>
-          <ordinal>57</ordinal>
+          <ordinal>76</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>30849</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M092_Total number of responses</remote-name>
@@ -2700,13 +3612,12 @@
           <local-name>[M092_Total number of responses]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M092_Total number of responses</remote-alias>
-          <ordinal>58</ordinal>
+          <ordinal>77</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>29440</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M092_Number of patients reporting having tried to use their GP practices website</remote-name>
@@ -2714,13 +3625,12 @@
           <local-name>[M092_Number of patients reporting having tried to use their GP practices website]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M092_Number of patients reporting having tried to use their GP practices website</remote-alias>
-          <ordinal>59</ordinal>
+          <ordinal>78</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>29269</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M093_Number of patients reporting that their GP practice website was easy to use</remote-name>
@@ -2728,13 +3638,12 @@
           <local-name>[M093_Number of patients reporting that their GP practice website was easy to use]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M093_Number of patients reporting that their GP practice website was easy to use</remote-alias>
-          <ordinal>60</ordinal>
+          <ordinal>79</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>29269</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M093_Total number of responses</remote-name>
@@ -2742,13 +3651,118 @@
           <local-name>[M093_Total number of responses]</local-name>
           <parent-name>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</parent-name>
           <remote-alias>M093_Total number of responses</remote-alias>
-          <ordinal>61</ordinal>
+          <ordinal>80</ordinal>
           <family>dfpc_gp_survey_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>29269</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_online_consultation_Unique ID</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[dfpc_online_consultation_Unique ID]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>dfpc_online_consultation_Unique ID</remote-alias>
+          <ordinal>81</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>610883</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_online_consultation_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[dfpc_online_consultation_Date]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>dfpc_online_consultation_Date</remote-alias>
+          <ordinal>82</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>92</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>dfpc_online_consultation_Practice code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[dfpc_online_consultation_Practice code]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>dfpc_online_consultation_Practice code</remote-alias>
+          <ordinal>83</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>39854</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M60_Number of patient online consultation submissions</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M60_Number of patient online consultation submissions]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>M60_Number of patient online consultation submissions</remote-alias>
+          <ordinal>84</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3296</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M61_Number of patient online consultation submissions</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M61_Number of patient online consultation submissions]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>M61_Number of patient online consultation submissions</remote-alias>
+          <ordinal>85</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3296</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>REF_GP practice population</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[REF_GP practice population]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>REF_GP practice population</remote-alias>
+          <ordinal>86</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>81930</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Online consultation system supplier</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Online consultation system supplier]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>Online consultation system supplier</remote-alias>
+          <ordinal>87</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M62_GP practice OC supplier count</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M62_GP practice OC supplier count]</local-name>
+          <parent-name>[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]</parent-name>
+          <remote-alias>M62_GP practice OC supplier count</remote-alias>
+          <ordinal>88</ordinal>
+          <family>dfpc_online_consultation_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_POMI_Unique ID</remote-name>
@@ -2756,13 +3770,12 @@
           <local-name>[dfpc_POMI_Unique ID]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>dfpc_POMI_Unique ID</remote-alias>
-          <ordinal>62</ordinal>
+          <ordinal>89</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>332900</approx-count>
+          <approx-count>358777</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_POMI_Date</remote-name>
@@ -2770,13 +3783,12 @@
           <local-name>[dfpc_POMI_Date]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>dfpc_POMI_Date</remote-alias>
-          <ordinal>63</ordinal>
+          <ordinal>90</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>49</approx-count>
+          <approx-count>53</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>dfpc_POMI_Practice code</remote-name>
@@ -2784,14 +3796,13 @@
           <local-name>[dfpc_POMI_Practice code]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>dfpc_POMI_Practice code</remote-alias>
-          <ordinal>64</ordinal>
+          <ordinal>91</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>38203</approx-count>
+          <approx-count>41040</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M050_GP practice appointment functionality enabled</remote-name>
@@ -2799,13 +3810,12 @@
           <local-name>[M050_GP practice appointment functionality enabled]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M050_GP practice appointment functionality enabled</remote-alias>
-          <ordinal>65</ordinal>
+          <ordinal>92</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>2</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M051_GP practice repeat prescription functionality enabled</remote-name>
@@ -2813,13 +3823,12 @@
           <local-name>[M051_GP practice repeat prescription functionality enabled]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M051_GP practice repeat prescription functionality enabled</remote-alias>
-          <ordinal>66</ordinal>
+          <ordinal>93</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>2</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M052_GP practice detailed coded record functionality enabled</remote-name>
@@ -2827,13 +3836,12 @@
           <local-name>[M052_GP practice detailed coded record functionality enabled]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M052_GP practice detailed coded record functionality enabled</remote-alias>
-          <ordinal>67</ordinal>
+          <ordinal>94</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>2</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M053_Number of GP appointments managed online</remote-name>
@@ -2841,13 +3849,12 @@
           <local-name>[M053_Number of GP appointments managed online]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M053_Number of GP appointments managed online</remote-alias>
-          <ordinal>68</ordinal>
+          <ordinal>95</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>2943</approx-count>
+          <approx-count>3089</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M054_Number of repeat prescription transactions</remote-name>
@@ -2855,13 +3862,12 @@
           <local-name>[M054_Number of repeat prescription transactions]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M054_Number of repeat prescription transactions</remote-alias>
-          <ordinal>69</ordinal>
+          <ordinal>96</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>8166</approx-count>
+          <approx-count>7894</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M055_Number of detailed coded record views</remote-name>
@@ -2869,13 +3875,12 @@
           <local-name>[M055_Number of detailed coded record views]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M055_Number of detailed coded record views</remote-alias>
-          <ordinal>70</ordinal>
+          <ordinal>97</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>7548</approx-count>
+          <approx-count>9186</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>REF_Number of GP practice registered patients</remote-name>
@@ -2883,13 +3888,64 @@
           <local-name>[REF_Number of GP practice registered patients]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>REF_Number of GP practice registered patients</remote-alias>
-          <ordinal>71</ordinal>
+          <ordinal>98</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>61431</approx-count>
+          <approx-count>61941</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M056_EMIS GP Practices</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M056_EMIS GP Practices]</local-name>
+          <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
+          <remote-alias>M056_EMIS GP Practices</remote-alias>
+          <ordinal>99</ordinal>
+          <family>dfpc_pomi_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M057_TPP GP Practices</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M057_TPP GP Practices]</local-name>
+          <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
+          <remote-alias>M057_TPP GP Practices</remote-alias>
+          <ordinal>100</ordinal>
+          <family>dfpc_pomi_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M058_VISION GP Practices</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M058_VISION GP Practices]</local-name>
+          <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
+          <remote-alias>M058_VISION GP Practices</remote-alias>
+          <ordinal>101</ordinal>
+          <family>dfpc_pomi_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M058B_MICROTEST GP Practices</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M058B_MICROTEST GP Practices]</local-name>
+          <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
+          <remote-alias>M058B_MICROTEST GP Practices</remote-alias>
+          <ordinal>102</ordinal>
+          <family>dfpc_pomi_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0140_Number of patients registered for appointment functionality</remote-name>
@@ -2897,13 +3953,12 @@
           <local-name>[M0140_Number of patients registered for appointment functionality]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M0140_Number of patients registered for appointment functionality</remote-alias>
-          <ordinal>72</ordinal>
+          <ordinal>103</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>30864</approx-count>
+          <approx-count>31097</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0141_Number of patients registered for repeat prescription functionality</remote-name>
@@ -2911,13 +3966,12 @@
           <local-name>[M0141_Number of patients registered for repeat prescription functionality]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M0141_Number of patients registered for repeat prescription functionality</remote-alias>
-          <ordinal>73</ordinal>
+          <ordinal>104</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>30109</approx-count>
+          <approx-count>28203</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0142_Number of patients registered for detailed coded record functionality</remote-name>
@@ -2925,13 +3979,52 @@
           <local-name>[M0142_Number of patients registered for detailed coded record functionality]</local-name>
           <parent-name>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</parent-name>
           <remote-alias>M0142_Number of patients registered for detailed coded record functionality</remote-alias>
-          <ordinal>74</ordinal>
+          <ordinal>105</ordinal>
           <family>dfpc_pomi_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>9944</approx-count>
+          <approx-count>10941</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>GP_Practice_Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[GP_Practice_Code (gp_practice_population_snapshot)]</local-name>
+          <parent-name>[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]</parent-name>
+          <remote-alias>GP_Practice_Code</remote-alias>
+          <ordinal>106</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6527</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Registered_patient</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Registered_patient]</local-name>
+          <parent-name>[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]</parent-name>
+          <remote-alias>Registered_patient</remote-alias>
+          <ordinal>107</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3032</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Effective_Snapshot_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[Effective_Snapshot_Date (gp_practice_population_snapshot)]</local-name>
+          <parent-name>[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]</parent-name>
+          <remote-alias>Effective_Snapshot_Date</remote-alias>
+          <ordinal>108</ordinal>
+          <family>gp_practice_population_snapshot</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -2939,14 +4032,13 @@
           <local-name>[GP_Practice_Code (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</parent-name>
           <remote-alias>GP_Practice_Code</remote-alias>
-          <ordinal>75</ordinal>
+          <ordinal>109</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>9045</approx-count>
+          <approx-count>8159</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Age_band</remote-name>
@@ -2954,14 +4046,13 @@
           <local-name>[Age_band]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</parent-name>
           <remote-alias>Age_band</remote-alias>
-          <ordinal>76</ordinal>
+          <ordinal>110</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>5</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Size</remote-name>
@@ -2969,13 +4060,12 @@
           <local-name>[Size (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</parent-name>
           <remote-alias>Size</remote-alias>
-          <ordinal>77</ordinal>
+          <ordinal>111</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>6456</approx-count>
+          <approx-count>6146</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -2983,13 +4073,12 @@
           <local-name>[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</parent-name>
           <remote-alias>Effective_Snapshot_Date</remote-alias>
-          <ordinal>78</ordinal>
+          <ordinal>112</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>DataSourceFileForThisSnapshot_Version</remote-name>
@@ -2997,13 +4086,12 @@
           <local-name>[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]</local-name>
           <parent-name>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</parent-name>
           <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-          <ordinal>79</ordinal>
+          <ordinal>113</ordinal>
           <family>patients_age_band_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_7807957ACBF244B9B48B36E7BDDA5518]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -3011,14 +4099,13 @@
           <local-name>[GP_Practice_Code]</local-name>
           <parent-name>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</parent-name>
           <remote-alias>GP_Practice_Code</remote-alias>
-          <ordinal>80</ordinal>
+          <ordinal>114</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>4866</approx-count>
+          <approx-count>4884</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Sex</remote-name>
@@ -3026,14 +4113,13 @@
           <local-name>[Sex]</local-name>
           <parent-name>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</parent-name>
           <remote-alias>Sex</remote-alias>
-          <ordinal>81</ordinal>
+          <ordinal>115</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>2</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Size</remote-name>
@@ -3041,13 +4127,12 @@
           <local-name>[Size]</local-name>
           <parent-name>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</parent-name>
           <remote-alias>Size</remote-alias>
-          <ordinal>82</ordinal>
+          <ordinal>116</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>4378</approx-count>
+          <approx-count>4535</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -3055,13 +4140,12 @@
           <local-name>[Effective_Snapshot_Date]</local-name>
           <parent-name>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</parent-name>
           <remote-alias>Effective_Snapshot_Date</remote-alias>
-          <ordinal>83</ordinal>
+          <ordinal>117</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>DataSourceFileForThisSnapshot_Version</remote-name>
@@ -3069,13 +4153,12 @@
           <local-name>[DataSourceFileForThisSnapshot_Version]</local-name>
           <parent-name>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</parent-name>
           <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-          <ordinal>84</ordinal>
+          <ordinal>118</ordinal>
           <family>patients_sex_demography_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
-          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_C29F80B1402D48468EAB81C31FF79ED4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
       </metadata-records>
     </connection>
@@ -3095,12 +4178,36 @@
           <relation name='ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4' table='[Extract].[ccg_code_mapping_snapshot_A9C0BCAEBB8848AA8059A6E30E6D8DA4]' type='table' />
         </properties>
       </object>
+      <object caption='dfpc_dspt_gp_practice_historical_view' id='dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B'>
+        <properties context=''>
+          <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_dspt_gp_practice_historical_view' table='[dbo].[dfpc_dspt_gp_practice_historical_view]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B' table='[Extract].[dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B]' type='table' />
+        </properties>
+      </object>
+      <object caption='dfpc_dspt_gp_practice_snapshot_view' id='dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB'>
+        <properties context=''>
+          <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_dspt_gp_practice_snapshot_view' table='[dbo].[dfpc_dspt_gp_practice_snapshot_view]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB' table='[Extract].[dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB]' type='table' />
+        </properties>
+      </object>
       <object caption='dfpc_gp_eps_view' id='dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734'>
         <properties context=''>
           <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_gp_eps_view' table='[dbo].[dfpc_gp_eps_view]' type='table' />
         </properties>
         <properties context='extract'>
           <relation name='dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734' table='[Extract].[dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734]' type='table' />
+        </properties>
+      </object>
+      <object caption='dfpc_gp_it_view' id='dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6'>
+        <properties context=''>
+          <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_gp_it_view' table='[dbo].[dfpc_gp_it_view]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6' table='[Extract].[dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6]' type='table' />
         </properties>
       </object>
       <object caption='dfpc_gp_survey_view' id='dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50'>
@@ -3111,12 +4218,28 @@
           <relation name='dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50' table='[Extract].[dfpc_gp_survey_view_408D2C384E284DD283621C0A0E38AC50]' type='table' />
         </properties>
       </object>
+      <object caption='dfpc_online_consultation_view' id='dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA'>
+        <properties context=''>
+          <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_online_consultation_view' table='[dbo].[dfpc_online_consultation_view]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA' table='[Extract].[dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA]' type='table' />
+        </properties>
+      </object>
       <object caption='dfpc_pomi_view' id='dfpc_pomi_view_9788946157154299A0BB79858E1F1B86'>
         <properties context=''>
           <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='dfpc_pomi_view' table='[dbo].[dfpc_pomi_view]' type='table' />
         </properties>
         <properties context='extract'>
           <relation name='dfpc_pomi_view_9788946157154299A0BB79858E1F1B86' table='[Extract].[dfpc_pomi_view_9788946157154299A0BB79858E1F1B86]' type='table' />
+        </properties>
+      </object>
+      <object caption='gp_practice_population_snapshot' id='gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA'>
+        <properties context=''>
+          <relation connection='sqlserver.1ewu1321tk03st1ggunbs0ilfjlf' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA' table='[Extract].[gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA]' type='table' />
         </properties>
       </object>
       <object caption='odscodes_gp_mapping' id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15'>
@@ -3164,10 +4287,34 @@
       <relationship>
         <expression op='='>
           <expression op='[GP_Code]' />
+          <expression op='[dfpc_DSPT_historical_Practice code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
+        <second-end-point object-id='dfpc_dspt_gp_practice_historical_view_8A5F591DFA4444D0879500A5C619548B' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
+          <expression op='[dfpc_DSPT_snapshot_Practice code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
+        <second-end-point object-id='dfpc_dspt_gp_practice_snapshot_view_9EB90918638948F1AED172BF34AC49FB' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
           <expression op='[dfpc_gp_eps_Practice code]' />
         </expression>
         <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
         <second-end-point object-id='dfpc_gp_eps_view_2A0D575E0AD245BAAAE99846D4B4A734' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
+          <expression op='[dfpc_gp_it_Practice code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
+        <second-end-point object-id='dfpc_gp_it_view_88575F658D6F4DBCA60152A4EACD82F6' />
       </relationship>
       <relationship>
         <expression op='='>
@@ -3180,10 +4327,26 @@
       <relationship>
         <expression op='='>
           <expression op='[GP_Code]' />
+          <expression op='[dfpc_online_consultation_Practice code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
+        <second-end-point object-id='dfpc_online_consultation_view_1DF1742325F74E2CB49DAEC6AEC009FA' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
           <expression op='[dfpc_POMI_Practice code]' />
         </expression>
         <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
         <second-end-point object-id='dfpc_pomi_view_9788946157154299A0BB79858E1F1B86' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_Code]' />
+          <expression op='[GP_Practice_Code (gp_practice_population_snapshot)]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_DDD18ACE53264692B90E843DA478EF15' />
+        <second-end-point object-id='gp_practice_population_snapshot_17E5B97D87754E6DB7A910C79011B6CA' />
       </relationship>
       <relationship>
         <expression op='='>
