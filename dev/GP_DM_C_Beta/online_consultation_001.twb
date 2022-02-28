@@ -21,7 +21,7 @@
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='Online_Consultation_V1' path='/t/NHSX_DEV/workbooks' revision='1.0' site='NHSX_DEV' />
+  <repository-location id='Online_Consultation_V1' path='/t/NHSX_DEV/workbooks' revision='1.1' site='NHSX_DEV' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -8197,8 +8197,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='950' minheight='950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='1015' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='1014' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='1019' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='1018' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='25' h='4340' id='989' is-fixed='true' name='Online Consultation  /  Caveatss' show-title='false' w='78331' x='21083' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -8694,8 +8694,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='1105' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='1104' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='1109' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='1108' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='25' h='4340' id='1085' is-fixed='true' name='Online Consultation  /Geography' show-title='false' w='78338' x='21076' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9258,8 +9258,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='1088' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='1087' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='1092' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='1091' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='25' h='4339' id='1040' is-fixed='true' name='Online Consultation  / System supplier' show-title='false' w='78337' x='21077' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9934,8 +9934,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2700' minheight='2700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='1086' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='1085' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='1090' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='1089' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='25' h='4333' id='947' is-fixed='true' name='Online Consultation  /  Utilisation' show-title='false' w='78338' x='21076' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -11111,7 +11111,7 @@
       </viewpoint>
       <simple-id uuid='{70F08D59-1D60-48FF-B79F-A6258C99DDB2}' />
     </window>
-    <window class='dashboard' name='Utilisation'>
+    <window class='dashboard' maximized='true' name='Utilisation'>
       <viewpoints>
         <viewpoint name='Age'>
           <zoom type='entire-view' />
@@ -11146,34 +11146,6 @@
         </viewpoint>
         <viewpoint name='[M061] KPI'>
           <zoom type='entire-view' />
-          <selection-collection>
-            <tuple-selection>
-              <tuple-reference>
-                <tuple-descriptor>
-                  <pane-descriptor>
-                    <x-fields />
-                    <y-fields />
-                  </pane-descriptor>
-                  <columns>
-                    <field>[online_consultations_v001].[none:Calculation_2368119350609645572:nk]</field>
-                    <field>[online_consultations_v001].[tdy:Calculation_2368119351976579109:qk]</field>
-                    <field>[online_consultations_v001].[usr:{KPI} M060 - Current Month (int) (copy)_2368119351989706797:qk]</field>
-                    <field>[online_consultations_v001].[usr:{KPI} M060 - Month △ (%) (copy)_2368119351989968942:qk]</field>
-                    <field>[online_consultations_v001].[usr:{KPI} M060(int) - Current Week (int) (copy)_2368119351994646584:qk]</field>
-                    <field>[online_consultations_v001].[usr:{KPI} M060(int) - △Week(%) (copy)_2368119351995166778:qk]</field>
-                  </columns>
-                </tuple-descriptor>
-                <tuple>
-                  <value>&quot;January - 2022&quot;</value>
-                  <value>#2022-01-24 00:00:00#</value>
-                  <value>9.634412887533891</value>
-                  <value>0.91433686580694995</value>
-                  <value>9.8089676105107788</value>
-                  <value>0.013296629795071598</value>
-                </tuple>
-              </tuple-reference>
-            </tuple-selection>
-          </selection-collection>
         </viewpoint>
       </viewpoints>
       <active id='-1' />
@@ -11262,7 +11234,7 @@
                   <value>&quot;January - 2022&quot;</value>
                   <value>#2022-01-24 00:00:00#</value>
                   <value>9.634412887533891</value>
-                  <value>0.91433686580694995</value>
+                  <value>0.91433686580695239</value>
                   <value>9.8089676105107788</value>
                   <value>0.013296629795071598</value>
                 </tuple>
@@ -11274,14 +11246,14 @@
       <active id='1083' />
       <simple-id uuid='{58EF4866-5531-4DC4-B96F-FF467FE9DDC1}' />
     </window>
-    <window class='dashboard' maximized='true' name='Caveats'>
+    <window class='dashboard' name='Caveats'>
       <viewpoints>
         <viewpoint name='Connecting to patients' />
         <viewpoint name='Online Consultation  /  Caveatss'>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='949' />
       <simple-id uuid='{5D6E1C6F-8648-4B9D-B771-6D42588D5365}' />
     </window>
     <window class='worksheet' name='Connecting to patients'>
