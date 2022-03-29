@@ -1,15 +1,15 @@
 Master Dash,Dashboard,Sheet,Sub Sheet,Link
-Overview,Overview,Overview,,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/GPDMCOverview/Overview?:iid=1
-Overview,Connecting to Patients,Patient Online Management Information (POMI),Usage,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline-EV/Usage
-Overview,Connecting to Patients,Patient Online Management Information (POMI),Uptake,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline-EV/Uptake
-Overview,Connecting to Patients,Patient Online Management Information (POMI),Enablement,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline-EV/Enablement
-Overview,Connecting to Patients,Patient Online Management Information (POMI),Principal System Supplier,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline-EV/PrincipalSystemSupplier
-Overview,Connecting to Patients,Patient Online Management Information (POMI),Geography,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline-EV/Geography
+Overview,Overview,Overview,,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/GPDMC-Overview/Overview?:iid=1
+Overview,Connecting to Patients,Patient Online Management Information (POMI),Usage,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline/Usage
+Overview,Connecting to Patients,Patient Online Management Information (POMI),Uptake,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline/Uptake
+Overview,Connecting to Patients,Patient Online Management Information (POMI),Enablement,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline/Enablement
+Overview,Connecting to Patients,Patient Online Management Information (POMI),Principal System Supplier,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline/PrincipalSystemSupplier
+Overview,Connecting to Patients,Patient Online Management Information (POMI),Geography,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/PatientOnline/Geography
 Overview,Connecting to Patients,Electronic Prescription Service (EPS),Utilisation,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/ElectronicPrescriptionService/Utilisation?:iid=2
 Overview,Connecting to Patients,Electronic Prescription Service (EPS),Geography,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/ElectronicPrescriptionService/Geography?:iid=1
-Overview,Connecting to Patients,Online Consultations (OC),Utilisation,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/Online_Consultation_V1/Utilisation?:iid=3
-Overview,Connecting to Patients,Online Consultations (OC),OC Supplier,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/Online_Consultation_V1/OCSupplier
-Overview,Connecting to Patients,Online Consultations (OC),Geography,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/Online_Consultation_V1/Geography
+Overview,Connecting to Patients,Online Consultations (OC),Utilisation,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/OnlineConsultation/Utilisation?:iid=3
+Overview,Connecting to Patients,Online Consultations (OC),OC Supplier,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/OnlineConsultation/OCSupplier
+Overview,Connecting to Patients,Online Consultations (OC),Geography,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/OnlineConsultation/Geography
 Overview,Improving our organisations,GP Patient Survey (GPPS),Online Services,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/GPPatientSurvey/OnlineServices
 Overview,Improving our organisations,GP Patient Survey (GPPS),GP Practice Website,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/GPPatientSurvey/GPPracticeWebsite?:iid=4
 Overview,Improving our organisations,GP Patient Survey (GPPS),Geography,https://tabuat.data.england.nhs.uk/#/site/NHSX_UAT/views/GPPatientSurvey/Geography
