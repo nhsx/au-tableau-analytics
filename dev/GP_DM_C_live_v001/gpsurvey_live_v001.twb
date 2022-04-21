@@ -23,7 +23,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='GPPatientSurvey_16485629895400' path='/t/NHSX_DEV/workbooks' revision='1.1' site='NHSX_DEV' />
+  <repository-location id='GPPatientSurvey_16485629895400' path='/t/NHSX_DEV/workbooks' revision='1.2' site='NHSX_DEV' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -1849,17 +1849,17 @@
     <action caption='Improving our org (Geography) 1' name='[Action6_3731AC1571AC4BA5AC11064A097787FF]'>
       <activation type='on-select' />
       <source dashboard='Caveats' type='sheet' worksheet='Improving our organisations' />
-      <link caption='Improving our org (Geography) 1' expression='https://tabanalytics.data.england.nhs.uk/#/site/NHSX/views/GPDMC-Overview/Improvingourorganisations' />
+      <link caption='Improving our org (Geography) 1' expression='https://tabanalytics.data.england.nhs.uk/#/views/GPDMC-Overview/Improvingourorganisations' />
     </action>
     <action caption='Improving our org (online services)' name='[Action6_8E684B8C0EBA4458976A1A49DD099503]'>
       <activation type='on-select' />
       <source dashboard='Online Services' type='sheet' worksheet='Improving our organisations' />
-      <link caption='' expression='https://tabanalytics.data.england.nhs.uk/#/site/NHSX/views/GPDMC-Overview/Improvingourorganisations' />
+      <link caption='' expression='https://tabanalytics.data.england.nhs.uk/#/views/GPDMC-Overview/Improvingourorganisations' />
     </action>
     <action caption='Improving our org (GP practice website)' name='[Action7_4CCF5DA33A274BBAACBA9E17638AA7FF]'>
       <activation type='on-select' />
       <source dashboard='GP Practice Website' type='sheet' worksheet='Improving our organisations' />
-      <link caption='' expression='https://tabanalytics.data.england.nhs.uk/#/site/NHSX/views/GPDMC-Overview/Improvingourorganisations' />
+      <link caption='' expression='https://tabanalytics.data.england.nhs.uk/#/views/GPDMC-Overview/Improvingourorganisations' />
     </action>
     <action caption='Caveats: Weighted data action' name='[Action7_8A9A6F025E814EFA9F8FC678868DFAD4]'>
       <activation type='on-select' />
@@ -1874,7 +1874,7 @@
     <action caption='Improving our org (Geography)' name='[Action8_FDAA4FB0D5264EF58C0422216C53F5A8]'>
       <activation type='on-select' />
       <source dashboard='Geography' type='sheet' worksheet='Improving our organisations' />
-      <link caption='' expression='https://tabanalytics.data.england.nhs.uk/#/site/NHSX/views/GPDMC-Overview/Improvingourorganisations' />
+      <link caption='' expression='https://tabanalytics.data.england.nhs.uk/#/views/GPDMC-Overview/Improvingourorganisations' />
     </action>
     <datasources>
       <datasource caption='gpsurvey_v001' name='sqlproxy.1rsmwzl0fa3b4z1ep0ura0ifl959' />
@@ -6164,8 +6164,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2600' minheight='2600' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='903' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='902' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='907' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='906' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='32' h='4167' id='751' is-fixed='true' name='GP Patient Survey  /  Caveats' show-title='false' w='79261' x='20739' y='0'>
                   <layout-cache type-h='fixed' type-w='fixed' />
                   <zone-style>
@@ -6851,8 +6851,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1950' minheight='1950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='889' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='888' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='893' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='892' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='34' h='4427' id='724' is-fixed='true' name='GP Patient Survey  /  GP Practice Website' show-title='false' w='79260' x='20740' y='0'>
                   <layout-cache type-h='fixed' type-w='fixed' />
                   <zone-style>
@@ -7526,8 +7526,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2200' minheight='2200' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='893' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='892' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='897' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='896' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='36' h='4688' id='735' is-fixed='true' name='GP Patient Survey  /  Geography' show-title='false' w='79261' x='20739' y='0'>
                   <layout-cache type-h='fixed' type-w='fixed' />
                   <zone-style>
@@ -8197,8 +8197,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1950' minheight='1950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='880' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='879' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='884' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='883' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='33' h='4297' id='714' is-fixed='true' name='GP Patient Survey  /  Online Services' show-title='false' w='79260' x='20740' y='0'>
                   <layout-cache type-h='fixed' type-w='fixed' />
                   <zone-style>
@@ -8550,7 +8550,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='467' />
+      <active id='-1' />
       <simple-id uuid='{D1397974-F16E-42B4-9791-1C5081165910}' />
     </window>
     <window class='dashboard' name='Geography'>
@@ -8604,7 +8604,7 @@
           <default-map-unit-selection mapunit='1' />
         </viewpoint>
       </viewpoints>
-      <active id='533' />
+      <active id='-1' />
       <simple-id uuid='{F6D7C13F-562A-4E91-AD5D-D6961100165C}' />
     </window>
     <window class='dashboard' name='Caveats'>
