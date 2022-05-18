@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.22.0213.1115                               -->
+<workbook original-version='18.1' source-build='2021.3.8 (20213.22.0213.1115)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='NHS_App_Dictionary' inline='true' name='federated.1dszadj0tenrjj1fk4vxj1je148r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='NHS_App_Dictionary' name='textscan.0segd0q1tgonrc1crxq361f0udn9'>
+            <connection class='textscan' directory='/Users/oliver.jones/Documents/GitHub/au-tableau-analytics/data/ad hoc' filename='NHS_App_Dictionary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0segd0q1tgonrc1crxq361f0udn9' name='NHS_App_Dictionary.csv' table='[NHS_App_Dictionary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='Order' ordinal='0' />
+            <column datatype='string' name='Metric ID' ordinal='1' />
+            <column datatype='integer' name='Priority' ordinal='2' />
+            <column datatype='string' name='Metric Name' ordinal='3' />
+            <column datatype='string' name='Metric group' ordinal='4' />
+            <column datatype='string' name='Metric sub group' ordinal='5' />
+            <column datatype='string' name='Calculation' ordinal='6' />
+            <column datatype='string' name='Sources' ordinal='7' />
+            <column datatype='string' name='Lead' ordinal='8' />
+            <column datatype='string' name='Comments' ordinal='9' />
+            <column datatype='string' name='Metric Title' ordinal='10' />
+            <column datatype='string' name='KPI Text' ordinal='11' />
+            <column datatype='string' name='Tooltip text' ordinal='12' />
+            <column datatype='string' name='Caveats' ordinal='13' />
+            <column datatype='string' name='Frequency' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0segd0q1tgonrc1crxq361f0udn9' name='NHS_App_Dictionary.csv' table='[NHS_App_Dictionary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='Order' ordinal='0' />
+            <column datatype='string' name='Metric ID' ordinal='1' />
+            <column datatype='integer' name='Priority' ordinal='2' />
+            <column datatype='string' name='Metric Name' ordinal='3' />
+            <column datatype='string' name='Metric group' ordinal='4' />
+            <column datatype='string' name='Metric sub group' ordinal='5' />
+            <column datatype='string' name='Calculation' ordinal='6' />
+            <column datatype='string' name='Sources' ordinal='7' />
+            <column datatype='string' name='Lead' ordinal='8' />
+            <column datatype='string' name='Comments' ordinal='9' />
+            <column datatype='string' name='Metric Title' ordinal='10' />
+            <column datatype='string' name='KPI Text' ordinal='11' />
+            <column datatype='string' name='Tooltip text' ordinal='12' />
+            <column datatype='string' name='Caveats' ordinal='13' />
+            <column datatype='string' name='Frequency' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Order</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metric ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Metric ID]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Metric ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Priority]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Priority</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metric Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Metric Name]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Metric Name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metric group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Metric group]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Metric group</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metric sub group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Metric sub group]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Metric sub group</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Calculation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Calculation]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Calculation</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sources</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sources]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Sources</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lead</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lead]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Lead</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comments</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Comments]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Comments</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metric Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Metric Title]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Metric Title</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KPI Text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[KPI Text]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>KPI Text</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tooltip text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tooltip text]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Tooltip text</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Caveats</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Caveats]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Caveats</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Frequency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Frequency]</local-name>
+            <parent-name>[NHS_App_Dictionary.csv]</parent-name>
+            <remote-alias>Frequency</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='NHS_App_Dictionary.csv' datatype='table' name='[__tableau_internal_object_id__].[NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='NHS_App_Dictionary.csv' id='NHS_App_Dictionary.csv_CF161376AE1A4B2B92A0C6DCCBF473F4'>
+            <properties context=''>
+              <relation connection='textscan.0segd0q1tgonrc1crxq361f0udn9' name='NHS_App_Dictionary.csv' table='[NHS_App_Dictionary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='Order' ordinal='0' />
+                  <column datatype='string' name='Metric ID' ordinal='1' />
+                  <column datatype='integer' name='Priority' ordinal='2' />
+                  <column datatype='string' name='Metric Name' ordinal='3' />
+                  <column datatype='string' name='Metric group' ordinal='4' />
+                  <column datatype='string' name='Metric sub group' ordinal='5' />
+                  <column datatype='string' name='Calculation' ordinal='6' />
+                  <column datatype='string' name='Sources' ordinal='7' />
+                  <column datatype='string' name='Lead' ordinal='8' />
+                  <column datatype='string' name='Comments' ordinal='9' />
+                  <column datatype='string' name='Metric Title' ordinal='10' />
+                  <column datatype='string' name='KPI Text' ordinal='11' />
+                  <column datatype='string' name='Tooltip text' ordinal='12' />
+                  <column datatype='string' name='Caveats' ordinal='13' />
+                  <column datatype='string' name='Frequency' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='M0143_KPI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>[federated.1dszadj0tenrjj1fk4vxj1je148r].[none:Metric Title:nk]</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NHS_App_Dictionary' name='federated.1dszadj0tenrjj1fk4vxj1je148r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dszadj0tenrjj1fk4vxj1je148r'>
+            <column datatype='string' name='[Metric ID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Metric Title]' role='dimension' type='nominal' />
+            <column-instance column='[Metric ID]' derivation='None' name='[none:Metric ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Metric Title]' derivation='None' name='[none:Metric Title:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dszadj0tenrjj1fk4vxj1je148r].[none:Metric ID:nk]'>
+            <groupfilter function='member' level='[none:Metric ID:nk]' member='&quot;M0143&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dszadj0tenrjj1fk4vxj1je148r].[none:Metric ID:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1dszadj0tenrjj1fk4vxj1je148r].[none:Metric Title:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5FBE8269-0239-453B-9FA9-DB659D3EBF9F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='96000' id='3' param='horz' type-v2='layout-flow' w='84700' x='15300' y='4000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f0f4f5' />
+            </zone-style>
+          </zone>
+          <zone h='100000' id='5' param='vert' type-v2='layout-flow' w='15300' x='0' y='0'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#005eb8' />
+            </zone-style>
+          </zone>
+          <zone h='4000' id='6' type-v2='text' w='84700' x='15300' y='0'>
+            <formatted-text>
+              <run>Title</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='0' />
+              <format attr='background-color' value='#005eb8' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='0' />
+          </zone-style>
+        </zone>
+        <zone h='5000' id='9' is-scaled='1' param='/Users/oliver.jones/Documents/GitHub/au-tableau-analytics/img/NHS 10mm - RGB Blue.jpg' type-v2='bitmap' w='7500' x='92500' y='-375' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='20' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='40' h='5000' id='9' is-fixed='true' is-scaled='1' param='/Users/oliver.jones/Documents/GitHub/au-tableau-analytics/img/NHS 10mm - RGB Blue.jpg' type-v2='bitmap' w='7500' x='92500' y='-375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4000' id='6' type-v2='text' w='84700' x='15300' y='0'>
+                  <formatted-text>
+                    <run>Title</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#005eb8' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='0' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6E440FF8-4E7D-4661-A0BE-903F4992A9DA}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='M0143_KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dszadj0tenrjj1fk4vxj1je148r].[none:Metric ID:nk]</field>
+            <field>[federated.1dszadj0tenrjj1fk4vxj1je148r].[none:Metric Title:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{933B3852-249D-45E0-94BC-3DF47CB54F90}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints />
+      <active id='5' />
+      <simple-id uuid='{11E3D4CB-C169-4823-9306-878B921CCF66}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Dashboard 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAGaUlEQVR4nO3cT4ocBRiH4a+6JhLUTGDMRiVxEQko4kVyh5wjR/Mgyco/QTdmFKJGMUin
+      u9wJgyhoIo28z7Or3W/38hVFLfPgs20AyNmdegAApyEAAFECABAlAABRAvAf2c3h1BMA/tbZ
+      qQf8H12b/dxbv5mL5ad5tt2cJ4f35q3lxeznbF5s1+e3eWM+Xp/Mo8OHp54K8JdcAP/Cfq7N
+      48Pd+XG7MY8Pd2c/Z7PMNvfWr+ej9as5X36ZmZlltvlk/WI+XT+fs3l54tUAVwnAa7DOcW4s
+      v87l8dZ8ebw9z7e3Z2bm3d33s591nm9vzp3d0xOvBLjKK6DX6DjLrHP84/mwrbMty/ywnc9h
+      1hMuA/gzF8AruDy+MzMzL2edZ9v5fHu8Nbd3T+fm8vNcHi/mcruYbVvm/d13c9yWE68FuGrx
+      KwiAJhcAQJQAAEQJAECUAABE+Qz0H3p4/848vP/BqWcAvDIXAECUAABECQBAlAAARAkAQJQA
+      AEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA
+      lAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJ
+      AECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAA
+      RAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECU
+      AABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkA
+      QJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABE
+      CQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQA
+      AEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA
+      lAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJ
+      AECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAA
+      RAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECU
+      AABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkA
+      QJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABE
+      CQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQA
+      AEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA
+      lAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJ
+      AECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAA
+      RAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECU
+      AABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkA
+      QJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABE
+      CQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQA
+      AEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBA
+      lAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJ
+      AECUAABECQBAlAAARAkAQJQAAEQJAEDU76XVT+vAU9AfAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='48' name='M0143_KPI' width='128'>
+      iVBORw0KGgoAAAANSUhEUgAAAIAAAAAwCAYAAADZ9HK+AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAAj0lEQVR4nO3SMQEAIAzAMMC/5yFjRxMFPXpnZg5ZbzuAXQaIM0CcAeIMEGeAOAPEGSDO
+      AHEGiDNAnAHiDBBngDgDxBkgzgBxBogzQJwB4gwQZ4A4A8QZIM4AcQaIM0CcAeIMEGeAOAPE
+      GSDOAHEGiDNAnAHiDBBngDgDxBkgzgBxBogzQJwB4gwQZ4A4A8R9tfkEXAhRcIwAAAAASUVO
+      RK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
