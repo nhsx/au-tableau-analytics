@@ -6,7 +6,6 @@ a.[Unique ID] as [usage_unique_id]
 ,a.[Date] as [usage_date]
 ,a.[Practice code] as [usage_practice_code]
 ,a.[Number of logins] as [M0149_number_of_logins]
-
 ,b.[Number of repeat prescriptions] as [M0152_number_of_repeat_prescriptions]
 ,c.[Number of primary care appointments booked] as [M0150_number_of_primary_care_appointments_booked]
 ,d.[Number of primary care appointments cancelled] as [M0151_number_of_primary_care_appointments_cancelled]
