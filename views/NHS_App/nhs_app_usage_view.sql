@@ -2,20 +2,23 @@ CREATE OR ALTER VIEW nhs_app_usage_view AS
 
 SELECT
 
-a.[Unique ID] as [usage_unique_id]
-,a.[Date] as [usage_date]
-,a.[Practice code] as [usage_practice_code]
-,a.[Number of logins] as [M0149_number_of_logins]
-,b.[Number of repeat prescriptions] as [M0152_number_of_repeat_prescriptions]
-,c.[Number of primary care appointments booked] as [M0150_number_of_primary_care_appointments_booked]
-,d.[Number of primary care appointments cancelled] as [M0151_number_of_primary_care_appointments_cancelled]
-,e.[Number of organ donation lookups] as [M0159_number_of_organ_donation_lookup]
-,f.[Number of organ donation registrations] as [M0156_number_of_organ_donation_registrations]
-,g.[Number of organ donation updates] as [M0158_number_of_organ_donation_updates]
-,h.[Number of organ donation withdrawals] as [M0157_number_of_organ_donation_withdrawals]
-,i.[Number of record views] as [M0153_number_of_record_views]
-,j.[Number of summary care record views] as [M0154_number_of_summary_care_record_views]
-,k.[Number of detail coded record views] as [M0155_number_of_detail_coded_record_views]
+    a.[Unique ID] as [usage_unique_id]
+    ,a.[Date] as [usage_date]
+    ,a.[Practice code] as [usage_practice_code]
+    ,a.[Number of logins] as [M0149_number_of_logins]
+
+    ,b.[Number of repeat prescriptions] as [M0152_number_of_repeat_prescriptions]
+    ,c.[Number of primary care appointments booked] as [M0150_number_of_primary_care_appointments_booked]
+    ,d.[Number of primary care appointments cancelled] as [M0151_number_of_primary_care_appointments_cancelled]
+    ,e.[Number of organ donation lookups] as [M0159_number_of_organ_donation_lookup]
+    ,f.[Number of organ donation registrations] as [M0156_number_of_organ_donation_registrations]
+    ,g.[Number of organ donation updates] as [M0158_number_of_organ_donation_updates]
+    ,h.[Number of organ donation withdrawals] as [M0157_number_of_organ_donation_withdrawals]
+    ,i.[Number of record views] as [M0153_number_of_record_views]
+    ,j.[Number of summary care record views] as [M0154_number_of_summary_care_record_views]
+    ,k.[Number of detail coded record views] as [M0155_number_of_detail_coded_record_views]
+
+    ,'1' as JoinCond    
 
 FROM
     [dbo].[nhs_app_usage_logins_day_count] a
