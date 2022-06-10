@@ -7,7 +7,7 @@
 6,M0146,1,New P9 Registrations,Uptake,Registrations,sum(P9VerifiedNHSAppUsers) for selected period,nhs_app_table_snapshot_yyyy_mm_dd.csv,Mattia,Keeping P9 number for continuity with previous dashboard.,,,,,,1
 7,M0147,1,% of Adult Population Registered for NHS App,Uptake,Registrations,sum(P9VerifiedNHSAppUsers)/ONS Population estimated 18+,nhs_app_table_snapshot_yyyy_mm_dd.csv,Mattia,Included to align with M2 reporting,,,,,,1
 8,M0148,1,% of GP Patients Registered for NHS App,Uptake,Registrations,sum(P9VerifiedNHSAppUsers)/GP Patient List Size,nhs_app_table_snapshot_yyyy_mm_dd.csv,Mattia,Included for continuity with previous dashboard.,,,,,,1
-9,M0149,1,Logins,Usage,Logins,Logins,nhs_app_table_snapshot_yyyy_mm_dd.csv,Olli,"Daily, Practice Level",,,,,,1
+9,M0149,1,Logins,Usage,Logins,Logins,nhs_app_table_snapshot_yyyy_mm_dd.csv,Olli,"Daily, Practice Level",'Test tile',,,,,1
 10,M0150,1,Primary Care Appointment Booked,Usage,Appointments,AppointmentsBooked,nhs_app_table_snapshot_yyyy_mm_dd.csv,Olli,"Daily, Practice Level",,,,,,1
 11,M0151,1,Primary Care Appointment Cancelled,Usage,Appointments,AppointmentsCancelled,nhs_app_table_snapshot_yyyy_mm_dd.csv,Olli,"Daily, Practice Level",,,,,,1
 12,M0181,2,Appointments Booked (Unique),Usage,Appointments,,,,Not receiving unique datapoints from NHSD,,,,,,1
