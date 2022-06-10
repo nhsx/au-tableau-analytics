@@ -1,0 +1,997 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0320.1853                               -->
+<datasource formatted-name='NDC_national_digital_channels_v001' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='nhsx-slt-analytics.database.windows.net' name='sqlserver.1cv53q512u73ac103c6ar14ikyxw'>
+        <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' server-oauth='' server-userid='18553' username='nhsei_tableau_read' workgroup-auth-mode='prompt' />
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_view' table='[dbo].[national_digital_channels_view]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_view' table='[dbo].[national_digital_channels_view]' type='table' />
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>ndc_Unique_ID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[ndc_Unique_ID]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>ndc_Unique_ID</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ndc_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[ndc_Date]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>ndc_Date</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M220_NRM_Number_of_users_with_an_NHS_App_registration</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M220_NRM_Number_of_users_with_an_NHS_App_registration]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M220_NRM_Number_of_users_with_an_NHS_App_registration</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M220_DENOM_Adult_population</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M220_DENOM_Adult_population]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M220_DENOM_Adult_population</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M221_NRM_Number_of_unique_NHS_App_logins</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M221_NRM_Number_of_unique_NHS_App_logins]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M221_NRM_Number_of_unique_NHS_App_logins</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M221_DENOM_Number_of_users_with_an_NHS_App_registration</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M221_DENOM_Number_of_users_with_an_NHS_App_registration]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M221_DENOM_Number_of_users_with_an_NHS_App_registration</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M223_NRM_Number of primary care appointments</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M223_NRM_Number of primary care appointments]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M223_NRM_Number of primary care appointments</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M223_DENOM_Number_of_primary_care_appointments_managed_online</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M223_DENOM_Number_of_primary_care_appointments_managed_online]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M223_DENOM_Number_of_primary_care_appointments_managed_online</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M227_Number of primary care appointments managed via the NHS App</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M227_Number of primary care appointments managed via the NHS App]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M227_Number of primary care appointments managed via the NHS App</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M228_Number_of_views_of_conditions_information</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M228_Number_of_views_of_conditions_information]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M228_Number_of_views_of_conditions_information</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M230_Number_of_gp_record_views</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M230_Number_of_gp_record_views]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M230_Number_of_gp_record_views</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M244_Number_of_Covid_Vaccine_Record_View</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M244_Number_of_Covid_Vaccine_Record_View]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M244_Number_of_Covid_Vaccine_Record_View</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M245_Population_registered_with_NHS_App</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M245_Population_registered_with_NHS_App]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M245_Population_registered_with_NHS_App</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M246_Number_of_all_time_NHS_App_registered_users</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M246_Number_of_all_time_NHS_App_registered_users]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M246_Number_of_all_time_NHS_App_registered_users</remote-alias>
+        <ordinal>15</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-alias>
+        <ordinal>16</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M246_Number_of_patients_registered_with_an_other_patient_online_service</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M246_Number_of_patients_registered_with_an_other_patient_online_service]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M246_Number_of_patients_registered_with_an_other_patient_online_service</remote-alias>
+        <ordinal>17</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-alias>
+        <ordinal>18</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M247_Adult_population</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M247_Adult_population]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M247_Adult_population</remote-alias>
+        <ordinal>19</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services</remote-alias>
+        <ordinal>20</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M253_Total_app_logins</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M253_Total_app_logins]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M253_Total_app_logins</remote-alias>
+        <ordinal>21</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M255_Number_of_confirmed_accounts_NHS_login</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M255_Number_of_confirmed_accounts_NHS_login]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M255_Number_of_confirmed_accounts_NHS_login</remote-alias>
+        <ordinal>22</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M257_NRM_Number_of_Detail_Coded_Record_Views</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M257_NRM_Number_of_Detail_Coded_Record_Views]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M257_NRM_Number_of_Detail_Coded_Record_Views</remote-alias>
+        <ordinal>23</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M257_DENOM_Number_of_all_Record Views</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M257_DENOM_Number_of_all_Record Views]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M257_DENOM_Number_of_all_Record Views</remote-alias>
+        <ordinal>24</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M258_Number_of_NHS_App_organ_donation_registrations</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M258_Number_of_NHS_App_organ_donation_registrations]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M258_Number_of_NHS_App_organ_donation_registrations</remote-alias>
+        <ordinal>25</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M262_Number_of_all_covid_vaccination_bookings</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M262_Number_of_all_covid_vaccination_bookings]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M262_Number_of_all_covid_vaccination_bookings</remote-alias>
+        <ordinal>26</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M264_Number_of_NHS.UK_vaccination_bookings_1st_dose</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M264_Number_of_NHS.UK_vaccination_bookings_1st_dose</remote-alias>
+        <ordinal>27</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose</remote-alias>
+        <ordinal>28</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M266_Number_of_NHS.UK_vaccination_bookings_booster</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M266_Number_of_NHS.UK_vaccination_bookings_booster]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M266_Number_of_NHS.UK_vaccination_bookings_booster</remote-alias>
+        <ordinal>29</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]</local-name>
+        <parent-name>[national_digital_channels_view]</parent-name>
+        <remote-alias>M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose</remote-alias>
+        <ordinal>30</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='GP Address1' datatype='string' hidden='true' name='[GP_Address1]' role='dimension' type='nominal' />
+  <column caption='GP Address2' datatype='string' hidden='true' name='[GP_Address2]' role='dimension' type='nominal' />
+  <column caption='GP Address3' datatype='string' hidden='true' name='[GP_Address3]' role='dimension' type='nominal' />
+  <column caption='M220 DENOM Adult population' datatype='integer' name='[M220_DENOM_Adult_population]' role='measure' type='quantitative' />
+  <column caption='M220 NRM Number of users with an NHS App registration' datatype='integer' name='[M220_NRM_Number_of_users_with_an_NHS_App_registration]' role='measure' type='quantitative' />
+  <column caption='M221 DENOM Number of users with an NHS App registration' datatype='integer' name='[M221_DENOM_Number_of_users_with_an_NHS_App_registration]' role='measure' type='quantitative' />
+  <column caption='M221 NRM Number of unique NHS App logins' datatype='integer' name='[M221_NRM_Number_of_unique_NHS_App_logins]' role='measure' type='quantitative' />
+  <column caption='M223 DENOM Number of primary care appointments managed online' datatype='integer' name='[M223_DENOM_Number_of_primary_care_appointments_managed_online]' role='measure' type='quantitative' />
+  <column caption='M223 NRM Number of primary care appointments' datatype='integer' name='[M223_NRM_Number of primary care appointments]' role='measure' type='quantitative' />
+  <column caption='M224 Number of repeat prescriptions ordered via the NHS App' datatype='integer' name='[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]' role='measure' type='quantitative' />
+  <column caption='M227 Number of primary care appointments managed via the NHS App' datatype='integer' name='[M227_Number of primary care appointments managed via the NHS App]' role='measure' type='quantitative' />
+  <column caption='M228 Number of views of conditions information' datatype='integer' name='[M228_Number_of_views_of_conditions_information]' role='measure' type='quantitative' />
+  <column caption='M230 Number of gp record views' datatype='integer' name='[M230_Number_of_gp_record_views]' role='measure' type='quantitative' />
+  <column caption='M244 Number of Covid Vaccine Record View' datatype='integer' name='[M244_Number_of_Covid_Vaccine_Record_View]' role='measure' type='quantitative' />
+  <column caption='M245 Population registered with NHS App' datatype='integer' name='[M245_Population_registered_with_NHS_App]' role='measure' type='quantitative' />
+  <column caption='M246 Number of all time NHS App registered users' datatype='integer' name='[M246_Number_of_all_time_NHS_App_registered_users]' role='measure' type='quantitative' />
+  <column caption='M246 Number of patients registered with an other patient online service' datatype='integer' name='[M246_Number_of_patients_registered_with_an_other_patient_online_service]' role='measure' type='quantitative' />
+  <column caption='M246 Total number of patients registered to use an patient online transactional services' datatype='integer' name='[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' role='measure' type='quantitative' />
+  <column caption='M247 Adult population' datatype='integer' name='[M247_Adult_population]' role='measure' type='quantitative' />
+  <column caption='M247 Adult population not registered to use an patient online transactional services' datatype='integer' name='[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]' role='measure' type='quantitative' />
+  <column caption='M247 Total number of patients registered to use an patient online transactional services' datatype='integer' name='[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' role='measure' type='quantitative' />
+  <column caption='M253 Total app logins' datatype='integer' name='[M253_Total_app_logins]' role='measure' type='quantitative' />
+  <column caption='M255 Number of confirmed accounts NHS login' datatype='integer' name='[M255_Number_of_confirmed_accounts_NHS_login]' role='measure' type='quantitative' />
+  <column caption='M257 DENOM Number of all Record Views' datatype='integer' name='[M257_DENOM_Number_of_all_Record Views]' role='measure' type='quantitative' />
+  <column caption='M257 NRM Number of Detail Coded Record Views' datatype='integer' name='[M257_NRM_Number_of_Detail_Coded_Record_Views]' role='measure' type='quantitative' />
+  <column caption='M258 Number of NHS App organ donation registrations' datatype='integer' name='[M258_Number_of_NHS_App_organ_donation_registrations]' role='measure' type='quantitative' />
+  <column caption='M262 Number of all covid vaccination bookings' datatype='integer' name='[M262_Number_of_all_covid_vaccination_bookings]' role='measure' type='quantitative' />
+  <column caption='M264 Number of NHS.UK vaccination bookings 1st dose' datatype='integer' name='[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]' role='measure' type='quantitative' />
+  <column caption='M265 Number of NHS.UK vaccination bookings 2nd dose' datatype='integer' name='[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]' role='measure' type='quantitative' />
+  <column caption='M266 Number of NHS.UK vaccination bookings booster' datatype='integer' name='[M266_Number_of_NHS.UK_vaccination_bookings_booster]' role='measure' type='quantitative' />
+  <column caption='M267 Number of NHS.UK vaccination bookings 3rd dose' datatype='integer' name='[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]' role='measure' type='quantitative' />
+  <column caption='PCN CCG Code' datatype='string' hidden='true' name='[PCN_CCG_Code]' role='dimension' type='nominal' />
+  <column caption='PCN CCG Name' datatype='string' hidden='true' name='[PCN_CCG_Name]' role='dimension' type='nominal' />
+  <column caption='PCN Region Code' datatype='string' hidden='true' name='[PCN_Region_Code]' role='dimension' type='nominal' />
+  <column caption='PCN Region Name' datatype='string' hidden='true' name='[PCN_Region_Name]' role='dimension' type='nominal' />
+  <column caption='PCN STP Code' datatype='string' hidden='true' name='[PCN_STP_Code]' role='dimension' type='nominal' />
+  <column caption='PCN STP Name' datatype='string' hidden='true' name='[PCN_STP_Name]' role='dimension' type='nominal' />
+  <column caption='Region Code Name' datatype='string' hidden='true' name='[Region_Code_Name]' role='dimension' type='nominal' />
+  <column caption='Region Name' datatype='string' hidden='true' name='[Region_Name]' role='dimension' type='nominal' />
+  <column caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' role='dimension' type='ordinal' />
+  <column caption='Unique ID (stp code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' role='dimension' type='ordinal' />
+  <column datatype='integer' hidden='true' name='[Unique ID]' role='dimension' type='ordinal' />
+  <_.fcp.ObjectModelTableType.true...column caption='national_digital_channels_view' datatype='table' name='[__tableau_internal_object_id__].[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]' role='measure' type='quantitative' />
+  <column caption='dfpc POMI Unique ID' datatype='integer' hidden='true' name='[dfpc_POMI_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='ndc Date' datatype='date' name='[ndc_Date]' role='dimension' type='ordinal' />
+  <column caption='ndc Unique ID' datatype='integer' name='[ndc_Unique_ID]' role='dimension' type='ordinal' />
+  <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='06/10/2022 04:01:13 PM' username='tableau_internal_user'>
+      <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+      <refresh>
+        <refresh-event add-from-file-path='NDC_national_digital_channels_v001' increment-value='%null%' refresh-type='create' rows-inserted='15' timestamp-start='2022-06-10 16:01:13.932' />
+      </refresh>
+      <metadata-records>
+        <metadata-record class='column'>
+          <remote-name>ndc_Unique_ID</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[ndc_Unique_ID]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>ndc_Unique_ID</remote-alias>
+          <ordinal>0</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>ndc_Date</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[ndc_Date]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>ndc_Date</remote-alias>
+          <ordinal>1</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M220_NRM_Number_of_users_with_an_NHS_App_registration</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M220_NRM_Number_of_users_with_an_NHS_App_registration]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M220_NRM_Number_of_users_with_an_NHS_App_registration</remote-alias>
+          <ordinal>2</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M220_DENOM_Adult_population</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M220_DENOM_Adult_population]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M220_DENOM_Adult_population</remote-alias>
+          <ordinal>3</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M221_NRM_Number_of_unique_NHS_App_logins</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M221_NRM_Number_of_unique_NHS_App_logins]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M221_NRM_Number_of_unique_NHS_App_logins</remote-alias>
+          <ordinal>4</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M221_DENOM_Number_of_users_with_an_NHS_App_registration</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M221_DENOM_Number_of_users_with_an_NHS_App_registration]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M221_DENOM_Number_of_users_with_an_NHS_App_registration</remote-alias>
+          <ordinal>5</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M223_NRM_Number of primary care appointments</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M223_NRM_Number of primary care appointments]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M223_NRM_Number of primary care appointments</remote-alias>
+          <ordinal>6</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M223_DENOM_Number_of_primary_care_appointments_managed_online</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M223_DENOM_Number_of_primary_care_appointments_managed_online]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M223_DENOM_Number_of_primary_care_appointments_managed_online</remote-alias>
+          <ordinal>7</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App</remote-alias>
+          <ordinal>8</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M227_Number of primary care appointments managed via the NHS App</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M227_Number of primary care appointments managed via the NHS App]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M227_Number of primary care appointments managed via the NHS App</remote-alias>
+          <ordinal>9</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M228_Number_of_views_of_conditions_information</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M228_Number_of_views_of_conditions_information]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M228_Number_of_views_of_conditions_information</remote-alias>
+          <ordinal>10</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>6</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M230_Number_of_gp_record_views</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M230_Number_of_gp_record_views]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M230_Number_of_gp_record_views</remote-alias>
+          <ordinal>11</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M244_Number_of_Covid_Vaccine_Record_View</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M244_Number_of_Covid_Vaccine_Record_View]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M244_Number_of_Covid_Vaccine_Record_View</remote-alias>
+          <ordinal>12</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M245_Population_registered_with_NHS_App</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M245_Population_registered_with_NHS_App]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M245_Population_registered_with_NHS_App</remote-alias>
+          <ordinal>13</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M246_Number_of_all_time_NHS_App_registered_users</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M246_Number_of_all_time_NHS_App_registered_users]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M246_Number_of_all_time_NHS_App_registered_users</remote-alias>
+          <ordinal>14</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-alias>
+          <ordinal>15</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M246_Number_of_patients_registered_with_an_other_patient_online_service</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M246_Number_of_patients_registered_with_an_other_patient_online_service]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M246_Number_of_patients_registered_with_an_other_patient_online_service</remote-alias>
+          <ordinal>16</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services</remote-alias>
+          <ordinal>17</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M247_Adult_population</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M247_Adult_population]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M247_Adult_population</remote-alias>
+          <ordinal>18</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>1</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services</remote-alias>
+          <ordinal>19</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M253_Total_app_logins</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M253_Total_app_logins]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M253_Total_app_logins</remote-alias>
+          <ordinal>20</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M255_Number_of_confirmed_accounts_NHS_login</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M255_Number_of_confirmed_accounts_NHS_login]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M255_Number_of_confirmed_accounts_NHS_login</remote-alias>
+          <ordinal>21</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>15</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M257_NRM_Number_of_Detail_Coded_Record_Views</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M257_NRM_Number_of_Detail_Coded_Record_Views]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M257_NRM_Number_of_Detail_Coded_Record_Views</remote-alias>
+          <ordinal>22</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>3</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M257_DENOM_Number_of_all_Record Views</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M257_DENOM_Number_of_all_Record Views]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M257_DENOM_Number_of_all_Record Views</remote-alias>
+          <ordinal>23</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M258_Number_of_NHS_App_organ_donation_registrations</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M258_Number_of_NHS_App_organ_donation_registrations]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M258_Number_of_NHS_App_organ_donation_registrations</remote-alias>
+          <ordinal>24</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>8</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M262_Number_of_all_covid_vaccination_bookings</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M262_Number_of_all_covid_vaccination_bookings]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M262_Number_of_all_covid_vaccination_bookings</remote-alias>
+          <ordinal>25</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M264_Number_of_NHS.UK_vaccination_bookings_1st_dose</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M264_Number_of_NHS.UK_vaccination_bookings_1st_dose</remote-alias>
+          <ordinal>26</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose</remote-alias>
+          <ordinal>27</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M266_Number_of_NHS.UK_vaccination_bookings_booster</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M266_Number_of_NHS.UK_vaccination_bookings_booster]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M266_Number_of_NHS.UK_vaccination_bookings_booster</remote-alias>
+          <ordinal>28</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose</remote-alias>
+          <ordinal>29</ordinal>
+          <family>national_digital_channels_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+      </metadata-records>
+    </connection>
+  </extract>
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='national_digital_channels_view' id='national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3'>
+        <properties context=''>
+          <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_view' table='[dbo].[national_digital_channels_view]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
