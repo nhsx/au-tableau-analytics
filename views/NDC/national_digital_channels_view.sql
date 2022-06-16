@@ -1,4 +1,4 @@
-CREATE VIEW national_digital_channels_view AS 
+CREATE OR ALTER VIEW national_digital_channels_view AS 
 SELECT
 A.[Unique ID] AS [ndc_Unique_ID],
 A.[Date] AS [ndc_Date],
@@ -6,8 +6,8 @@ A.[Number of users with an NHS App registration] AS [M220_NRM_Number_of_users_wi
 A.[Adult population] AS [M220_DENOM_Adult_population],
 B.[Number of unique NHS App logins] AS [M221_NRM_Number_of_unique_NHS_App_logins],
 B.[Number of users with an NHS App registration] AS [M221_DENOM_Number_of_users_with_an_NHS_App_registration],
-C.[Number of primary care appointments] AS [M223_NRM_Number of primary care appointments],
-C.[Number of primary care appointments managed online] AS [M223_DENOM_Number_of_primary_care_appointments_managed_online],
+C.[Number of primary care appointments] AS [M223_DENOM_Number of primary care appointments],
+C.[Number of primary care appointments managed online] AS [M223_NRM_Number_of_primary_care_appointments_managed_online],
 D.[Number of repeat prescriptions ordered via the NHS App] AS [M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App],
 E.[Number of primary care appointments managed via the NHS App] AS [M227_Number of primary care appointments managed via the NHS App],
 F.[Number of views of conditions information] AS [M228_Number_of_views_of_conditions_information],
