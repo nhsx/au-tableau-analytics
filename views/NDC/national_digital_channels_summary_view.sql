@@ -7,8 +7,9 @@ SELECT
    ,'M220' as metric_name
    ,cast([Number of users with an NHS App registration] as float)/cast([Adult population] as float) as metric_value
 FROM
-   ndc_dashboard_nhsapp_registered_population_month_prop A
+   ndc_dashboard_nhsapp_registered_population_month_prop 
 )
+
 ,M221 as (
 SELECT
    [Unique ID] AS [ndc_Unique_ID]
@@ -17,10 +18,20 @@ SELECT
    ,cast([Number of unique NHS App logins] as float)/CAST([Number of users with an NHS App registration] as float) as metric_value
 
 FROM
-   ndc_dashboard_user_base_loggingin_month_prop B
-
-
+   ndc_dashboard_user_base_loggingin_month_prop 
 )
+
+,M222 as (
+select 
+   [Unique ID] AS [ndc_Unique_ID]
+   ,[Date] AS [ndc_Date]
+   ,'M222' as metric_name
+   ,CAST([Proportion of repeat prescriptions ordered online] as float) as metric_value
+from
+
+   ndc_dashboard_repeat_prescriptions_online_month_prop 
+)
+
 ,M223 as (
 select 
    [Unique ID] AS [ndc_Unique_ID]
@@ -28,11 +39,10 @@ select
    ,'M223' as metric_name
    -- ,[Number of primary care appointments managed online]
    -- ,[Number of primary care appointments]
-   ,CAST(C.[Number of primary care appointments managed online] as float) /CAST(NULLIF([Number of primary care appointments],0) as float) as metric_value
+   ,CAST([Number of primary care appointments managed online] as float) /CAST(NULLIF([Number of primary care appointments],0) as float) as metric_value
 from
 
-   ndc_dashboard_primary_care_appts_managed_online_month_prop C
-
+   ndc_dashboard_primary_care_appts_managed_online_month_prop 
 )
 
 ,M224 as (
@@ -43,7 +53,29 @@ select
     ,cast([Number of repeat prescriptions ordered via the NHS App] as float) as metric_value
 from
 
-   ndc_dashboard_nhsapp_repeat_prescriptions_ordered_month_count D
+   ndc_dashboard_nhsapp_repeat_prescriptions_ordered_month_count 
+)
+
+,M225 as (
+select 
+   [Unique ID] AS [ndc_Unique_ID]
+   ,[Date] AS [ndc_Date]
+   ,'M225' as metric_name
+   ,CAST([Number of referrals managed via the NHS App] as float)  as metric_value
+from
+
+   ndc_dashboard_nhsapp_refferrals_managed_month_count 
+)
+
+,M226 as (
+select 
+   [Unique ID] AS [ndc_Unique_ID]
+   ,[Date] AS [ndc_Date]
+   ,'M226' as metric_name
+   ,CAST([Number of secondary care appointments made via the NHS App] as float) as metric_value
+from
+
+   ndc_dashboard_nhsapp_secondary_care_appointments_month_count
 
 )
 
@@ -56,7 +88,6 @@ select
 from
 
    ndc_dashboard_nhsapp_primary_appointments_managed_month_count E
-
 )
 
 ,M228 as (
@@ -68,8 +99,19 @@ select
 from
 
    ndc_dashboard_nhsuk_view_of_conditions_month_count F
-
 )
+
+,M229 as (
+select 
+   [Unique ID] AS [ndc_Unique_ID]
+   ,[Date] AS [ndc_Date]
+   ,'M229' as metric_name
+   ,CAST([Number of find a service uses on NHS.uk] as float) as metric_value
+from
+
+   ndc_dashboard_nhsuk_findservice_uses_month_count
+)
+
 ,M230 as (
 select 
    [Unique ID] AS [ndc_Unique_ID]
@@ -79,22 +121,43 @@ select
 from
 
    ndc_dashboard_gp_record_view_month_count G
-
 )
+
+,M231 as (
+select 
+   [Unique ID] AS [ndc_Unique_ID]
+   ,[Date] AS [ndc_Date]
+   ,'M231' as metric_name
+   ,CAST([Number of test result views via the NHS App] as float) as metric_value
+from
+
+   ndc_dashboard_nhsapp_test_result_views_month_count
+)
+
 ,final as (
 select * from M220
 UNION all 
 select * from M221
 UNION all 
+select * from M222
+UNION all 
 select * from M223
 UNION all 
 select * from M224
+UNION all 
+select * from M225
+UNION all 
+select * from M226
 UNION all 
 select * from M227
 UNION all 
 select * from M228
 UNION all 
+select * from M229
+UNION all 
 select * from M230
+UNION all 
+select * from M231
 )
 
 select 
