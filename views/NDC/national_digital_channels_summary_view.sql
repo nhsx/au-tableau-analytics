@@ -133,6 +133,10 @@ from
 
    ndc_dashboard_nhsapp_test_result_views_month_count
 )
+,hlts as (
+select * from ndc_insights_highlights
+
+)
 
 ,final as (
 select * from M220
@@ -166,6 +170,7 @@ select
     ,a.metric_name
     ,a.metric_value
     ,b.metric_value as p_value
+    ,hlts.highlight
 
 from
     final as a
@@ -175,3 +180,7 @@ on
     dateadd(month, -1,a.[ndc_date])=b.[ndc_date]
 and
     a.metric_name=b.metric_name
+left JOIN
+   hlts
+ON
+   a.ndc_date=hlts.ndc_date
