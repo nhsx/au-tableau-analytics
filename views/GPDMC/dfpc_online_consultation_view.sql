@@ -17,4 +17,3 @@ left join [dbo].[online_consultation_gp_practice_submissions_week_rate] B
 left join [dbo].[online_consultation_gp_practice_supplier_week_count] C
      on A.[Week Commencing] = C.[Week Commencing] and  A.[Practice code] = C.[Practice code]
 
-ORDER BY [dfpc_online_consultation_Unique ID] OFFSET 0 ROWS
