@@ -10,14 +10,18 @@ SELECT
     -- ,e.[Number of patient online consultation submissions] AS [M60_Number of patient online consultation submissions]
     ,j.[Number of registered patients with a nominated pharmacy] AS [M083_Number of registered patients with a nominated pharmacy]
     ,k.[Number of EPS items] AS [M084_Number of items prescribed and dispensed via EPS during the reporting period]
+    ,k.[All items] AS [REF_All dispensing items prescribed and dispensed during the reporting period]
+
     ,l.[Number of eRD items] AS [M085_Number of repeat dispensing items prescribed and dispensed during the reporting period]
     ,m.[Total number of responses] AS [M091_Total number of responses]
     ,m.[Number of patients reporting having booked an appointment online] AS [M091_Number of patients reporting having booked an appointment online]
     ,n.[Total number of responses] AS [M092_Total number of responses]
     ,n.[Number of patients reporting having tried to use their GP practices website] AS [M092_Number of patients reporting having tried to use their GP practices website]
-    ,o.[Number of patients reporting having tried to use their GP practices website] AS [M093_Total number of responses]
+    ,o.[Number of patients reporting that their GP practice website was easy to use] AS [M093_Number of patients reporting that their GP practice website was easy to use]
+
     ,p.[Number of patients registered for appointment functionality] AS [M0140_Number of patients registered for appointment functionality] 
     ,q.[Number of patients registered for detailed coded record functionality] AS [M0142_Number of patients registered for detailed coded record functionality] 
+    ,r.[Number of registered patients] AS [REF_Number of GP practice registered patients]
 
 FROM
 
@@ -66,3 +70,5 @@ LEFT JOIN
     pomi_patient_record_func_month_count_prop	q
 ON
     a.[Date]=q.[Date] AND a.[Practice code]=q.[Practice code]
+left join  [dbo].[pomi_patient_appointments_func_month_count_prop]  r
+    on A.[Date] = r.[Date] and  A.[Practice code] = r.[Practice code]
