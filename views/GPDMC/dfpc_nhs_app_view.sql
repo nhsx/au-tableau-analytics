@@ -2,8 +2,8 @@ CREATE OR ALTER VIEW [dbo].[dfpc_nhs_app_view]
 AS
 with base as (
 SELECT 
-    a.[Unique ID] as [dfpc_unique_id]
-    ,a.[Date] as [dfpc_date]
+    
+    a.[Date] as [dfpc_date]
     ,a.[Practice code] as [dfpc_practice_code]	
     ,a.[Cumulative number of P9 NHS app registrations] as [M0148_cumulative_number_of_p9_nhs_app_registrations]
     ,a.[Number of GP registered patients] as [M0148_number_of_gp_registered_patients]

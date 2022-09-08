@@ -1,8 +1,7 @@
-CREATE VIEW dfpc_dspt_gp_practice_snapshot_view AS
+CREATE OR ALTER VIEW dfpc_dspt_gp_practice_snapshot_view AS
 SELECT 
 
-    A.[Unique ID]  AS [dfpc_DSPT_snapshot_Unique ID] 
-    ,A.[Date]  AS [dfpc_DSPT_snapshot_Date]
+    A.[Date]  AS [dfpc_DSPT_snapshot_Date]
     ,A.[Practice code] AS [dfpc_DSPT_snapshot_Practice code] 
     ,A.[Financial year] AS [dfpc_DSPT_snapshot_financial_year] 
     ,A.[Number of GP practices that meet or exceed the DSPT standard (snapshot)] AS [M76AB_Number of GP practices that meet or exceed the DSPT standard (snapshot)]
@@ -33,4 +32,3 @@ ON
     AND A.[Practice code]  = C.[Practice code]
     AND A.[Financial year] = C.[Financial year]
 
-ORDER BY [dfpc_DSPT_snapshot_Unique ID] OFFSET 0 ROWS

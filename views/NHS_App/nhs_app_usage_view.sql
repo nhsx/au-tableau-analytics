@@ -2,8 +2,7 @@ CREATE OR ALTER VIEW nhs_app_usage_view AS
 
 SELECT
 
-    a.[Unique ID] as [usage_unique_id]
-    ,a.[Date] as [usage_date]
+    a.[Date] as [usage_date]
     ,a.[Practice code] as [usage_practice_code]
     ,a.[Number of logins] as [M0149_number_of_logins]
 

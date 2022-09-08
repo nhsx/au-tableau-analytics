@@ -1,6 +1,5 @@
 CREATE OR ALTER VIEW national_digital_channels_view AS 
 SELECT
-A.[Unique ID] AS [ndc_Unique_ID],
 A.[Date] AS [ndc_Date],
 A.[Number of users with an NHS App registration] AS [M220_NRM_Number_of_users_with_an_NHS_App_registration],
 A.[Adult population] AS [M220_DENOM_Adult_population],

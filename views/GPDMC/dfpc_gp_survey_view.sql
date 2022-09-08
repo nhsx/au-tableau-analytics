@@ -1,7 +1,7 @@
-CREATE VIEW dfpc_gp_survey_view
+CREATE OR ALTER VIEW dfpc_gp_survey_view
 AS
-SELECT A.[Unique ID]  AS [dfpc_gp_survey_Unique ID]
-      ,A.[Date]  AS [dfpc_gp_survey_Date]
+SELECT 
+        A.[Date]  AS [dfpc_gp_survey_Date]
       ,A.[Practice code] AS [dfpc_gp_survey_Practice code]
       ,A.[Total number of responses] AS [M90_Total number of responses]
       ,A.[Number of patients reporting using GP practice online services] AS [M90_Number of patients reporting using GP practice online services] 
@@ -22,4 +22,3 @@ left join  [dbo].[results_use_gp_website_year_prop]  C
 
 left join  [dbo].[results_easyuse_gp_website_year_prop]  D
     on A.[Date] = D.[Date] and  A.[Practice code] = D.[Practice code]
-ORDER BY [dfpc_gp_survey_Unique ID] OFFSET 0 ROWS

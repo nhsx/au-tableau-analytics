@@ -2,8 +2,7 @@ CREATE OR ALTER VIEW nhs_app_uptake_view AS
 
 SELECT
 
-    a.[Unique ID] as [uptake_unique_id]
-    ,a.[Date] as [uptake_date]
+    a.[Date] as [uptake_date]
     ,a.[Practice code] as [uptake_practice_code]	
     ,a.[Cumulative number of P9 NHS app registrations] as [M0148_cumulative_number_of_p9_nhs_app_registrations]
     ,a.[Number of GP registered patients] as [M0148_number_of_gp_registered_patients]

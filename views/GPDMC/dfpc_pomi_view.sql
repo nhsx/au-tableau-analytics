@@ -1,7 +1,7 @@
-CREATE VIEW dfpc_pomi_view
+CREATE OR ALTER VIEW dfpc_pomi_view
 AS
-SELECT A.[Unique ID]  AS [dfpc_POMI_Unique ID] 
-      ,A.[Date]  AS [dfpc_POMI_Date]
+SELECT 
+        A.[Date]  AS [dfpc_POMI_Date]
       ,A.[Practice code] AS [dfpc_POMI_Practice code] 
       ,[GP practice appointment functionality enabled] AS [M050_GP practice appointment functionality enabled]
       ,[GP practice repeat prescription functionality enabled] AS [M051_GP practice repeat prescription functionality enabled]
@@ -58,4 +58,3 @@ left join  [dbo].[pomi_vision_gp_practice_month_count]  L
 left join  [dbo].[pomi_microtest_gp_practice_month_count]  M
     on A.[Date] = M.[Date] and  A.[Practice code] = M.[Practice code]
     
-ORDER BY [dfpc_POMI_Unique ID] OFFSET 0 ROWS

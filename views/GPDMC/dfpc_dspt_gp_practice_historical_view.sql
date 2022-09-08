@@ -1,8 +1,7 @@
-CREATE VIEW dfpc_dspt_gp_practice_historical_view AS
+CREATE OR ALTER VIEW dfpc_dspt_gp_practice_historical_view AS
 SELECT 
 
-    A.[Unique ID]  AS [dfpc_DSPT_historical_Unique ID] 
-    ,A.[Date]  AS [dfpc_DSPT_historical_Date]
+    A.[Date]  AS [dfpc_DSPT_historical_Date]
     ,A.[Practice code] AS [dfpc_DSPT_historical_Practice code] 
     ,A.[Financial year] AS [dfpc_DSPT_historical_financial_year] 
     ,A.[Number of GP practices that meet or exceed the DSPT standard (historical)] AS [M76A_Number of GP practices that meet or exceed the DSPT standard (historical)]
@@ -32,5 +31,3 @@ ON
     A.[Date]  = C.[Date]
     AND A.[Practice code]  = C.[Practice code]
     AND A.[Financial year] = C.[Financial year]
-
-ORDER BY [dfpc_DSPT_historical_Unique ID] OFFSET 0 ROWS
