@@ -2,8 +2,7 @@ CREATE OR ALTER VIEW national_digital_channels_summary_view as
 
 with M220 as (
 SELECT
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M220' as metric_name
    ,cast([Number of users with an NHS App registration] as float)/cast([Adult population] as float) as metric_value
 FROM
@@ -12,8 +11,7 @@ FROM
 
 ,M221 as (
 SELECT
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M221' as metric_name
    ,cast([Number of unique NHS App logins] as float)/CAST([Number of users with an NHS App registration] as float) as metric_value
 
@@ -23,8 +21,7 @@ FROM
 
 ,M222 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M222' as metric_name
    ,CAST([Proportion of repeat prescriptions ordered online] as float) as metric_value
 from
@@ -34,8 +31,7 @@ from
 
 ,M223 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M223' as metric_name
    -- ,[Number of primary care appointments managed online]
    -- ,[Number of primary care appointments]
@@ -47,8 +43,7 @@ from
 
 ,M224 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M224' as metric_name
     ,cast([Number of repeat prescriptions ordered via the NHS App] as float) as metric_value
 from
@@ -58,8 +53,7 @@ from
 
 ,M225 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M225' as metric_name
    ,CAST([Number of referrals managed via the NHS App] as float)  as metric_value
 from
@@ -69,8 +63,7 @@ from
 
 ,M226 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M226' as metric_name
    ,CAST([Number of secondary care appointments made via the NHS App] as float) as metric_value
 from
@@ -81,8 +74,7 @@ from
 
 ,M227 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M227' as metric_name
     ,cast([Number of primary care appointments managed via the NHS App] as float) as metric_value
 from
@@ -92,8 +84,7 @@ from
 
 ,M228 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M228' as metric_name
     ,cast([Number of views of conditions information] as float) as M228
 from
@@ -103,8 +94,7 @@ from
 
 ,M229 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M229' as metric_name
    ,CAST([Number of find a service uses on NHS.uk] as float) as metric_value
 from
@@ -114,8 +104,7 @@ from
 
 ,M230 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M230' as metric_name
     ,cast([Number of gp record views] as float) as M230
 from
@@ -125,8 +114,7 @@ from
 
 ,M231 as (
 select 
-   [Unique ID] AS [ndc_Unique_ID]
-   ,[Date] AS [ndc_Date]
+   [Date] AS [ndc_Date]
    ,'M231' as metric_name
    ,CAST([Number of test result views via the NHS App] as float) as metric_value
 from

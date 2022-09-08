@@ -1,7 +1,7 @@
-CREATE VIEW dfpc_gp_eps_view
+CREATE OR ALTER VIEW dfpc_gp_eps_view
 AS
-SELECT A.[Unique ID]  AS [dfpc_gp_eps_Unique ID]
-      ,A.[Date]  AS [dfpc_gp_eps_Date]
+SELECT 
+        A.[Date]  AS [dfpc_gp_eps_Date]
       ,A.[Practice code] AS [dfpc_gp_eps_Practice code]
       ,A.[Number of registered patients with a nominated pharmacy] AS [M083_Number of registered patients with a nominated pharmacy]
       ,A.[Number of registered patients] AS [REF_Number of GP registered patients] 
@@ -16,4 +16,3 @@ left join [dbo].[eps_usage_eps_utilisation_month_prop] B
 
 left join  [dbo].[eps_usage_erd_utilisation_month_prop]  C
     on A.[Date] = C.[Date] and  A.[Practice code] = C.[Practice code]
-ORDER BY [dfpc_gp_eps_Unique ID] OFFSET 0 ROWS
