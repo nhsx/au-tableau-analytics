@@ -1,6 +1,6 @@
 CREATE OR ALTER VIEW national_digital_channels_view AS 
 SELECT
-A.[Date] AS [ndc_Date],
+cast(A.[Date] as date) AS [ndc_Date],
 A.[Number of users with an NHS App registration] AS [M220_NRM_Number_of_users_with_an_NHS_App_registration],
 A.[Adult population] AS [M220_DENOM_Adult_population],
 B.[Number of unique NHS App logins] AS [M221_NRM_Number_of_unique_NHS_App_logins],
@@ -38,7 +38,7 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,z.[Number of record, information and results views on the NHS App] as [M233_Number_of_record_information_and_results_views_on_the_NHS_App]
 ,aa.[Number of estimated visits to NHS UK] as [M256_Number_of_estimated_visits_to_NHS_UK]
 ,ab.[Number of appointments managed on the NHS App] as [M235_Number_of_appointments_managed_on_the_NHS_App]
-,ac.[Number of messages and consultations on the NHS App] as [M236_Number_of_messages_and_consultations_on_the_NHS_App]
+,ac.[OLCs on the NHS App] as [M236_Number_of_messages_and_consultations_on_the_NHS_App]
 
 ,ad.[Proportion of repeat prescriptions ordered online] as [M222_Proportion_of_repeat_prescriptions_ordered_online]
 ,ae.[Number of prescriptions managed on the NHS App] as [M234_Number_of_prescriptions_managed_on_the_NHS_App]
