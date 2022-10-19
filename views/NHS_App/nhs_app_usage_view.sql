@@ -81,3 +81,4 @@ LEFT JOIN
 ON
     a.[Date]=k.[Date]
     AND a.[Practice code]=k.[Practice code]
+

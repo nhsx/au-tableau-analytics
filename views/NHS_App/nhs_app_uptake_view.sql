@@ -1,5 +1,4 @@
 CREATE OR ALTER VIEW nhs_app_uptake_view AS 
-
 SELECT
 
     a.[Date] as [uptake_date]
@@ -12,6 +11,11 @@ SELECT
     ,d.[Number of P9 NHS app registrations] as [M0146_number_of_p9_app_registrations]
     ,e.[Cumulative number of P9 NHS app registrations] as [M0145_cumulative_number_of_P9_nhs_app_registrations]
  
+    ,f.[Number of logins] as [M0149_number_of_logins]
+    ,g.[Number of primary care appointments booked] as [M0150_number_of_primary_care_appointments_booked]
+    ,h.[Number of primary care appointments cancelled] as [M0151_number_of_primary_care_appointments_cancelled]
+
+
     ,'1' as JoinCond
 
 FROM
@@ -36,3 +40,21 @@ LEFT JOIN
 ON
     a.[Date]=e.[Date]
     AND a.[Practice code]=e.[Practice code]
+
+LEFT JOIN
+    [dbo].[nhs_app_usage_logins_day_count] f
+ON
+    a.[Date]=f.[Date]
+    AND a.[Practice code]=f.[Practice code]
+
+LEFT JOIN
+    [dbo].[nhs_app_usage_primary_care_appointments_booked_day_count] g
+ON
+    a.[Date]=g.[Date]
+    AND a.[Practice code]=g.[Practice code]
+
+LEFT JOIN
+    [dbo].[nhs_app_usage_primary_care_appointments_cancelled_day_count] h
+ON
+    a.[Date]=h.[Date]
+    AND a.[Practice code]=h.[Practice code]

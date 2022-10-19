@@ -72,7 +72,7 @@ select
     ,[dfpc_practice_code] as dfpc_practice_code
 
     ,SUM([M0146_number_of_p9_app_registrations]) as [M0146_number_of_p9_app_registrations]
-    ,SUM([M0148_number_of_gp_registered_patients]) as [M0148_number_of_gp_registered_patients]
+    ,MAX([M0148_number_of_gp_registered_patients]) as [M0148_number_of_gp_registered_patients]
     ,SUM([M0144_number_of_nhs_app_registrations]) as [M0144_number_of_nhs_app_registrations]
     ,SUM([M0145_cumulative_number_of_P9_nhs_app_registrations]) as [M0145_cumulative_number_of_P9_nhs_app_registrations]
     ,SUM([M0152_number_of_repeat_prescriptions]) as [M0152_number_of_repeat_prescriptions]
