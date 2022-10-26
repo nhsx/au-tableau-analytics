@@ -53,7 +53,7 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,an.[DCR views through other POL service] as [M252_DCR_views_through_other_POL_service]
 ,ao.[Number of Secondary Care Messages sent via NHS App] as [M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]
 ,ap.[services] as [MXXX_services]
-
+,aq.[Number of Covid Pass Transactions Undertaken] as [M269_Number_of_Covid_Pass_Transactions_Undertaken]
 
 FROM
 ndc_dashboard_nhsapp_registered_population_month_prop A
@@ -221,3 +221,7 @@ LEFT JOIN
 ndc_transactions_nhsuk_view_of_services_month_count	 	ap
 ON
 a.[Date]=ap.[Date]
+LEFT JOIN
+ndc_transactions_nhsapp_covid_pass_transactions_month_count aq
+ON
+a.[Date]=aq.[Date]
