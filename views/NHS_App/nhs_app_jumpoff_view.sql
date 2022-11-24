@@ -214,3 +214,27 @@ Provider
 
 FROM
 nhs_app_jumpoff_substrakt_patientparticipationgroup_day_count
+
+UNION ALL
+
+SELECT 
+Provider
+,Date
+,[Practice code]
+,'Messages' as jumpoff_measure
+,[Number of accurx - messages Jump Off Clicks] as jumpoff_value
+
+FROM
+nhs_app_jumpoff_accurx_messages_day_count
+
+UNION ALL
+
+SELECT
+Provider
+,Date
+,[Practice code]
+,'Medical' AS jumpoff_measure
+,[Number of accurx - medical Jump Off Clicks] as jumpoff_value
+
+FROM
+nhs_app_jumpoff_accurx_medical_day_count
