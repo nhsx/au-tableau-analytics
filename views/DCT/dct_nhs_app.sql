@@ -1,4 +1,4 @@
-CREATE OR ALTER VIEW dct_nhs_app as
+CREATE OR ALTER VIEW dct_nhs_app_view as
 
 with a as (
 SELECT 
