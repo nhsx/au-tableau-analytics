@@ -17,11 +17,11 @@ UNION ALL
 SELECT
 'Social Care' as org_type
 ,ICB_Code as ICB_CODE
-,[Count] as number_of_orgs_with_status
-,[CQC registered location - latest DSPT status] as dspt_status
-,[Date] as report_date
-,left([CQC registered location - latest DSPT status],5) as dspt_edition
-,[Total] as total_orgs
+,[Number of locations with the standard status] as number_of_orgs_with_status
+,[Standard status] as dspt_status
+,[Report Date] as report_date
+,null as dspt_edition
+,[Total number of locations] as total_orgs
 
 FROM
 dspt_socialcare_standards_compliance_by_ICB
