@@ -18,9 +18,9 @@ DATEFROMPARTS(RIGHT(month_year, 4),LEFT(month_year, CHARINDEX('-',month_year)-1)
       -- ,cast([Care_Home_Beds] as float) as [Care_Home_Beds]
       ,try_convert(float, Care_Home_Beds)  as [Care_Home_Beds]
 
-      ,[Date]
-      ,[IsActive]
-      ,[IsDomcare]
+      -- ,[Date]
+      -- ,[IsActive]
+      -- ,[IsDomcare]
       ,[ServiceUserCount]
       ,[PIR submission date]
       ,[month_year]
