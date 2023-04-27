@@ -8,6 +8,7 @@ SELECT
 ,[Report Date] as report_date
 ,[Dspt_edition] as dspt_edition
 ,[Total number of Trusts] as total_orgs
+,GETDATE() as date_updated
 
 FROM
 dspt_nhs_trusts_standards_compliance_by_ICB 
@@ -19,9 +20,10 @@ SELECT
 ,ICB_Code as ICB_CODE
 ,[Number of locations with the standard status] as number_of_orgs_with_status
 ,[Standard status] as dspt_status
-,DATEFROMPARTS(LEFT([Report Date],4), substring([Report Date], 6,2), 01) as report_date
+,[Report Date] as report_date
 ,null as dspt_edition
 ,[Total number of locations] as total_orgs
+,GETDATE() as date_updated
 
 FROM
 dspt_socialcare_standards_compliance_by_ICB
