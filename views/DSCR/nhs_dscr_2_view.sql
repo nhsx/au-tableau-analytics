@@ -28,7 +28,7 @@ DATEFROMPARTS(RIGHT(month_year, 4),LEFT(month_year, CHARINDEX('-',month_year)-1)
       ,CAST([Use a Digital Social Care Record system?] as VARCHAR(10)) as [Use a Digital Social Care Record system?]
       ,[PIRm_n]
       ,[run_date]
-
+      ,isnull(try_convert(float, Care_Home_Beds),0) + isnull(try_convert(float, [ServiceUserCount]),0) as Proxy_Users
 
 FROM
 [dbo].[dscr_all_variables_care_home_beds] a
