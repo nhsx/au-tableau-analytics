@@ -6,7 +6,7 @@ SELECT
     ,Trust_Type
     ,EPR_Group
     ,Current_EPR_Status
-    ,Bi_Weekly_Report_Date
+    ,CAST(Bi_Weekly_Report_Date as date) as Bi_Weekly_Report_Date
     ,STP_Code
     ,Organisation_Name
     ,GETDATE() as date_updated
