@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20211.21.0320.1853                               -->
+<!-- build 20214.22.0420.0834                               -->
 <datasource formatted-name='nhs_app_uptake_v001' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
@@ -8,6 +8,7 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
   </document-format-change-manifest>
+  <repository-location id='nhs_app_uptake_v001' path='datasources' revision='1.4' />
   <connection class='federated'>
     <named-connections>
       <named-connection caption='nhsx-slt-analytics.database.windows.net' name='sqlserver.1cv53q512u73ac103c6ar14ikyxw'>
@@ -19,6 +20,8 @@
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='odscodes_gp_mapping' table='[dbo].[odscodes_gp_mapping]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='ccg_code_mapping_snapshot' table='[dbo].[ccg_code_mapping_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='shapefile_ccg_boundaries_snapshot' table='[dbo].[shapefile_ccg_boundaries_snapshot]' type='table' />
+      <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='ccg_icb_region_mapping_snapshot' table='[dbo].[ccg_icb_region_mapping_snapshot]' type='table' />
+      <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='shapefile_stp_boundaries_snapshot' table='[dbo].[shapefile_stp_boundaries_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='nhs_app_uptake_view' table='[dbo].[nhs_app_uptake_view]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='patients_age_band_demography_snapshot' table='[dbo].[patients_age_band_demography_snapshot]' type='table' />
@@ -30,6 +33,9 @@
       <map key='[CCG code]' value='[shapefile_ccg_boundaries_snapshot].[CCG code]' />
       <map key='[CCG name (shapefile_ccg_boundaries_snapshot)]' value='[shapefile_ccg_boundaries_snapshot].[CCG name]' />
       <map key='[CCG name]' value='[ccg_code_mapping_snapshot].[CCG name]' />
+      <map key='[CCG_Name]' value='[ccg_icb_region_mapping_snapshot].[CCG_Name]' />
+      <map key='[CCG_ODS_Code]' value='[ccg_icb_region_mapping_snapshot].[CCG_ODS_Code]' />
+      <map key='[CCG_ONS_Code]' value='[ccg_icb_region_mapping_snapshot].[CCG_ONS_Code]' />
       <map key='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[DataSourceFileForThisSnapshot_Version]' />
       <map key='[DataSourceFileForThisSnapshot_Version]' value='[patients_sex_demography_snapshot].[DataSourceFileForThisSnapshot_Version]' />
       <map key='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' value='[gp_practice_population_snapshot].[Effective_Snapshot_Date]' />
@@ -55,6 +61,12 @@
       <map key='[GP_Register_Date]' value='[odscodes_gp_mapping].[GP_Register_Date]' />
       <map key='[GP_STP_Code]' value='[odscodes_gp_mapping].[GP_STP_Code]' />
       <map key='[GP_STP_Name]' value='[odscodes_gp_mapping].[GP_STP_Name]' />
+      <map key='[ICB_Code]' value='[ccg_icb_region_mapping_snapshot].[ICB_Code]' />
+      <map key='[ICB_Name]' value='[ccg_icb_region_mapping_snapshot].[ICB_Name]' />
+      <map key='[ICB_ONS_Code]' value='[ccg_icb_region_mapping_snapshot].[ICB_ONS_Code]' />
+      <map key='[Import_Date]' value='[ccg_icb_region_mapping_snapshot].[Import_Date]' />
+      <map key='[JoinCond]' value='[nhs_app_uptake_view].[JoinCond]' />
+      <map key='[Last_Refreshed (ccg_icb_region_mapping_snapshot)]' value='[ccg_icb_region_mapping_snapshot].[Last_Refreshed]' />
       <map key='[Last_Refreshed]' value='[odscodes_gp_mapping].[Last_Refreshed]' />
       <map key='[M0143_cumulative_number_of_nhs_app_registrations]' value='[nhs_app_uptake_view].[M0143_cumulative_number_of_nhs_app_registrations]' />
       <map key='[M0144_number_of_nhs_app_registrations]' value='[nhs_app_uptake_view].[M0144_number_of_nhs_app_registrations]' />
@@ -62,6 +74,9 @@
       <map key='[M0146_number_of_p9_app_registrations]' value='[nhs_app_uptake_view].[M0146_number_of_p9_app_registrations]' />
       <map key='[M0148_cumulative_number_of_p9_nhs_app_registrations]' value='[nhs_app_uptake_view].[M0148_cumulative_number_of_p9_nhs_app_registrations]' />
       <map key='[M0148_number_of_gp_registered_patients]' value='[nhs_app_uptake_view].[M0148_number_of_gp_registered_patients]' />
+      <map key='[M0149_number_of_logins]' value='[nhs_app_uptake_view].[M0149_number_of_logins]' />
+      <map key='[M0150_number_of_primary_care_appointments_booked]' value='[nhs_app_uptake_view].[M0150_number_of_primary_care_appointments_booked]' />
+      <map key='[M0151_number_of_primary_care_appointments_cancelled]' value='[nhs_app_uptake_view].[M0151_number_of_primary_care_appointments_cancelled]' />
       <map key='[ODS CCG code]' value='[ccg_code_mapping_snapshot].[ODS CCG code]' />
       <map key='[ONS CCG code]' value='[ccg_code_mapping_snapshot].[ONS CCG code]' />
       <map key='[PCN_CCG_Code]' value='[odscodes_gp_mapping].[PCN_CCG_Code]' />
@@ -70,26 +85,37 @@
       <map key='[PCN_Region_Name]' value='[odscodes_gp_mapping].[PCN_Region_Name]' />
       <map key='[PCN_STP_Code]' value='[odscodes_gp_mapping].[PCN_STP_Code]' />
       <map key='[PCN_STP_Name]' value='[odscodes_gp_mapping].[PCN_STP_Name]' />
+      <map key='[Region_Code]' value='[ccg_icb_region_mapping_snapshot].[Region_Code]' />
       <map key='[Region_Code_Name]' value='[odscodes_gp_mapping].[Region_Code_Name]' />
+      <map key='[Region_Name (ccg_icb_region_mapping_snapshot)]' value='[ccg_icb_region_mapping_snapshot].[Region_Name]' />
       <map key='[Region_Name]' value='[odscodes_gp_mapping].[Region_Name]' />
       <map key='[Registered_patient]' value='[gp_practice_population_snapshot].[Registered_patient]' />
+      <map key='[STP Geography]' value='[shapefile_stp_boundaries_snapshot].[STP Geography]' />
+      <map key='[STP code]' value='[shapefile_stp_boundaries_snapshot].[STP code]' />
+      <map key='[STP name]' value='[shapefile_stp_boundaries_snapshot].[STP name]' />
       <map key='[Sex]' value='[patients_sex_demography_snapshot].[Sex]' />
       <map key='[Size (patients_age_band_demography_snapshot)]' value='[patients_age_band_demography_snapshot].[Size]' />
       <map key='[Size]' value='[patients_sex_demography_snapshot].[Size]' />
       <map key='[Unique ID (shapefile_ccg_boundaries_snapshot)]' value='[shapefile_ccg_boundaries_snapshot].[Unique ID]' />
-      <map key='[Unique ID]' value='[ccg_code_mapping_snapshot].[Unique ID]' />
+      <map key='[Unique ID]' value='[shapefile_stp_boundaries_snapshot].[Unique ID]' />
+      <map key='[bng_e (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[bng_e]' />
       <map key='[bng_e]' value='[shapefile_ccg_boundaries_snapshot].[bng_e]' />
+      <map key='[bng_n (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[bng_n]' />
       <map key='[bng_n]' value='[shapefile_ccg_boundaries_snapshot].[bng_n]' />
+      <map key='[geometry (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[geometry]' />
       <map key='[geometry2]' value='[shapefile_ccg_boundaries_snapshot].[geometry2]' />
       <map key='[geometry3]' value='[shapefile_ccg_boundaries_snapshot].[geometry3]' />
       <map key='[geometry]' value='[shapefile_ccg_boundaries_snapshot].[geometry]' />
+      <map key='[lat (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[lat]' />
       <map key='[lat]' value='[shapefile_ccg_boundaries_snapshot].[lat]' />
+      <map key='[long (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[long]' />
       <map key='[long]' value='[shapefile_ccg_boundaries_snapshot].[long]' />
+      <map key='[st_area(shape) (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[st_area(shape)]' />
       <map key='[st_area(shape)]' value='[shapefile_ccg_boundaries_snapshot].[st_area(shape)]' />
+      <map key='[st_length(shape) (shapefile_stp_boundaries_snapshot)]' value='[shapefile_stp_boundaries_snapshot].[st_length(shape)]' />
       <map key='[st_length(shape)]' value='[shapefile_ccg_boundaries_snapshot].[st_length(shape)]' />
       <map key='[uptake_date]' value='[nhs_app_uptake_view].[uptake_date]' />
       <map key='[uptake_practice_code]' value='[nhs_app_uptake_view].[uptake_practice_code]' />
-      <map key='[uptake_unique_id]' value='[nhs_app_uptake_view].[uptake_unique_id]' />
     </cols>
     <metadata-records>
       <metadata-record class='column'>
@@ -601,78 +627,58 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
-        <remote-name>Unique ID</remote-name>
-        <remote-type>3</remote-type>
-        <local-name>[Unique ID]</local-name>
-        <parent-name>[ccg_code_mapping_snapshot]</parent-name>
-        <remote-alias>Unique ID</remote-alias>
-        <ordinal>28</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>10</precision>
-        <contains-null>false</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
         <remote-name>ONS CCG code</remote-name>
-        <remote-type>129</remote-type>
+        <remote-type>130</remote-type>
         <local-name>[ONS CCG code]</local-name>
         <parent-name>[ccg_code_mapping_snapshot]</parent-name>
         <remote-alias>ONS CCG code</remote-alias>
-        <ordinal>29</ordinal>
+        <ordinal>28</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>255</width>
-        <contains-null>false</contains-null>
+        <contains-null>true</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
           <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
         <remote-name>CCG name</remote-name>
-        <remote-type>129</remote-type>
+        <remote-type>130</remote-type>
         <local-name>[CCG name]</local-name>
         <parent-name>[ccg_code_mapping_snapshot]</parent-name>
         <remote-alias>CCG name</remote-alias>
-        <ordinal>30</ordinal>
+        <ordinal>29</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>255</width>
-        <contains-null>false</contains-null>
+        <contains-null>true</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
           <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
         <remote-name>ODS CCG code</remote-name>
-        <remote-type>129</remote-type>
+        <remote-type>130</remote-type>
         <local-name>[ODS CCG code]</local-name>
         <parent-name>[ccg_code_mapping_snapshot]</parent-name>
         <remote-alias>ODS CCG code</remote-alias>
-        <ordinal>31</ordinal>
+        <ordinal>30</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>255</width>
-        <contains-null>false</contains-null>
+        <contains-null>true</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
           <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
@@ -683,7 +689,7 @@
         <local-name>[Unique ID (shapefile_ccg_boundaries_snapshot)]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>Unique ID</remote-alias>
-        <ordinal>33</ordinal>
+        <ordinal>32</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -700,7 +706,7 @@
         <local-name>[CCG code]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>CCG code</remote-alias>
-        <ordinal>34</ordinal>
+        <ordinal>33</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -720,7 +726,7 @@
         <local-name>[CCG name (shapefile_ccg_boundaries_snapshot)]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>CCG name</remote-alias>
-        <ordinal>35</ordinal>
+        <ordinal>34</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -740,7 +746,7 @@
         <local-name>[bng_e]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>bng_e</remote-alias>
-        <ordinal>36</ordinal>
+        <ordinal>35</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -757,7 +763,7 @@
         <local-name>[bng_n]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>bng_n</remote-alias>
-        <ordinal>37</ordinal>
+        <ordinal>36</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -774,7 +780,7 @@
         <local-name>[long]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>long</remote-alias>
-        <ordinal>38</ordinal>
+        <ordinal>37</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -791,7 +797,7 @@
         <local-name>[lat]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>lat</remote-alias>
-        <ordinal>39</ordinal>
+        <ordinal>38</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -808,7 +814,7 @@
         <local-name>[st_area(shape)]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>st_area(shape)</remote-alias>
-        <ordinal>40</ordinal>
+        <ordinal>39</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -825,7 +831,7 @@
         <local-name>[st_length(shape)]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>st_length(shape)</remote-alias>
-        <ordinal>41</ordinal>
+        <ordinal>40</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -842,7 +848,7 @@
         <local-name>[geometry]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>geometry</remote-alias>
-        <ordinal>42</ordinal>
+        <ordinal>41</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -861,7 +867,7 @@
         <local-name>[CCG Geography]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>CCG Geography</remote-alias>
-        <ordinal>43</ordinal>
+        <ordinal>42</ordinal>
         <local-type>spatial</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -877,7 +883,7 @@
         <local-name>[geometry2]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>geometry2</remote-alias>
-        <ordinal>44</ordinal>
+        <ordinal>43</ordinal>
         <local-type>spatial</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -893,7 +899,7 @@
         <local-name>[geometry3]</local-name>
         <parent-name>[shapefile_ccg_boundaries_snapshot]</parent-name>
         <remote-alias>geometry3</remote-alias>
-        <ordinal>45</ordinal>
+        <ordinal>44</ordinal>
         <local-type>spatial</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -904,12 +910,398 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>CCG_ONS_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[CCG_ONS_Code]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>CCG_ONS_Code</remote-alias>
+        <ordinal>46</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CCG_ODS_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[CCG_ODS_Code]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>CCG_ODS_Code</remote-alias>
+        <ordinal>47</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CCG_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[CCG_Name]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>CCG_Name</remote-alias>
+        <ordinal>48</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ICB_ONS_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ICB_ONS_Code]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>ICB_ONS_Code</remote-alias>
+        <ordinal>49</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ICB_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ICB_Code]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>ICB_Code</remote-alias>
+        <ordinal>50</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ICB_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ICB_Name]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>ICB_Name</remote-alias>
+        <ordinal>51</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region_Code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Region_Code]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>Region_Code</remote-alias>
+        <ordinal>52</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region_Name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Region_Name (ccg_icb_region_mapping_snapshot)]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>Region_Name</remote-alias>
+        <ordinal>53</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Import_Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Import_Date]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>Import_Date</remote-alias>
+        <ordinal>54</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Last_Refreshed</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Last_Refreshed (ccg_icb_region_mapping_snapshot)]</local-name>
+        <parent-name>[ccg_icb_region_mapping_snapshot]</parent-name>
+        <remote-alias>Last_Refreshed</remote-alias>
+        <ordinal>55</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Unique ID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[Unique ID]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>Unique ID</remote-alias>
+        <ordinal>57</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>STP code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[STP code]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>STP code</remote-alias>
+        <ordinal>58</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>STP name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[STP name]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>STP name</remote-alias>
+        <ordinal>59</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>bng_e</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[bng_e (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>bng_e</remote-alias>
+        <ordinal>60</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>bng_n</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[bng_n (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>bng_n</remote-alias>
+        <ordinal>61</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>long</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[long (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>long</remote-alias>
+        <ordinal>62</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>lat</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[lat (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>lat</remote-alias>
+        <ordinal>63</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>st_area(shape)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[st_area(shape) (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>st_area(shape)</remote-alias>
+        <ordinal>64</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>st_length(shape)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[st_length(shape) (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>st_length(shape)</remote-alias>
+        <ordinal>65</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>geometry</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[geometry (shapefile_stp_boundaries_snapshot)]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>geometry</remote-alias>
+        <ordinal>66</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>STP Geography</remote-name>
+        <remote-type>128</remote-type>
+        <local-name>[STP Geography]</local-name>
+        <parent-name>[shapefile_stp_boundaries_snapshot]</parent-name>
+        <remote-alias>STP Geography</remote-alias>
+        <ordinal>67</ordinal>
+        <local-type>spatial</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;geography&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BINARY&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>GP_Practice_Code</remote-name>
         <remote-type>129</remote-type>
         <local-name>[GP_Practice_Code (gp_practice_population_snapshot)]</local-name>
         <parent-name>[gp_practice_population_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>47</ordinal>
+        <ordinal>69</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -929,7 +1321,7 @@
         <local-name>[Registered_patient]</local-name>
         <parent-name>[gp_practice_population_snapshot]</parent-name>
         <remote-alias>Registered_patient</remote-alias>
-        <ordinal>48</ordinal>
+        <ordinal>70</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -946,7 +1338,7 @@
         <local-name>[Effective_Snapshot_Date (gp_practice_population_snapshot)]</local-name>
         <parent-name>[gp_practice_population_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>49</ordinal>
+        <ordinal>71</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -958,50 +1350,204 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_494CDD54087948259FB398188A5D99A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
-        <remote-name>uptake_unique_id</remote-name>
-        <remote-type>3</remote-type>
-        <local-name>[uptake_unique_id]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>uptake_unique_id</remote-alias>
-        <ordinal>51</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>10</precision>
-        <contains-null>false</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
         <remote-name>uptake_date</remote-name>
         <remote-type>7</remote-type>
         <local-name>[uptake_date]</local-name>
         <parent-name>[nhs_app_uptake_view]</parent-name>
         <remote-alias>uptake_date</remote-alias>
-        <ordinal>52</ordinal>
-        <local-type>date</local-type>
+        <ordinal>73</ordinal>
+        <local-type>datetime</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
-          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
         <remote-name>uptake_practice_code</remote-name>
-        <remote-type>129</remote-type>
+        <remote-type>130</remote-type>
         <local-name>[uptake_practice_code]</local-name>
         <parent-name>[nhs_app_uptake_view]</parent-name>
         <remote-alias>uptake_practice_code</remote-alias>
-        <ordinal>53</ordinal>
+        <ordinal>74</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>255</width>
         <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0148_cumulative_number_of_p9_nhs_app_registrations</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0148_cumulative_number_of_p9_nhs_app_registrations]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0148_cumulative_number_of_p9_nhs_app_registrations</remote-alias>
+        <ordinal>75</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0148_number_of_gp_registered_patients</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0148_number_of_gp_registered_patients]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0148_number_of_gp_registered_patients</remote-alias>
+        <ordinal>76</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0144_number_of_nhs_app_registrations</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0144_number_of_nhs_app_registrations]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0144_number_of_nhs_app_registrations</remote-alias>
+        <ordinal>77</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0143_cumulative_number_of_nhs_app_registrations</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0143_cumulative_number_of_nhs_app_registrations]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0143_cumulative_number_of_nhs_app_registrations</remote-alias>
+        <ordinal>78</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0146_number_of_p9_app_registrations</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0146_number_of_p9_app_registrations]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0146_number_of_p9_app_registrations</remote-alias>
+        <ordinal>79</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0145_cumulative_number_of_P9_nhs_app_registrations</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0145_cumulative_number_of_P9_nhs_app_registrations]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0145_cumulative_number_of_P9_nhs_app_registrations</remote-alias>
+        <ordinal>80</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0149_number_of_logins</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0149_number_of_logins]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0149_number_of_logins</remote-alias>
+        <ordinal>81</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0150_number_of_primary_care_appointments_booked</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0150_number_of_primary_care_appointments_booked]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0150_number_of_primary_care_appointments_booked</remote-alias>
+        <ordinal>82</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>M0151_number_of_primary_care_appointments_cancelled</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[M0151_number_of_primary_care_appointments_cancelled]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>M0151_number_of_primary_care_appointments_cancelled</remote-alias>
+        <ordinal>83</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>JoinCond</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[JoinCond]</local-name>
+        <parent-name>[nhs_app_uptake_view]</parent-name>
+        <remote-alias>JoinCond</remote-alias>
+        <ordinal>84</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1</width>
+        <contains-null>false</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
@@ -1012,114 +1558,12 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
-        <remote-name>M0148_cumulative_number_of_p9_nhs_app_registrations</remote-name>
-        <remote-type>20</remote-type>
-        <local-name>[M0148_cumulative_number_of_p9_nhs_app_registrations]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>M0148_cumulative_number_of_p9_nhs_app_registrations</remote-alias>
-        <ordinal>54</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>19</precision>
-        <contains-null>true</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
-        <remote-name>M0148_number_of_gp_registered_patients</remote-name>
-        <remote-type>20</remote-type>
-        <local-name>[M0148_number_of_gp_registered_patients]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>M0148_number_of_gp_registered_patients</remote-alias>
-        <ordinal>55</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>19</precision>
-        <contains-null>true</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
-        <remote-name>M0144_number_of_nhs_app_registrations</remote-name>
-        <remote-type>20</remote-type>
-        <local-name>[M0144_number_of_nhs_app_registrations]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>M0144_number_of_nhs_app_registrations</remote-alias>
-        <ordinal>56</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>19</precision>
-        <contains-null>true</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
-        <remote-name>M0143_cumulative_number_of_nhs_app_registrations</remote-name>
-        <remote-type>20</remote-type>
-        <local-name>[M0143_cumulative_number_of_nhs_app_registrations]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>M0143_cumulative_number_of_nhs_app_registrations</remote-alias>
-        <ordinal>57</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>19</precision>
-        <contains-null>true</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
-        <remote-name>M0146_number_of_p9_app_registrations</remote-name>
-        <remote-type>20</remote-type>
-        <local-name>[M0146_number_of_p9_app_registrations]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>M0146_number_of_p9_app_registrations</remote-alias>
-        <ordinal>58</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>19</precision>
-        <contains-null>true</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
-        <remote-name>M0145_cumulative_number_of_P9_nhs_app_registrations</remote-name>
-        <remote-type>20</remote-type>
-        <local-name>[M0145_cumulative_number_of_P9_nhs_app_registrations]</local-name>
-        <parent-name>[nhs_app_uptake_view]</parent-name>
-        <remote-alias>M0145_cumulative_number_of_P9_nhs_app_registrations</remote-alias>
-        <ordinal>59</ordinal>
-        <local-type>integer</local-type>
-        <aggregation>Sum</aggregation>
-        <precision>19</precision>
-        <contains-null>true</contains-null>
-        <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
-        </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-      </metadata-record>
-      <metadata-record class='column'>
         <remote-name>GP_Practice_Code</remote-name>
         <remote-type>129</remote-type>
         <local-name>[GP_Practice_Code (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>61</ordinal>
+        <ordinal>86</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1139,7 +1583,7 @@
         <local-name>[Age_band]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Age_band</remote-alias>
-        <ordinal>62</ordinal>
+        <ordinal>87</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1159,7 +1603,7 @@
         <local-name>[Size (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Size</remote-alias>
-        <ordinal>63</ordinal>
+        <ordinal>88</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1176,7 +1620,7 @@
         <local-name>[Effective_Snapshot_Date (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>64</ordinal>
+        <ordinal>89</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1193,7 +1637,7 @@
         <local-name>[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]</local-name>
         <parent-name>[patients_age_band_demography_snapshot]</parent-name>
         <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-        <ordinal>65</ordinal>
+        <ordinal>90</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1210,7 +1654,7 @@
         <local-name>[GP_Practice_Code]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>GP_Practice_Code</remote-alias>
-        <ordinal>67</ordinal>
+        <ordinal>92</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1230,7 +1674,7 @@
         <local-name>[Sex]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Sex</remote-alias>
-        <ordinal>68</ordinal>
+        <ordinal>93</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>255</width>
@@ -1250,7 +1694,7 @@
         <local-name>[Size]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Size</remote-alias>
-        <ordinal>69</ordinal>
+        <ordinal>94</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1267,7 +1711,7 @@
         <local-name>[Effective_Snapshot_Date]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>Effective_Snapshot_Date</remote-alias>
-        <ordinal>70</ordinal>
+        <ordinal>95</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1284,7 +1728,7 @@
         <local-name>[DataSourceFileForThisSnapshot_Version]</local-name>
         <parent-name>[patients_sex_demography_snapshot]</parent-name>
         <remote-alias>DataSourceFileForThisSnapshot_Version</remote-alias>
-        <ordinal>71</ordinal>
+        <ordinal>96</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>10</precision>
@@ -1300,6 +1744,9 @@
   <aliases enabled='yes' />
   <column caption='Age band' datatype='string' name='[Age_band]' role='dimension' type='nominal' />
   <column caption='CCG name (shapefile ccg boundaries snapshot)' datatype='string' name='[CCG name (shapefile_ccg_boundaries_snapshot)]' role='dimension' type='nominal' />
+  <column caption='CCG Name' datatype='string' name='[CCG_Name]' role='dimension' type='nominal' />
+  <column caption='CCG ODS Code' datatype='string' name='[CCG_ODS_Code]' role='dimension' type='nominal' />
+  <column caption='CCG ONS Code' datatype='string' name='[CCG_ONS_Code]' role='dimension' type='nominal' />
   <column caption='DataSourceFileForThisSnapshot Version (patients age band demography snapshot)' datatype='integer' name='[DataSourceFileForThisSnapshot_Version (patients_age_band_demography_snapshot)]' role='measure' type='quantitative' />
   <column caption='DataSourceFileForThisSnapshot Version' datatype='integer' name='[DataSourceFileForThisSnapshot_Version]' role='measure' type='quantitative' />
   <column caption='Effective Snapshot Date (gp practice population snapshot)' datatype='date' name='[Effective_Snapshot_Date (gp_practice_population_snapshot)]' role='dimension' type='ordinal' />
@@ -1325,20 +1772,27 @@
   <column caption='GP Register Date' datatype='date' name='[GP_Register_Date]' role='dimension' type='ordinal' />
   <column caption='GP STP Code' datatype='string' name='[GP_STP_Code]' role='dimension' type='nominal' />
   <column caption='GP STP Name' datatype='string' name='[GP_STP_Name]' role='dimension' type='nominal' />
+  <column caption='ICB Code' datatype='string' name='[ICB_Code]' role='dimension' type='nominal' />
+  <column caption='ICB Name' datatype='string' name='[ICB_Name]' role='dimension' type='nominal' />
+  <column caption='ICB ONS Code' datatype='string' name='[ICB_ONS_Code]' role='dimension' type='nominal' />
+  <column caption='Import Date' datatype='datetime' name='[Import_Date]' role='dimension' type='ordinal' />
+  <column caption='Last Refreshed (ccg icb region mapping snapshot)' datatype='datetime' name='[Last_Refreshed (ccg_icb_region_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Last Refreshed' datatype='date' name='[Last_Refreshed]' role='dimension' type='ordinal' />
-  <column caption='M0143 cumulative number of nhs app registrations' datatype='integer' name='[M0143_cumulative_number_of_nhs_app_registrations]' role='measure' type='quantitative' />
-  <column caption='M0144 number of nhs app registrations' datatype='integer' name='[M0144_number_of_nhs_app_registrations]' role='measure' type='quantitative' />
-  <column caption='M0145 cumulative number of P9 nhs app registrations' datatype='integer' name='[M0145_cumulative_number_of_P9_nhs_app_registrations]' role='measure' type='quantitative' />
-  <column caption='M0146 number of p9 app registrations' datatype='integer' name='[M0146_number_of_p9_app_registrations]' role='measure' type='quantitative' />
-  <column caption='M0148 cumulative number of p9 nhs app registrations' datatype='integer' name='[M0148_cumulative_number_of_p9_nhs_app_registrations]' role='measure' type='quantitative' />
-  <column caption='M0148 number of gp registered patients' datatype='integer' name='[M0148_number_of_gp_registered_patients]' role='measure' type='quantitative' />
+  <column caption='M0143 cumulative number of nhs app registrations' datatype='real' name='[M0143_cumulative_number_of_nhs_app_registrations]' role='measure' type='quantitative' />
+  <column caption='M0144 number of nhs app registrations' datatype='real' name='[M0144_number_of_nhs_app_registrations]' role='measure' type='quantitative' />
+  <column caption='M0145 cumulative number of P9 nhs app registrations' datatype='real' name='[M0145_cumulative_number_of_P9_nhs_app_registrations]' role='measure' type='quantitative' />
+  <column caption='M0146 number of p9 app registrations' datatype='real' name='[M0146_number_of_p9_app_registrations]' role='measure' type='quantitative' />
+  <column caption='M0148 cumulative number of p9 nhs app registrations' datatype='real' name='[M0148_cumulative_number_of_p9_nhs_app_registrations]' role='measure' type='quantitative' />
+  <column caption='M0148 number of gp registered patients' datatype='real' name='[M0148_number_of_gp_registered_patients]' role='measure' type='quantitative' />
   <column caption='PCN CCG Code' datatype='string' hidden='true' name='[PCN_CCG_Code]' role='dimension' type='nominal' />
   <column caption='PCN CCG Name' datatype='string' hidden='true' name='[PCN_CCG_Name]' role='dimension' type='nominal' />
   <column caption='PCN Region Code' datatype='string' hidden='true' name='[PCN_Region_Code]' role='dimension' type='nominal' />
   <column caption='PCN Region Name' datatype='string' hidden='true' name='[PCN_Region_Name]' role='dimension' type='nominal' />
   <column caption='PCN STP Code' datatype='string' hidden='true' name='[PCN_STP_Code]' role='dimension' type='nominal' />
   <column caption='PCN STP Name' datatype='string' hidden='true' name='[PCN_STP_Name]' role='dimension' type='nominal' />
+  <column caption='Region Code' datatype='string' name='[Region_Code]' role='dimension' type='nominal' />
   <column caption='Region Code Name' datatype='string' hidden='true' name='[Region_Code_Name]' role='dimension' type='nominal' />
+  <column caption='Region Name (ccg icb region mapping snapshot)' datatype='string' name='[Region_Name (ccg_icb_region_mapping_snapshot)]' role='dimension' type='nominal' />
   <column caption='Region Name' datatype='string' hidden='true' name='[Region_Name]' role='dimension' type='nominal' />
   <column caption='Registered patient' datatype='integer' name='[Registered_patient]' role='measure' type='quantitative' />
   <column caption='Size (patients age band demography snapshot)' datatype='integer' name='[Size (patients_age_band_demography_snapshot)]' role='measure' type='quantitative' />
@@ -1347,26 +1801,34 @@
   <column caption='Unique ID (stp code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column datatype='integer' hidden='true' name='[Unique ID]' role='dimension' type='ordinal' />
   <_.fcp.ObjectModelTableType.true...column caption='ccg_code_mapping_snapshot' datatype='table' name='[__tableau_internal_object_id__].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='ccg_icb_region_mapping_snapshot' datatype='table' name='[__tableau_internal_object_id__].[ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='gp_practice_population_snapshot' datatype='table' name='[__tableau_internal_object_id__].[gp_practice_population_snapshot_494CDD54087948259FB398188A5D99A2]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='nhs_app_uptake_view' datatype='table' name='[__tableau_internal_object_id__].[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='odscodes_gp_mapping' datatype='table' name='[__tableau_internal_object_id__].[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='patients_age_band_demography_snapshot' datatype='table' name='[__tableau_internal_object_id__].[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='patients_sex_demography_snapshot' datatype='table' name='[__tableau_internal_object_id__].[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shapefile_ccg_boundaries_snapshot' datatype='table' name='[__tableau_internal_object_id__].[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='shapefile_stp_boundaries_snapshot' datatype='table' name='[__tableau_internal_object_id__].[shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A]' role='measure' type='quantitative' />
+  <column caption='Bng E (Shapefile Stp Boundaries Snapshot)' datatype='integer' name='[bng_e (shapefile_stp_boundaries_snapshot)]' role='measure' type='quantitative' />
   <column caption='Bng E' datatype='integer' name='[bng_e]' role='measure' type='quantitative' />
+  <column caption='Bng N (Shapefile Stp Boundaries Snapshot)' datatype='integer' name='[bng_n (shapefile_stp_boundaries_snapshot)]' role='measure' type='quantitative' />
   <column caption='Bng N' datatype='integer' name='[bng_n]' role='measure' type='quantitative' />
   <column caption='dfpc POMI Unique ID' datatype='integer' hidden='true' name='[dfpc_POMI_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='Geometry (Shapefile Stp Boundaries Snapshot)' datatype='string' name='[geometry (shapefile_stp_boundaries_snapshot)]' role='dimension' type='nominal' />
   <column caption='Geometry2' datatype='spatial' hidden='true' name='[geometry2]' role='measure' type='nominal' />
   <column caption='Geometry3' datatype='spatial' hidden='true' name='[geometry3]' role='measure' type='nominal' />
   <column caption='Geometry' datatype='string' name='[geometry]' role='dimension' type='nominal' />
+  <column aggregation='Avg' caption='Lat (Shapefile Stp Boundaries Snapshot)' datatype='real' name='[lat (shapefile_stp_boundaries_snapshot)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
   <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+  <column caption='Long (Shapefile Stp Boundaries Snapshot)' datatype='real' name='[long (shapefile_stp_boundaries_snapshot)]' role='measure' type='quantitative' />
   <column aggregation='Avg' caption='Long' datatype='real' name='[long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+  <column caption='St Area(Shape) (Shapefile Stp Boundaries Snapshot)' datatype='real' name='[st_area(shape) (shapefile_stp_boundaries_snapshot)]' role='measure' type='quantitative' />
   <column caption='St Area(Shape)' datatype='real' name='[st_area(shape)]' role='measure' type='quantitative' />
+  <column caption='St Length(Shape) (Shapefile Stp Boundaries Snapshot)' datatype='real' name='[st_length(shape) (shapefile_stp_boundaries_snapshot)]' role='measure' type='quantitative' />
   <column caption='St Length(Shape)' datatype='real' name='[st_length(shape)]' role='measure' type='quantitative' />
-  <column caption='Uptake Date' datatype='date' name='[uptake_date]' role='dimension' type='ordinal' />
+  <column caption='Uptake Date' datatype='datetime' name='[uptake_date]' role='dimension' type='ordinal' />
   <column caption='Uptake Practice Code' datatype='string' name='[uptake_practice_code]' role='dimension' type='nominal' />
-  <column caption='Uptake Unique Id' datatype='integer' name='[uptake_unique_id]' role='dimension' type='ordinal' />
-  <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+  <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='false' units='records'>
     <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/18/2022 05:58:57 PM' username='tableau_internal_user'>
       <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' table='[Extract].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
@@ -1448,6 +1910,7 @@
           <approx-count>6941</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Name</remote-name>
@@ -1462,6 +1925,7 @@
           <approx-count>4206</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Register_Date</remote-name>
@@ -1475,6 +1939,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_LAT</remote-name>
@@ -1488,6 +1953,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>4664</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Long</remote-name>
@@ -1501,6 +1967,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>4664</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Postcode</remote-name>
@@ -1515,6 +1982,7 @@
           <approx-count>4918</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_CCG_Code</remote-name>
@@ -1529,6 +1997,7 @@
           <approx-count>111</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_CCG_Name</remote-name>
@@ -1543,6 +2012,7 @@
           <approx-count>111</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_STP_Code</remote-name>
@@ -1557,6 +2027,7 @@
           <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_STP_Name</remote-name>
@@ -1571,6 +2042,7 @@
           <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Region_Code</remote-name>
@@ -1585,6 +2057,7 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Region_Name</remote-name>
@@ -1599,6 +2072,7 @@
           <approx-count>8</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_PCN_Code</remote-name>
@@ -1613,6 +2087,7 @@
           <approx-count>1392</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_PCN_Name</remote-name>
@@ -1627,6 +2102,7 @@
           <approx-count>1392</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Last_Refreshed</remote-name>
@@ -1640,6 +2116,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>ONS CCG code</remote-name>
@@ -1654,6 +2131,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG name</remote-name>
@@ -1668,6 +2146,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>ODS CCG code</remote-name>
@@ -1682,6 +2161,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Unique ID</remote-name>
@@ -1695,6 +2175,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG code</remote-name>
@@ -1709,6 +2190,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG name</remote-name>
@@ -1723,6 +2205,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>bng_e</remote-name>
@@ -1736,6 +2219,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>bng_n</remote-name>
@@ -1749,6 +2233,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>long</remote-name>
@@ -1762,6 +2247,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>lat</remote-name>
@@ -1775,6 +2261,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>st_area(shape)</remote-name>
@@ -1788,6 +2275,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>st_length(shape)</remote-name>
@@ -1801,6 +2289,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>geometry</remote-name>
@@ -1815,6 +2304,7 @@
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>CCG Geography</remote-name>
@@ -1828,6 +2318,7 @@
           <aggregation>Collect</aggregation>
           <approx-count>106</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -1842,6 +2333,7 @@
           <approx-count>6518</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_494CDD54087948259FB398188A5D99A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Registered_patient</remote-name>
@@ -1855,6 +2347,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>3460</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_494CDD54087948259FB398188A5D99A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -1868,6 +2361,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_494CDD54087948259FB398188A5D99A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>uptake_unique_id</remote-name>
@@ -1881,6 +2375,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>3289774</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>uptake_date</remote-name>
@@ -1894,6 +2389,7 @@
           <aggregation>Year</aggregation>
           <approx-count>500</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>uptake_practice_code</remote-name>
@@ -1908,6 +2404,7 @@
           <approx-count>22672</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0148_cumulative_number_of_p9_nhs_app_registrations</remote-name>
@@ -1921,6 +2418,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>26914</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0148_number_of_gp_registered_patients</remote-name>
@@ -1934,6 +2432,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>15999</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0144_number_of_nhs_app_registrations</remote-name>
@@ -1947,6 +2446,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>249</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0143_cumulative_number_of_nhs_app_registrations</remote-name>
@@ -1960,6 +2460,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>31241</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0146_number_of_p9_app_registrations</remote-name>
@@ -1973,6 +2474,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>199</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>M0145_cumulative_number_of_P9_nhs_app_registrations</remote-name>
@@ -1986,6 +2488,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>26914</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[nhs_app_uptake_view_195C860D32734014A041B6FEA85E91F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -2000,6 +2503,7 @@
           <approx-count>9258</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Age_band</remote-name>
@@ -2014,6 +2518,7 @@
           <approx-count>5</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Size</remote-name>
@@ -2027,6 +2532,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>6018</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -2040,6 +2546,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>DataSourceFileForThisSnapshot_Version</remote-name>
@@ -2053,6 +2560,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_age_band_demography_snapshot_175AE756C8854F40A6A0DC66274F8F2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>GP_Practice_Code</remote-name>
@@ -2067,6 +2575,7 @@
           <approx-count>4750</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Sex</remote-name>
@@ -2081,6 +2590,7 @@
           <approx-count>2</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Size</remote-name>
@@ -2094,6 +2604,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>4407</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>Effective_Snapshot_Date</remote-name>
@@ -2107,6 +2618,7 @@
           <aggregation>Year</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>DataSourceFileForThisSnapshot_Version</remote-name>
@@ -2120,6 +2632,7 @@
           <aggregation>Sum</aggregation>
           <approx-count>1</approx-count>
           <contains-null>true</contains-null>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patients_sex_demography_snapshot_0C34EF0F0C2B4E7B97FBC3160B03ED94]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
         </metadata-record>
       </metadata-records>
     </connection>
@@ -2137,6 +2650,11 @@
         </properties>
         <properties context='extract'>
           <relation name='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' table='[Extract].[ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98]' type='table' />
+        </properties>
+      </object>
+      <object caption='ccg_icb_region_mapping_snapshot' id='ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D'>
+        <properties context=''>
+          <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='ccg_icb_region_mapping_snapshot' table='[dbo].[ccg_icb_region_mapping_snapshot]' type='table' />
         </properties>
       </object>
       <object caption='gp_practice_population_snapshot' id='gp_practice_population_snapshot_494CDD54087948259FB398188A5D99A2'>
@@ -2187,6 +2705,11 @@
           <relation name='shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9' table='[Extract].[shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9]' type='table' />
         </properties>
       </object>
+      <object caption='shapefile_stp_boundaries_snapshot' id='shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A'>
+        <properties context=''>
+          <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='shapefile_stp_boundaries_snapshot' table='[dbo].[shapefile_stp_boundaries_snapshot]' type='table' />
+        </properties>
+      </object>
     </objects>
     <relationships>
       <relationship>
@@ -2196,6 +2719,14 @@
         </expression>
         <first-end-point object-id='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3' />
         <second-end-point object-id='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_STP_Code]' />
+          <expression op='[ICB_Code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_504F52040C0140F18FBDE877D94149C3' />
+        <second-end-point object-id='ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D' />
       </relationship>
       <relationship>
         <expression op='='>
@@ -2236,6 +2767,14 @@
         </expression>
         <first-end-point object-id='ccg_code_mapping_snapshot_6CC0E39731DE47F9859C167158508B98' />
         <second-end-point object-id='shapefile_ccg_boundaries_snapshot_DB8861F44A4347FD8155348B0EF3E1E9' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[ICB_ONS_Code]' />
+          <expression op='[STP code]' />
+        </expression>
+        <first-end-point object-id='ccg_icb_region_mapping_snapshot_64E170E4ECB54771A1F2061B9025A08D' />
+        <second-end-point object-id='shapefile_stp_boundaries_snapshot_F1E6F726896F4A80A23D819A4C3FAE6A' />
       </relationship>
     </relationships>
   </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
