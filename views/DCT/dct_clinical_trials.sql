@@ -4,4 +4,5 @@ SELECT
     ,GETDATE() as date_updated
 
 FROM
-    number_of_clinical_trial_researcher_month_count
+    -- number_of_clinical_trial_researcher_month_count
+    clinical_trial_volume_month_count
