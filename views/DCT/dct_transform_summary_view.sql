@@ -97,7 +97,7 @@ SELECT
 FROM
 dct_clinical_trials
 WHERE
-metric='Number of researcher actual'
+metric='Trial volume acual'
 )
 
 
