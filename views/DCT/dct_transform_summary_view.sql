@@ -140,6 +140,9 @@ SELECT
     ,d.PIR_YES as M392_PIR_YES
     ,d.PIR_COUNT as M392_PIR_COUNT
 
+    ,GETDATE() as date_updated
+
+
 FROM
     _DimDate dd
 LEFT JOIN

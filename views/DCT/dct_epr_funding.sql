@@ -3,8 +3,7 @@ CREATE OR ALTER VIEW dct_epr_funding AS
 SELECT 
 
     Date
-    ,[Revenue '000]*1000 as revenue
-    ,[Capital'000]*1000 as capital
+    ,[Cumulative in year_(FD prog) '000] as cum_year_total
     ,[Cumulative total '000]*1000 as cum_total
     ,GETDATE() as date_updated
 
