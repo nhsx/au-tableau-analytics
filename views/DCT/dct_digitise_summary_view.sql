@@ -93,6 +93,9 @@ SELECT
     ,c.orgs_met as M394_orgs_met
     ,c.total_orgs as M394_total_orgs
 
+    ,GETDATE() as date_updated
+
+
 FROM
     _DimDate dd
 
