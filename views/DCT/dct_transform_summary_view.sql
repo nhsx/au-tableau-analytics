@@ -98,31 +98,6 @@ metric='Trial volume acual'
 
 
 -- DSCR
--- ,DSCR as (
--- SELECT 
---     _date
---     ,ICB_ONS_Code
---     ,icb.ICB22CDH as ICB_code
---     ,SUM(
---         CASE 
---         WHEN [Use a Digital Social Care Record system?]='Yes' THEN 1
---         ELSE 0
---         END
---     ) as PIR_YES
---     ,count(*) as PIR_COUNT
--- FROM
---     nhs_dscr_2_view a
--- LEFT JOIN
---     icb_ons_ods_mapping icb
--- ON
---     a.ICB_ONS_Code=icb.ICB22CD
-
--- group by 
---     _date
---     ,ICB_ONS_Code
---     ,icb.ICB22CDH
--- )
-
 ,DSCR as (
 
 SELECT 
