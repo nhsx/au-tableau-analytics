@@ -24,12 +24,7 @@ ON
 )
 
 
-
-
-
 -- NHS app processing
-
-
 ,app_ons as (
 SELECT 
     DATE
@@ -72,6 +67,7 @@ ON
 icb.ICB22CD=b.ICB_ONS_Code
 )
 
+
 -- eRS processing
 ,ers1 as (
 
@@ -102,30 +98,55 @@ metric='Trial volume acual'
 
 
 -- DSCR
-,DSCR as (
-SELECT 
-    _date
-    ,ICB_ONS_Code
-    ,icb.ICB22CDH as ICB_code
-    ,SUM(
-        CASE 
-        WHEN [Use a Digital Social Care Record system?]='Yes' THEN 1
-        ELSE 0
-        END
-    ) as PIR_YES
-    ,count(*) as PIR_COUNT
-FROM
-    nhs_dscr_2_view a
-LEFT JOIN
-    icb_ons_ods_mapping icb
-ON
-    a.ICB_ONS_Code=icb.ICB22CD
+-- ,DSCR as (
+-- SELECT 
+--     _date
+--     ,ICB_ONS_Code
+--     ,icb.ICB22CDH as ICB_code
+--     ,SUM(
+--         CASE 
+--         WHEN [Use a Digital Social Care Record system?]='Yes' THEN 1
+--         ELSE 0
+--         END
+--     ) as PIR_YES
+--     ,count(*) as PIR_COUNT
+-- FROM
+--     nhs_dscr_2_view a
+-- LEFT JOIN
+--     icb_ons_ods_mapping icb
+-- ON
+--     a.ICB_ONS_Code=icb.ICB22CD
 
-group by 
-    _date
-    ,ICB_ONS_Code
-    ,icb.ICB22CDH
+-- group by 
+--     _date
+--     ,ICB_ONS_Code
+--     ,icb.ICB22CDH
+-- )
+
+,DSCR as (
+
+SELECT 
+a.eo_monthly_date as _date
+,a.ICB_ONS_Code
+,icb.ICB_Code
+,SUM(a.YEStodate) as PIR_YES
+,COUNT(*) as PIR_COUNT
+
+FROM
+dct_dscr_view a
+
+LEFT JOIN
+    ccg_icb_region_mapping_snapshot as icb
+    ON
+    a.ICB_ONS_Code=icb.ICB_ONS_Code
+
+GROUP BY
+a.eo_monthly_date
+,a.ICB_ONS_Code
+,icb.ICB_Code
+
 )
+
 
 
 -- FINAL SELECT
