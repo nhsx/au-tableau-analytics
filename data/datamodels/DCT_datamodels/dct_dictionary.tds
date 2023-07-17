@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20223.23.0623.1714                               -->
+<datasource formatted-name='federated.0i8p2c31dj5ijn1gvn0f413mq60f' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='nhsx-slt-analytics.database.windows.net' name='sqlserver.1jr4j8b1cq5wf31ec94ml0kv10uk'>
+        <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' username='nhsei_tableau_read' />
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1jr4j8b1cq5wf31ec94ml0kv10uk' name='dct_dictionary' table='[dbo].[dct_dictionary]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='sqlserver.1jr4j8b1cq5wf31ec94ml0kv10uk' name='dct_dictionary' table='[dbo].[dct_dictionary]' type='table' />
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>ID</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ID]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>ID</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Metric_Id</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Metric_Id]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Metric_Id</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Priority_Number</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[Priority_Number]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Priority_Number</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Area</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Area]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Area</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>20</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Programme</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Programme]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Programme</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Commitment</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Commitment]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Commitment</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1000</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Metric</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Metric]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Metric</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1000</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Metric_Calculation</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Metric_Calculation]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Metric_Calculation</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Data_Source</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Data_Source]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Data_Source</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Contact</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Contact]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Contact</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Pipeline_Status</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Pipeline_Status]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Pipeline_Status</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1000</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Drilldown_level</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Drilldown_level]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Drilldown_level</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ForecastingTrajectory_data_available</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ForecastingTrajectory_data_available]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>ForecastingTrajectory_data_available</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Reporting_frequency</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Reporting_frequency]</local-name>
+        <parent-name>[dct_dictionary]</parent-name>
+        <remote-alias>Reporting_frequency</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>20</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='Data Source' datatype='string' name='[Data_Source]' role='dimension' type='nominal' />
+  <column caption='Drilldown level' datatype='string' name='[Drilldown_level]' role='dimension' type='nominal' />
+  <column caption='ForecastingTrajectory data available' datatype='string' name='[ForecastingTrajectory_data_available]' role='dimension' type='nominal' />
+  <column caption='Metric Calculation' datatype='string' name='[Metric_Calculation]' role='dimension' type='nominal' />
+  <column caption='Metric Id' datatype='string' name='[Metric_Id]' role='dimension' type='nominal' />
+  <column caption='Pipeline Status' datatype='string' name='[Pipeline_Status]' role='dimension' type='nominal' />
+  <column caption='Priority Number' datatype='integer' name='[Priority_Number]' role='dimension' type='ordinal' />
+  <column caption='Reporting frequency' datatype='string' name='[Reporting_frequency]' role='dimension' type='nominal' />
+  <_.fcp.ObjectModelTableType.true...column caption='dct_dictionary' datatype='table' name='[__tableau_internal_object_id__].[dct_dictionary_C491ADB1235C4188BEC192CEE91153CC]' role='measure' type='quantitative' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='dct_dictionary' id='dct_dictionary_C491ADB1235C4188BEC192CEE91153CC'>
+        <properties context=''>
+          <relation connection='sqlserver.1jr4j8b1cq5wf31ec94ml0kv10uk' name='dct_dictionary' table='[dbo].[dct_dictionary]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
