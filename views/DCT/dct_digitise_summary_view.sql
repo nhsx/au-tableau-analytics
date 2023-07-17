@@ -30,7 +30,7 @@ ON
     ,[Run Date]
     ,[Virtual Ward Capacity at stp level]
     FROM
-    virtual_ward_biweekly_current_capacity_and_prop
+    virtual_ward_biweekly_capacity_and_prop
 )
 
 -- EPR 

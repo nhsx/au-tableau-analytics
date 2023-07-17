@@ -1,0 +1,47 @@
+
+DROP TABLE dct_dictionary;
+CREATE TABLE dct_dictionary 
+("ID" varchar(10), 
+"Metric_Id" varchar(50), 
+"Priority_Number" int, 
+"Area" varchar(20), 
+"Programme" varchar(100), 
+"Commitment" varchar(1000), 
+"Metric" varchar(1000), 
+"Metric_Calculation" varchar(100), 
+"Data_Source" varchar(100), 
+"Contact" varchar(100), 
+"Pipeline_Status" varchar(1000), 
+"Drilldown_level" varchar(100), 
+"ForecastingTrajectory_data_available" varchar(10), 
+"Reporting_frequency" varchar(20)
+);
+
+INSERT INTO dct_dictionary
+VALUES
+('4a','M380','1','Digitise','People','Established digital, data and technology talent pipelines and improved digital literacy among leaders and the workforce','N/A','','N/A','N/A','','N/A','N/A','N/A'),
+('5a','M381','1','Digitise','Nationally Provided Capabilities','Ensured all health and social care settings have the right infrastructure and connectivity to work digitally','N/A','','N/A','N/A','','N/A','N/A','N/A'),
+('10','M382','1','Connect','Data Capabilities','Every ICS has implemented a population health and planning data platform and business intelligence tools by 2023','Number of ICS with a Population Health solution','','','','Pipeline built','','',''),
+('11a','M383','1','Connect','IRLS','Data for research and development is available through a federated network of trusted research environments (TREs) by March 2025.','N/A','','','Russ Healey','','','',''),
+('11b','M384a and M384b','1','Connect','IRLS','We will accelerate clinical trial set-up, including increasing the capacity of the NHS DigiTrials service to deliver studies by 30% (March 2023)','Number of studies completed','','','Russ Healey','Pipeline built','','',''),
+('11c','M385','1','Connect','IRLS','Through the Data for Research and Development programme we will invest up to £200 million to transform access to and linkage of NHS health and genomic data sets for data-driven innovation and inclusive clinical trials, whose results will be critical to ensuring public confidence in data access for research and innovation purposes.','Level of funding allocated and spent','','','Russ Healey','Pipeline built','','',''),
+('12','M386','2','Connect','Interoperability','By enhancing and extending our national referral platform, the NHS e-Referral Service, we aim to support ICSs to meet their target of reducing unnecessary outpatient appointments and follow-ups by at least 25% by March 2023','Reduction in unnecessary outpatient appointments/follow ups','','','Pete Tickle','Pipeline to be built','','',''),
+('13','M387a and M387b','2','Connect','Interoperability','We will increase the number of organisations using electronic referral systems (eRS) APIs to reduce an unnecessary burden on the workforce. Our goal is to have 20% of providers accessing APIs (March 2023)','Number of providers accessing eRS by API','','','Pete Tickle','Pipeline built','','',''),
+('16','M388','1','Transform','Product Directorate','NHS App - Benefitting from an array of new features','N/A','','','','','','',''),
+('','M389','1','Transform','NHSE Central Commercial Function','The right assurance and commercial foundations are put in place by 2025 to stimulate a thriving innovation ecosystem that fosters collaboration between the health and social care sectors and the tech industry','N/A','','N/A','N/A','','N/A','N/A','N/A'),
+('1a','M390a and M390b','1','Digitise','Digitising the Frontline','90% of NHS trusts with electronic health records by December 2023, and 100% by March 2025','Number of ICSs with EPRs','','','Lisa Austin/ Kate Penny','','ICS','',''),
+('1b','M391','1','Digitise','Digitising the Frontline','We will provide multi-year funding to ICSs, approximately £2 billion, based on need (starting with those without an EPR) to support all trusts to reach our minimum digital foundations','Level of funding allocated and spent','','','','','','',''),
+('2a','M392','1','Digitise','Non-TD (Social Care)','80% of CQC-registered adult social care providers with digital care records by March 2024','Number of social care providers with digital care records','','','Natalie James','Pipeline built (Re using data and pipeline for the Digital Social Care dashboard)','ICS','','Monthly'),
+('2b','M393','1','Digitise','Non-TD (Social Care)','We will provide £25 million of funding this year as part of a 3-year programme to enable ICSs to scale up use of digital social care records, alongside other promising evidence-based technologies such as falls prevention technology, in addition to £3 million of funding each year to fund local hands-on support to enable these objectives','Level of funding allocated and spent','','','Natalie James','Pipeline built (Re using data and pipeline for the Digital Social Care dashboard)','ICS','','Quarterly'),
+('3a','M394','1','Digitise','Cyber Futures','Increased cyber security capabilities, resilience, clinical safety and accessibility','% of compliance with Data Security Protection Toolkit','','','','Pipeline built','','',''),
+('4b','M395','1','Digitise','People','We will enable recruitment, retention and growth of the Digital, Data and Technology (DDaT) workforce to meet challenging projected health and care demand by 2030, through graduates, apprentices and experienced hires, creating posts for an additional 10,500 full-time staff (March 2025)','Number of full-time staff','','','Sarah Blundell','Pipeline to be built','','',''),
+('5b','M396','1','Digitise','Non-TD (Social Care)','We will deliver fibre broadband upgrades to at least 1,000 care homes currently dependent on poor connections (March 2024)','Number of care homes with broadband','','','John Parkes (NHSD)','Pipeline to be built','ICS','',''),
+('6','M397','2','Digitise','Digitising the Frontline','We will increase the availability of digital monitoring of vital signs for people in care homes and at home, with the aim of a further 500,000 people being supported by this technology by March 2023','Number of people supported at home','','','Zharain Bawa','Pipeline to be built','ICS','','Monthly'),
+('7','M398','2','Digitise','Digitising the Frontline','We will scale hospital at home and tech-enabled virtual ward services. These will be used as step-down pathways for frailty and respiratory care to reduce length of stay. Our ambition is to have 40 to 50 virtual ward ‘beds’ per 100,000 of the population (March 2024)','Number of virtual ward beds per 100,000 of the population','','','Caroline Berry','Pipeline being built (currently we using the metrics from dbrks_virtual_ward_biweekly_capacity_and_prop notebook only)','','Yes',''),
+('9a','M399','1','Connect','Nationally Provided Capabilities InteroperabilityDigitising the Frontline','Constituent organisations of an ICS are connected to an integrated life-long health and care record by 2024, enabled by core national capabilities, local health records and shared care records, giving individuals, their approved caregivers and their care team the ability to view and contribute to the record','Number of user views of Shared Care Records per 1,000 England populationNumber of ICS/STPs with 50% of its PCN partners connected to a Shared Care Record System','','','Jackie Bell','Pipeline to be built','','',''),
+('9b','M400','1','Connect','Nationally Provided Capabilities','We will enable more frontline staff to access and update health records: redevelop the NHS Spine, which supports the IT infrastructure for health and social care in England, joining together IT systems across organisations, by building a more open platform that better adapts to changing user needs and supports the development of new and innovative services using cloud tools and technology, with a view to achieving a 5% increase in connected suppliers (March 2024)','Number of connected suppliers','','','','Pipeline to be built','','',''),
+('15','M401','1','Transform','Product Directorate','NHS App - 75% of adults registered for the NHS App by March 2024','% of adults registered for the NHS App','','','','Pipeline built (Re-using pipeline and data from NHS App dashboard)','National','','Monthly'),
+('17','M402','1','Transform','Product Directorate','Our aim is that, by 2024, 75% of adults will have registered for the NHS App with 68% (over 30 million people) having done so by March 2023.','% of adults registered for the NHS App','','','','Pipeline built(Re-using pipeline and data from NHS App dashboard)','National','','Monthly'),
+('','M403','1','Transform','Non-TD (Social Care)','Prevention and detection technologies are used to protect the 20% of care home residents who are identified as at high risk of falls by 2024','Number of prevention and detection technologies used','','Will ingest in Azure','Natalie James','Pipeline to be built','ICS','','Quarterly'),
+('','M404','1','Transform','Non-TD (Social Care)','We will launch a fund to drive uptake in care homes of sensor-based falls prevention and detection technologies, such as acoustic monitoring, for the 20% of residents identified as being at high risk of falling (March 2024)','Level of funding allocated and spent','','','Natalie James','Pipeline to be built','ICS','',''),
+('','M405','2','Transform','Diagnostics','We will use clinical decision support systems in diagnostics to improve the provision of the most appropriate test at the right time, improve the safety and quality of care, and reduce the overall cost through the roll-out of iRefer. It is anticipated that it will be rolled out to 50% of trusts (by March 2023)','% rollout to trusts','','','','Pipeline to be built','','','')
