@@ -56,6 +56,10 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,aq.[Number of Covid Pass Transactions Undertaken] as [M269_Number_of_Covid_Pass_Transactions_Undertaken]
 ,ar.bporResearch as M270_Research
 ,at.[Number of Wayfinder Clicks] as [M271_Number_of_Wayfinder_Clicks]
+,au.[Messages Sent Notification] as M273_Messages_Sent_Notification
+,au.[Messages Sent No Notification] as M273_Messages_Sent_No_Notification
+,au.[Messages Read Notification] as M273_Messages_Read_Notification
+,au.[Messages Read No Notification] as M273_Messages_Read_No_Notification
 
 FROM
 ndc_dashboard_nhsapp_registered_population_month_prop A
@@ -237,3 +241,8 @@ LEFT JOIN
 ndc_transactions_nhsapp_wayfinder at
 ON
 a.[Date]=at.[Date]
+
+LEFT JOIN
+ndc_messages_nhsapp_messages_read au
+ON
+a.[Date]=au.[Date]
