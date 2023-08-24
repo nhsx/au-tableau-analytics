@@ -58,17 +58,26 @@ group by
 SELECT 
     report_date
     ,ICB_CODE
+    -- ,SUM(
+    --     CASE
+    --     WHEN dspt_status in (
+    --         '21/22 Standards Exceeded'
+    --         ,'21/22 Standards Met'
+    --         ,'21/22 Standards Exceeded.'
+    --         ,'21/22 Standards Met.'
+    --     ) 
+    --     THEN number_of_orgs_with_status
+    --     ELSE 0
+    --     END
+    -- ) as orgs_met
     ,SUM(
-        CASE
-        WHEN dspt_status in (
-            '21/22 Standards Exceeded'
-            ,'21/22 Standards Met'
-            ,'21/22 Standards Exceeded.'
-            ,'21/22 Standards Met.'
-        ) 
-        THEN number_of_orgs_with_status
+            CASE
+            WHEN dspt_status like '%Exceeded%' THEN number_of_orgs_with_status
+            WHEN dspt_status like '%Met%' THEN number_of_orgs_with_status
         ELSE 0
         END
+
+
     ) as orgs_met
     ,MAX(total_orgs) as total_orgs
 
