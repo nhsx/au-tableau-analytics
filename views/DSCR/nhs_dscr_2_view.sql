@@ -17,7 +17,7 @@ DATEFROMPARTS(RIGHT(month_year, 4),LEFT(month_year, CHARINDEX('-',month_year)-1)
       ,[Is_Care_Home]
       -- ,cast([Care_Home_Beds] as float) as [Care_Home_Beds]
       ,try_convert(float, Care_Home_Beds)  as [Care_Home_Beds]
-
+      , Is_Domant
       -- ,[Date]
       -- ,[IsActive]
       -- ,[IsDomcare]
