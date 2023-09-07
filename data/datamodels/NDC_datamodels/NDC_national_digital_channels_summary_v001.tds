@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20211.21.0320.1853                               -->
-<datasource formatted-name='NDC_national_digital_channels_v001' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20223.23.0623.1714                               -->
+<datasource formatted-name='NDC_national_digital_channels_summary_v001' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
@@ -14,8 +14,11 @@
         <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' server-oauth='' server-userid='18553' username='nhsei_tableau_read' workgroup-auth-mode='prompt' />
       </named-connection>
     </named-connections>
-    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_summary_view' table='[dbo].[national_digital_channels_summary_view]' type='table' />
-    <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_summary_view' table='[dbo].[national_digital_channels_summary_view]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_forecast_view' table='[dbo].[national_digital_channels_forecast_view]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+      <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_summary_view' table='[dbo].[national_digital_channels_summary_view]' type='table' />
+      <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_forecast_view' table='[dbo].[national_digital_channels_forecast_view]' type='table' />
+    </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
     <metadata-records>
       <metadata-record class='column'>
         <remote-name>ndc_date</remote-name>
@@ -24,13 +27,12 @@
         <parent-name>[national_digital_channels_summary_view]</parent-name>
         <remote-alias>ndc_date</remote-alias>
         <ordinal>1</ordinal>
-        <local-type>date</local-type>
+        <local-type>datetime</local-type>
         <aggregation>Year</aggregation>
-        <contains-null>false</contains-null>
+        <contains-null>true</contains-null>
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
-          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
@@ -41,13 +43,12 @@
         <parent-name>[national_digital_channels_summary_view]</parent-name>
         <remote-alias>previous_date</remote-alias>
         <ordinal>2</ordinal>
-        <local-type>date</local-type>
+        <local-type>datetime</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
-          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
@@ -105,6 +106,228 @@
         </attributes>
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>highlight</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[highlight]</local-name>
+        <parent-name>[national_digital_channels_summary_view]</parent-name>
+        <remote-alias>highlight</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Date]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>Date</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_total_registered users</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_total_registered users]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_total_registered users</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_unique_logins</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_unique_logins]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_unique_logins</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_percent_logging_in</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[forecast_percent_logging_in]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_percent_logging_in</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_repeat_prescriptions</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_repeat_prescriptions]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_repeat_prescriptions</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_referrals</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_referrals]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_referrals</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_primary_care_appts_mgd</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_primary_care_appts_mgd]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_primary_care_appts_mgd</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_secondary_care_appts</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_secondary_care_appts]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_secondary_care_appts</remote-alias>
+        <ordinal>15</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_condition_views</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[forecast_condition_views]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_condition_views</remote-alias>
+        <ordinal>16</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_service Search</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[forecast_service Search]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_service Search</remote-alias>
+        <ordinal>17</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_record_views</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_record_views]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_record_views</remote-alias>
+        <ordinal>18</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>forecast_test_results</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[forecast_test_results]</local-name>
+        <parent-name>[national_digital_channels_forecast_view]</parent-name>
+        <remote-alias>forecast_test_results</remote-alias>
+        <ordinal>19</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>19</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
     </metadata-records>
   </connection>
   <aliases enabled='yes' />
@@ -122,58 +345,73 @@
   <column caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Unique ID (stp code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column datatype='integer' hidden='true' name='[Unique ID]' role='dimension' type='ordinal' />
+  <_.fcp.ObjectModelTableType.true...column caption='national_digital_channels_forecast_view' datatype='table' name='[__tableau_internal_object_id__].[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='national_digital_channels_summary_view' datatype='table' name='[__tableau_internal_object_id__].[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]' role='measure' type='quantitative' />
   <column caption='dfpc POMI Unique ID' datatype='integer' hidden='true' name='[dfpc_POMI_Unique ID]' role='dimension' type='ordinal' />
+  <column caption='Forecast Condition Views' datatype='real' name='[forecast_condition_views]' role='measure' type='quantitative' />
+  <column caption='Forecast Percent Logging In' datatype='real' name='[forecast_percent_logging_in]' role='measure' type='quantitative' />
+  <column caption='Forecast Primary Care Appts Mgd' datatype='integer' name='[forecast_primary_care_appts_mgd]' role='measure' type='quantitative' />
+  <column caption='Forecast Record Views' datatype='integer' name='[forecast_record_views]' role='measure' type='quantitative' />
+  <column caption='Forecast Referrals' datatype='integer' name='[forecast_referrals]' role='measure' type='quantitative' />
+  <column caption='Forecast Repeat Prescriptions' datatype='integer' name='[forecast_repeat_prescriptions]' role='measure' type='quantitative' />
+  <column caption='Forecast Secondary Care Appts' datatype='integer' name='[forecast_secondary_care_appts]' role='measure' type='quantitative' />
+  <column caption='forecast service Search' datatype='real' name='[forecast_service Search]' role='measure' type='quantitative' />
+  <column caption='Forecast Test Results' datatype='integer' name='[forecast_test_results]' role='measure' type='quantitative' />
+  <column caption='Forecast Total Registered Users' datatype='integer' name='[forecast_total_registered users]' role='measure' type='quantitative' />
+  <column caption='Forecast Unique Logins' datatype='integer' name='[forecast_unique_logins]' role='measure' type='quantitative' />
   <column caption='Metric Name' datatype='string' name='[metric_name]' role='dimension' type='nominal' />
   <column caption='Metric Value' datatype='real' name='[metric_value]' role='measure' type='quantitative' />
-  <column caption='Ndc Date' datatype='date' name='[ndc_date]' role='dimension' type='ordinal' />
+  <column caption='Ndc Date' datatype='datetime' name='[ndc_date]' role='dimension' type='ordinal' />
   <column caption='P Value' datatype='real' name='[p_value]' role='measure' type='quantitative' />
-  <column caption='Previous Date' datatype='date' name='[previous_date]' role='dimension' type='ordinal' />
+  <column caption='Previous Date' datatype='datetime' name='[previous_date]' role='dimension' type='ordinal' />
   <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/mattia.ficarelli_nhs/Documents/My Tableau Repository/Datasources/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='06/16/2022 10:11:21 AM' username='tableau_internal_user'>
-      <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
-      <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/OliverJones/Downloads/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/07/2023 09:40:32 AM' username='tableau_internal_user'>
+      <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA' table='[Extract].[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]' type='table' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+        <relation name='national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912' table='[Extract].[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]' type='table' />
+        <relation name='national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA' table='[Extract].[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]' type='table' />
+      </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
       <refresh>
-        <refresh-event add-from-file-path='NDC_national_digital_channels_summary_v001' increment-value='%null%' refresh-type='create' rows-inserted='81' timestamp-start='2022-06-16 10:11:21.903' />
+        <refresh-event add-from-file-path='NDC_national_digital_channels_summary_v001' increment-value='%null%' refresh-type='create' rows-inserted='447' timestamp-start='2023-09-07 09:40:31.008' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
           <remote-name>ndc_date</remote-name>
-          <remote-type>133</remote-type>
+          <remote-type>135</remote-type>
           <local-name>[ndc_date]</local-name>
-          <parent-name>[Extract]</parent-name>
+          <parent-name>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</parent-name>
           <remote-alias>ndc_date</remote-alias>
           <ordinal>0</ordinal>
           <family>national_digital_channels_summary_view</family>
-          <local-type>date</local-type>
+          <local-type>datetime</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>15</approx-count>
+          <approx-count>31</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>previous_date</remote-name>
-          <remote-type>133</remote-type>
+          <remote-type>135</remote-type>
           <local-name>[previous_date]</local-name>
-          <parent-name>[Extract]</parent-name>
+          <parent-name>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</parent-name>
           <remote-alias>previous_date</remote-alias>
           <ordinal>1</ordinal>
           <family>national_digital_channels_summary_view</family>
-          <local-type>date</local-type>
+          <local-type>datetime</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>15</approx-count>
+          <approx-count>31</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>metric_name</remote-name>
           <remote-type>129</remote-type>
           <local-name>[metric_name]</local-name>
-          <parent-name>[Extract]</parent-name>
+          <parent-name>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</parent-name>
           <remote-alias>metric_name</remote-alias>
           <ordinal>2</ordinal>
           <family>national_digital_channels_summary_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>7</approx-count>
+          <approx-count>12</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -181,26 +419,196 @@
           <remote-name>metric_value</remote-name>
           <remote-type>5</remote-type>
           <local-name>[metric_value]</local-name>
-          <parent-name>[Extract]</parent-name>
+          <parent-name>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</parent-name>
           <remote-alias>metric_value</remote-alias>
           <ordinal>3</ordinal>
           <family>national_digital_channels_summary_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>64</approx-count>
+          <approx-count>342</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
           <remote-name>p_value</remote-name>
           <remote-type>5</remote-type>
           <local-name>[p_value]</local-name>
-          <parent-name>[Extract]</parent-name>
+          <parent-name>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</parent-name>
           <remote-alias>p_value</remote-alias>
           <ordinal>4</ordinal>
           <family>national_digital_channels_summary_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>57</approx-count>
+          <approx-count>331</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>highlight</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[highlight]</local-name>
+          <parent-name>[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]</parent-name>
+          <remote-alias>highlight</remote-alias>
+          <ordinal>5</ordinal>
+          <family>national_digital_channels_summary_view</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>18</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Date</remote-name>
+          <remote-type>135</remote-type>
+          <local-name>[Date]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>Date</remote-alias>
+          <ordinal>6</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>datetime</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>75</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_total_registered users</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_total_registered users]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_total_registered users</remote-alias>
+          <ordinal>7</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>51</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_unique_logins</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_unique_logins]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_unique_logins</remote-alias>
+          <ordinal>8</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>47</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_percent_logging_in</remote-name>
+          <remote-type>5</remote-type>
+          <local-name>[forecast_percent_logging_in]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_percent_logging_in</remote-alias>
+          <ordinal>9</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>real</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>45</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_repeat_prescriptions</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_repeat_prescriptions]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_repeat_prescriptions</remote-alias>
+          <ordinal>10</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>50</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_referrals</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_referrals]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_referrals</remote-alias>
+          <ordinal>11</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>62</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_primary_care_appts_mgd</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_primary_care_appts_mgd]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_primary_care_appts_mgd</remote-alias>
+          <ordinal>12</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>67</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_secondary_care_appts</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_secondary_care_appts]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_secondary_care_appts</remote-alias>
+          <ordinal>13</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>51</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_condition_views</remote-name>
+          <remote-type>5</remote-type>
+          <local-name>[forecast_condition_views]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_condition_views</remote-alias>
+          <ordinal>14</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>real</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>62</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_service Search</remote-name>
+          <remote-type>5</remote-type>
+          <local-name>[forecast_service Search]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_service Search</remote-alias>
+          <ordinal>15</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>real</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>51</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_record_views</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_record_views]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_record_views</remote-alias>
+          <ordinal>16</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>50</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>forecast_test_results</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[forecast_test_results]</local-name>
+          <parent-name>[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]</parent-name>
+          <remote-alias>forecast_test_results</remote-alias>
+          <ordinal>17</ordinal>
+          <family>national_digital_channels_forecast_view</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>51</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
       </metadata-records>
@@ -213,14 +621,32 @@
   <date-options start-of-week='monday' />
   <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     <objects>
+      <object caption='national_digital_channels_forecast_view' id='national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA'>
+        <properties context=''>
+          <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_forecast_view' table='[dbo].[national_digital_channels_forecast_view]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA' table='[Extract].[national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA]' type='table' />
+        </properties>
+      </object>
       <object caption='national_digital_channels_summary_view' id='national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912'>
         <properties context=''>
           <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_summary_view' table='[dbo].[national_digital_channels_summary_view]' type='table' />
         </properties>
         <properties context='extract'>
-          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <relation name='national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912' table='[Extract].[national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912]' type='table' />
         </properties>
       </object>
     </objects>
+    <relationships>
+      <relationship>
+        <expression op='='>
+          <expression op='[ndc_date]' />
+          <expression op='[Date]' />
+        </expression>
+        <first-end-point object-id='national_digital_channels_summary_view_9F9943CBF02E4040B968CE2286A3E912' />
+        <second-end-point object-id='national_digital_channels_forecast_view_6A0E9DCC24CE4335A7F78A3D5E838DCA' />
+      </relationship>
+    </relationships>
   </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
 </datasource>
