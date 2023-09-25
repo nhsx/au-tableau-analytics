@@ -9,6 +9,7 @@ SELECT
     ,CAST(Bi_Weekly_Report_Date as date) as Bi_Weekly_Report_Date
     ,STP_Code
     ,Organisation_Name
+    ,Current_Forecast_Go_Live
     ,GETDATE() as date_updated
 
 FROM 
