@@ -40,7 +40,9 @@ SELECT
     ,STP_Code
     ,count(*) as trust_count
     ,SUM(
-        CASE WHEN EPR_Group IN ('Group 2', 'Group 3') THEN 1
+        CASE 
+        WHEN EPR_Group IN ('Group 2', 'Group 3') THEN 1
+        WHEN EPR_Group IN ('Group 0', 'Group 1') AND Current_Forecast_Go_Live < [Bi_Weekly_Report_Date] THEN 1
         ELSE 0
         END
     ) as count_EPR
