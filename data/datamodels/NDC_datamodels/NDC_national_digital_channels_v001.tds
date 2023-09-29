@@ -15,11 +15,119 @@
         <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' server-oauth='' server-userid='18553' username='nhsei_tableau_read' workgroup-auth-mode='prompt' />
       </named-connection>
     </named-connections>
-    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_forecast_view' table='[dbo].[national_digital_channels_forecast_view]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='DimDate_View' table='[dbo].[DimDate_View]' type='table' />
     <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_view' table='[dbo].[national_digital_channels_view]' type='table' />
+      <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='DimDate_View' table='[dbo].[DimDate_View]' type='table' />
       <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_forecast_view' table='[dbo].[national_digital_channels_forecast_view]' type='table' />
     </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+    <cols>
+      <map key='[Date (DimDate_View)]' value='[DimDate_View].[Date]' />
+      <map key='[DateKey]' value='[DimDate_View].[DateKey]' />
+      <map key='[Date]' value='[national_digital_channels_forecast_view].[Date]' />
+      <map key='[DayName]' value='[DimDate_View].[DayName]' />
+      <map key='[DayOfMonth]' value='[DimDate_View].[DayOfMonth]' />
+      <map key='[DayOfQuarter]' value='[DimDate_View].[DayOfQuarter]' />
+      <map key='[DayOfWeekInMonth]' value='[DimDate_View].[DayOfWeekInMonth]' />
+      <map key='[DayOfWeekInYear]' value='[DimDate_View].[DayOfWeekInYear]' />
+      <map key='[DayOfWeekUK]' value='[DimDate_View].[DayOfWeekUK]' />
+      <map key='[DayOfWeekUSA]' value='[DimDate_View].[DayOfWeekUSA]' />
+      <map key='[DayOfYear]' value='[DimDate_View].[DayOfYear]' />
+      <map key='[DaySuffix]' value='[DimDate_View].[DaySuffix]' />
+      <map key='[FY_date]' value='[DimDate_View].[FY_date]' />
+      <map key='[FirstDayOfMonth]' value='[DimDate_View].[FirstDayOfMonth]' />
+      <map key='[FirstDayOfQuarter]' value='[DimDate_View].[FirstDayOfQuarter]' />
+      <map key='[FirstDayOfYear]' value='[DimDate_View].[FirstDayOfYear]' />
+      <map key='[FullDateUK]' value='[DimDate_View].[FullDateUK]' />
+      <map key='[FullDateUSA]' value='[DimDate_View].[FullDateUSA]' />
+      <map key='[HolidayUK]' value='[DimDate_View].[HolidayUK]' />
+      <map key='[IsHolidayUK]' value='[DimDate_View].[IsHolidayUK]' />
+      <map key='[IsWeekday]' value='[DimDate_View].[IsWeekday]' />
+      <map key='[LastDayOfMonth]' value='[DimDate_View].[LastDayOfMonth]' />
+      <map key='[LastDayOfQuarter]' value='[DimDate_View].[LastDayOfQuarter]' />
+      <map key='[LastDayOfYear]' value='[DimDate_View].[LastDayOfYear]' />
+      <map key='[M220_DENOM_Adult_population]' value='[national_digital_channels_view].[M220_DENOM_Adult_population]' />
+      <map key='[M220_NRM_Number_of_users_with_an_NHS_App_registration]' value='[national_digital_channels_view].[M220_NRM_Number_of_users_with_an_NHS_App_registration]' />
+      <map key='[M221_DENOM_Number_of_users_with_an_NHS_App_registration]' value='[national_digital_channels_view].[M221_DENOM_Number_of_users_with_an_NHS_App_registration]' />
+      <map key='[M221_NRM_Number_of_unique_NHS_App_logins]' value='[national_digital_channels_view].[M221_NRM_Number_of_unique_NHS_App_logins]' />
+      <map key='[M222_Proportion_of_repeat_prescriptions_ordered_online]' value='[national_digital_channels_view].[M222_Proportion_of_repeat_prescriptions_ordered_online]' />
+      <map key='[M223_DENOM_Number of primary care appointments]' value='[national_digital_channels_view].[M223_DENOM_Number of primary care appointments]' />
+      <map key='[M223_NRM_Number_of_primary_care_appointments_managed_online]' value='[national_digital_channels_view].[M223_NRM_Number_of_primary_care_appointments_managed_online]' />
+      <map key='[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]' value='[national_digital_channels_view].[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]' />
+      <map key='[M225_Number_of_referrals_managed_via_the_NHS_App]' value='[national_digital_channels_view].[M225_Number_of_referrals_managed_via_the_NHS_App]' />
+      <map key='[M226_Number_of_secondary_care_appointments_made_via_the_NHS_App]' value='[national_digital_channels_view].[M226_Number_of_secondary_care_appointments_made_via_the_NHS_App]' />
+      <map key='[M227_Number of primary care appointments managed via the NHS App]' value='[national_digital_channels_view].[M227_Number of primary care appointments managed via the NHS App]' />
+      <map key='[M228_Number_of_views_of_conditions_information]' value='[national_digital_channels_view].[M228_Number_of_views_of_conditions_information]' />
+      <map key='[M229_Number_of_find_a_service_uses_on_NHS.uk]' value='[national_digital_channels_view].[M229_Number_of_find_a_service_uses_on_NHS.uk]' />
+      <map key='[M230_Number_of_gp_record_views]' value='[national_digital_channels_view].[M230_Number_of_gp_record_views]' />
+      <map key='[M231_Number_of_test_result_views_via_the_NHS_App]' value='[national_digital_channels_view].[M231_Number_of_test_result_views_via_the_NHS_App]' />
+      <map key='[M232_Number_of_NHS_app_covid_pass_uses]' value='[national_digital_channels_view].[M232_Number_of_NHS_app_covid_pass_uses]' />
+      <map key='[M233_Number_of_record_information_and_results_views_on_the_NHS_App]' value='[national_digital_channels_view].[M233_Number_of_record_information_and_results_views_on_the_NHS_App]' />
+      <map key='[M234_Number_of_prescriptions_managed_on_the_NHS_App]' value='[national_digital_channels_view].[M234_Number_of_prescriptions_managed_on_the_NHS_App]' />
+      <map key='[M235_Number_of_appointments_managed_on_the_NHS_App]' value='[national_digital_channels_view].[M235_Number_of_appointments_managed_on_the_NHS_App]' />
+      <map key='[M236_Number_of_messages_and_consultations_on_the_NHS_App]' value='[national_digital_channels_view].[M236_Number_of_messages_and_consultations_on_the_NHS_App]' />
+      <map key='[M238_Number_of_views_of_other_information]' value='[national_digital_channels_view].[M238_Number_of_views_of_other_information]' />
+      <map key='[M239_Number_of_views_of_live_well_information]' value='[national_digital_channels_view].[M239_Number_of_views_of_live_well_information]' />
+      <map key='[M241_Number_of_views_of_book_a_covid19_vaccination]' value='[national_digital_channels_view].[M241_Number_of_views_of_book_a_covid19_vaccination]' />
+      <map key='[M242_Number_of_views_of_medicines_information]' value='[national_digital_channels_view].[M242_Number_of_views_of_medicines_information]' />
+      <map key='[M243_Number_of_views_of_NHS_app_online_information]' value='[national_digital_channels_view].[M243_Number_of_views_of_NHS_app_online_information]' />
+      <map key='[M244_Number_of_Covid_Vaccine_Record_View]' value='[national_digital_channels_view].[M244_Number_of_Covid_Vaccine_Record_View]' />
+      <map key='[M245_Population_registered_with_NHS_App]' value='[national_digital_channels_view].[M245_Population_registered_with_NHS_App]' />
+      <map key='[M246_Number_of_all_time_NHS_App_registered_users]' value='[national_digital_channels_view].[M246_Number_of_all_time_NHS_App_registered_users]' />
+      <map key='[M246_Number_of_patients_registered_with_an_other_patient_online_service]' value='[national_digital_channels_view].[M246_Number_of_patients_registered_with_an_other_patient_online_service]' />
+      <map key='[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' value='[national_digital_channels_view].[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' />
+      <map key='[M247_Adult_population]' value='[national_digital_channels_view].[M247_Adult_population]' />
+      <map key='[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]' value='[national_digital_channels_view].[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]' />
+      <map key='[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' value='[national_digital_channels_view].[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' />
+      <map key='[M249_Number_of_repeat_prescriptions_through_an_other_POL_service]' value='[national_digital_channels_view].[M249_Number_of_repeat_prescriptions_through_an_other_POL_service]' />
+      <map key='[M250_Number_of_offline_repeat_prescriptions]' value='[national_digital_channels_view].[M250_Number_of_offline_repeat_prescriptions]' />
+      <map key='[M251_Number_of_DCR_views_through_the_NHS_app]' value='[national_digital_channels_view].[M251_Number_of_DCR_views_through_the_NHS_app]' />
+      <map key='[M252_DCR_views_through_other_POL_service]' value='[national_digital_channels_view].[M252_DCR_views_through_other_POL_service]' />
+      <map key='[M253_Total_app_logins]' value='[national_digital_channels_view].[M253_Total_app_logins]' />
+      <map key='[M255_Number_of_confirmed_accounts_NHS_login]' value='[national_digital_channels_view].[M255_Number_of_confirmed_accounts_NHS_login]' />
+      <map key='[M256_Number_of_estimated_visits_to_NHS_UK]' value='[national_digital_channels_view].[M256_Number_of_estimated_visits_to_NHS_UK]' />
+      <map key='[M257_DENOM_Number_of_all_Record Views]' value='[national_digital_channels_view].[M257_DENOM_Number_of_all_Record Views]' />
+      <map key='[M257_NRM_Number_of_Detail_Coded_Record_Views]' value='[national_digital_channels_view].[M257_NRM_Number_of_Detail_Coded_Record_Views]' />
+      <map key='[M258_Number_of_NHS_App_organ_donation_registrations]' value='[national_digital_channels_view].[M258_Number_of_NHS_App_organ_donation_registrations]' />
+      <map key='[M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]' value='[national_digital_channels_view].[M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]' />
+      <map key='[M262_Number_of_all_covid_vaccination_bookings]' value='[national_digital_channels_view].[M262_Number_of_all_covid_vaccination_bookings]' />
+      <map key='[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]' value='[national_digital_channels_view].[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]' />
+      <map key='[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]' value='[national_digital_channels_view].[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]' />
+      <map key='[M266_Number_of_NHS.UK_vaccination_bookings_booster]' value='[national_digital_channels_view].[M266_Number_of_NHS.UK_vaccination_bookings_booster]' />
+      <map key='[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]' value='[national_digital_channels_view].[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]' />
+      <map key='[M269_Number_of_Covid_Pass_Transactions_Undertaken]' value='[national_digital_channels_view].[M269_Number_of_Covid_Pass_Transactions_Undertaken]' />
+      <map key='[M270_Research]' value='[national_digital_channels_view].[M270_Research]' />
+      <map key='[M271_Number_of_Wayfinder_Clicks]' value='[national_digital_channels_view].[M271_Number_of_Wayfinder_Clicks]' />
+      <map key='[M273_Messages_Read_No_Notification]' value='[national_digital_channels_view].[M273_Messages_Read_No_Notification]' />
+      <map key='[M273_Messages_Read_Notification]' value='[national_digital_channels_view].[M273_Messages_Read_Notification]' />
+      <map key='[M273_Messages_Sent_No_Notification]' value='[national_digital_channels_view].[M273_Messages_Sent_No_Notification]' />
+      <map key='[M273_Messages_Sent_Notification]' value='[national_digital_channels_view].[M273_Messages_Sent_Notification]' />
+      <map key='[MMYYYY]' value='[DimDate_View].[MMYYYY]' />
+      <map key='[MXXX_services]' value='[national_digital_channels_view].[MXXX_services]' />
+      <map key='[MonthName]' value='[DimDate_View].[MonthName]' />
+      <map key='[MonthOfQuarter]' value='[DimDate_View].[MonthOfQuarter]' />
+      <map key='[MonthYear]' value='[DimDate_View].[MonthYear]' />
+      <map key='[Month]' value='[DimDate_View].[Month]' />
+      <map key='[QuarterName]' value='[DimDate_View].[QuarterName]' />
+      <map key='[Quarter]' value='[DimDate_View].[Quarter]' />
+      <map key='[WeekOfMonth]' value='[DimDate_View].[WeekOfMonth]' />
+      <map key='[WeekOfQuarter]' value='[DimDate_View].[WeekOfQuarter]' />
+      <map key='[WeekOfYear]' value='[DimDate_View].[WeekOfYear]' />
+      <map key='[YearName]' value='[DimDate_View].[YearName]' />
+      <map key='[Year]' value='[DimDate_View].[Year]' />
+      <map key='[forecast_condition_views]' value='[national_digital_channels_forecast_view].[forecast_condition_views]' />
+      <map key='[forecast_percent_logging_in]' value='[national_digital_channels_forecast_view].[forecast_percent_logging_in]' />
+      <map key='[forecast_primary_care_appts_mgd]' value='[national_digital_channels_forecast_view].[forecast_primary_care_appts_mgd]' />
+      <map key='[forecast_record_views]' value='[national_digital_channels_forecast_view].[forecast_record_views]' />
+      <map key='[forecast_referrals]' value='[national_digital_channels_forecast_view].[forecast_referrals]' />
+      <map key='[forecast_repeat_prescriptions]' value='[national_digital_channels_forecast_view].[forecast_repeat_prescriptions]' />
+      <map key='[forecast_secondary_care_appts]' value='[national_digital_channels_forecast_view].[forecast_secondary_care_appts]' />
+      <map key='[forecast_service Search]' value='[national_digital_channels_forecast_view].[forecast_service Search]' />
+      <map key='[forecast_test_results]' value='[national_digital_channels_forecast_view].[forecast_test_results]' />
+      <map key='[forecast_total_registered users]' value='[national_digital_channels_forecast_view].[forecast_total_registered users]' />
+      <map key='[forecast_unique_logins]' value='[national_digital_channels_forecast_view].[forecast_unique_logins]' />
+      <map key='[ndc_Date]' value='[national_digital_channels_view].[ndc_Date]' />
+    </cols>
     <metadata-records>
       <metadata-record class='column'>
         <remote-name>ndc_Date</remote-name>
@@ -1008,12 +1116,666 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>DateKey</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[DateKey]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DateKey</remote-alias>
+        <ordinal>60</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Date (DimDate_View)]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>Date</remote-alias>
+        <ordinal>61</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FullDateUK</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[FullDateUK]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>FullDateUK</remote-alias>
+        <ordinal>62</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FullDateUSA</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[FullDateUSA]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>FullDateUSA</remote-alias>
+        <ordinal>63</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfMonth</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfMonth]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfMonth</remote-alias>
+        <ordinal>64</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DaySuffix</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DaySuffix]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DaySuffix</remote-alias>
+        <ordinal>65</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>4</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayName</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayName]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayName</remote-alias>
+        <ordinal>66</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>9</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfWeekUSA</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfWeekUSA]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfWeekUSA</remote-alias>
+        <ordinal>67</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfWeekUK</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfWeekUK]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfWeekUK</remote-alias>
+        <ordinal>68</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfWeekInMonth</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfWeekInMonth]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfWeekInMonth</remote-alias>
+        <ordinal>69</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfWeekInYear</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfWeekInYear]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfWeekInYear</remote-alias>
+        <ordinal>70</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfQuarter</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfQuarter]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfQuarter</remote-alias>
+        <ordinal>71</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>3</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DayOfYear</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[DayOfYear]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>DayOfYear</remote-alias>
+        <ordinal>72</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>3</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>WeekOfMonth</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[WeekOfMonth]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>WeekOfMonth</remote-alias>
+        <ordinal>73</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>WeekOfQuarter</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[WeekOfQuarter]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>WeekOfQuarter</remote-alias>
+        <ordinal>74</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>WeekOfYear</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[WeekOfYear]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>WeekOfYear</remote-alias>
+        <ordinal>75</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Month</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Month]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>Month</remote-alias>
+        <ordinal>76</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>MonthName</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[MonthName]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>MonthName</remote-alias>
+        <ordinal>77</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>9</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>MonthOfQuarter</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[MonthOfQuarter]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>MonthOfQuarter</remote-alias>
+        <ordinal>78</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Quarter</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Quarter]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>Quarter</remote-alias>
+        <ordinal>79</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>1</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>QuarterName</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[QuarterName]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>QuarterName</remote-alias>
+        <ordinal>80</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>9</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Year</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Year]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>Year</remote-alias>
+        <ordinal>81</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>4</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>YearName</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[YearName]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>YearName</remote-alias>
+        <ordinal>82</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>7</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>MonthYear</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[MonthYear]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>MonthYear</remote-alias>
+        <ordinal>83</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>MMYYYY</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[MMYYYY]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>MMYYYY</remote-alias>
+        <ordinal>84</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>6</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FirstDayOfMonth</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[FirstDayOfMonth]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>FirstDayOfMonth</remote-alias>
+        <ordinal>85</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>LastDayOfMonth</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[LastDayOfMonth]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>LastDayOfMonth</remote-alias>
+        <ordinal>86</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FirstDayOfQuarter</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[FirstDayOfQuarter]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>FirstDayOfQuarter</remote-alias>
+        <ordinal>87</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>LastDayOfQuarter</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[LastDayOfQuarter]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>LastDayOfQuarter</remote-alias>
+        <ordinal>88</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FirstDayOfYear</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[FirstDayOfYear]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>FirstDayOfYear</remote-alias>
+        <ordinal>89</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>LastDayOfYear</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[LastDayOfYear]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>LastDayOfYear</remote-alias>
+        <ordinal>90</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+          <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>IsWeekday</remote-name>
+        <remote-type>11</remote-type>
+        <local-name>[IsWeekday]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>IsWeekday</remote-alias>
+        <ordinal>91</ordinal>
+        <local-type>boolean</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BIT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>IsHolidayUK</remote-name>
+        <remote-type>11</remote-type>
+        <local-name>[IsHolidayUK]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>IsHolidayUK</remote-alias>
+        <ordinal>92</ordinal>
+        <local-type>boolean</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BIT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>HolidayUK</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[HolidayUK]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>HolidayUK</remote-alias>
+        <ordinal>93</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FY_date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[FY_date]</local-name>
+        <parent-name>[DimDate_View]</parent-name>
+        <remote-alias>FY_date</remote-alias>
+        <ordinal>94</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>Date</remote-name>
         <remote-type>7</remote-type>
         <local-name>[Date]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>Date</remote-alias>
-        <ordinal>60</ordinal>
+        <ordinal>96</ordinal>
         <local-type>datetime</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1029,7 +1791,7 @@
         <local-name>[forecast_total_registered users]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_total_registered users</remote-alias>
-        <ordinal>61</ordinal>
+        <ordinal>97</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1046,7 +1808,7 @@
         <local-name>[forecast_unique_logins]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_unique_logins</remote-alias>
-        <ordinal>62</ordinal>
+        <ordinal>98</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1063,7 +1825,7 @@
         <local-name>[forecast_percent_logging_in]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_percent_logging_in</remote-alias>
-        <ordinal>63</ordinal>
+        <ordinal>99</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1080,7 +1842,7 @@
         <local-name>[forecast_repeat_prescriptions]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_repeat_prescriptions</remote-alias>
-        <ordinal>64</ordinal>
+        <ordinal>100</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1097,7 +1859,7 @@
         <local-name>[forecast_referrals]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_referrals</remote-alias>
-        <ordinal>65</ordinal>
+        <ordinal>101</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1114,7 +1876,7 @@
         <local-name>[forecast_primary_care_appts_mgd]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_primary_care_appts_mgd</remote-alias>
-        <ordinal>66</ordinal>
+        <ordinal>102</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1131,7 +1893,7 @@
         <local-name>[forecast_secondary_care_appts]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_secondary_care_appts</remote-alias>
-        <ordinal>67</ordinal>
+        <ordinal>103</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1148,7 +1910,7 @@
         <local-name>[forecast_condition_views]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_condition_views</remote-alias>
-        <ordinal>68</ordinal>
+        <ordinal>104</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1165,7 +1927,7 @@
         <local-name>[forecast_service Search]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_service Search</remote-alias>
-        <ordinal>69</ordinal>
+        <ordinal>105</ordinal>
         <local-type>real</local-type>
         <aggregation>Sum</aggregation>
         <precision>15</precision>
@@ -1182,7 +1944,7 @@
         <local-name>[forecast_record_views]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_record_views</remote-alias>
-        <ordinal>70</ordinal>
+        <ordinal>106</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1199,7 +1961,7 @@
         <local-name>[forecast_test_results]</local-name>
         <parent-name>[national_digital_channels_forecast_view]</parent-name>
         <remote-alias>forecast_test_results</remote-alias>
-        <ordinal>71</ordinal>
+        <ordinal>107</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1213,9 +1975,42 @@
     </metadata-records>
   </connection>
   <aliases enabled='yes' />
+  <column caption='Current Date' datatype='date' name='[Calculation_966022120178724865]' role='dimension' type='ordinal'>
+    <calculation class='tableau' formula='{FIXED: MAX([ndc_Date])}' />
+  </column>
+  <column caption='PC' datatype='integer' name='[Calculation_966022120178860034]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='IF YEAR([Calculation_966022120178724865])+1=YEAR([FY_date])&#13;&#10;THEN&#13;&#10;[forecast_primary_care_appts_mgd]&#13;&#10;END' />
+  </column>
+  <column caption='M227' datatype='integer' name='[Calculation_966022120179302403]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='IF &#13;&#10;YEAR([ndc_Date]) = YEAR([Calculation_966022120178724865])&#13;&#10;OR&#13;&#10;YEAR([ndc_Date]) = YEAR([Calculation_966022120178724865])-1&#13;&#10;then&#13;&#10;[M227_Number of primary care appointments managed via the NHS App]&#13;&#10;end' />
+  </column>
+  <column caption='Date (DimDate View)' datatype='datetime' fiscal-year-start='4' name='[Date (DimDate_View)]' role='dimension' type='ordinal' />
+  <column caption='Date Key' datatype='integer' name='[DateKey]' role='dimension' type='ordinal' />
+  <column datatype='datetime' fiscal-year-start='4' name='[Date]' role='dimension' type='ordinal' />
+  <column caption='Day Name' datatype='string' name='[DayName]' role='dimension' type='nominal' />
+  <column caption='Day Of Month' datatype='string' name='[DayOfMonth]' role='dimension' type='nominal' />
+  <column caption='Day Of Quarter' datatype='string' name='[DayOfQuarter]' role='dimension' type='nominal' />
+  <column caption='Day Of Week In Month' datatype='string' name='[DayOfWeekInMonth]' role='dimension' type='nominal' />
+  <column caption='Day Of Week In Year' datatype='string' name='[DayOfWeekInYear]' role='dimension' type='nominal' />
+  <column caption='Day Of Week UK' datatype='string' name='[DayOfWeekUK]' role='dimension' type='nominal' />
+  <column caption='Day Of Week USA' datatype='string' name='[DayOfWeekUSA]' role='dimension' type='nominal' />
+  <column caption='Day Of Year' datatype='string' name='[DayOfYear]' role='dimension' type='nominal' />
+  <column caption='Day Suffix' datatype='string' name='[DaySuffix]' role='dimension' type='nominal' />
+  <column caption='FY date' datatype='datetime' name='[FY_date]' role='dimension' type='ordinal' />
+  <column caption='First Day Of Month' datatype='date' name='[FirstDayOfMonth]' role='dimension' type='ordinal' />
+  <column caption='First Day Of Quarter' datatype='date' name='[FirstDayOfQuarter]' role='dimension' type='ordinal' />
+  <column caption='First Day Of Year' datatype='date' name='[FirstDayOfYear]' role='dimension' type='ordinal' />
+  <column caption='Full Date UK' datatype='string' name='[FullDateUK]' role='dimension' type='nominal' />
+  <column caption='Full Date USA' datatype='string' name='[FullDateUSA]' role='dimension' type='nominal' />
   <column caption='GP Address1' datatype='string' hidden='true' name='[GP_Address1]' role='dimension' type='nominal' />
   <column caption='GP Address2' datatype='string' hidden='true' name='[GP_Address2]' role='dimension' type='nominal' />
   <column caption='GP Address3' datatype='string' hidden='true' name='[GP_Address3]' role='dimension' type='nominal' />
+  <column caption='Holiday UK' datatype='string' name='[HolidayUK]' role='dimension' type='nominal' />
+  <column caption='Is Holiday UK' datatype='boolean' name='[IsHolidayUK]' role='dimension' type='nominal' />
+  <column caption='Is Weekday' datatype='boolean' name='[IsWeekday]' role='dimension' type='nominal' />
+  <column caption='Last Day Of Month' datatype='date' name='[LastDayOfMonth]' role='dimension' type='ordinal' />
+  <column caption='Last Day Of Quarter' datatype='date' name='[LastDayOfQuarter]' role='dimension' type='ordinal' />
+  <column caption='Last Day Of Year' datatype='date' name='[LastDayOfYear]' role='dimension' type='ordinal' />
   <column caption='M220 DENOM Adult population' datatype='integer' name='[M220_DENOM_Adult_population]' role='measure' type='quantitative' />
   <column caption='M220 NRM Number of users with an NHS App registration' datatype='integer' name='[M220_NRM_Number_of_users_with_an_NHS_App_registration]' role='measure' type='quantitative' />
   <column caption='M221 DENOM Number of users with an NHS App registration' datatype='integer' name='[M221_DENOM_Number_of_users_with_an_NHS_App_registration]' role='measure' type='quantitative' />
@@ -1242,17 +2037,27 @@
   <column caption='M265 Number of NHS.UK vaccination bookings 2nd dose' datatype='real' name='[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]' role='measure' type='quantitative' />
   <column caption='M266 Number of NHS.UK vaccination bookings booster' datatype='real' name='[M266_Number_of_NHS.UK_vaccination_bookings_booster]' role='measure' type='quantitative' />
   <column caption='M267 Number of NHS.UK vaccination bookings 3rd dose' datatype='real' name='[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]' role='measure' type='quantitative' />
+  <column caption='Mmyyyy' datatype='string' name='[MMYYYY]' role='dimension' type='nominal' />
+  <column caption='Month Name' datatype='string' name='[MonthName]' role='dimension' type='nominal' />
+  <column caption='Month Of Quarter' datatype='string' name='[MonthOfQuarter]' role='dimension' type='nominal' />
+  <column caption='Month Year' datatype='string' name='[MonthYear]' role='dimension' type='nominal' />
   <column caption='PCN CCG Code' datatype='string' hidden='true' name='[PCN_CCG_Code]' role='dimension' type='nominal' />
   <column caption='PCN CCG Name' datatype='string' hidden='true' name='[PCN_CCG_Name]' role='dimension' type='nominal' />
   <column caption='PCN Region Code' datatype='string' hidden='true' name='[PCN_Region_Code]' role='dimension' type='nominal' />
   <column caption='PCN Region Name' datatype='string' hidden='true' name='[PCN_Region_Name]' role='dimension' type='nominal' />
   <column caption='PCN STP Code' datatype='string' hidden='true' name='[PCN_STP_Code]' role='dimension' type='nominal' />
   <column caption='PCN STP Name' datatype='string' hidden='true' name='[PCN_STP_Name]' role='dimension' type='nominal' />
+  <column caption='Quarter Name' datatype='string' name='[QuarterName]' role='dimension' type='nominal' />
   <column caption='Region Code Name' datatype='string' hidden='true' name='[Region_Code_Name]' role='dimension' type='nominal' />
   <column caption='Region Name' datatype='string' hidden='true' name='[Region_Name]' role='dimension' type='nominal' />
   <column caption='Unique ID (nhs region code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (nhs_region_code_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column caption='Unique ID (stp code mapping snapshot)' datatype='integer' hidden='true' name='[Unique ID (stp_code_mapping_snapshot)]' role='dimension' type='ordinal' />
   <column datatype='integer' hidden='true' name='[Unique ID]' role='dimension' type='ordinal' />
+  <column caption='Week Of Month' datatype='string' name='[WeekOfMonth]' role='dimension' type='nominal' />
+  <column caption='Week Of Quarter' datatype='string' name='[WeekOfQuarter]' role='dimension' type='nominal' />
+  <column caption='Week Of Year' datatype='string' name='[WeekOfYear]' role='dimension' type='nominal' />
+  <column caption='Year Name' datatype='string' name='[YearName]' role='dimension' type='nominal' />
+  <_.fcp.ObjectModelTableType.true...column caption='DimDate_View' datatype='table' name='[__tableau_internal_object_id__].[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='national_digital_channels_forecast_view' datatype='table' name='[__tableau_internal_object_id__].[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='national_digital_channels_view' datatype='table' name='[__tableau_internal_object_id__].[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]' role='measure' type='quantitative' />
   <column caption='dfpc POMI Unique ID' datatype='integer' hidden='true' name='[dfpc_POMI_Unique ID]' role='dimension' type='ordinal' />
@@ -1268,15 +2073,124 @@
   <column caption='Forecast Total Registered Users' datatype='integer' name='[forecast_total_registered users]' role='measure' type='quantitative' />
   <column caption='Forecast Unique Logins' datatype='integer' name='[forecast_unique_logins]' role='measure' type='quantitative' />
   <column caption='ndc Date' datatype='date' name='[ndc_Date]' role='dimension' type='ordinal' />
+  <column-instance column='[FY_date]' derivation='Year' name='[yr:FY_date:ok]' pivot='key' type='ordinal' />
   <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/OliverJones/Downloads/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/07/2023 09:37:50 AM' username='tableau_internal_user'>
-      <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F' table='[Extract].[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]' type='table' />
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/OliverJones/Downloads/NHSX tableau-staging_v001.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/14/2023 08:15:57 AM' username='tableau_internal_user'>
+      <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0' table='[Extract].[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
         <relation name='national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3' table='[Extract].[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3]' type='table' />
+        <relation name='DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0' table='[Extract].[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]' type='table' />
         <relation name='national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F' table='[Extract].[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]' type='table' />
       </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+      <cols>
+        <map key='[Date (DimDate_View)]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[Date]' />
+        <map key='[DateKey]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DateKey]' />
+        <map key='[Date]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[Date]' />
+        <map key='[DayName]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayName]' />
+        <map key='[DayOfMonth]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfMonth]' />
+        <map key='[DayOfQuarter]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfQuarter]' />
+        <map key='[DayOfWeekInMonth]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfWeekInMonth]' />
+        <map key='[DayOfWeekInYear]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfWeekInYear]' />
+        <map key='[DayOfWeekUK]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfWeekUK]' />
+        <map key='[DayOfWeekUSA]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfWeekUSA]' />
+        <map key='[DayOfYear]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DayOfYear]' />
+        <map key='[DaySuffix]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[DaySuffix]' />
+        <map key='[FY_date]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[FY_date]' />
+        <map key='[FirstDayOfMonth]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[FirstDayOfMonth]' />
+        <map key='[FirstDayOfQuarter]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[FirstDayOfQuarter]' />
+        <map key='[FirstDayOfYear]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[FirstDayOfYear]' />
+        <map key='[FullDateUK]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[FullDateUK]' />
+        <map key='[FullDateUSA]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[FullDateUSA]' />
+        <map key='[HolidayUK]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[HolidayUK]' />
+        <map key='[IsHolidayUK]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[IsHolidayUK]' />
+        <map key='[IsWeekday]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[IsWeekday]' />
+        <map key='[LastDayOfMonth]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[LastDayOfMonth]' />
+        <map key='[LastDayOfQuarter]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[LastDayOfQuarter]' />
+        <map key='[LastDayOfYear]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[LastDayOfYear]' />
+        <map key='[M220_DENOM_Adult_population]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M220_DENOM_Adult_population]' />
+        <map key='[M220_NRM_Number_of_users_with_an_NHS_App_registration]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M220_NRM_Number_of_users_with_an_NHS_App_registration]' />
+        <map key='[M221_DENOM_Number_of_users_with_an_NHS_App_registration]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M221_DENOM_Number_of_users_with_an_NHS_App_registration]' />
+        <map key='[M221_NRM_Number_of_unique_NHS_App_logins]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M221_NRM_Number_of_unique_NHS_App_logins]' />
+        <map key='[M222_Proportion_of_repeat_prescriptions_ordered_online]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M222_Proportion_of_repeat_prescriptions_ordered_online]' />
+        <map key='[M223_DENOM_Number of primary care appointments]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M223_DENOM_Number of primary care appointments]' />
+        <map key='[M223_NRM_Number_of_primary_care_appointments_managed_online]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M223_NRM_Number_of_primary_care_appointments_managed_online]' />
+        <map key='[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App]' />
+        <map key='[M225_Number_of_referrals_managed_via_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M225_Number_of_referrals_managed_via_the_NHS_App]' />
+        <map key='[M226_Number_of_secondary_care_appointments_made_via_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M226_Number_of_secondary_care_appointments_made_via_the_NHS_App]' />
+        <map key='[M227_Number of primary care appointments managed via the NHS App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M227_Number of primary care appointments managed via the NHS App]' />
+        <map key='[M228_Number_of_views_of_conditions_information]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M228_Number_of_views_of_conditions_information]' />
+        <map key='[M229_Number_of_find_a_service_uses_on_NHS.uk]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M229_Number_of_find_a_service_uses_on_NHS.uk]' />
+        <map key='[M230_Number_of_gp_record_views]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M230_Number_of_gp_record_views]' />
+        <map key='[M231_Number_of_test_result_views_via_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M231_Number_of_test_result_views_via_the_NHS_App]' />
+        <map key='[M232_Number_of_NHS_app_covid_pass_uses]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M232_Number_of_NHS_app_covid_pass_uses]' />
+        <map key='[M233_Number_of_record_information_and_results_views_on_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M233_Number_of_record_information_and_results_views_on_the_NHS_App]' />
+        <map key='[M234_Number_of_prescriptions_managed_on_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M234_Number_of_prescriptions_managed_on_the_NHS_App]' />
+        <map key='[M235_Number_of_appointments_managed_on_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M235_Number_of_appointments_managed_on_the_NHS_App]' />
+        <map key='[M236_Number_of_messages_and_consultations_on_the_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M236_Number_of_messages_and_consultations_on_the_NHS_App]' />
+        <map key='[M238_Number_of_views_of_other_information]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M238_Number_of_views_of_other_information]' />
+        <map key='[M239_Number_of_views_of_live_well_information]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M239_Number_of_views_of_live_well_information]' />
+        <map key='[M241_Number_of_views_of_book_a_covid19_vaccination]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M241_Number_of_views_of_book_a_covid19_vaccination]' />
+        <map key='[M242_Number_of_views_of_medicines_information]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M242_Number_of_views_of_medicines_information]' />
+        <map key='[M243_Number_of_views_of_NHS_app_online_information]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M243_Number_of_views_of_NHS_app_online_information]' />
+        <map key='[M244_Number_of_Covid_Vaccine_Record_View]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M244_Number_of_Covid_Vaccine_Record_View]' />
+        <map key='[M245_Population_registered_with_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M245_Population_registered_with_NHS_App]' />
+        <map key='[M246_Number_of_all_time_NHS_App_registered_users]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M246_Number_of_all_time_NHS_App_registered_users]' />
+        <map key='[M246_Number_of_patients_registered_with_an_other_patient_online_service]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M246_Number_of_patients_registered_with_an_other_patient_online_service]' />
+        <map key='[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M246_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' />
+        <map key='[M247_Adult_population]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M247_Adult_population]' />
+        <map key='[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M247_Adult_population_not_registered_to_use_an_patient_online_transactional_services]' />
+        <map key='[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M247_Total_number_of_patients_registered_to_use_an_patient_online_transactional_services]' />
+        <map key='[M249_Number_of_repeat_prescriptions_through_an_other_POL_service]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M249_Number_of_repeat_prescriptions_through_an_other_POL_service]' />
+        <map key='[M250_Number_of_offline_repeat_prescriptions]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M250_Number_of_offline_repeat_prescriptions]' />
+        <map key='[M251_Number_of_DCR_views_through_the_NHS_app]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M251_Number_of_DCR_views_through_the_NHS_app]' />
+        <map key='[M252_DCR_views_through_other_POL_service]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M252_DCR_views_through_other_POL_service]' />
+        <map key='[M253_Total_app_logins]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M253_Total_app_logins]' />
+        <map key='[M255_Number_of_confirmed_accounts_NHS_login]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M255_Number_of_confirmed_accounts_NHS_login]' />
+        <map key='[M256_Number_of_estimated_visits_to_NHS_UK]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M256_Number_of_estimated_visits_to_NHS_UK]' />
+        <map key='[M257_DENOM_Number_of_all_Record Views]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M257_DENOM_Number_of_all_Record Views]' />
+        <map key='[M257_NRM_Number_of_Detail_Coded_Record_Views]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M257_NRM_Number_of_Detail_Coded_Record_Views]' />
+        <map key='[M258_Number_of_NHS_App_organ_donation_registrations]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M258_Number_of_NHS_App_organ_donation_registrations]' />
+        <map key='[M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]' />
+        <map key='[M262_Number_of_all_covid_vaccination_bookings]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M262_Number_of_all_covid_vaccination_bookings]' />
+        <map key='[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M264_Number_of_NHS.UK_vaccination_bookings_1st_dose]' />
+        <map key='[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M265_Number_of_NHS.UK_vaccination_bookings_2nd_dose]' />
+        <map key='[M266_Number_of_NHS.UK_vaccination_bookings_booster]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M266_Number_of_NHS.UK_vaccination_bookings_booster]' />
+        <map key='[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M267_Number_of_NHS.UK_vaccination_bookings_3rd_dose]' />
+        <map key='[M269_Number_of_Covid_Pass_Transactions_Undertaken]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M269_Number_of_Covid_Pass_Transactions_Undertaken]' />
+        <map key='[M270_Research]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M270_Research]' />
+        <map key='[M271_Number_of_Wayfinder_Clicks]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M271_Number_of_Wayfinder_Clicks]' />
+        <map key='[M273_Messages_Read_No_Notification]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M273_Messages_Read_No_Notification]' />
+        <map key='[M273_Messages_Read_Notification]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M273_Messages_Read_Notification]' />
+        <map key='[M273_Messages_Sent_No_Notification]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M273_Messages_Sent_No_Notification]' />
+        <map key='[M273_Messages_Sent_Notification]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[M273_Messages_Sent_Notification]' />
+        <map key='[MMYYYY]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[MMYYYY]' />
+        <map key='[MXXX_services]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[MXXX_services]' />
+        <map key='[MonthName]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[MonthName]' />
+        <map key='[MonthOfQuarter]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[MonthOfQuarter]' />
+        <map key='[MonthYear]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[MonthYear]' />
+        <map key='[Month]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[Month]' />
+        <map key='[QuarterName]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[QuarterName]' />
+        <map key='[Quarter]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[Quarter]' />
+        <map key='[WeekOfMonth]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[WeekOfMonth]' />
+        <map key='[WeekOfQuarter]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[WeekOfQuarter]' />
+        <map key='[WeekOfYear]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[WeekOfYear]' />
+        <map key='[YearName]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[YearName]' />
+        <map key='[Year]' value='[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0].[Year]' />
+        <map key='[forecast_condition_views]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_condition_views]' />
+        <map key='[forecast_percent_logging_in]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_percent_logging_in]' />
+        <map key='[forecast_primary_care_appts_mgd]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_primary_care_appts_mgd]' />
+        <map key='[forecast_record_views]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_record_views]' />
+        <map key='[forecast_referrals]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_referrals]' />
+        <map key='[forecast_repeat_prescriptions]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_repeat_prescriptions]' />
+        <map key='[forecast_secondary_care_appts]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_secondary_care_appts]' />
+        <map key='[forecast_service Search]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_service Search]' />
+        <map key='[forecast_test_results]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_test_results]' />
+        <map key='[forecast_total_registered users]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_total_registered users]' />
+        <map key='[forecast_unique_logins]' value='[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F].[forecast_unique_logins]' />
+        <map key='[ndc_Date]' value='[national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3].[ndc_Date]' />
+      </cols>
       <refresh>
-        <refresh-event add-from-file-path='NDC_national_digital_channels_v001' increment-value='%null%' refresh-type='create' rows-inserted='106' timestamp-start='2023-09-07 09:37:48.296' />
+        <refresh-event add-from-file-path='NDC_national_digital_channels_v001' increment-value='%null%' refresh-type='create' rows-inserted='7411' timestamp-start='2023-09-14 08:15:54.028' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
@@ -2034,12 +2948,491 @@
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
+          <remote-name>DateKey</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[DateKey]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DateKey</remote-alias>
+          <ordinal>58</ordinal>
+          <family>DimDate_View</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>7305</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Date</remote-name>
+          <remote-type>135</remote-type>
+          <local-name>[Date (DimDate_View)]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>Date</remote-alias>
+          <ordinal>59</ordinal>
+          <family>DimDate_View</family>
+          <local-type>datetime</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>7305</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>FullDateUK</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[FullDateUK]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>FullDateUK</remote-alias>
+          <ordinal>60</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>7305</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>FullDateUSA</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[FullDateUSA]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>FullDateUSA</remote-alias>
+          <ordinal>61</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>7305</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfMonth</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfMonth]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfMonth</remote-alias>
+          <ordinal>62</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>31</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DaySuffix</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DaySuffix]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DaySuffix</remote-alias>
+          <ordinal>63</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>31</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayName</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayName]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayName</remote-alias>
+          <ordinal>64</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfWeekUSA</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfWeekUSA]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfWeekUSA</remote-alias>
+          <ordinal>65</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfWeekUK</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfWeekUK]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfWeekUK</remote-alias>
+          <ordinal>66</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>7</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfWeekInMonth</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfWeekInMonth]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfWeekInMonth</remote-alias>
+          <ordinal>67</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>5</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfWeekInYear</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfWeekInYear]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfWeekInYear</remote-alias>
+          <ordinal>68</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>53</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfQuarter</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfQuarter]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfQuarter</remote-alias>
+          <ordinal>69</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>14</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>DayOfYear</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[DayOfYear]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>DayOfYear</remote-alias>
+          <ordinal>70</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>458</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>WeekOfMonth</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[WeekOfMonth]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>WeekOfMonth</remote-alias>
+          <ordinal>71</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>6</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>WeekOfQuarter</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[WeekOfQuarter]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>WeekOfQuarter</remote-alias>
+          <ordinal>72</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>14</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>WeekOfYear</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[WeekOfYear]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>WeekOfYear</remote-alias>
+          <ordinal>73</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>55</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Month</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Month]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>Month</remote-alias>
+          <ordinal>74</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>MonthName</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[MonthName]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>MonthName</remote-alias>
+          <ordinal>75</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>12</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>MonthOfQuarter</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[MonthOfQuarter]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>MonthOfQuarter</remote-alias>
+          <ordinal>76</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>3</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Quarter</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Quarter]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>Quarter</remote-alias>
+          <ordinal>77</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>QuarterName</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[QuarterName]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>QuarterName</remote-alias>
+          <ordinal>78</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>4</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Year</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Year]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>Year</remote-alias>
+          <ordinal>79</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>20</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>YearName</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[YearName]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>YearName</remote-alias>
+          <ordinal>80</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>20</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>MonthYear</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[MonthYear]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>MonthYear</remote-alias>
+          <ordinal>81</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>258</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>MMYYYY</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[MMYYYY]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>MMYYYY</remote-alias>
+          <ordinal>82</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>258</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>FirstDayOfMonth</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[FirstDayOfMonth]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>FirstDayOfMonth</remote-alias>
+          <ordinal>83</ordinal>
+          <family>DimDate_View</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>258</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>LastDayOfMonth</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[LastDayOfMonth]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>LastDayOfMonth</remote-alias>
+          <ordinal>84</ordinal>
+          <family>DimDate_View</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>258</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>FirstDayOfQuarter</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[FirstDayOfQuarter]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>FirstDayOfQuarter</remote-alias>
+          <ordinal>85</ordinal>
+          <family>DimDate_View</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>80</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>LastDayOfQuarter</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[LastDayOfQuarter]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>LastDayOfQuarter</remote-alias>
+          <ordinal>86</ordinal>
+          <family>DimDate_View</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>80</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>FirstDayOfYear</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[FirstDayOfYear]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>FirstDayOfYear</remote-alias>
+          <ordinal>87</ordinal>
+          <family>DimDate_View</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>20</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>LastDayOfYear</remote-name>
+          <remote-type>133</remote-type>
+          <local-name>[LastDayOfYear]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>LastDayOfYear</remote-alias>
+          <ordinal>88</ordinal>
+          <family>DimDate_View</family>
+          <local-type>date</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>20</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>IsWeekday</remote-name>
+          <remote-type>11</remote-type>
+          <local-name>[IsWeekday]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>IsWeekday</remote-alias>
+          <ordinal>89</ordinal>
+          <family>DimDate_View</family>
+          <local-type>boolean</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>IsHolidayUK</remote-name>
+          <remote-type>11</remote-type>
+          <local-name>[IsHolidayUK]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>IsHolidayUK</remote-alias>
+          <ordinal>90</ordinal>
+          <family>DimDate_View</family>
+          <local-type>boolean</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>2</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>HolidayUK</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[HolidayUK]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>HolidayUK</remote-alias>
+          <ordinal>91</ordinal>
+          <family>DimDate_View</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>10</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>FY_date</remote-name>
+          <remote-type>135</remote-type>
+          <local-name>[FY_date]</local-name>
+          <parent-name>[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]</parent-name>
+          <remote-alias>FY_date</remote-alias>
+          <ordinal>92</ordinal>
+          <family>DimDate_View</family>
+          <local-type>datetime</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>7305</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
           <remote-name>Date</remote-name>
           <remote-type>135</remote-type>
           <local-name>[Date]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>Date</remote-alias>
-          <ordinal>58</ordinal>
+          <ordinal>93</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>datetime</local-type>
           <aggregation>Year</aggregation>
@@ -2052,7 +3445,7 @@
           <local-name>[forecast_total_registered users]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_total_registered users</remote-alias>
-          <ordinal>59</ordinal>
+          <ordinal>94</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2065,7 +3458,7 @@
           <local-name>[forecast_unique_logins]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_unique_logins</remote-alias>
-          <ordinal>60</ordinal>
+          <ordinal>95</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2078,7 +3471,7 @@
           <local-name>[forecast_percent_logging_in]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_percent_logging_in</remote-alias>
-          <ordinal>61</ordinal>
+          <ordinal>96</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
@@ -2091,7 +3484,7 @@
           <local-name>[forecast_repeat_prescriptions]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_repeat_prescriptions</remote-alias>
-          <ordinal>62</ordinal>
+          <ordinal>97</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2104,7 +3497,7 @@
           <local-name>[forecast_referrals]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_referrals</remote-alias>
-          <ordinal>63</ordinal>
+          <ordinal>98</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2117,7 +3510,7 @@
           <local-name>[forecast_primary_care_appts_mgd]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_primary_care_appts_mgd</remote-alias>
-          <ordinal>64</ordinal>
+          <ordinal>99</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2130,7 +3523,7 @@
           <local-name>[forecast_secondary_care_appts]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_secondary_care_appts</remote-alias>
-          <ordinal>65</ordinal>
+          <ordinal>100</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2143,7 +3536,7 @@
           <local-name>[forecast_condition_views]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_condition_views</remote-alias>
-          <ordinal>66</ordinal>
+          <ordinal>101</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
@@ -2156,7 +3549,7 @@
           <local-name>[forecast_service Search]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_service Search</remote-alias>
-          <ordinal>67</ordinal>
+          <ordinal>102</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
@@ -2169,7 +3562,7 @@
           <local-name>[forecast_record_views]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_record_views</remote-alias>
-          <ordinal>68</ordinal>
+          <ordinal>103</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2182,7 +3575,7 @@
           <local-name>[forecast_test_results]</local-name>
           <parent-name>[national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F]</parent-name>
           <remote-alias>forecast_test_results</remote-alias>
-          <ordinal>69</ordinal>
+          <ordinal>104</ordinal>
           <family>national_digital_channels_forecast_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2193,12 +3586,126 @@
     </connection>
   </extract>
   <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <style>
+    <style-rule element='mark'>
+      <encoding attr='color' field='[yr:FY_date:ok]' type='palette'>
+        <map to='#499894'>
+          <bucket>2018</bucket>
+        </map>
+        <map to='#4e79a7'>
+          <bucket>2010</bucket>
+        </map>
+        <map to='#4e79a7'>
+          <bucket>2024</bucket>
+        </map>
+        <map to='#4e79a7'>
+          <bucket>2030</bucket>
+        </map>
+        <map to='#59a14f'>
+          <bucket>2014</bucket>
+        </map>
+        <map to='#79706e'>
+          <bucket>2022</bucket>
+        </map>
+        <map to='#86bcb6'>
+          <bucket>2019</bucket>
+        </map>
+        <map to='#8cd17d'>
+          <bucket>2015</bucket>
+        </map>
+        <map to='#9d7660'>
+          <bucket>2028</bucket>
+        </map>
+        <map to='#a0cbe8'>
+          <bucket>2011</bucket>
+        </map>
+        <map to='#b07aa1'>
+          <bucket>2026</bucket>
+        </map>
+        <map to='#b6992d'>
+          <bucket>2016</bucket>
+        </map>
+        <map to='#bab0ac'>
+          <bucket>2023</bucket>
+        </map>
+        <map to='#d4a6c8'>
+          <bucket>2027</bucket>
+        </map>
+        <map to='#d7b5a6'>
+          <bucket>2029</bucket>
+        </map>
+        <map to='#e15759'>
+          <bucket>2020</bucket>
+        </map>
+        <map to='#f1ce63'>
+          <bucket>2017</bucket>
+        </map>
+        <map to='#f28e2b'>
+          <bucket>2012</bucket>
+        </map>
+        <map to='#fabfd2'>
+          <bucket>2025</bucket>
+        </map>
+        <map to='#ff9d9a'>
+          <bucket>2021</bucket>
+        </map>
+        <map to='#ffbe7d'>
+          <bucket>2013</bucket>
+        </map>
+      </encoding>
+    </style-rule>
+  </style>
   <semantic-values>
     <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
   </semantic-values>
   <date-options start-of-week='monday' />
+  <field-sort-info field-sort-order-type='custom-order'>
+    <field-sort-custom-order field='DateKey' />
+    <field-sort-custom-order field='Date (DimDate_View)' />
+    <field-sort-custom-order field='FullDateUK' />
+    <field-sort-custom-order field='FullDateUSA' />
+    <field-sort-custom-order field='DayOfMonth' />
+    <field-sort-custom-order field='DaySuffix' />
+    <field-sort-custom-order field='DayName' />
+    <field-sort-custom-order field='DayOfWeekUSA' />
+    <field-sort-custom-order field='DayOfWeekUK' />
+    <field-sort-custom-order field='DayOfWeekInMonth' />
+    <field-sort-custom-order field='DayOfWeekInYear' />
+    <field-sort-custom-order field='DayOfQuarter' />
+    <field-sort-custom-order field='DayOfYear' />
+    <field-sort-custom-order field='WeekOfMonth' />
+    <field-sort-custom-order field='WeekOfQuarter' />
+    <field-sort-custom-order field='WeekOfYear' />
+    <field-sort-custom-order field='Month' />
+    <field-sort-custom-order field='MonthName' />
+    <field-sort-custom-order field='MonthOfQuarter' />
+    <field-sort-custom-order field='Quarter' />
+    <field-sort-custom-order field='QuarterName' />
+    <field-sort-custom-order field='Year' />
+    <field-sort-custom-order field='YearName' />
+    <field-sort-custom-order field='MonthYear' />
+    <field-sort-custom-order field='MMYYYY' />
+    <field-sort-custom-order field='FirstDayOfMonth' />
+    <field-sort-custom-order field='LastDayOfMonth' />
+    <field-sort-custom-order field='FirstDayOfQuarter' />
+    <field-sort-custom-order field='LastDayOfQuarter' />
+    <field-sort-custom-order field='FirstDayOfYear' />
+    <field-sort-custom-order field='LastDayOfYear' />
+    <field-sort-custom-order field='IsWeekday' />
+    <field-sort-custom-order field='IsHolidayUK' />
+    <field-sort-custom-order field='HolidayUK' />
+    <field-sort-custom-order field='FY_date' />
+  </field-sort-info>
   <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     <objects>
+      <object caption='DimDate_View' id='DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0'>
+        <properties context=''>
+          <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='DimDate_View' table='[dbo].[DimDate_View]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0' table='[Extract].[DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0]' type='table' />
+        </properties>
+      </object>
       <object caption='national_digital_channels_forecast_view' id='national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F'>
         <properties context=''>
           <relation connection='sqlserver.1cv53q512u73ac103c6ar14ikyxw' name='national_digital_channels_forecast_view' table='[dbo].[national_digital_channels_forecast_view]' type='table' />
@@ -2220,9 +3727,17 @@
       <relationship>
         <expression op='='>
           <expression op='[ndc_Date]' />
-          <expression _.fcp.RelationshipCalculations.false...op='[DATE(Date)]' _.fcp.RelationshipCalculations.true...op='DATE([Date])' />
+          <expression _.fcp.RelationshipCalculations.false...op='[DATE(Date (DimDate_View))]' _.fcp.RelationshipCalculations.true...op='DATE([Date (DimDate_View)])' />
         </expression>
         <first-end-point object-id='national_digital_channels_view_103B0A0CAD544913B3DED9688E4A6DB3' />
+        <second-end-point object-id='DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[Date (DimDate_View)]' />
+          <expression op='[Date]' />
+        </expression>
+        <first-end-point object-id='DimDate_View_13FDD38FE58D4F1FA5913E6353C3DEB0' />
         <second-end-point object-id='national_digital_channels_forecast_view_E1F7FAB99118481E83DEA3C8D543555F' />
       </relationship>
     </relationships>
