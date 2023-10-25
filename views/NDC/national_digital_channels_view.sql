@@ -60,6 +60,9 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,au.[Messages Sent No Notification] as M273_Messages_Sent_No_Notification
 ,au.[Messages Read Notification] as M273_Messages_Read_Notification
 ,au.[Messages Read No Notification] as M273_Messages_Read_No_Notification
+,ISNULL(av.[Number of NBS jumpoff clicks via the NHS App], 0)  as M274_Number_of_NBS_jumpoff_clicks_via_the_NHS_App
+,ISNULL(aw.[Number of GP Registration jumpoff clicks via the NHS App],0) as M275_Number_of_GP_Registration_jumpoff_clicks_via_the_NHS_App
+
 
 FROM
 ndc_dashboard_nhsapp_registered_population_month_prop A
@@ -246,3 +249,14 @@ LEFT JOIN
 ndc_messages_nhsapp_messages_read au
 ON
 a.[Date]=au.[Date]
+
+LEFT JOIN
+ndc_nbs av
+ON
+a.[Date]=av.[Date]
+
+LEFT JOIN
+ndc_gp_registration aw
+ON
+a.[Date]=aw.[Date]
+
