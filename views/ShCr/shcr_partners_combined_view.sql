@@ -17,7 +17,7 @@ shcr_partners_trust_data_month_count
 
 UNION ALL 
 SELECT
-'pcn' as org_type
+'PCN' as org_type
 ,CAST([For Month] as DATE) as date
 ,[ICB ODS code]
 ,[ICS Name (if applicable)]
@@ -46,7 +46,7 @@ shcr_partners_la_data_month_count
 
 UNION ALL 
 SELECT
-'Community' as org_type
+'Prioritised Community' as org_type
 
 ,CAST([For Month] as DATE) as date
 ,[ICB ODS code]
