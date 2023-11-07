@@ -5,11 +5,12 @@
   <document-format-change-manifest>
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.RelationshipCalculations.true...RelationshipCalculations />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
   </document-format-change-manifest>
-  <repository-location id='shcr_partners_1' path='datasources' revision='1.4' />
+  <repository-location id='shcr_partners_1' path='datasources' revision='1.2' />
   <connection class='federated'>
     <named-connections>
       <named-connection caption='nhsx-slt-analytics.database.windows.net' name='sqlserver.16xn79t19ghfl61aynuuc039jqzq'>
@@ -21,7 +22,7 @@
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shcr_partners_icb_data_month_count_view' table='[dbo].[shcr_partners_icb_data_month_count_view]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='odscodes_gp_mapping' table='[dbo].[odscodes_gp_mapping]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
-      <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='icb_ons_ods_mapping' table='[dbo].[icb_ons_ods_mapping]' type='table' />
+      <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='stp_code_mapping_snapshot' table='[dbo].[stp_code_mapping_snapshot]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shapefile_stp_boundaries_snapshot' table='[dbo].[shapefile_stp_boundaries_snapshot]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shcr_partners_combined_view' table='[dbo].[shcr_partners_combined_view]' type='table' />
     </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
@@ -50,15 +51,14 @@
       <map key='[ICB Name (if applicable)]' value='[shcr_partners_icb_data_month_count_view].[ICB Name (if applicable)]' />
       <map key='[ICB ODS code (shcr_partners_combined_view)]' value='[shcr_partners_combined_view].[ICB ODS code]' />
       <map key='[ICB ODS code]' value='[shcr_partners_icb_data_month_count_view].[ICB ODS code]' />
-      <map key='[ICB22CDH]' value='[icb_ons_ods_mapping].[ICB22CDH]' />
-      <map key='[ICB22CD]' value='[icb_ons_ods_mapping].[ICB22CD]' />
-      <map key='[ICB22NM]' value='[icb_ons_ods_mapping].[ICB22NM]' />
       <map key='[ICS Name (if applicable)]' value='[shcr_partners_combined_view].[ICS Name (if applicable)]' />
       <map key='[Last_Refreshed]' value='[odscodes_gp_mapping].[Last_Refreshed]' />
       <map key='[Name of ShCR System]' value='[shcr_partners_icb_data_month_count_view].[Name of ShCR System]' />
       <map key='[Number of ShCR views in the past month]' value='[shcr_partners_icb_data_month_count_view].[Number of ShCR views in the past month]' />
       <map key='[Number of unique user ShCR views in the past month]' value='[shcr_partners_icb_data_month_count_view].[Number of unique user ShCR views in the past month]' />
       <map key='[Number of users with access to the ShCR]' value='[shcr_partners_icb_data_month_count_view].[Number of users with access to the ShCR]' />
+      <map key='[ODS STP code]' value='[stp_code_mapping_snapshot].[ODS STP code]' />
+      <map key='[ONS STP code]' value='[stp_code_mapping_snapshot].[ONS STP code]' />
       <map key='[PCN_CCG_Code]' value='[odscodes_gp_mapping].[PCN_CCG_Code]' />
       <map key='[PCN_CCG_Name]' value='[odscodes_gp_mapping].[PCN_CCG_Name]' />
       <map key='[PCN_Region_Code]' value='[odscodes_gp_mapping].[PCN_Region_Code]' />
@@ -72,6 +72,7 @@
       <map key='[Registered_patient]' value='[gp_practice_population_snapshot].[Registered_patient]' />
       <map key='[STP Geography]' value='[shapefile_stp_boundaries_snapshot].[STP Geography]' />
       <map key='[STP code]' value='[shapefile_stp_boundaries_snapshot].[STP code]' />
+      <map key='[STP name (stp_code_mapping_snapshot)]' value='[stp_code_mapping_snapshot].[STP name]' />
       <map key='[STP name]' value='[shapefile_stp_boundaries_snapshot].[STP name]' />
       <map key='[ShCR Programme Name]' value='[shcr_partners_icb_data_month_count_view].[ShCR Programme Name]' />
       <map key='[Unique ID]' value='[shapefile_stp_boundaries_snapshot].[Unique ID]' />
@@ -849,63 +850,64 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
-        <remote-name>ICB22CD</remote-name>
-        <remote-type>130</remote-type>
-        <local-name>[ICB22CD]</local-name>
-        <parent-name>[icb_ons_ods_mapping]</parent-name>
-        <remote-alias>ICB22CD</remote-alias>
+        <remote-name>ONS STP code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ONS STP code]</local-name>
+        <parent-name>[stp_code_mapping_snapshot]</parent-name>
+        <remote-alias>ONS STP code</remote-alias>
         <ordinal>44</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>10</width>
-        <contains-null>true</contains-null>
+        <width>255</width>
+        <contains-null>false</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
           <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
         </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
-        <remote-name>ICB22CDH</remote-name>
-        <remote-type>130</remote-type>
-        <local-name>[ICB22CDH]</local-name>
-        <parent-name>[icb_ons_ods_mapping]</parent-name>
-        <remote-alias>ICB22CDH</remote-alias>
+        <remote-name>STP name</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[STP name (stp_code_mapping_snapshot)]</local-name>
+        <parent-name>[stp_code_mapping_snapshot]</parent-name>
+        <remote-alias>STP name</remote-alias>
         <ordinal>45</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>5</width>
-        <contains-null>true</contains-null>
+        <width>255</width>
+        <contains-null>false</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
           <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
         </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
-        <remote-name>ICB22NM</remote-name>
-        <remote-type>130</remote-type>
-        <local-name>[ICB22NM]</local-name>
-        <parent-name>[icb_ons_ods_mapping]</parent-name>
-        <remote-alias>ICB22NM</remote-alias>
+        <remote-name>ODS STP code</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[ODS STP code]</local-name>
+        <parent-name>[stp_code_mapping_snapshot]</parent-name>
+        <remote-alias>ODS STP code</remote-alias>
         <ordinal>46</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <contains-null>true</contains-null>
+        <width>255</width>
+        <contains-null>false</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
         <attributes>
-          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
-          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
           <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
         </attributes>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
         <remote-name>Unique ID</remote-name>
@@ -1110,7 +1112,7 @@
         <ordinal>60</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
-        <width>9</width>
+        <width>21</width>
         <contains-null>false</contains-null>
         <padded-semantics>true</padded-semantics>
         <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
@@ -1251,66 +1253,30 @@
     </metadata-records>
   </connection>
   <aliases enabled='yes' />
-  <column caption='Effective Snapshot Date' datatype='date' name='[Effective_Snapshot_Date]' role='dimension' type='ordinal' />
-  <column caption='GP Address1' datatype='string' name='[GP_Address1]' role='dimension' type='nominal' />
-  <column caption='GP Address2' datatype='string' name='[GP_Address2]' role='dimension' type='nominal' />
-  <column caption='GP Address3' datatype='string' name='[GP_Address3]' role='dimension' type='nominal' />
-  <column caption='GP CCG Code' datatype='string' name='[GP_CCG_Code]' role='dimension' type='nominal' />
-  <column caption='GP CCG Name' datatype='string' name='[GP_CCG_Name]' role='dimension' type='nominal' />
-  <column caption='GP Code' datatype='string' name='[GP_Code]' role='dimension' type='nominal' />
-  <column aggregation='Avg' caption='Gp Lat' datatype='real' name='[GP_LAT]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-  <column caption='GP Long' datatype='real' name='[GP_Long]' role='measure' type='quantitative' />
-  <column caption='GP Name' datatype='string' name='[GP_Name]' role='dimension' type='nominal' />
-  <column caption='GP PCN Code' datatype='string' name='[GP_PCN_Code]' role='dimension' type='nominal' />
-  <column caption='GP PCN Name' datatype='string' name='[GP_PCN_Name]' role='dimension' type='nominal' />
-  <column caption='GP Postcode' datatype='string' name='[GP_Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
-  <column caption='GP Practice Code' datatype='string' name='[GP_Practice_Code]' role='dimension' type='nominal' />
-  <column caption='GP Region Code' datatype='string' name='[GP_Region_Code]' role='dimension' type='nominal' />
-  <column caption='GP Region Name' datatype='string' name='[GP_Region_Name]' role='dimension' type='nominal' />
-  <column caption='GP Register Date' datatype='date' name='[GP_Register_Date]' role='dimension' type='ordinal' />
-  <column caption='GP STP Code' datatype='string' name='[GP_STP_Code]' role='dimension' type='nominal' />
-  <column caption='GP STP Name' datatype='string' name='[GP_STP_Name]' role='dimension' type='nominal' />
+  <column aggregation='Avg' datatype='real' name='[GP_LAT]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+  <column datatype='string' name='[GP_Postcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
   <column caption='ICB ODS code (shcr partners combined view)' datatype='string' name='[ICB ODS code (shcr_partners_combined_view)]' role='dimension' type='nominal' />
-  <column caption='Icb22Cdh' datatype='string' name='[ICB22CDH]' role='dimension' type='nominal' />
-  <column caption='Icb22Cd' datatype='string' name='[ICB22CD]' role='dimension' type='nominal' />
-  <column caption='Icb22Nm' datatype='string' name='[ICB22NM]' role='dimension' type='nominal' />
-  <column caption='Last Refreshed' datatype='date' name='[Last_Refreshed]' role='dimension' type='ordinal' />
-  <column caption='PCN CCG Code' datatype='string' name='[PCN_CCG_Code]' role='dimension' type='nominal' />
-  <column caption='PCN CCG Name' datatype='string' name='[PCN_CCG_Name]' role='dimension' type='nominal' />
-  <column caption='PCN Region Code' datatype='string' name='[PCN_Region_Code]' role='dimension' type='nominal' />
-  <column caption='PCN Region Name' datatype='string' name='[PCN_Region_Name]' role='dimension' type='nominal' />
-  <column caption='PCN STP Code' datatype='string' name='[PCN_STP_Code]' role='dimension' type='nominal' />
-  <column caption='PCN STP Name' datatype='string' name='[PCN_STP_Name]' role='dimension' type='nominal' />
-  <column caption='Region Code Name' datatype='string' name='[Region_Code_Name]' role='dimension' type='nominal' />
-  <column caption='Region Name' datatype='string' name='[Region_Name]' role='dimension' type='nominal' />
-  <column caption='Registered patient' datatype='integer' name='[Registered_patient]' role='measure' type='quantitative' />
-  <column datatype='integer' name='[Unique ID]' role='dimension' type='ordinal' />
   <_.fcp.ObjectModelTableType.true...column caption='gp_practice_population_snapshot' datatype='table' name='[__tableau_internal_object_id__].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' role='measure' type='quantitative' />
-  <_.fcp.ObjectModelTableType.true...column caption='icb_ons_ods_mapping' datatype='table' name='[__tableau_internal_object_id__].[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='odscodes_gp_mapping' datatype='table' name='[__tableau_internal_object_id__].[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shapefile_stp_boundaries_snapshot' datatype='table' name='[__tableau_internal_object_id__].[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shcr_partners_combined_view' datatype='table' name='[__tableau_internal_object_id__].[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shcr_partners_icb_data_month_count_view' datatype='table' name='[__tableau_internal_object_id__].[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5]' role='measure' type='quantitative' />
-  <column caption='Bng E' datatype='integer' name='[bng_e]' role='measure' type='quantitative' />
-  <column caption='Bng N' datatype='integer' name='[bng_n]' role='measure' type='quantitative' />
-  <column caption='Date (Shcr Partners Combined View)' datatype='date' name='[date (shcr_partners_combined_view)]' role='dimension' type='ordinal' />
-  <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
-  <column caption='Geometry' datatype='string' name='[geometry]' role='dimension' type='nominal' />
-  <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-  <column aggregation='Avg' caption='Long' datatype='real' name='[long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='stp_code_mapping_snapshot' datatype='table' name='[__tableau_internal_object_id__].[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]' role='measure' type='quantitative' />
+  <column aggregation='Count' caption='Date (Shcr Partners Combined View)' datatype='date' name='[date (shcr_partners_combined_view)]' role='dimension' type='ordinal' />
+  <column aggregation='Count' caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+  <column aggregation='Avg' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+  <column aggregation='Avg' datatype='real' name='[long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
   <column caption='Org Name' datatype='string' name='[org_name]' role='dimension' type='nominal' />
   <column caption='Org Ods Code' datatype='string' name='[org_ods_code]' role='dimension' type='nominal' />
   <column caption='Org Type' datatype='string' name='[org_type]' role='dimension' type='nominal' />
-  <column caption='St Area(Shape)' datatype='real' name='[st_area(shape)]' role='measure' type='quantitative' />
-  <column caption='St Length(Shape)' datatype='real' name='[st_length(shape)]' role='measure' type='quantitative' />
   <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/OliverJones/Downloads/shcr_partners_icb_data_month_count_view+ (tableau-staging).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/11/2023 10:07:13 AM' username='tableau_internal_user'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/OliverJones/Downloads/shcr_partners_icb_data_month_count_view+ (tableau-staging).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/07/2023 02:13:30 PM' username='tableau_internal_user'>
       <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8' table='[Extract].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
         <relation name='shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5' table='[Extract].[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5]' type='table' />
         <relation name='odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238' table='[Extract].[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238]' type='table' />
         <relation name='gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8' table='[Extract].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' type='table' />
-        <relation name='icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1' table='[Extract].[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]' type='table' />
+        <relation name='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962' table='[Extract].[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]' type='table' />
         <relation name='shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D' table='[Extract].[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D]' type='table' />
         <relation name='shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749' table='[Extract].[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]' type='table' />
       </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
@@ -1339,15 +1305,14 @@
         <map key='[ICB Name (if applicable)]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[ICB Name (if applicable)]' />
         <map key='[ICB ODS code (shcr_partners_combined_view)]' value='[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749].[ICB ODS code]' />
         <map key='[ICB ODS code]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[ICB ODS code]' />
-        <map key='[ICB22CDH]' value='[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1].[ICB22CDH]' />
-        <map key='[ICB22CD]' value='[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1].[ICB22CD]' />
-        <map key='[ICB22NM]' value='[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1].[ICB22NM]' />
         <map key='[ICS Name (if applicable)]' value='[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749].[ICS Name (if applicable)]' />
         <map key='[Last_Refreshed]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[Last_Refreshed]' />
         <map key='[Name of ShCR System]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[Name of ShCR System]' />
         <map key='[Number of ShCR views in the past month]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[Number of ShCR views in the past month]' />
         <map key='[Number of unique user ShCR views in the past month]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[Number of unique user ShCR views in the past month]' />
         <map key='[Number of users with access to the ShCR]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[Number of users with access to the ShCR]' />
+        <map key='[ODS STP code]' value='[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962].[ODS STP code]' />
+        <map key='[ONS STP code]' value='[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962].[ONS STP code]' />
         <map key='[PCN_CCG_Code]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[PCN_CCG_Code]' />
         <map key='[PCN_CCG_Name]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[PCN_CCG_Name]' />
         <map key='[PCN_Region_Code]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[PCN_Region_Code]' />
@@ -1361,6 +1326,7 @@
         <map key='[Registered_patient]' value='[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8].[Registered_patient]' />
         <map key='[STP Geography]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[STP Geography]' />
         <map key='[STP code]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[STP code]' />
+        <map key='[STP name (stp_code_mapping_snapshot)]' value='[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962].[STP name]' />
         <map key='[STP name]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[STP name]' />
         <map key='[ShCR Programme Name]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[ShCR Programme Name]' />
         <map key='[Unique ID]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[Unique ID]' />
@@ -1379,7 +1345,7 @@
         <map key='[st_length(shape)]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[st_length(shape)]' />
       </cols>
       <refresh>
-        <refresh-event add-from-file-path='shcr_partners_1' increment-value='%null%' refresh-type='create' rows-inserted='16397' timestamp-start='2023-10-11 10:07:10.252' />
+        <refresh-event add-from-file-path='shcr_partners_1' increment-value='%null%' refresh-type='create' rows-inserted='18048' timestamp-start='2023-11-07 14:10:37.361' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
@@ -1392,7 +1358,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>3</approx-count>
+          <approx-count>4</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1405,7 +1371,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>33</approx-count>
+          <approx-count>36</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1419,7 +1385,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>33</approx-count>
+          <approx-count>35</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1447,7 +1413,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>34</approx-count>
+          <approx-count>38</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1461,7 +1427,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>11</approx-count>
+          <approx-count>13</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1488,7 +1454,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>38</approx-count>
+          <approx-count>55</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1501,7 +1467,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>62</approx-count>
+          <approx-count>92</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1514,7 +1480,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>64</approx-count>
+          <approx-count>93</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1540,7 +1506,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>6366</approx-count>
+          <approx-count>6353</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1554,7 +1520,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>4559</approx-count>
+          <approx-count>4546</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1568,7 +1534,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>474</approx-count>
+          <approx-count>449</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1581,7 +1547,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>4503</approx-count>
+          <approx-count>4271</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1594,7 +1560,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>4503</approx-count>
+          <approx-count>4271</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1607,7 +1573,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3460</approx-count>
+          <approx-count>3352</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1621,7 +1587,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3499</approx-count>
+          <approx-count>3416</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1635,7 +1601,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1325</approx-count>
+          <approx-count>1329</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1649,7 +1615,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3828</approx-count>
+          <approx-count>4325</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1663,7 +1629,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>109</approx-count>
+          <approx-count>111</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1677,7 +1643,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>109</approx-count>
+          <approx-count>111</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1775,7 +1741,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1386</approx-count>
+          <approx-count>1397</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1789,7 +1755,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1386</approx-count>
+          <approx-count>1397</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1900,7 +1866,7 @@
           <family>gp_practice_population_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>6353</approx-count>
+          <approx-count>6350</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1914,7 +1880,7 @@
           <family>gp_practice_population_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>3368</approx-count>
+          <approx-count>3133</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1931,13 +1897,13 @@
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
-          <remote-name>ICB22CD</remote-name>
+          <remote-name>ONS STP code</remote-name>
           <remote-type>129</remote-type>
-          <local-name>[ICB22CD]</local-name>
-          <parent-name>[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]</parent-name>
-          <remote-alias>ICB22CD</remote-alias>
+          <local-name>[ONS STP code]</local-name>
+          <parent-name>[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]</parent-name>
+          <remote-alias>ONS STP code</remote-alias>
           <ordinal>40</ordinal>
-          <family>icb_ons_ods_mapping</family>
+          <family>stp_code_mapping_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>42</approx-count>
@@ -1945,13 +1911,13 @@
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
         <metadata-record class='column'>
-          <remote-name>ICB22CDH</remote-name>
+          <remote-name>STP name</remote-name>
           <remote-type>129</remote-type>
-          <local-name>[ICB22CDH]</local-name>
-          <parent-name>[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]</parent-name>
-          <remote-alias>ICB22CDH</remote-alias>
+          <local-name>[STP name (stp_code_mapping_snapshot)]</local-name>
+          <parent-name>[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]</parent-name>
+          <remote-alias>STP name</remote-alias>
           <ordinal>41</ordinal>
-          <family>icb_ons_ods_mapping</family>
+          <family>stp_code_mapping_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>42</approx-count>
@@ -1959,13 +1925,13 @@
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
         <metadata-record class='column'>
-          <remote-name>ICB22NM</remote-name>
+          <remote-name>ODS STP code</remote-name>
           <remote-type>129</remote-type>
-          <local-name>[ICB22NM]</local-name>
-          <parent-name>[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]</parent-name>
-          <remote-alias>ICB22NM</remote-alias>
+          <local-name>[ODS STP code]</local-name>
+          <parent-name>[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]</parent-name>
+          <remote-alias>ODS STP code</remote-alias>
           <ordinal>42</ordinal>
-          <family>icb_ons_ods_mapping</family>
+          <family>stp_code_mapping_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
           <approx-count>42</approx-count>
@@ -2142,7 +2108,7 @@
           <family>shcr_partners_combined_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>3</approx-count>
+          <approx-count>4</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -2155,7 +2121,7 @@
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>33</approx-count>
+          <approx-count>36</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2169,7 +2135,7 @@
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>33</approx-count>
+          <approx-count>35</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2209,7 +2175,7 @@
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1330</approx-count>
+          <approx-count>1582</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2223,7 +2189,7 @@
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1360</approx-count>
+          <approx-count>1602</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2243,14 +2209,6 @@
         </properties>
         <properties context='extract'>
           <relation name='gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8' table='[Extract].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' type='table' />
-        </properties>
-      </object>
-      <object caption='icb_ons_ods_mapping' id='icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1'>
-        <properties context=''>
-          <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='icb_ons_ods_mapping' table='[dbo].[icb_ons_ods_mapping]' type='table' />
-        </properties>
-        <properties context='extract'>
-          <relation name='icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1' table='[Extract].[icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1]' type='table' />
         </properties>
       </object>
       <object caption='odscodes_gp_mapping' id='odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238'>
@@ -2285,6 +2243,14 @@
           <relation name='shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5' table='[Extract].[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5]' type='table' />
         </properties>
       </object>
+      <object caption='stp_code_mapping_snapshot' id='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962'>
+        <properties context=''>
+          <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='stp_code_mapping_snapshot' table='[dbo].[stp_code_mapping_snapshot]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962' table='[Extract].[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]' type='table' />
+        </properties>
+      </object>
     </objects>
     <relationships>
       <relationship>
@@ -2297,14 +2263,6 @@
       </relationship>
       <relationship>
         <expression op='='>
-          <expression op='[GP_STP_Code]' />
-          <expression op='[ICB22CDH]' />
-        </expression>
-        <first-end-point object-id='odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238' />
-        <second-end-point object-id='icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1' />
-      </relationship>
-      <relationship>
-        <expression op='='>
           <expression op='[ICB ODS code]' />
           <expression op='[GP_STP_Code]' />
         </expression>
@@ -2313,10 +2271,10 @@
       </relationship>
       <relationship>
         <expression op='='>
-          <expression op='[ICB22CD]' />
+          <expression op='[ONS STP code]' />
           <expression op='[STP code]' />
         </expression>
-        <first-end-point object-id='icb_ons_ods_mapping_9A466F7A8D6A492D9CBC28C510EE01A1' />
+        <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962' unique-key='true' />
         <second-end-point object-id='shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D' />
       </relationship>
       <relationship>
@@ -2332,6 +2290,14 @@
         </expression>
         <first-end-point object-id='shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5' />
         <second-end-point object-id='shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[GP_STP_Code]' />
+          <expression op='[ODS STP code]' />
+        </expression>
+        <first-end-point object-id='odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238' />
+        <second-end-point object-id='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962' />
       </relationship>
     </relationships>
   </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
