@@ -9,7 +9,7 @@ C.[Number of primary care appointments] AS [M223_DENOM_Number of primary care ap
 C.[Number of primary care appointments managed online] AS [M223_NRM_Number_of_primary_care_appointments_managed_online],
 D.[Number of repeat prescriptions ordered via the NHS App] AS [M224_Number_of_repeat_prescriptions_ordered_via_the_NHS_App],
 E.[Number of primary care appointments managed via the NHS App] AS [M227_Number of primary care appointments managed via the NHS App],
-F.[Number of views of conditions information] AS [M228_Number_of_views_of_conditions_information],
+ax.conditions_nhsuk AS [M228_Number_of_views_of_conditions_information],
 G.[Number of gp record views] AS [M230_Number_of_gp_record_views],
 H.[Number of Covid_Vaccine_Record_View] AS [M244_Number_of_Covid_Vaccine_Record_View],
 I.[Population registered with NHS App] AS [M245_Population_registered_with_NHS_App],
@@ -32,7 +32,7 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 
 ,u.[Number of referrals managed via the NHS App] as [M225_Number_of_referrals_managed_via_the_NHS_App]
 ,v.[Number of secondary care appointments made via the NHS App] as [M226_Number_of_secondary_care_appointments_made_via_the_NHS_App]
-,w.[Number of find a service uses on NHS.uk] as [M229_Number_of_find_a_service_uses_on_NHS.uk]
+,ax.nhs_services_nhsuk as [M229_Number_of_find_a_service_uses_on_NHS.uk]
 ,x.[Number of test result views via the NHS App] as [M231_Number_of_test_result_views_via_the_NHS_App]
 ,y.[Number of NHS app covid pass uses] as [M232_Number_of_NHS_app_covid_pass_uses]
 ,z.[Number of record, information and results views on the NHS App] as [M233_Number_of_record_information_and_results_views_on_the_NHS_App]
@@ -43,16 +43,16 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,ad.[Proportion of repeat prescriptions ordered online] as [M222_Proportion_of_repeat_prescriptions_ordered_online]
 ,ae.[Number of prescriptions managed on the NHS App] as [M234_Number_of_prescriptions_managed_on_the_NHS_App]
 ,af.[Number of views of other information] as [M238_Number_of_views_of_other_information]
-,ag.[Number of views of live well information] as [M239_Number_of_views_of_live_well_information]
-,ah.[Number of views of book a covid19 vaccination] as [M241_Number_of_views_of_book_a_covid19_vaccination]
-,ai.[Number of views of medicines information] as [M242_Number_of_views_of_medicines_information]
-,aj.[Number of views of NHS app online information] as [M243_Number_of_views_of_NHS_app_online_information]
+,ax.live_well_nhsuk as [M239_Number_of_views_of_live_well_information]
+,ax.book_a_coronavirus_vaccination_nhsuk as [M241_Number_of_views_of_book_a_covid19_vaccination]
+,ax.medicines_nhsuk as [M242_Number_of_views_of_medicines_information]
+,ax.nhs_app_nhsuk as [M243_Number_of_views_of_NHS_app_online_information]
 ,ak.[Number of repeat prescriptions through an other POL service] as [M249_Number_of_repeat_prescriptions_through_an_other_POL_service]
 ,al.[Number of offline repeat prescriptions] as [M250_Number_of_offline_repeat_prescriptions]
 ,am.[Number of DCR views through the NHS app] as [M251_Number_of_DCR_views_through_the_NHS_app]
 ,an.[DCR views through other POL service] as [M252_DCR_views_through_other_POL_service]
 ,ao.[Number of Secondary Care Messages sent via NHS App] as [M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]
-,ap.[services] as [MXXX_services]
+,ax.services_nhsuk as [MXXX_services]
 ,aq.[Number of Covid Pass Transactions Undertaken] as [M269_Number_of_Covid_Pass_Transactions_Undertaken]
 ,ar.bporResearch as M270_Research
 ,at.[Number of Wayfinder Clicks] as [M271_Number_of_Wayfinder_Clicks]
@@ -62,6 +62,9 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,au.[Messages Read No Notification] as M273_Messages_Read_No_Notification
 ,ISNULL(av.[Number of NBS jumpoff clicks via the NHS App], 0)  as M274_Number_of_NBS_jumpoff_clicks_via_the_NHS_App
 ,ISNULL(aw.[Number of GP Registration jumpoff clicks via the NHS App],0) as M275_Number_of_GP_Registration_jumpoff_clicks_via_the_NHS_App
+,ISNULL(ax.pregnancy_nhsuk,0) as MYYY_pregnancy_nhsuk
+,ISNULL(ax.mental_health_nhsuk,0) as MZZZ_mental_health_nhsuk
+,ISNULL(ax.service_search_nhsuk,0) as MAAA_service_search_nhsuk
 
 
 FROM
@@ -259,4 +262,10 @@ LEFT JOIN
 ndc_gp_registration aw
 ON
 a.[Date]=aw.[Date]
+
+LEFT JOIN
+ndc_transactions_nhsuk_site_sections ax
+ON
+a.[Date]=ax.[Date]
+
 
