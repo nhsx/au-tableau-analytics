@@ -65,7 +65,8 @@ T.[Number of NHS.UK vaccination bookings 3rd dose] AS [M267_Number_of_NHS.UK_vac
 ,ISNULL(ax.pregnancy_nhsuk,0) as MYYY_pregnancy_nhsuk
 ,ISNULL(ax.mental_health_nhsuk,0) as MZZZ_mental_health_nhsuk
 ,ISNULL(ax.service_search_nhsuk,0) as MAAA_service_search_nhsuk
-
+,ay.[Number of NHS.UK vaccination bookings COVID Autumn Winter] as MBBB_Number_of_NHS_UK_vaccination_bookings_COVID_Autumn_Winter
+,az.[Number of NHS.UK vaccination bookings Flu Autumn Winter] as MCCC_Number_of_NHS_UK_vaccination_bookings_Flu_Autumn_Winter
 
 FROM
 ndc_dashboard_nhsapp_registered_population_month_prop A
@@ -268,4 +269,12 @@ ndc_transactions_nhsuk_site_sections ax
 ON
 a.[Date]=ax.[Date]
 
+LEFT JOIN
+ndc_vaccine_nhsuk_covid_vaccination_booking_autumn_winter_month_count ay
+ON
+a.[Date]=ay.[Date]
 
+LEFT JOIN
+ndc_vaccine_nhsuk_flu_vaccination_booking_autumn_winter_month_count az
+ON
+a.Date=az.Date
