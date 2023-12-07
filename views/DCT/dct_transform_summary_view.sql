@@ -105,7 +105,7 @@ a.eo_monthly_date as _date
 ,a.ICB_ONS_Code
 ,icb.ICB_Code
 ,SUM(a.YEStodate) as PIR_YES
-,COUNT(*) as PIR_COUNT
+,SUM(a.YESNOtodate) as PIR_COUNT
 
 FROM
 dct_dscr_view a
