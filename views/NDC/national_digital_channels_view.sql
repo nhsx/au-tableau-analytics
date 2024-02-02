@@ -3,7 +3,7 @@ SELECT
 
 cast(a.[Date] as date) AS [ndc_Date],
 all_time_nhs_app_registered_users AS [M220_NRM_Number_of_users_with_an_NHS_App_registration],
-44715443 AS [M220_DENOM_Adult_population],
+47996895 AS [M220_DENOM_Adult_population],
 unique_logins_nhs_app AS [M221_NRM_Number_of_unique_NHS_App_logins],
 all_time_nhs_app_registered_users AS [M221_DENOM_Number_of_users_with_an_NHS_App_registration],
 primary_care_appointments AS [M223_DENOM_Number of primary care appointments],
