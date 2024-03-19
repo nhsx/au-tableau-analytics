@@ -79,6 +79,7 @@ as [M233_Number_of_record_information_and_results_views_on_the_NHS_App]
 ,covid_pass_transactions as [M269_Number_of_Covid_Pass_Transactions_Undertaken]
 ,bporResearch as M270_Research
 ,wayfinder as [M271_Number_of_Wayfinder_Clicks]
+,wayfinder_views as [M271_Number_of_Wayfinder_Views]
 ,c.[Messages Sent Notification] as M273_Messages_Sent_Notification
 ,c.[Messages Sent No Notification] as M273_Messages_Sent_No_Notification
 ,c.[Messages Read Notification] as M273_Messages_Read_Notification
