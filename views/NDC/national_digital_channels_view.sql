@@ -35,6 +35,7 @@ manageYourReferral as [M225_Number_of_referrals_managed_via_the_NHS_App]
 ,PKB_appointments as [M226_Number_of_secondary_care_appointments_made_via_the_NHS_App]
 ,[nhs-services_nhsuk] as [M229_Number_of_find_a_service_uses_on_NHS.uk]
 ,PKB_testResults as [M231_Number_of_test_result_views_via_the_NHS_App]
+,record_view_test_results as [M231a_Number_of_test_result_views_via_the_NHS_App]
 ,Covid_Pass + Covid_Pass_P5 as [M232_Number_of_NHS_app_covid_pass_uses]
 ,Substrakt_accountAdmin
 + Substrakt_patientParticipationGroups
