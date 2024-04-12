@@ -72,7 +72,7 @@ as [M233_Number_of_record_information_and_results_views_on_the_NHS_App]
 
 ,b.[Number of repeat prescription transactions] - prescriptions as [M249_Number_of_repeat_prescriptions_through_an_other_POL_service]
 ,eps_repeat_prescriptions - b.[Number of repeat prescription transactions] as [M250_Number_of_offline_repeat_prescriptions]
-
+,eps_repeat_prescriptions as eps_repeat_prescriptions
 ,RecordViewsDCR as [M251_Number_of_DCR_views_through_the_NHS_app]
 ,b.[Number of detailed coded record views] - RecordViewsDCR as [M252_DCR_views_through_other_POL_service]
 ,PKB_messages + Substrakt_messages as [M260_Number_of_Secondary_Care_Messages_sent_via_NHS_App]
