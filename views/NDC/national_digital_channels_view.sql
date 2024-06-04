@@ -92,6 +92,7 @@ as [M233_Number_of_record_information_and_results_views_on_the_NHS_App]
 ,ISNULL([service-search_nhsuk],0) as MAAA_service_search_nhsuk
 ,covid_winter as MBBB_Number_of_NHS_UK_vaccination_bookings_COVID_Autumn_Winter
 ,flu_winter as MCCC_Number_of_NHS_UK_vaccination_bookings_Flu_Autumn_Winter
+,d.repeat_prescription_cf
 
 FROM
 ndc_actuals_all a
@@ -105,3 +106,8 @@ LEFT JOIN
 ndc_messages_nhsapp_messages_read c
 ON
 a.[Date]=c.[Date]
+
+LEFT JOIN
+ndc_repeat_prescription_cf d
+ON
+a.[Date]=d.[date]
