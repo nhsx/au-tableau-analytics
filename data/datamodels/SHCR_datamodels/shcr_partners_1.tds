@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20223.23.0623.1714                               -->
-<datasource formatted-name='shcr_partners_1' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20233.24.0314.1442                               -->
+<datasource formatted-name='shcr_partners_1 (local copy)' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
@@ -9,12 +9,13 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.RelationshipCalculations.true...RelationshipCalculations />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
   </document-format-change-manifest>
-  <repository-location id='shcr_partners_1' path='datasources' revision='1.2' />
+  <repository-location id='shcr_partners_1' path='datasources' revision='1.8' />
   <connection class='federated'>
     <named-connections>
       <named-connection caption='nhsx-slt-analytics.database.windows.net' name='sqlserver.16xn79t19ghfl61aynuuc039jqzq'>
-        <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' server-oauth='' server-userid='20622' username='nhsei_tableau_read' workgroup-auth-mode='prompt' />
+        <connection authentication='sqlserver' class='sqlserver' dbname='tableau-staging' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='nhsx-slt-analytics.database.windows.net' server-oauth='' server-userid='20621' username='nhsei_tableau_read' workgroup-auth-mode='prompt' />
       </named-connection>
     </named-connections>
     <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
@@ -24,6 +25,7 @@
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='gp_practice_population_snapshot' table='[dbo].[gp_practice_population_snapshot]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='stp_code_mapping_snapshot' table='[dbo].[stp_code_mapping_snapshot]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shapefile_stp_boundaries_snapshot' table='[dbo].[shapefile_stp_boundaries_snapshot]' type='table' />
+      <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shcr_connecting_care_golive_supplier_website' table='[dbo].[shcr_connecting_care_golive_supplier_website]' type='table' />
       <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shcr_partners_combined_view' table='[dbo].[shcr_partners_combined_view]' type='table' />
     </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
     <cols>
@@ -48,7 +50,10 @@
       <map key='[GP_Register_Date]' value='[odscodes_gp_mapping].[GP_Register_Date]' />
       <map key='[GP_STP_Code]' value='[odscodes_gp_mapping].[GP_STP_Code]' />
       <map key='[GP_STP_Name]' value='[odscodes_gp_mapping].[GP_STP_Name]' />
+      <map key='[Go ive Date]' value='[shcr_connecting_care_golive_supplier_website].[Go ive Date]' />
       <map key='[ICB Name (if applicable)]' value='[shcr_partners_icb_data_month_count_view].[ICB Name (if applicable)]' />
+      <map key='[ICB Name]' value='[shcr_connecting_care_golive_supplier_website].[ICB Name]' />
+      <map key='[ICB ODS Code]' value='[shcr_connecting_care_golive_supplier_website].[ICB ODS Code]' />
       <map key='[ICB ODS code (shcr_partners_combined_view)]' value='[shcr_partners_combined_view].[ICB ODS code]' />
       <map key='[ICB ODS code]' value='[shcr_partners_icb_data_month_count_view].[ICB ODS code]' />
       <map key='[ICS Name (if applicable)]' value='[shcr_partners_combined_view].[ICS Name (if applicable)]' />
@@ -75,7 +80,9 @@
       <map key='[STP name (stp_code_mapping_snapshot)]' value='[stp_code_mapping_snapshot].[STP name]' />
       <map key='[STP name]' value='[shapefile_stp_boundaries_snapshot].[STP name]' />
       <map key='[ShCR Programme Name]' value='[shcr_partners_icb_data_month_count_view].[ShCR Programme Name]' />
+      <map key='[System Supplier]' value='[shcr_connecting_care_golive_supplier_website].[System Supplier]' />
       <map key='[Unique ID]' value='[shapefile_stp_boundaries_snapshot].[Unique ID]' />
+      <map key='[Website]' value='[shcr_connecting_care_golive_supplier_website].[Website]' />
       <map key='[bng_e]' value='[shapefile_stp_boundaries_snapshot].[bng_e]' />
       <map key='[bng_n]' value='[shapefile_stp_boundaries_snapshot].[bng_n]' />
       <map key='[date (shcr_partners_combined_view)]' value='[shcr_partners_combined_view].[date]' />
@@ -1104,12 +1111,104 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
       </metadata-record>
       <metadata-record class='column'>
+        <remote-name>ICB ODS Code</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[ICB ODS Code]</local-name>
+        <parent-name>[shcr_connecting_care_golive_supplier_website]</parent-name>
+        <remote-alias>ICB ODS Code</remote-alias>
+        <ordinal>60</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ICB Name</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[ICB Name]</local-name>
+        <parent-name>[shcr_connecting_care_golive_supplier_website]</parent-name>
+        <remote-alias>ICB Name</remote-alias>
+        <ordinal>61</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>System Supplier</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[System Supplier]</local-name>
+        <parent-name>[shcr_connecting_care_golive_supplier_website]</parent-name>
+        <remote-alias>System Supplier</remote-alias>
+        <ordinal>62</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Website</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Website]</local-name>
+        <parent-name>[shcr_connecting_care_golive_supplier_website]</parent-name>
+        <remote-alias>Website</remote-alias>
+        <ordinal>63</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Go ive Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Go ive Date]</local-name>
+        <parent-name>[shcr_connecting_care_golive_supplier_website]</parent-name>
+        <remote-alias>Go ive Date</remote-alias>
+        <ordinal>64</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
         <remote-name>org_type</remote-name>
         <remote-type>129</remote-type>
         <local-name>[org_type]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>org_type</remote-alias>
-        <ordinal>60</ordinal>
+        <ordinal>66</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <width>21</width>
@@ -1129,7 +1228,7 @@
         <local-name>[date (shcr_partners_combined_view)]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>date</remote-alias>
-        <ordinal>61</ordinal>
+        <ordinal>67</ordinal>
         <local-type>date</local-type>
         <aggregation>Year</aggregation>
         <contains-null>true</contains-null>
@@ -1146,7 +1245,7 @@
         <local-name>[ICB ODS code (shcr_partners_combined_view)]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>ICB ODS code</remote-alias>
-        <ordinal>62</ordinal>
+        <ordinal>68</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -1165,7 +1264,7 @@
         <local-name>[ICS Name (if applicable)]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>ICS Name (if applicable)</remote-alias>
-        <ordinal>63</ordinal>
+        <ordinal>69</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -1184,7 +1283,7 @@
         <local-name>[Partner Organisation connected to ShCR?]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>Partner Organisation connected to ShCR?</remote-alias>
-        <ordinal>64</ordinal>
+        <ordinal>70</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1201,7 +1300,7 @@
         <local-name>[Partner Organisation plans to be connected by March 2023?]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>Partner Organisation plans to be connected by March 2023?</remote-alias>
-        <ordinal>65</ordinal>
+        <ordinal>71</ordinal>
         <local-type>integer</local-type>
         <aggregation>Sum</aggregation>
         <precision>19</precision>
@@ -1218,7 +1317,7 @@
         <local-name>[org_ods_code]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>org_ods_code</remote-alias>
-        <ordinal>66</ordinal>
+        <ordinal>72</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -1237,7 +1336,7 @@
         <local-name>[org_name]</local-name>
         <parent-name>[shcr_partners_combined_view]</parent-name>
         <remote-alias>org_name</remote-alias>
-        <ordinal>67</ordinal>
+        <ordinal>73</ordinal>
         <local-type>string</local-type>
         <aggregation>Count</aggregation>
         <contains-null>true</contains-null>
@@ -1259,6 +1358,7 @@
   <_.fcp.ObjectModelTableType.true...column caption='gp_practice_population_snapshot' datatype='table' name='[__tableau_internal_object_id__].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='odscodes_gp_mapping' datatype='table' name='[__tableau_internal_object_id__].[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shapefile_stp_boundaries_snapshot' datatype='table' name='[__tableau_internal_object_id__].[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelTableType.true...column caption='shcr_connecting_care_golive_supplier_website' datatype='table' name='[__tableau_internal_object_id__].[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shcr_partners_combined_view' datatype='table' name='[__tableau_internal_object_id__].[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='shcr_partners_icb_data_month_count_view' datatype='table' name='[__tableau_internal_object_id__].[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5]' role='measure' type='quantitative' />
   <_.fcp.ObjectModelTableType.true...column caption='stp_code_mapping_snapshot' datatype='table' name='[__tableau_internal_object_id__].[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]' role='measure' type='quantitative' />
@@ -1269,8 +1369,8 @@
   <column caption='Org Name' datatype='string' name='[org_name]' role='dimension' type='nominal' />
   <column caption='Org Ods Code' datatype='string' name='[org_ods_code]' role='dimension' type='nominal' />
   <column caption='Org Type' datatype='string' name='[org_type]' role='dimension' type='nominal' />
-  <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/OliverJones/Downloads/shcr_partners_icb_data_month_count_view+ (tableau-staging).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/07/2023 02:13:30 PM' username='tableau_internal_user'>
+  <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/NM2.IIHY3MGE/Documents/GIT/au-tableau-analytics/data/datamodels/SHCR_datamodels/shcr_partners_1.tds Files/Data/Extracts/shcr_partners_1.hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/09/2024 09:27:05 AM' username=''>
       <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8' table='[Extract].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' type='table' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
         <relation name='shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5' table='[Extract].[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5]' type='table' />
@@ -1278,6 +1378,7 @@
         <relation name='gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8' table='[Extract].[gp_practice_population_snapshot_1D069CA2FD5341388CBA01F0422C18A8]' type='table' />
         <relation name='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962' table='[Extract].[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962]' type='table' />
         <relation name='shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D' table='[Extract].[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D]' type='table' />
+        <relation name='shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315' table='[Extract].[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]' type='table' />
         <relation name='shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749' table='[Extract].[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]' type='table' />
       </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
       <cols>
@@ -1302,7 +1403,10 @@
         <map key='[GP_Register_Date]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[GP_Register_Date]' />
         <map key='[GP_STP_Code]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[GP_STP_Code]' />
         <map key='[GP_STP_Name]' value='[odscodes_gp_mapping_ABC2517F10B74F319EE606B6F9726238].[GP_STP_Name]' />
+        <map key='[Go ive Date]' value='[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315].[Go ive Date]' />
         <map key='[ICB Name (if applicable)]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[ICB Name (if applicable)]' />
+        <map key='[ICB Name]' value='[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315].[ICB Name]' />
+        <map key='[ICB ODS Code]' value='[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315].[ICB ODS Code]' />
         <map key='[ICB ODS code (shcr_partners_combined_view)]' value='[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749].[ICB ODS code]' />
         <map key='[ICB ODS code]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[ICB ODS code]' />
         <map key='[ICS Name (if applicable)]' value='[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749].[ICS Name (if applicable)]' />
@@ -1329,7 +1433,9 @@
         <map key='[STP name (stp_code_mapping_snapshot)]' value='[stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962].[STP name]' />
         <map key='[STP name]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[STP name]' />
         <map key='[ShCR Programme Name]' value='[shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5].[ShCR Programme Name]' />
+        <map key='[System Supplier]' value='[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315].[System Supplier]' />
         <map key='[Unique ID]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[Unique ID]' />
+        <map key='[Website]' value='[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315].[Website]' />
         <map key='[bng_e]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[bng_e]' />
         <map key='[bng_n]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[bng_n]' />
         <map key='[date (shcr_partners_combined_view)]' value='[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749].[date]' />
@@ -1345,7 +1451,7 @@
         <map key='[st_length(shape)]' value='[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D].[st_length(shape)]' />
       </cols>
       <refresh>
-        <refresh-event add-from-file-path='shcr_partners_1' increment-value='%null%' refresh-type='create' rows-inserted='18048' timestamp-start='2023-11-07 14:10:37.361' />
+        <refresh-event add-from-file-path='shcr_partners_1 (local copy)' increment-value='%null%' refresh-type='create' rows-inserted='21096' timestamp-start='2024-07-09 09:27:03.140' />
       </refresh>
       <metadata-records>
         <metadata-record class='column'>
@@ -1358,7 +1464,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>4</approx-count>
+          <approx-count>6</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1371,7 +1477,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>36</approx-count>
+          <approx-count>40</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1385,7 +1491,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>35</approx-count>
+          <approx-count>40</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1399,7 +1505,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>16</approx-count>
+          <approx-count>17</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1413,7 +1519,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>38</approx-count>
+          <approx-count>43</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1427,7 +1533,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>13</approx-count>
+          <approx-count>15</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1467,7 +1573,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>92</approx-count>
+          <approx-count>144</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1480,7 +1586,7 @@
           <family>shcr_partners_icb_data_month_count_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>93</approx-count>
+          <approx-count>141</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1506,7 +1612,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>6353</approx-count>
+          <approx-count>6291</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1520,7 +1626,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>4546</approx-count>
+          <approx-count>4962</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1534,7 +1640,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>449</approx-count>
+          <approx-count>511</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1547,7 +1653,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>4271</approx-count>
+          <approx-count>3685</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1560,7 +1666,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>real</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>4271</approx-count>
+          <approx-count>3685</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -1573,7 +1679,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3352</approx-count>
+          <approx-count>3792</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1587,7 +1693,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>3416</approx-count>
+          <approx-count>3399</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1601,7 +1707,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1329</approx-count>
+          <approx-count>1375</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1615,7 +1721,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>4325</approx-count>
+          <approx-count>3607</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1629,7 +1735,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>111</approx-count>
+          <approx-count>112</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1643,7 +1749,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>111</approx-count>
+          <approx-count>112</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1741,7 +1847,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1397</approx-count>
+          <approx-count>1383</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1755,7 +1861,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1397</approx-count>
+          <approx-count>1383</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1769,7 +1875,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>112</approx-count>
+          <approx-count>113</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1783,7 +1889,7 @@
           <family>odscodes_gp_mapping</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>112</approx-count>
+          <approx-count>113</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1866,7 +1972,7 @@
           <family>gp_practice_population_snapshot</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>6350</approx-count>
+          <approx-count>6295</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -1880,7 +1986,7 @@
           <family>gp_practice_population_snapshot</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
-          <approx-count>3133</approx-count>
+          <approx-count>3261</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -2085,12 +2191,81 @@
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
+          <remote-name>ICB ODS Code</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[ICB ODS Code]</local-name>
+          <parent-name>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</parent-name>
+          <remote-alias>ICB ODS Code</remote-alias>
+          <ordinal>54</ordinal>
+          <family>shcr_connecting_care_golive_supplier_website</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>42</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>ICB Name</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[ICB Name]</local-name>
+          <parent-name>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</parent-name>
+          <remote-alias>ICB Name</remote-alias>
+          <ordinal>55</ordinal>
+          <family>shcr_connecting_care_golive_supplier_website</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>42</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>System Supplier</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[System Supplier]</local-name>
+          <parent-name>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</parent-name>
+          <remote-alias>System Supplier</remote-alias>
+          <ordinal>56</ordinal>
+          <family>shcr_connecting_care_golive_supplier_website</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>13</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Website</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Website]</local-name>
+          <parent-name>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</parent-name>
+          <remote-alias>Website</remote-alias>
+          <ordinal>57</ordinal>
+          <family>shcr_connecting_care_golive_supplier_website</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>34</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RUS_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Go ive Date</remote-name>
+          <remote-type>135</remote-type>
+          <local-name>[Go ive Date]</local-name>
+          <parent-name>[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]</parent-name>
+          <remote-alias>Go ive Date</remote-alias>
+          <ordinal>58</ordinal>
+          <family>shcr_connecting_care_golive_supplier_website</family>
+          <local-type>datetime</local-type>
+          <aggregation>Year</aggregation>
+          <approx-count>39</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
           <remote-name>org_type</remote-name>
           <remote-type>129</remote-type>
           <local-name>[org_type]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>org_type</remote-alias>
-          <ordinal>54</ordinal>
+          <ordinal>59</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
@@ -2104,11 +2279,11 @@
           <local-name>[date (shcr_partners_combined_view)]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>date</remote-alias>
-          <ordinal>55</ordinal>
+          <ordinal>60</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>date</local-type>
           <aggregation>Year</aggregation>
-          <approx-count>4</approx-count>
+          <approx-count>6</approx-count>
           <contains-null>true</contains-null>
         </metadata-record>
         <metadata-record class='column'>
@@ -2117,11 +2292,11 @@
           <local-name>[ICB ODS code (shcr_partners_combined_view)]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>ICB ODS code</remote-alias>
-          <ordinal>56</ordinal>
+          <ordinal>61</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>36</approx-count>
+          <approx-count>40</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2131,11 +2306,11 @@
           <local-name>[ICS Name (if applicable)]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>ICS Name (if applicable)</remote-alias>
-          <ordinal>57</ordinal>
+          <ordinal>62</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>35</approx-count>
+          <approx-count>40</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2145,7 +2320,7 @@
           <local-name>[Partner Organisation connected to ShCR?]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>Partner Organisation connected to ShCR?</remote-alias>
-          <ordinal>58</ordinal>
+          <ordinal>63</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2158,7 +2333,7 @@
           <local-name>[Partner Organisation plans to be connected by March 2023?]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>Partner Organisation plans to be connected by March 2023?</remote-alias>
-          <ordinal>59</ordinal>
+          <ordinal>64</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>integer</local-type>
           <aggregation>Sum</aggregation>
@@ -2171,11 +2346,11 @@
           <local-name>[org_ods_code]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>org_ods_code</remote-alias>
-          <ordinal>60</ordinal>
+          <ordinal>65</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1582</approx-count>
+          <approx-count>1961</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2185,11 +2360,11 @@
           <local-name>[org_name]</local-name>
           <parent-name>[shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749]</parent-name>
           <remote-alias>org_name</remote-alias>
-          <ordinal>61</ordinal>
+          <ordinal>66</ordinal>
           <family>shcr_partners_combined_view</family>
           <local-type>string</local-type>
           <aggregation>Count</aggregation>
-          <approx-count>1602</approx-count>
+          <approx-count>2012</approx-count>
           <contains-null>true</contains-null>
           <collation flag='1' name='LEN_RUS_S2' />
         </metadata-record>
@@ -2225,6 +2400,14 @@
         </properties>
         <properties context='extract'>
           <relation name='shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D' table='[Extract].[shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D]' type='table' />
+        </properties>
+      </object>
+      <object caption='shcr_connecting_care_golive_supplier_website' id='shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315'>
+        <properties context=''>
+          <relation connection='sqlserver.16xn79t19ghfl61aynuuc039jqzq' name='shcr_connecting_care_golive_supplier_website' table='[dbo].[shcr_connecting_care_golive_supplier_website]' type='table' />
+        </properties>
+        <properties context='extract'>
+          <relation name='shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315' table='[Extract].[shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315]' type='table' />
         </properties>
       </object>
       <object caption='shcr_partners_combined_view' id='shcr_partners_combined_view_269D3FD8AC4143AF826DFA55BA022749'>
@@ -2276,6 +2459,14 @@
         </expression>
         <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='stp_code_mapping_snapshot_3852ED6861F342F5B81E1E7178BAD962' unique-key='true' />
         <second-end-point object-id='shapefile_stp_boundaries_snapshot_0922293038BF4CFE83DCC32EF03DC85D' />
+      </relationship>
+      <relationship>
+        <expression op='='>
+          <expression op='[ICB ODS code]' />
+          <expression op='[ICB ODS Code]' />
+        </expression>
+        <first-end-point object-id='shcr_partners_icb_data_month_count_view_1891C56AE85B4C70B7E0DC14AFEAEED5' />
+        <second-end-point object-id='shcr_connecting_care_golive_supplier_website_15C93D857F4E4B4C812B9DB455D69315' />
       </relationship>
       <relationship>
         <expression op='AND'>
