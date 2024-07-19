@@ -14,6 +14,7 @@ CAST([For Month] as DATE) as date
 ,[Number of unique user ShCR views in the past month]
 -- ,[Completed by (email)]
 -- ,[Date completed]
+,LatestSubmission_Flg
 ,GETDATE() as date_updated
 
 
